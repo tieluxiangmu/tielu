@@ -1,0 +1,1221 @@
+2014/08/24 06:42:34 [error] [exception.CException] exception 'CException' with message 'Property "CWebApplication.smarty" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/framework/base/CComponent.php:130
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CModule.php(105): CComponent->__get('smarty')
+#1 /Applications/XAMPP/xamppfiles/htdocs/web/protected/controllers/SiteController.php(13): CModule->__get('smarty')
+#2 /Applications/XAMPP/xamppfiles/htdocs/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#3 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): CController->run('')
+#7 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#8 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /Applications/XAMPP/xamppfiles/htdocsindex.php(12): CApplication->run()
+#10 {main}
+REQUEST_URI=/web/
+---
+2014/08/24 06:43:47 [error] [exception.CException] exception 'CException' with message 'Property "CWebApplication.smarty" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/framework/base/CComponent.php:130
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CModule.php(105): CComponent->__get('smarty')
+#1 /Applications/XAMPP/xamppfiles/htdocs/web/protected/controllers/SiteController.php(13): CModule->__get('smarty')
+#2 /Applications/XAMPP/xamppfiles/htdocs/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#3 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): CController->run('')
+#7 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#8 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /Applications/XAMPP/xamppfiles/htdocsindex.php(12): CApplication->run()
+#10 {main}
+REQUEST_URI=/web/
+---
+2014/08/24 06:43:51 [error] [exception.CException] exception 'CException' with message 'Property "CWebApplication.smarty" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/framework/base/CComponent.php:130
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CModule.php(105): CComponent->__get('smarty')
+#1 /Applications/XAMPP/xamppfiles/htdocs/web/protected/controllers/SiteController.php(13): CModule->__get('smarty')
+#2 /Applications/XAMPP/xamppfiles/htdocs/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#3 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): CController->run('')
+#7 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#8 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /Applications/XAMPP/xamppfiles/htdocsindex.php(12): CApplication->run()
+#10 {main}
+REQUEST_URI=/web/
+---
+2014/08/24 11:26:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii".' in /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#1 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocsindex.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=index.php?r=gii
+---
+2014/08/24 11:26:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii".' in /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#1 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocsindex.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=index.php?r=gii
+---
+2014/08/24 11:39:14 [error] [exception.CException] exception 'CException' with message 'Property "CWebApplication.smarty" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/framework/base/CComponent.php:130
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CModule.php(105): CComponent->__get('smarty')
+#1 /Applications/XAMPP/xamppfiles/htdocs/web/protected/controllers/SiteController.php(13): CModule->__get('smarty')
+#2 /Applications/XAMPP/xamppfiles/htdocs/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#3 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): CController->run('')
+#7 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#8 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /Applications/XAMPP/xamppfiles/htdocsindex.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/web/
+---
+2014/08/24 11:40:34 [error] [exception.CException] exception 'CException' with message 'Property "CWebApplication.smarty" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/framework/base/CComponent.php:130
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CModule.php(105): CComponent->__get('smarty')
+#1 /Applications/XAMPP/xamppfiles/htdocs/web/protected/controllers/SiteController.php(13): CModule->__get('smarty')
+#2 /Applications/XAMPP/xamppfiles/htdocs/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#3 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): CController->run('')
+#7 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#8 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /Applications/XAMPP/xamppfiles/htdocsindex.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/web/
+---
+2014/08/24 11:42:51 [error] [php] Undefined index: call (/Applications/XAMPP/xamppfiles/htdocs/web/protected/extensions/smarty/plugins/compiler.widget.php:15)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/web/protected/extensions/smarty/sysplugins/smarty_internal_templateparser.php(3101): Smarty_Internal_Templateparser->yy_r36()
+#1 /Applications/XAMPP/xamppfiles/htdocs/web/protected/extensions/smarty/sysplugins/smarty_internal_templateparser.php(3201): Smarty_Internal_Templateparser->yy_reduce()
+#2 /Applications/XAMPP/xamppfiles/htdocs/web/protected/extensions/smarty/sysplugins/smarty_internal_smartytemplatecompiler.php(105): Smarty_Internal_Templateparser->doParse()
+#3 /Applications/XAMPP/xamppfiles/htdocs/web/protected/extensions/smarty/sysplugins/smarty_internal_templatecompilerbase.php(200): Smarty_Internal_SmartyTemplateCompiler->doCompile()
+#4 /Applications/XAMPP/xamppfiles/htdocs/web/protected/extensions/smarty/sysplugins/smarty_internal_compile_block.php(202): Smarty_Internal_SmartyTemplateCompiler->compileTemplate()
+#5 /Applications/XAMPP/xamppfiles/htdocs/web/protected/extensions/smarty/sysplugins/smarty_internal_compile_block.php(260): compileChildBlock()
+#6 /Applications/XAMPP/xamppfiles/htdocs/web/protected/extensions/smarty/sysplugins/smarty_internal_templatecompilerbase.php(473): Smarty_Internal_Compile_Blockclose->compile()
+#7 /Applications/XAMPP/xamppfiles/htdocs/web/protected/extensions/smarty/sysplugins/smarty_internal_templatecompilerbase.php(257): Smarty_Internal_SmartyTemplateCompiler->callTagCompiler()
+#8 /Applications/XAMPP/xamppfiles/htdocs/web/protected/extensions/smarty/sysplugins/smarty_internal_templateparser.php(2493): Smarty_Internal_SmartyTemplateCompiler->compileTag()
+#9 /Applications/XAMPP/xamppfiles/htdocs/web/protected/extensions/smarty/sysplugins/smarty_internal_templateparser.php(3101): Smarty_Internal_Templateparser->yy_r58()
+#10 /Applications/XAMPP/xamppfiles/htdocs/web/protected/extensions/smarty/sysplugins/smarty_internal_templateparser.php(3201): Smarty_Internal_Templateparser->yy_reduce()
+#11 /Applications/XAMPP/xamppfiles/htdocs/web/protected/extensions/smarty/sysplugins/smarty_internal_smartytemplatecompiler.php(105): Smarty_Internal_Templateparser->doParse()
+#12 /Applications/XAMPP/xamppfiles/htdocs/web/protected/extensions/smarty/sysplugins/smarty_internal_templatecompilerbase.php(200): Smarty_Internal_SmartyTemplateCompiler->doCompile()
+#13 /Applications/XAMPP/xamppfiles/htdocs/web/protected/extensions/smarty/sysplugins/smarty_internal_template.php(187): Smarty_Internal_SmartyTemplateCompiler->compileTemplate()
+#14 /Applications/XAMPP/xamppfiles/htdocs/web/protected/extensions/smarty/sysplugins/smarty_internal_templatebase.php(155): Smarty_Internal_Template->compileTemplateSource()
+#15 /Applications/XAMPP/xamppfiles/htdocs/web/protected/extensions/smarty/sysplugins/smarty_internal_templatebase.php(374): Smarty->fetch()
+#16 /Applications/XAMPP/xamppfiles/htdocs/web/protected/controllers/SiteController.php(15): Smarty->display()
+#17 /Applications/XAMPP/xamppfiles/htdocs/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#18 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(308): CInlineAction->runWithParams()
+#19 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(286): SiteController->runAction()
+#20 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#21 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): SiteController->run()
+#22 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#23 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#24 /Applications/XAMPP/xamppfiles/htdocsindex.php(13): CWebApplication->run()
+REQUEST_URI=/web/
+in /Applications/XAMPP/xamppfiles/htdocs/web/protected/extensions/smarty/plugins/compiler.widget.php (15)
+in /Applications/XAMPP/xamppfiles/htdocs/web/protected/extensions/smarty/sysplugins/smarty_internal_templatecompilerbase.php (346)
+in /Applications/XAMPP/xamppfiles/htdocs/web/protected/extensions/smarty/sysplugins/smarty_internal_templateparser.php (2388)
+2014/08/24 12:05:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user".' in /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('user')
+#1 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocsindex.php(8): CApplication->run()
+#3 {main}
+REQUEST_URI=index.php?r=user
+---
+2014/08/24 12:05:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "add".' in /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(270): CController->missingAction('add')
+#1 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): CController->run('add')
+#2 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('userinfo/add')
+#3 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocsindex.php(8): CApplication->run()
+#5 {main}
+REQUEST_URI=index.php?r=userinfo/add
+---
+2014/08/24 12:11:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(270): CController->missingAction('login')
+#1 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): CController->run('login')
+#2 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#3 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocsindex.php(8): CApplication->run()
+#5 {main}
+REQUEST_URI=index.php?r=site/login
+---
+2014/08/24 12:11:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "index/Create".' in /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('index/Create')
+#1 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocsindex.php(8): CApplication->run()
+#3 {main}
+REQUEST_URI=index.php?r=index/Create
+---
+2014/08/24 12:11:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "iuserinfo/Create".' in /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('iuserinfo/Creat...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocsindex.php(8): CApplication->run()
+#3 {main}
+REQUEST_URI=index.php?r=iuserinfo/Create
+---
+2014/08/24 12:11:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(270): CController->missingAction('login')
+#1 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): CController->run('login')
+#2 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#3 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocsindex.php(8): CApplication->run()
+#5 {main}
+REQUEST_URI=index.php?r=site/login
+---
+2014/08/24 12:13:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/create".' in /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('user/create')
+#1 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocsindex.php(8): CApplication->run()
+#3 {main}
+REQUEST_URI=index.php?r=user/create
+---
+2014/08/25 11:14:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loadModel".' in /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(270): CController->missingAction('loadModel')
+#1 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): CController->run('loadModel')
+#2 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('userinfo/loadMo...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocsindex.php(8): CApplication->run()
+#5 {main}
+REQUEST_URI=index.php?r=userinfo/loadModel/1
+---
+2014/08/25 11:14:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loadModel".' in /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(270): CController->missingAction('loadModel')
+#1 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): CController->run('loadModel')
+#2 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('userinfo/loadMo...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocsindex.php(8): CApplication->run()
+#5 {main}
+REQUEST_URI=index.php?r=userinfo/loadModel
+---
+2014/08/25 11:21:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "checkUsername".' in /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(270): CController->missingAction('checkUsername')
+#1 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): CController->run('checkUsername')
+#2 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('userinfo/checkU...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocsindex.php(8): CApplication->run()
+#5 {main}
+REQUEST_URI=index.php?r=userinfo/checkUsername
+---
+2014/08/25 11:21:35 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php:336
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#2 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): CController->run('Checkusername')
+#4 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('userinfo/Checku...')
+#5 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#6 /Applications/XAMPP/xamppfiles/htdocsindex.php(8): CApplication->run()
+#7 {main}
+REQUEST_URI=index.php?r=userinfo/Checkusername
+---
+2014/08/25 11:21:39 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php:336
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#2 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): CController->run('checkusername')
+#4 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('userinfo/checku...')
+#5 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#6 /Applications/XAMPP/xamppfiles/htdocsindex.php(8): CApplication->run()
+#7 {main}
+REQUEST_URI=index.php?r=userinfo/checkusername
+---
+2014/08/25 11:58:20 [error] [exception.CException] exception 'CException' with message 'Property "UserinfoController._identity" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/framework/base/CComponent.php:130
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/web/protected/controllers/UserinfoController.php(134): CComponent->__get('_identity')
+#1 /Applications/XAMPP/xamppfiles/htdocs/framework/web/actions/CInlineAction.php(49): UserinfoController->actionCheckusername()
+#2 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#4 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): CController->run('checkusername')
+#6 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('userinfo/checku...')
+#7 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#8 /Applications/XAMPP/xamppfiles/htdocsindex.php(8): CApplication->run()
+#9 {main}
+REQUEST_URI=index.php?r=userinfo/checkusername
+---
+2014/08/25 12:01:21 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '' for key 'username'. The SQL statement executed was: INSERT INTO `userinfo` (`username`, `upassword`) VALUES (:yp0, :yp1).
+2014/08/25 12:01:21 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '' for key 'username'. The SQL statement executed was: INSERT INTO `userinfo` (`username`, `upassword`) VALUES (:yp0, :yp1)' in /Applications/XAMPP/xamppfiles/htdocs/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /Applications/XAMPP/xamppfiles/htdocs/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/web/protected/controllers/UserinfoController.php(67): CActiveRecord->save()
+#3 /Applications/XAMPP/xamppfiles/htdocs/framework/web/actions/CInlineAction.php(49): UserinfoController->actionCreate()
+#4 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): CController->run('create')
+#8 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('userinfo/create')
+#9 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /Applications/XAMPP/xamppfiles/htdocsindex.php(8): CApplication->run()
+#11 {main}
+REQUEST_URI=index.php?r=userinfo/create
+HTTP_REFERER=http://localhostindex.php?r=userinfo/create
+---
+2014/08/25 12:07:10 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php:336
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#2 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): CController->run('checkusername')
+#4 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('userinfo/checku...')
+#5 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#6 /Applications/XAMPP/xamppfiles/htdocsindex.php(8): CApplication->run()
+#7 {main}
+REQUEST_URI=index.php?r=userinfo/checkusername
+HTTP_REFERER=http://localhostindex.php
+---
+2014/08/25 12:08:43 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php:336
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#2 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): CController->run('checkusername')
+#4 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('userinfo/checku...')
+#5 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#6 /Applications/XAMPP/xamppfiles/htdocsindex.php(8): CApplication->run()
+#7 {main}
+REQUEST_URI=index.php?r=userinfo/checkusername
+HTTP_REFERER=http://localhostindex.php
+---
+2014/08/25 12:08:50 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php:336
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#2 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): CController->run('checkusername')
+#4 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('userinfo/checku...')
+#5 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#6 /Applications/XAMPP/xamppfiles/htdocsindex.php(8): CApplication->run()
+#7 {main}
+REQUEST_URI=index.php?r=userinfo/checkusername
+---
+2014/08/25 12:08:55 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php:336
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#2 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): CController->run('checkusername')
+#4 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('userinfo/checku...')
+#5 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#6 /Applications/XAMPP/xamppfiles/htdocsindex.php(8): CApplication->run()
+#7 {main}
+REQUEST_URI=index.php?r=userinfo/checkusername
+---
+2014/08/25 12:09:11 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php:336
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#2 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): CController->run('checkusername')
+#4 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('userinfo/checku...')
+#5 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#6 /Applications/XAMPP/xamppfiles/htdocsindex.php(8): CApplication->run()
+#7 {main}
+REQUEST_URI=index.php?r=userinfo/checkusername
+---
+2014/08/25 12:09:13 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php:336
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#2 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): CController->run('checkusername')
+#4 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('userinfo/checku...')
+#5 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#6 /Applications/XAMPP/xamppfiles/htdocsindex.php(8): CApplication->run()
+#7 {main}
+REQUEST_URI=index.php?r=userinfo/checkusername
+---
+2014/08/25 12:09:26 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php:336
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#2 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): CController->run('Checkusername')
+#4 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('userinfo/Checku...')
+#5 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#6 /Applications/XAMPP/xamppfiles/htdocsindex.php(8): CApplication->run()
+#7 {main}
+REQUEST_URI=index.php?r=userinfo/Checkusername
+---
+2014/08/25 12:09:46 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php:336
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#2 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): CController->run('Checkusername')
+#4 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('userinfo/Checku...')
+#5 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#6 /Applications/XAMPP/xamppfiles/htdocsindex.php(8): CApplication->run()
+#7 {main}
+REQUEST_URI=index.php?r=userinfo/Checkusername
+---
+2014/08/25 12:09:53 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php:336
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#2 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): CController->run('checkusername')
+#4 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('userinfo/checku...')
+#5 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#6 /Applications/XAMPP/xamppfiles/htdocsindex.php(8): CApplication->run()
+#7 {main}
+REQUEST_URI=index.php?r=userinfo/checkusername
+---
+2014/08/25 12:10:11 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php:336
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#2 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): CController->run('checkusername')
+#4 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('userinfo/checku...')
+#5 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#6 /Applications/XAMPP/xamppfiles/htdocsindex.php(8): CApplication->run()
+#7 {main}
+REQUEST_URI=index.php?r=userinfo/checkusername
+---
+2014/08/25 12:10:14 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php:336
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#2 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): CController->run('checkusername')
+#4 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('userinfo/checku...')
+#5 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#6 /Applications/XAMPP/xamppfiles/htdocsindex.php(8): CApplication->run()
+#7 {main}
+REQUEST_URI=index.php?r=userinfo/checkusername
+---
+2014/08/25 12:10:16 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php:336
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#2 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): CController->run('checkusername')
+#4 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('userinfo/checku...')
+#5 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#6 /Applications/XAMPP/xamppfiles/htdocsindex.php(8): CApplication->run()
+#7 {main}
+REQUEST_URI=index.php?r=userinfo/checkusername
+---
+2014/08/25 12:13:02 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php:336
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#2 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): CController->run('')
+#4 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('userinfo')
+#5 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#6 /Applications/XAMPP/xamppfiles/htdocsindex.php(8): CApplication->run()
+#7 {main}
+REQUEST_URI=index.php?r=userinfo
+---
+2014/08/25 12:13:06 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php:336
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#2 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): CController->run('')
+#4 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('userinfo')
+#5 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#6 /Applications/XAMPP/xamppfiles/htdocsindex.php(8): CApplication->run()
+#7 {main}
+REQUEST_URI=index.php?r=userinfo
+---
+2014/08/25 12:13:15 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php:336
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#2 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): CController->run('index')
+#4 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('userinfo/index')
+#5 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#6 /Applications/XAMPP/xamppfiles/htdocsindex.php(8): CApplication->run()
+#7 {main}
+REQUEST_URI=index.php?r=userinfo/index
+HTTP_REFERER=http://localhostindex.php
+---
+2014/08/25 12:13:30 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php:336
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#2 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): CController->run('index')
+#4 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('userinfo/index')
+#5 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#6 /Applications/XAMPP/xamppfiles/htdocsindex.php(8): CApplication->run()
+#7 {main}
+REQUEST_URI=index.php?r=userinfo/index
+HTTP_REFERER=http://localhostindex.php
+---
+2014/08/25 12:13:34 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php:336
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#2 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): CController->run('index')
+#4 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('userinfo/index')
+#5 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#6 /Applications/XAMPP/xamppfiles/htdocsindex.php(8): CApplication->run()
+#7 {main}
+REQUEST_URI=index.php?r=userinfo/index
+HTTP_REFERER=http://localhostindex.php
+---
+2014/08/25 12:13:46 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php:336
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#2 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): CController->run('index')
+#4 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('userinfo/index')
+#5 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#6 /Applications/XAMPP/xamppfiles/htdocsindex.php(8): CApplication->run()
+#7 {main}
+REQUEST_URI=index.php?r=userinfo/index
+---
+2014/08/25 12:13:53 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php:336
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#2 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): CController->run('')
+#4 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('userinfo')
+#5 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#6 /Applications/XAMPP/xamppfiles/htdocsindex.php(8): CApplication->run()
+#7 {main}
+REQUEST_URI=index.php?r=userinfo
+---
+2014/08/25 12:14:07 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php:336
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#2 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): CController->run('')
+#4 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('userinfo')
+#5 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#6 /Applications/XAMPP/xamppfiles/htdocsindex.php(8): CApplication->run()
+#7 {main}
+REQUEST_URI=index.php?r=userinfo
+---
+2014/08/25 12:14:24 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php:336
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#2 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): CController->run('')
+#4 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('userinfo')
+#5 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#6 /Applications/XAMPP/xamppfiles/htdocsindex.php(8): CApplication->run()
+#7 {main}
+REQUEST_URI=index.php?r=userinfo
+---
+2014/08/25 12:20:22 [error] [exception.CException] exception 'CException' with message 'Property "UserinfoController.attributes" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/framework/base/CComponent.php:173
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/web/protected/controllers/UserinfoController.php(129): CComponent->__set('attributes', Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/framework/web/actions/CInlineAction.php(49): UserinfoController->actionCheckusername()
+#2 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#4 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): CController->run('checkusername')
+#6 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('userinfo/checku...')
+#7 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#8 /Applications/XAMPP/xamppfiles/htdocsindex.php(8): CApplication->run()
+#9 {main}
+REQUEST_URI=index.php?r=userinfo/checkusername
+HTTP_REFERER=http://localhostindex.php
+---
+2014/08/25 12:26:00 [error] [exception.CException] exception 'CException' with message 'Property "UserinfoController._identity" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/framework/base/CComponent.php:130
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/web/protected/controllers/UserinfoController.php(133): CComponent->__get('_identity')
+#1 /Applications/XAMPP/xamppfiles/htdocs/framework/web/actions/CInlineAction.php(49): UserinfoController->actionCheckusername()
+#2 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#4 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): CController->run('checkusername')
+#6 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('userinfo/checku...')
+#7 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#8 /Applications/XAMPP/xamppfiles/htdocsindex.php(8): CApplication->run()
+#9 {main}
+REQUEST_URI=index.php?r=userinfo/checkusername
+HTTP_REFERER=http://localhostindex.php?
+---
+2014/08/25 12:31:18 [error] [exception.CException] exception 'CException' with message 'Property "Userinfo.password" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/framework/base/CComponent.php:130
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/framework/db/ar/CActiveRecord.php(143): CComponent->__get('password')
+#1 /Applications/XAMPP/xamppfiles/htdocs/web/protected/components/UserIdentity.php(25): CActiveRecord->__get('password')
+#2 /Applications/XAMPP/xamppfiles/htdocs/web/protected/controllers/UserinfoController.php(137): UserIdentity->authenticate()
+#3 /Applications/XAMPP/xamppfiles/htdocs/framework/web/actions/CInlineAction.php(49): UserinfoController->actionCheckusername()
+#4 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): CController->run('checkusername')
+#8 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('userinfo/checku...')
+#9 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /Applications/XAMPP/xamppfiles/htdocsindex.php(8): CApplication->run()
+#11 {main}
+REQUEST_URI=index.php?r=userinfo/checkusername
+HTTP_REFERER=http://localhostindex.php?
+---
+2014/08/25 12:31:32 [error] [exception.CException] exception 'CException' with message 'Property "Userinfo.password" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/framework/base/CComponent.php:130
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/framework/db/ar/CActiveRecord.php(143): CComponent->__get('password')
+#1 /Applications/XAMPP/xamppfiles/htdocs/web/protected/components/UserIdentity.php(25): CActiveRecord->__get('password')
+#2 /Applications/XAMPP/xamppfiles/htdocs/web/protected/controllers/UserinfoController.php(137): UserIdentity->authenticate()
+#3 /Applications/XAMPP/xamppfiles/htdocs/framework/web/actions/CInlineAction.php(49): UserinfoController->actionCheckusername()
+#4 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): CController->run('checkusername')
+#8 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('userinfo/checku...')
+#9 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /Applications/XAMPP/xamppfiles/htdocsindex.php(8): CApplication->run()
+#11 {main}
+REQUEST_URI=index.php?r=userinfo/checkusername
+HTTP_REFERER=http://localhostindex.php?
+---
+2014/08/25 12:32:22 [error] [exception.CException] exception 'CException' with message 'Property "Userinfo.password" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/framework/base/CComponent.php:130
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/framework/db/ar/CActiveRecord.php(143): CComponent->__get('password')
+#1 /Applications/XAMPP/xamppfiles/htdocs/web/protected/components/UserIdentity.php(25): CActiveRecord->__get('password')
+#2 /Applications/XAMPP/xamppfiles/htdocs/web/protected/controllers/UserinfoController.php(137): UserIdentity->authenticate()
+#3 /Applications/XAMPP/xamppfiles/htdocs/framework/web/actions/CInlineAction.php(49): UserinfoController->actionCheckusername()
+#4 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): CController->run('checkusername')
+#8 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('userinfo/checku...')
+#9 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /Applications/XAMPP/xamppfiles/htdocsindex.php(8): CApplication->run()
+#11 {main}
+REQUEST_URI=index.php?r=userinfo/checkusername
+HTTP_REFERER=http://localhostindex.php?
+---
+2014/08/25 12:32:30 [error] [exception.CException] exception 'CException' with message 'Property "Userinfo.password" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/framework/base/CComponent.php:130
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/framework/db/ar/CActiveRecord.php(143): CComponent->__get('password')
+#1 /Applications/XAMPP/xamppfiles/htdocs/web/protected/components/UserIdentity.php(25): CActiveRecord->__get('password')
+#2 /Applications/XAMPP/xamppfiles/htdocs/web/protected/controllers/UserinfoController.php(137): UserIdentity->authenticate()
+#3 /Applications/XAMPP/xamppfiles/htdocs/framework/web/actions/CInlineAction.php(49): UserinfoController->actionCheckusername()
+#4 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): CController->run('checkusername')
+#8 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('userinfo/checku...')
+#9 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /Applications/XAMPP/xamppfiles/htdocsindex.php(8): CApplication->run()
+#11 {main}
+REQUEST_URI=index.php?r=userinfo/checkusername
+HTTP_REFERER=http://localhostindex.php?
+---
+2014/08/25 12:32:57 [error] [exception.CException] exception 'CException' with message 'Property "UserIdentity.upassword" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/framework/base/CComponent.php:130
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/web/protected/components/UserIdentity.php(25): CComponent->__get('upassword')
+#1 /Applications/XAMPP/xamppfiles/htdocs/web/protected/controllers/UserinfoController.php(137): UserIdentity->authenticate()
+#2 /Applications/XAMPP/xamppfiles/htdocs/framework/web/actions/CInlineAction.php(49): UserinfoController->actionCheckusername()
+#3 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): CController->run('checkusername')
+#7 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('userinfo/checku...')
+#8 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /Applications/XAMPP/xamppfiles/htdocsindex.php(8): CApplication->run()
+#10 {main}
+REQUEST_URI=index.php?r=userinfo/checkusername
+HTTP_REFERER=http://localhostindex.php?
+---
+2014/08/25 12:33:54 [error] [exception.CException] exception 'CException' with message 'Property "UserIdentity.upassword" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/framework/base/CComponent.php:130
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/web/protected/components/UserIdentity.php(25): CComponent->__get('upassword')
+#1 /Applications/XAMPP/xamppfiles/htdocs/web/protected/controllers/UserinfoController.php(137): UserIdentity->authenticate()
+#2 /Applications/XAMPP/xamppfiles/htdocs/framework/web/actions/CInlineAction.php(49): UserinfoController->actionCheckusername()
+#3 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): CController->run('checkusername')
+#7 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('userinfo/checku...')
+#8 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /Applications/XAMPP/xamppfiles/htdocsindex.php(8): CApplication->run()
+#10 {main}
+REQUEST_URI=index.php?r=userinfo/checkusername
+HTTP_REFERER=http://localhostindex.php?
+---
+2014/08/25 12:34:19 [error] [exception.CException] exception 'CException' with message 'Property "UserIdentity.upassword" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/framework/base/CComponent.php:130
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/web/protected/components/UserIdentity.php(26): CComponent->__get('upassword')
+#1 /Applications/XAMPP/xamppfiles/htdocs/web/protected/controllers/UserinfoController.php(137): UserIdentity->authenticate()
+#2 /Applications/XAMPP/xamppfiles/htdocs/framework/web/actions/CInlineAction.php(49): UserinfoController->actionCheckusername()
+#3 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): CController->run('checkusername')
+#7 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('userinfo/checku...')
+#8 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /Applications/XAMPP/xamppfiles/htdocsindex.php(8): CApplication->run()
+#10 {main}
+REQUEST_URI=index.php?r=userinfo/checkusername
+HTTP_REFERER=http://localhostindex.php?
+---
+2014/08/25 12:36:44 [error] [exception.CException] exception 'CException' with message 'Property "UserIdentity.upassword" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/framework/base/CComponent.php:130
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/web/protected/components/UserIdentity.php(26): CComponent->__get('upassword')
+#1 /Applications/XAMPP/xamppfiles/htdocs/web/protected/controllers/UserinfoController.php(137): UserIdentity->authenticate()
+#2 /Applications/XAMPP/xamppfiles/htdocs/framework/web/actions/CInlineAction.php(49): UserinfoController->actionCheckusername()
+#3 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): CController->run('checkusername')
+#7 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('userinfo/checku...')
+#8 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /Applications/XAMPP/xamppfiles/htdocsindex.php(8): CApplication->run()
+#10 {main}
+REQUEST_URI=index.php?r=userinfo/checkusername
+HTTP_REFERER=http://localhostindex.php?
+---
+2014/08/25 12:37:40 [error] [exception.CException] exception 'CException' with message 'Property "UserIdentity.upassword" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/framework/base/CComponent.php:130
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/web/protected/components/UserIdentity.php(26): CComponent->__get('upassword')
+#1 /Applications/XAMPP/xamppfiles/htdocs/web/protected/controllers/UserinfoController.php(137): UserIdentity->authenticate()
+#2 /Applications/XAMPP/xamppfiles/htdocs/framework/web/actions/CInlineAction.php(49): UserinfoController->actionCheckusername()
+#3 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): CController->run('checkusername')
+#7 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('userinfo/checku...')
+#8 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /Applications/XAMPP/xamppfiles/htdocsindex.php(8): CApplication->run()
+#10 {main}
+REQUEST_URI=index.php?r=userinfo/checkusername
+HTTP_REFERER=http://localhostindex.php?
+---
+2014/08/25 12:38:05 [error] [exception.CException] exception 'CException' with message 'Property "UserIdentity.upassword" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/framework/base/CComponent.php:130
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/web/protected/components/UserIdentity.php(20): CComponent->__get('upassword')
+#1 /Applications/XAMPP/xamppfiles/htdocs/web/protected/controllers/UserinfoController.php(137): UserIdentity->authenticate()
+#2 /Applications/XAMPP/xamppfiles/htdocs/framework/web/actions/CInlineAction.php(49): UserinfoController->actionCheckusername()
+#3 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): CController->run('checkusername')
+#7 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('userinfo/checku...')
+#8 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /Applications/XAMPP/xamppfiles/htdocsindex.php(8): CApplication->run()
+#10 {main}
+REQUEST_URI=index.php?r=userinfo/checkusername
+HTTP_REFERER=http://localhostindex.php?
+---
+2014/08/25 12:39:10 [error] [exception.CException] exception 'CException' with message 'Property "UserIdentity.upassword" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/framework/base/CComponent.php:130
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/web/protected/components/UserIdentity.php(20): CComponent->__get('upassword')
+#1 /Applications/XAMPP/xamppfiles/htdocs/web/protected/controllers/UserinfoController.php(138): UserIdentity->authenticate()
+#2 /Applications/XAMPP/xamppfiles/htdocs/framework/web/actions/CInlineAction.php(49): UserinfoController->actionCheckusername()
+#3 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): CController->run('checkusername')
+#7 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('userinfo/checku...')
+#8 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /Applications/XAMPP/xamppfiles/htdocsindex.php(8): CApplication->run()
+#10 {main}
+REQUEST_URI=index.php?r=userinfo/checkusername
+HTTP_REFERER=http://localhostindex.php?
+---
+2014/08/25 12:39:16 [error] [exception.CException] exception 'CException' with message 'Property "UserIdentity.upassword" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/framework/base/CComponent.php:130
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/web/protected/components/UserIdentity.php(20): CComponent->__get('upassword')
+#1 /Applications/XAMPP/xamppfiles/htdocs/web/protected/controllers/UserinfoController.php(138): UserIdentity->authenticate()
+#2 /Applications/XAMPP/xamppfiles/htdocs/framework/web/actions/CInlineAction.php(49): UserinfoController->actionCheckusername()
+#3 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): CController->run('checkusername')
+#7 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('userinfo/checku...')
+#8 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /Applications/XAMPP/xamppfiles/htdocsindex.php(8): CApplication->run()
+#10 {main}
+REQUEST_URI=index.php?r=userinfo/checkusername
+HTTP_REFERER=http://localhostindex.php?
+---
+2014/08/25 12:40:45 [error] [exception.CException] exception 'CException' with message 'Property "UserIdentity.upassword" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/framework/base/CComponent.php:130
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/web/protected/components/UserIdentity.php(25): CComponent->__get('upassword')
+#1 /Applications/XAMPP/xamppfiles/htdocs/web/protected/controllers/UserinfoController.php(137): UserIdentity->authenticate()
+#2 /Applications/XAMPP/xamppfiles/htdocs/framework/web/actions/CInlineAction.php(49): UserinfoController->actionCheckusername()
+#3 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): CController->run('checkusername')
+#7 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('userinfo/checku...')
+#8 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /Applications/XAMPP/xamppfiles/htdocsindex.php(8): CApplication->run()
+#10 {main}
+REQUEST_URI=index.php?r=userinfo/checkusername
+HTTP_REFERER=http://localhostindex.php?
+---
+2014/08/25 13:18:00 [error] [exception.CException] exception 'CException' with message 'Property "UserIdentity.upassword" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/framework/base/CComponent.php:130
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/web/protected/components/UserIdentity.php(25): CComponent->__get('upassword')
+#1 /Applications/XAMPP/xamppfiles/htdocs/web/protected/controllers/UserinfoController.php(137): UserIdentity->authenticate()
+#2 /Applications/XAMPP/xamppfiles/htdocs/framework/web/actions/CInlineAction.php(49): UserinfoController->actionCheckusername()
+#3 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): CController->run('checkusername')
+#7 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('userinfo/checku...')
+#8 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /Applications/XAMPP/xamppfiles/htdocsindex.php(8): CApplication->run()
+#10 {main}
+REQUEST_URI=index.php?r=userinfo/checkusername
+HTTP_REFERER=http://localhostindex.php?
+---
+2014/08/25 13:45:48 [error] [exception.CException] exception 'CException' with message 'Property "Userinfo._identity" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/framework/base/CComponent.php:130
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/framework/db/ar/CActiveRecord.php(143): CComponent->__get('_identity')
+#1 /Applications/XAMPP/xamppfiles/htdocs/web/protected/models/Userinfo.php(60): CActiveRecord->__get('_identity')
+#2 /Applications/XAMPP/xamppfiles/htdocs/web/protected/controllers/UserinfoController.php(133): Userinfo->login()
+#3 /Applications/XAMPP/xamppfiles/htdocs/framework/web/actions/CInlineAction.php(49): UserinfoController->actionCheckusername()
+#4 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): CController->run('checkusername')
+#8 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('userinfo/checku...')
+#9 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /Applications/XAMPP/xamppfiles/htdocsindex.php(8): CApplication->run()
+#11 {main}
+REQUEST_URI=index.php?r=userinfo/checkusername
+HTTP_REFERER=http://localhostindex.php?
+---
+2014/08/25 13:46:26 [error] [exception.CException] exception 'CException' with message 'Property "Userinfo._identity" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/framework/base/CComponent.php:130
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/framework/db/ar/CActiveRecord.php(143): CComponent->__get('_identity')
+#1 /Applications/XAMPP/xamppfiles/htdocs/web/protected/models/Userinfo.php(60): CActiveRecord->__get('_identity')
+#2 /Applications/XAMPP/xamppfiles/htdocs/web/protected/controllers/UserinfoController.php(133): Userinfo->login()
+#3 /Applications/XAMPP/xamppfiles/htdocs/framework/web/actions/CInlineAction.php(49): UserinfoController->actionCheckusername()
+#4 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): CController->run('checkusername')
+#8 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('userinfo/checku...')
+#9 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /Applications/XAMPP/xamppfiles/htdocsindex.php(8): CApplication->run()
+#11 {main}
+REQUEST_URI=index.php?r=userinfo/checkusername
+HTTP_REFERER=http://localhostindex.php?
+---
+2014/08/25 13:46:30 [error] [exception.CException] exception 'CException' with message 'Property "Userinfo._identity" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/framework/base/CComponent.php:130
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/framework/db/ar/CActiveRecord.php(143): CComponent->__get('_identity')
+#1 /Applications/XAMPP/xamppfiles/htdocs/web/protected/models/Userinfo.php(60): CActiveRecord->__get('_identity')
+#2 /Applications/XAMPP/xamppfiles/htdocs/web/protected/controllers/UserinfoController.php(133): Userinfo->login()
+#3 /Applications/XAMPP/xamppfiles/htdocs/framework/web/actions/CInlineAction.php(49): UserinfoController->actionCheckusername()
+#4 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): CController->run('checkusername')
+#8 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('userinfo/checku...')
+#9 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /Applications/XAMPP/xamppfiles/htdocsindex.php(8): CApplication->run()
+#11 {main}
+REQUEST_URI=index.php?r=userinfo/checkusername
+HTTP_REFERER=http://localhostindex.php?
+---
+2014/08/25 13:47:30 [error] [exception.CException] exception 'CException' with message 'Property "Userinfo.password" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/framework/base/CComponent.php:130
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/framework/db/ar/CActiveRecord.php(143): CComponent->__get('password')
+#1 /Applications/XAMPP/xamppfiles/htdocs/web/protected/models/Userinfo.php(63): CActiveRecord->__get('password')
+#2 /Applications/XAMPP/xamppfiles/htdocs/web/protected/controllers/UserinfoController.php(132): Userinfo->login()
+#3 /Applications/XAMPP/xamppfiles/htdocs/framework/web/actions/CInlineAction.php(49): UserinfoController->actionCheckusername()
+#4 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): CController->run('checkusername')
+#8 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('userinfo/checku...')
+#9 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /Applications/XAMPP/xamppfiles/htdocsindex.php(8): CApplication->run()
+#11 {main}
+REQUEST_URI=index.php?r=userinfo/checkusername
+HTTP_REFERER=http://localhostindex.php?
+---
+2014/08/25 13:47:36 [error] [exception.CException] exception 'CException' with message 'Property "Userinfo.password" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/framework/base/CComponent.php:130
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/framework/db/ar/CActiveRecord.php(143): CComponent->__get('password')
+#1 /Applications/XAMPP/xamppfiles/htdocs/web/protected/models/Userinfo.php(63): CActiveRecord->__get('password')
+#2 /Applications/XAMPP/xamppfiles/htdocs/web/protected/controllers/UserinfoController.php(132): Userinfo->login()
+#3 /Applications/XAMPP/xamppfiles/htdocs/framework/web/actions/CInlineAction.php(49): UserinfoController->actionCheckusername()
+#4 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): CController->run('checkusername')
+#8 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('userinfo/checku...')
+#9 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /Applications/XAMPP/xamppfiles/htdocsindex.php(8): CApplication->run()
+#11 {main}
+REQUEST_URI=index.php?r=userinfo/checkusername
+HTTP_REFERER=http://localhostindex.php?
+---
+2014/08/25 17:43:05 [error] [exception.SmartyException] exception 'SmartyException' with message 'Unable to load template file 'home/page/home.tpl'' in /Applications/XAMPP/xamppfiles/htdocs/web/protected/extensions/smarty/sysplugins/smarty_internal_templatebase.php:127
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/web/protected/extensions/smarty/sysplugins/smarty_internal_templatebase.php(374): Smarty_Internal_TemplateBase->fetch('home/page/home....', NULL, NULL, NULL, true)
+#1 /Applications/XAMPP/xamppfiles/htdocs/web/protected/controllers/SiteController.php(15): Smarty_Internal_TemplateBase->display('home/page/home....')
+#2 /Applications/XAMPP/xamppfiles/htdocs/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#3 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): CController->run('')
+#7 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#8 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /Applications/XAMPP/xamppfiles/htdocsindex.php(8): CApplication->run()
+#10 {main}
+REQUEST_URI=index.php
+---
+2014/08/25 17:44:00 [error] [exception.SmartyException] exception 'SmartyException' with message 'Unable to load template file 'home/page/home.tpl'' in /Applications/XAMPP/xamppfiles/htdocs/web/protected/extensions/smarty/sysplugins/smarty_internal_templatebase.php:127
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/web/protected/extensions/smarty/sysplugins/smarty_internal_templatebase.php(374): Smarty_Internal_TemplateBase->fetch('home/page/home....', NULL, NULL, NULL, true)
+#1 /Applications/XAMPP/xamppfiles/htdocs/web/protected/controllers/SiteController.php(15): Smarty_Internal_TemplateBase->display('home/page/home....')
+#2 /Applications/XAMPP/xamppfiles/htdocs/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#3 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): CController->run('')
+#7 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#8 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /Applications/XAMPP/xamppfiles/htdocsindex.php(8): CApplication->run()
+#10 {main}
+REQUEST_URI=index.php
+---
+2014/08/25 17:44:32 [error] [exception.SmartyException] exception 'SmartyException' with message 'Unable to load template file 'home/page/main.tpl'' in /Applications/XAMPP/xamppfiles/htdocs/web/protected/extensions/smarty/sysplugins/smarty_internal_templatebase.php:127
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/web/protected/extensions/smarty/sysplugins/smarty_internal_templatebase.php(374): Smarty_Internal_TemplateBase->fetch('home/page/main....', NULL, NULL, NULL, true)
+#1 /Applications/XAMPP/xamppfiles/htdocs/web/protected/controllers/SiteController.php(15): Smarty_Internal_TemplateBase->display('home/page/main....')
+#2 /Applications/XAMPP/xamppfiles/htdocs/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#3 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): CController->run('')
+#7 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#8 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /Applications/XAMPP/xamppfiles/htdocsindex.php(8): CApplication->run()
+#10 {main}
+REQUEST_URI=index.php
+---
+2014/08/25 17:52:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "login".' in /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('login')
+#1 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocsindex.php(8): CApplication->run()
+#3 {main}
+REQUEST_URI=index.php?r=login
+---
+2014/08/25 17:56:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loginout".' in /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(270): CController->missingAction('loginout')
+#1 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): CController->run('loginout')
+#2 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('userinfo/logino...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocsindex.php(8): CApplication->run()
+#5 {main}
+REQUEST_URI=index.php?r=userinfo/loginout
+---
+2014/08/25 18:15:47 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'railsecdatabase.userinfo' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `userinfo`.
+2014/08/25 18:15:47 [error] [exception.CDbException] exception 'CDbException' with message 'The table "userinfo" for active record class "Userinfo" cannot be found in the database.' in /Applications/XAMPP/xamppfiles/htdocs/framework/db/ar/CActiveRecord.php:2310
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/framework/db/ar/CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Userinfo))
+#1 /Applications/XAMPP/xamppfiles/htdocs/framework/gii/generators/crud/CrudCode.php(66): CActiveRecord::model('Userinfo')
+#2 /Applications/XAMPP/xamppfiles/htdocs/framework/validators/CInlineValidator.php(42): CrudCode->validateModel('model', Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute(Object(CrudCode), 'model')
+#4 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CModel.php(159): CValidator->validate(Object(CrudCode), NULL)
+#5 /Applications/XAMPP/xamppfiles/htdocs/framework/gii/CCodeGenerator.php(159): CModel->validate()
+#6 /Applications/XAMPP/xamppfiles/htdocs/framework/gii/CCodeGenerator.php(63): CCodeGenerator->prepare()
+#7 /Applications/XAMPP/xamppfiles/htdocs/framework/web/actions/CInlineAction.php(49): CCodeGenerator->actionIndex()
+#8 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): CController->run('')
+#12 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('gii/crud')
+#13 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /Applications/XAMPP/xamppfiles/htdocsindex.php(8): CApplication->run()
+#15 {main}
+REQUEST_URI=index.php?r=gii/crud
+HTTP_REFERER=http://localhostindex.php?r=gii/crud
+---
+2014/08/25 18:16:13 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'railsecdatabase.userinfo' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `userinfo`.
+2014/08/25 18:16:13 [error] [exception.CDbException] exception 'CDbException' with message 'The table "userinfo" for active record class "Userinfo" cannot be found in the database.' in /Applications/XAMPP/xamppfiles/htdocs/framework/db/ar/CActiveRecord.php:2310
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/framework/db/ar/CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Userinfo))
+#1 /Applications/XAMPP/xamppfiles/htdocs/framework/gii/generators/crud/CrudCode.php(66): CActiveRecord::model('Userinfo')
+#2 /Applications/XAMPP/xamppfiles/htdocs/framework/validators/CInlineValidator.php(42): CrudCode->validateModel('model', Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute(Object(CrudCode), 'model')
+#4 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CModel.php(159): CValidator->validate(Object(CrudCode), NULL)
+#5 /Applications/XAMPP/xamppfiles/htdocs/framework/gii/CCodeGenerator.php(159): CModel->validate()
+#6 /Applications/XAMPP/xamppfiles/htdocs/framework/gii/CCodeGenerator.php(63): CCodeGenerator->prepare()
+#7 /Applications/XAMPP/xamppfiles/htdocs/framework/web/actions/CInlineAction.php(49): CCodeGenerator->actionIndex()
+#8 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): CController->run('')
+#12 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('gii/crud')
+#13 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /Applications/XAMPP/xamppfiles/htdocsindex.php(8): CApplication->run()
+#15 {main}
+REQUEST_URI=index.php?r=gii/crud
+HTTP_REFERER=http://localhostindex.php?r=gii/crud
+---
+2014/08/25 18:24:05 [error] [exception.CException] exception 'CException' with message 'Property "Userinfo._identity" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/framework/base/CComponent.php:130
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/framework/db/ar/CActiveRecord.php(143): CComponent->__get('_identity')
+#1 /Applications/XAMPP/xamppfiles/htdocs/web/protected/models/Userinfo.php(52): CActiveRecord->__get('_identity')
+#2 /Applications/XAMPP/xamppfiles/htdocs/web/protected/controllers/UserinfoController.php(96): Userinfo->login()
+#3 /Applications/XAMPP/xamppfiles/htdocs/framework/web/actions/CInlineAction.php(49): UserinfoController->actionCheckusername()
+#4 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): CController->run('checkusername')
+#8 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('userinfo/checku...')
+#9 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /Applications/XAMPP/xamppfiles/htdocsindex.php(8): CApplication->run()
+#11 {main}
+REQUEST_URI=index.php?r=userinfo/checkusername
+HTTP_REFERER=http://localhostindex.php?r=site/login
+---
+2014/08/25 18:25:41 [error] [exception.CException] exception 'CException' with message 'Property "Userinfo._identity" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/framework/base/CComponent.php:130
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/framework/db/ar/CActiveRecord.php(143): CComponent->__get('_identity')
+#1 /Applications/XAMPP/xamppfiles/htdocs/web/protected/models/Userinfo.php(52): CActiveRecord->__get('_identity')
+#2 /Applications/XAMPP/xamppfiles/htdocs/web/protected/controllers/UserinfoController.php(96): Userinfo->login()
+#3 /Applications/XAMPP/xamppfiles/htdocs/framework/web/actions/CInlineAction.php(49): UserinfoController->actionCheckusername()
+#4 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): CController->run('checkusername')
+#8 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('userinfo/checku...')
+#9 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /Applications/XAMPP/xamppfiles/htdocsindex.php(8): CApplication->run()
+#11 {main}
+REQUEST_URI=index.php?r=userinfo/checkusername
+HTTP_REFERER=http://localhostindex.php?r=site/login
+---
+2014/08/27 14:59:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "list".' in /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(270): CController->missingAction('list')
+#1 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): CController->run('list')
+#2 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('dutyperson/list')
+#3 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocsindex.php(8): CApplication->run()
+#5 {main}
+REQUEST_URI=index.php?r=dutyperson/list
+---
+2014/08/27 14:59:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "edit".' in /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(270): CController->missingAction('edit')
+#1 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): CController->run('edit')
+#2 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('dutyperson/edit')
+#3 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocsindex.php(8): CApplication->run()
+#5 {main}
+REQUEST_URI=index.php?r=dutyperson/edit&id=1
+---
+2014/08/27 15:07:13 [error] [exception.CException] exception 'CException' with message 'Property "CActiveDataProvider.Dutyperson" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/framework/base/CComponent.php:130
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/web/protected/controllers/DutypersonController.php(83): CComponent->__get('Dutyperson')
+#1 /Applications/XAMPP/xamppfiles/htdocs/framework/web/actions/CInlineAction.php(49): DutypersonController->actionIndex()
+#2 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#4 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): CController->run('')
+#6 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('dutyperson')
+#7 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#8 /Applications/XAMPP/xamppfiles/htdocsindex.php(8): CApplication->run()
+#9 {main}
+REQUEST_URI=index.php?r=dutyperson
+---
+2014/08/28 03:33:42 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'bbb' for key 'dutyername'. The SQL statement executed was: INSERT INTO `tl_dutyperson` (`dutyername`) VALUES (:yp0).
+2014/08/28 03:33:42 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'bbb' for key 'dutyername'. The SQL statement executed was: INSERT INTO `tl_dutyperson` (`dutyername`) VALUES (:yp0)' in /Applications/XAMPP/xamppfiles/htdocs/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /Applications/XAMPP/xamppfiles/htdocs/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/web/protected/controllers/DutypersonController.php(30): CActiveRecord->save()
+#3 /Applications/XAMPP/xamppfiles/htdocs/framework/web/actions/CInlineAction.php(49): DutypersonController->actionCreate()
+#4 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): CController->run('create')
+#8 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('dutyperson/crea...')
+#9 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /Applications/XAMPP/xamppfiles/htdocsindex.php(8): CApplication->run()
+#11 {main}
+REQUEST_URI=index.php?r=dutyperson/create
+HTTP_REFERER=http://localhostindex.php?r=dutyperson/create
+---
+2014/08/28 03:34:36 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '??' for key 'dutyername'. The SQL statement executed was: INSERT INTO `tl_dutyperson` (`dutyername`) VALUES (:yp0).
+2014/08/28 03:34:36 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '??' for key 'dutyername'. The SQL statement executed was: INSERT INTO `tl_dutyperson` (`dutyername`) VALUES (:yp0)' in /Applications/XAMPP/xamppfiles/htdocs/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /Applications/XAMPP/xamppfiles/htdocs/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/web/protected/controllers/DutypersonController.php(30): CActiveRecord->save()
+#3 /Applications/XAMPP/xamppfiles/htdocs/framework/web/actions/CInlineAction.php(49): DutypersonController->actionCreate()
+#4 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): CController->run('create')
+#8 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('dutyperson/crea...')
+#9 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /Applications/XAMPP/xamppfiles/htdocsindex.php(8): CApplication->run()
+#11 {main}
+REQUEST_URI=index.php?r=dutyperson/create
+HTTP_REFERER=http://localhostindex.php?r=dutyperson/create
+---
+2014/08/28 03:34:47 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '??' for key 'dutyername'. The SQL statement executed was: INSERT INTO `tl_dutyperson` (`dutyername`) VALUES (:yp0).
+2014/08/28 03:34:47 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '??' for key 'dutyername'. The SQL statement executed was: INSERT INTO `tl_dutyperson` (`dutyername`) VALUES (:yp0)' in /Applications/XAMPP/xamppfiles/htdocs/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /Applications/XAMPP/xamppfiles/htdocs/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/web/protected/controllers/DutypersonController.php(30): CActiveRecord->save()
+#3 /Applications/XAMPP/xamppfiles/htdocs/framework/web/actions/CInlineAction.php(49): DutypersonController->actionCreate()
+#4 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): CController->run('create')
+#8 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('dutyperson/crea...')
+#9 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /Applications/XAMPP/xamppfiles/htdocsindex.php(8): CApplication->run()
+#11 {main}
+REQUEST_URI=index.php?r=dutyperson/create
+HTTP_REFERER=http://localhostindex.php?r=dutyperson/create
+---
+2014/08/28 03:34:53 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '??' for key 'dutyername'. The SQL statement executed was: INSERT INTO `tl_dutyperson` (`dutyername`) VALUES (:yp0).
+2014/08/28 03:34:53 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '??' for key 'dutyername'. The SQL statement executed was: INSERT INTO `tl_dutyperson` (`dutyername`) VALUES (:yp0)' in /Applications/XAMPP/xamppfiles/htdocs/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /Applications/XAMPP/xamppfiles/htdocs/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/web/protected/controllers/DutypersonController.php(30): CActiveRecord->save()
+#3 /Applications/XAMPP/xamppfiles/htdocs/framework/web/actions/CInlineAction.php(49): DutypersonController->actionCreate()
+#4 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): CController->run('create')
+#8 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('dutyperson/crea...')
+#9 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /Applications/XAMPP/xamppfiles/htdocsindex.php(8): CApplication->run()
+#11 {main}
+REQUEST_URI=index.php?r=dutyperson/create
+HTTP_REFERER=http://localhostindex.php?r=dutyperson/create
+---
+2014/08/28 03:35:01 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '??' for key 'dutyername'. The SQL statement executed was: INSERT INTO `tl_dutyperson` (`dutyername`) VALUES (:yp0).
+2014/08/28 03:35:01 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '??' for key 'dutyername'. The SQL statement executed was: INSERT INTO `tl_dutyperson` (`dutyername`) VALUES (:yp0)' in /Applications/XAMPP/xamppfiles/htdocs/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /Applications/XAMPP/xamppfiles/htdocs/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/web/protected/controllers/DutypersonController.php(30): CActiveRecord->save()
+#3 /Applications/XAMPP/xamppfiles/htdocs/framework/web/actions/CInlineAction.php(49): DutypersonController->actionCreate()
+#4 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): CController->run('create')
+#8 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('dutyperson/crea...')
+#9 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /Applications/XAMPP/xamppfiles/htdocsindex.php(8): CApplication->run()
+#11 {main}
+REQUEST_URI=index.php?r=dutyperson/create
+HTTP_REFERER=http://localhostindex.php?r=dutyperson/create
+---
+2014/08/28 06:14:03 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '15' at line 1. The SQL statement executed was: 15.
+2014/08/28 06:14:03 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '15' at line 1. The SQL statement executed was: 15' in /Applications/XAMPP/xamppfiles/htdocs/framework/db/CDbCommand.php:541
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/framework/db/CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/framework/db/ar/CActiveRecord.php(1527): CDbCommand->queryAll()
+#2 /Applications/XAMPP/xamppfiles/htdocs/web/protected/controllers/DutypersonController.php(91): CActiveRecord->findAllBySql(15)
+#3 /Applications/XAMPP/xamppfiles/htdocs/framework/web/actions/CInlineAction.php(49): DutypersonController->actionIndex()
+#4 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): CController->run('index')
+#8 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('dutyperson/inde...')
+#9 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /Applications/XAMPP/xamppfiles/htdocsindex.php(8): CApplication->run()
+#11 {main}
+REQUEST_URI=index.php?r=dutyperson/index&_dc=1409199243744&start=0&limit=15
+HTTP_REFERER=http://localhostindex.php
+---
+2014/08/28 06:15:47 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '15' at line 1. The SQL statement executed was: 15.
+2014/08/28 06:15:47 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '15' at line 1. The SQL statement executed was: 15' in /Applications/XAMPP/xamppfiles/htdocs/framework/db/CDbCommand.php:541
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/framework/db/CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/framework/db/ar/CActiveRecord.php(1527): CDbCommand->queryAll()
+#2 /Applications/XAMPP/xamppfiles/htdocs/web/protected/controllers/DutypersonController.php(91): CActiveRecord->findAllBySql(15)
+#3 /Applications/XAMPP/xamppfiles/htdocs/framework/web/actions/CInlineAction.php(49): DutypersonController->actionIndex()
+#4 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): CController->run('index')
+#8 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('dutyperson/inde...')
+#9 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /Applications/XAMPP/xamppfiles/htdocsindex.php(8): CApplication->run()
+#11 {main}
+REQUEST_URI=index.php?r=dutyperson/index&_dc=1409199243744&start=0&limit=15
+---
+2014/08/28 06:15:58 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '15' at line 1. The SQL statement executed was: 15.
+2014/08/28 06:15:58 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '15' at line 1. The SQL statement executed was: 15' in /Applications/XAMPP/xamppfiles/htdocs/framework/db/CDbCommand.php:541
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/framework/db/CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/framework/db/ar/CActiveRecord.php(1527): CDbCommand->queryAll()
+#2 /Applications/XAMPP/xamppfiles/htdocs/web/protected/controllers/DutypersonController.php(91): CActiveRecord->findAllBySql(15)
+#3 /Applications/XAMPP/xamppfiles/htdocs/framework/web/actions/CInlineAction.php(49): DutypersonController->actionIndex()
+#4 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): CController->run('index')
+#8 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('dutyperson/inde...')
+#9 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /Applications/XAMPP/xamppfiles/htdocsindex.php(8): CApplication->run()
+#11 {main}
+REQUEST_URI=index.php?r=dutyperson/index&_dc=1409199243744&start=0&limit=15
+---
+2014/08/28 06:16:17 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '15' at line 1. The SQL statement executed was: 15.
+2014/08/28 06:16:17 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '15' at line 1. The SQL statement executed was: 15' in /Applications/XAMPP/xamppfiles/htdocs/framework/db/CDbCommand.php:541
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/framework/db/CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/framework/db/ar/CActiveRecord.php(1527): CDbCommand->queryAll()
+#2 /Applications/XAMPP/xamppfiles/htdocs/web/protected/controllers/DutypersonController.php(92): CActiveRecord->findAllBySql(15)
+#3 /Applications/XAMPP/xamppfiles/htdocs/framework/web/actions/CInlineAction.php(49): DutypersonController->actionIndex()
+#4 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): CController->run('index')
+#8 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('dutyperson/inde...')
+#9 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /Applications/XAMPP/xamppfiles/htdocsindex.php(8): CApplication->run()
+#11 {main}
+REQUEST_URI=index.php?r=dutyperson/index&_dc=1409199243744&start=0&limit=15
+---
+2014/08/28 06:16:19 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '15' at line 1. The SQL statement executed was: 15.
+2014/08/28 06:16:19 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '15' at line 1. The SQL statement executed was: 15' in /Applications/XAMPP/xamppfiles/htdocs/framework/db/CDbCommand.php:541
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/framework/db/CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/framework/db/ar/CActiveRecord.php(1527): CDbCommand->queryAll()
+#2 /Applications/XAMPP/xamppfiles/htdocs/web/protected/controllers/DutypersonController.php(92): CActiveRecord->findAllBySql(15)
+#3 /Applications/XAMPP/xamppfiles/htdocs/framework/web/actions/CInlineAction.php(49): DutypersonController->actionIndex()
+#4 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(282): CController->run('index')
+#8 /Applications/XAMPP/xamppfiles/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('dutyperson/inde...')
+#9 /Applications/XAMPP/xamppfiles/htdocs/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /Applications/XAMPP/xamppfiles/htdocsindex.php(8): CApplication->run()
+#11 {main}
+REQUEST_URI=index.php?r=dutyperson/index&_dc=1409199243744&start=0&limit=15
+---

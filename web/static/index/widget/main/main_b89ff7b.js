@@ -1,0 +1,1 @@
+define("index:widget/main/main.js",function(){});

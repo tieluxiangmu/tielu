@@ -1,0 +1,1 @@
+define("common:widget/weblistener/weblistener.js",function(e,n,o){var i=i||{},i={init:function(){listener.on("com.myTest","say",function(e,n){console.log(n)})}};o.exports=i});

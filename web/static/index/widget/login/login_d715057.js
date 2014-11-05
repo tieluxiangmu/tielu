@@ -1,0 +1,1 @@
+define("index:widget/login/login.js",function(n,i,t){var o=o||{};o={init:function(){var n=this;n.render(),n.bind()},render:function(){var n=this;n.loginbtn=$("#submit-btn")},bind:function(){this.loginbtn.click(function(){location.href="/web"})}},t.exports=o});

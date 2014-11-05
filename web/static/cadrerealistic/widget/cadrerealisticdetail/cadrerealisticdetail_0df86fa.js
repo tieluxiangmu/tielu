@@ -1,0 +1,1 @@
+define("cadrerealistic:widget/cadrerealisticdetail/cadrerealisticdetail.js",function(i,e,n){var r=r||{};r={init:function(){var i=this;i.render(),i.bind()},render:function(){},bind:function(){}},n.exports=r});

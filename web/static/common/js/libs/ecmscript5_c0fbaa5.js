@@ -1,0 +1,1 @@
+Array.prototype.indexOf||(Array.prototype.indexOf=function(r,t){for(var e=t||0;e<this.length;e++)if(this[e]===r)return e;return-1});

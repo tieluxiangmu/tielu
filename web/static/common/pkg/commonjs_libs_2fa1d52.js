@@ -1,0 +1,2 @@
+define("common:widget/commonhelp/commonhelp.js",function(o,n,e){{var m=m||{};window.ui}m={},e.exports=m});
+;define("common:widget/weblistener/weblistener.js",function(e,n,o){var i=i||{},i={init:function(){listener.on("com.myTest","say",function(e,n){console.log(n)})}};o.exports=i});
