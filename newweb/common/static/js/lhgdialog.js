@@ -1,0 +1,1 @@
+﻿document.write("<script src='/web/static/libs/lhgdialog/lhgdialog.js'></script>");
