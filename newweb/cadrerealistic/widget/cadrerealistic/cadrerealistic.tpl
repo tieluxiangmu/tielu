@@ -1,15 +1,15 @@
 <div class="content-box">
   <div class="content-box-header">
     <h3>
-    干部写实管理表 </h3>
+    干部写实管理 </h3>
     <ul class="content-box-tabs">
       <li>
       <a href="#tab1" class="default-tab current">
-      管理写实 </a>
+      管理干部写实 </a>
       </li>
       <li>
       <a href="#tab2">
-      添加写实 </a>
+      添加干部写实 </a>
       </li>
     </ul>
     <div class="clear">
@@ -20,15 +20,13 @@
       <form class="search">
         <fieldset>
           <p>
-            <span>
-            请选择日期 </span>
+            <span class="spantitle">选择日期 </span>
             <input class="Wdate text-input small-input" onclick="WdatePicker()" type="text" id="js-input-sdateofentry"/>
-            <span>到</span>
+            <span class="spantitle">到</span>
             <input class="Wdate text-input small-input" onclick="WdatePicker()" type="text" id="js-input-edateofentry"/>
           </p>
           <p>
-            <span>
-            检查人 </span>
+            <span class="spantitle">检&nbsp;&nbsp;查&nbsp;&nbsp;人 </span>
             <select class="chosen-select" id="checkperson">
               <option selected="selected" value="">请选择</option>
               <option value="余戈">余戈</option>
@@ -42,8 +40,7 @@
               <option value="汤献忠">汤献忠</option>
               <option value="黄成福">黄成福</option>
             </select>
-            <span>
-            检查方式 </span>
+            <span class="spantitle">检查方式 </span>
             <select class="chosen-select" id="checkmodel">
               <option selected="selected" value="">请选择</option>
               <option value="添乘">
@@ -55,8 +52,7 @@
             </select>
           </p>
           <p>
-            <span>
-            值班干部 </span>
+            <span class="spantitle">值班干部 </span>
             <select class="chosen-select" id="adresonduty">
               <option selected="selected" value="">请选择</option>
               <option value="钟世能">钟世能</option>
@@ -70,8 +66,7 @@
               <option value="罗尤宽">罗尤宽</option>
               <option value="黄毅">黄毅</option>
             </select>
-            <span>
-            两违类别 </span>
+            <span class="spantitle">两违类别 </span>
             <select class="chosen-select" id="categorynumber">
               <option selected="selected" value="">请选择</option>
               <option value="A">

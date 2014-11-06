@@ -217,6 +217,13 @@ body{
     /*background:url('/static/images/icons/bullet_black.png') center left no-repeat;
     padding:4px 0 4px 20px*/
 }
+#main-content ul li a{
+    /*background:url('/static/images/icons/bullet_black.png') center left no-repeat;
+    padding:4px 0 4px 20px*/
+    font-weight: bolder;
+    color: #57a000;
+    font-size:14px;
+}
 #main-content ol{
     padding:0 0 0 24px
 }
@@ -240,7 +247,7 @@ body{
 }
 ul.content-box-tabs{
     float:right;
-    padding:12px 15px 0 0 !important;
+    padding:10px 15px 0 0 !important;
     margin:0 !important
 }
 ul.content-box-tabs li{
@@ -257,7 +264,7 @@ ul.content-box-tabs li a{
     border-bottom:0
 }
 ul.content-box-tabs li a:hover{
-    color:#57a000
+    color:orange !important;
 }
 ul.content-box-tabs li a.current{
     background:#fff;
@@ -943,8 +950,8 @@ table {
 100%{-moz-transform:translateX(0)}*/
 }
 #login-content{
--webkit-animation:fadeInDown 1s .2s ease both;
--moz-animation:fadeInDown 1s .2s ease both;}
+-webkit-animation:fadeInDown 0.7s .2s ease both;
+-moz-animation:fadeInDown 0.7s .2s ease both;}
 @-webkit-keyframes fadeInDown{
 0%{opacity:0;
 -webkit-transform:translateY(-20px)}
@@ -958,8 +965,8 @@ table {
 -moz-transform:translateY(0)}
 }
 #logo{
--webkit-animation:bounceIn 1s .2s ease both;
--moz-animation:bounceIn 1s .2s ease both;}
+-webkit-animation:bounceIn 0.3s .1s ease both;
+-moz-animation:bounceIn 0.3s .1s ease both;}
 @-webkit-keyframes bounceIn{
 0%{opacity:0;
 -webkit-transform:scale(.3)}
@@ -977,8 +984,8 @@ table {
 100%{-moz-transform:scale(1)}
 }
 .attention{
--webkit-animation:shake 1s .2s ease both;
--moz-animation:shake 1s .2s ease both;}
+-webkit-animation:shake 0.3s .1s ease both;
+-moz-animation:shake 0.3s .1s ease both;}
 @-webkit-keyframes shake{
 0%,100%{-webkit-transform:translateX(0);}
 10%,30%,50%,70%, 90%{-webkit-transform:translateX(-10px);}
@@ -999,5 +1006,8 @@ textarea.error,select.error{
 select.small-input {
 height: 30px !important;
 vertical-align: bottom  !important;
+}
+.spantitle{
+    font-weight: bolder;
 }
 

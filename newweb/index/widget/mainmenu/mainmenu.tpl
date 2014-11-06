@@ -27,9 +27,9 @@
         <li>
             <a class="shortcut-button" href="">
                 <span>
-                    <img src="/static/images/bookshelf.png" alt="相关资料" />
+                    <img src="/static/images/check.png" alt="相关资料" />
                     <br />
-                    相关资料
+                    干部考核
                 </span>
             </a>
         </li>
@@ -48,15 +48,6 @@
                     <img src="/static/images/transfer.png" alt="联系人" />
                     <br />
                     联系人
-                </span>
-            </a>
-        </li>
-        <li>
-            <a class="shortcut-button" href="" rel="">
-                <span>
-                    <img src="/static/images/search.png" alt="查询" />
-                    <br />
-                    查询
                 </span>
             </a>
         </li>
