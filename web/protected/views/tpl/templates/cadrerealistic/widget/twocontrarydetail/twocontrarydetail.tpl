@@ -54,3 +54,6 @@
 </tr>
 </tbody>
 </table>
+<div style="text-align:center;margin-bottom:20px">
+    <input type="buttoon" data-formtype="cancel" style="width:100px;margin-left:20px;"class="btn" id="js-btn-cancelcardreal" value="关闭窗口"/>
+</div>
