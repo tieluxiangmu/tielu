@@ -1,0 +1,1 @@
+define("cadrerealistic:widget/cadrerealisticdetail/cadrerealisticdetail.js",function(i,e,n){var r=r||{};r={init:function(){var i=this;i.render(),i.bind()},render:function(){},bind:function(){var i=this;$("#js-btn-cancelcardreal").on("click",$.proxy(i.closeDialog,this))},closeDialog:function(){var i=$.dialog.list;for(var e in i)i[e].close()}},n.exports=r});

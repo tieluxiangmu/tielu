@@ -18,3 +18,18 @@
 .pagination input{
 	display: none;
 }
+#realinvestigation-form label{
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+    margin-right: 10px;
+}
+#realinvestigation-form textarea{
+    width: 500px !important;
+}
+#realinvestigation-form .tips{
+    display: inline-block;
+margin-left: 10px;
+color: #777;
+vertical-align: -5px;
+}

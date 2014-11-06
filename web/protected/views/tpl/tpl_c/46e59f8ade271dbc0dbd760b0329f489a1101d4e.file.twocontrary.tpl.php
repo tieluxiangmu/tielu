@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2014-11-04 02:12:47
+<?php /* Smarty version Smarty-3.1.13, created on 2014-11-06 13:06:57
          compiled from "D:\wamp\www\web\protected\views\tpl\templates\cadrerealistic\page\twocontrary.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:50995458361fddb075-60457586%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,13 +7,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '46e59f8ade271dbc0dbd760b0329f489a1101d4e' => 
     array (
       0 => 'D:\\wamp\\www\\web\\protected\\views\\tpl\\templates\\cadrerealistic\\page\\twocontrary.tpl',
-      1 => 1412678168,
+      1 => 1415275515,
       2 => 'file',
     ),
     '6730cc0f8d0edb19731f980e1e71c59d39b67783' => 
     array (
       0 => 'D:\\wamp\\www\\web\\protected\\views\\tpl\\templates\\common\\page\\layout.tpl',
-      1 => 1412678176,
+      1 => 1415279034,
       2 => 'file',
     ),
   ),
@@ -21,9 +21,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
   'unifunc' => 'content_5458361fed4f65_81909588',
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5458361fed4f65_81909588')) {function content_5458361fed4f65_81909588($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 

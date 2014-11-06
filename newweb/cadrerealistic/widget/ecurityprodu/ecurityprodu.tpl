@@ -6,7 +6,7 @@
 <div class="content-box">
   <div class="content-box-header">
     <h3>
-    安全生产管理表 </h3>
+    安全生产管理 </h3>
     <ul class="content-box-tabs">
       <li>
       <a href="#tab1" class="default-tab current">
@@ -25,8 +25,6 @@
             <input class="Wdate text-input small-input" onclick="WdatePicker()" type="text" id="sstoragetime" name="small-input"/>
             <span>到</span>
             <input class="Wdate text-input small-input" onclick="WdatePicker()" type="text" id="estoragetime" name="small-input"/>
-          </p>
-          <p>
             <span>完成期限</span>
             <input class="Wdate text-input small-input" onclick="WdatePicker()" type="text" id="sdeadline" name="small-input"/>
             <span>到</span>
@@ -75,7 +73,7 @@
             </select>
           </p>
           <p class="btn-con">
-             <input class="button btn btn-primary" id="submitseacrh-btn" type="button" value="确认查询"/>
+             <input class="button btn btn-primary" id="submitseacrh-btn" type="button" value="开始查询"/>
             <input class="btn btn-success exportexcel" data-excelinfo='{"conid":"js-p-listecurityprodu","page":"safetyproduct/exportuserexcel"}' type="button" value="导出excel"/>
             <input class="btn btn-warning deleteall" data-deleteinfo='{"channelid":"safetyproduct-form","conid":"js-p-listecurityprodu","page":"safetyproduct/delete"}' type="button" value="确认删除"/>
           </p>

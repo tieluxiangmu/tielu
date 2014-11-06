@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2014-11-04 02:09:58
+<?php /* Smarty version Smarty-3.1.13, created on 2014-11-06 12:05:17
          compiled from "D:\wamp\www\web\protected\views\tpl\templates\cadrerealistic\page\listcadrerealistic.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2713354583576f12523-68838956%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f0aee1999672484bdfb74ba4c5e2f8525b331ad7' => 
     array (
       0 => 'D:\\wamp\\www\\web\\protected\\views\\tpl\\templates\\cadrerealistic\\page\\listcadrerealistic.tpl',
-      1 => 1412678168,
+      1 => 1415275515,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.13',
+  'unifunc' => 'content_545835771aeb67_82051171',
   'variables' => 
   array (
     'data' => 0,
@@ -22,11 +24,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'i' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_545835771aeb67_82051171',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_545835771aeb67_82051171')) {function content_545835771aeb67_82051171($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_escape')) include 'D:\\wamp\\www\\web\\protected\\extensions\\smarty\\plugins\\modifier.escape.php';
 if (!is_callable('smarty_modifier_f_escape_xml')) include 'D:\\wamp\\www\\web\\protected\\extensions\\smarty\\plugins\\modifier.f_escape_xml.php';
+if (!is_callable('smarty_modifier_truncate')) include 'D:\\wamp\\www\\web\\protected\\extensions\\smarty\\plugins\\modifier.truncate.php';
 ?><?php if ((count($_smarty_tpl->tpl_vars['data']->value)==0)){?>
 <div class="notification attention png_bg"><a href="#" class="close">
 <img src="/web/static/cadrerealistic/images/icons/cross_grey_small_b635c2e.png" title="关闭" alt="可关闭这个提示">
@@ -38,8 +39,7 @@ if (!is_callable('smarty_modifier_f_escape_xml')) include 'D:\\wamp\\www\\web\\p
 <thead>
 <tr>
 <th>
-<input class="check-all" type="checkbox" />
-</th>
+<input class="check-all" type="checkbox" />全选</th>
 <th>
 日期</th>
 <th>
@@ -50,7 +50,7 @@ if (!is_callable('smarty_modifier_f_escape_xml')) include 'D:\\wamp\\www\\web\\p
 值班干部</th>
 <th>
 发现问题</th>
-<th>
+<th style="width:100px;">
 两违类别/件数</th>
 <th>
 相关操作</th>
@@ -82,10 +82,8 @@ if (!is_callable('smarty_modifier_f_escape_xml')) include 'D:\\wamp\\www\\web\\p
 
 </td>
 <td>
-<a>
 <?php echo smarty_modifier_f_escape_xml($_smarty_tpl->tpl_vars['data']->value[$_smarty_tpl->tpl_vars['i']->value]['checkmodel']);?>
 
-</a>
 </td>
 <td>
 <?php echo smarty_modifier_f_escape_xml($_smarty_tpl->tpl_vars['data']->value[$_smarty_tpl->tpl_vars['i']->value]['company']);?>
@@ -96,7 +94,7 @@ if (!is_callable('smarty_modifier_f_escape_xml')) include 'D:\\wamp\\www\\web\\p
 
 </td>
 <td>
-<?php echo smarty_modifier_f_escape_xml($_smarty_tpl->tpl_vars['data']->value[$_smarty_tpl->tpl_vars['i']->value]['foundproblem']);?>
+<?php echo smarty_modifier_f_escape_xml(smarty_modifier_truncate($_smarty_tpl->tpl_vars['data']->value[$_smarty_tpl->tpl_vars['i']->value]['foundproblem'],40,''));?>
 
 </td>
 <td>
@@ -105,14 +103,14 @@ if (!is_callable('smarty_modifier_f_escape_xml')) include 'D:\\wamp\\www\\web\\p
 </td>
 <td>
 <a href="" class="edit"  data-editinfo='{"page":"realinvestigation/editcadrerealistic","id":<?php echo smarty_modifier_f_escape_xml($_smarty_tpl->tpl_vars['data']->value[$_smarty_tpl->tpl_vars['i']->value]["id"]);?>
-}'  title="修改干部写实管理">
+}'  title="写实修改">
 <img src="/web/static/cadrerealistic/images/icons/pencil_2d05354.png" alt="编辑" />
 </a>
-<a href="" title="点击删除"   data-deleteinfo='{"channelid":"realinvestigation-form","page":"realinvestigation/delete","id":<?php echo smarty_modifier_f_escape_xml($_smarty_tpl->tpl_vars['data']->value[$_smarty_tpl->tpl_vars['i']->value]["id"]);?>
+<a href="" title="写实删除"   data-deleteinfo='{"channelid":"realinvestigation-form","page":"realinvestigation/delete","id":<?php echo smarty_modifier_f_escape_xml($_smarty_tpl->tpl_vars['data']->value[$_smarty_tpl->tpl_vars['i']->value]["id"]);?>
 }' class="delete">
 <img src="/web/static/cadrerealistic/images/icons/cross_bc68ad4.png"  alt="删除" />
 </a>
-<a href="" title="干部写实管理详情"  class="detail"  data-detailinfo='{"page":"realinvestigation/view","id":<?php echo smarty_modifier_f_escape_xml($_smarty_tpl->tpl_vars['data']->value[$_smarty_tpl->tpl_vars['i']->value]["id"]);?>
+<a href="" title="写实详情"  class="detail"  data-detailinfo='{"page":"realinvestigation/view","id":<?php echo smarty_modifier_f_escape_xml($_smarty_tpl->tpl_vars['data']->value[$_smarty_tpl->tpl_vars['i']->value]["id"]);?>
 }'>
 <img src="/web/static/cadrerealistic/images/icons/detail_4ffc6a5.png" alt="详情" />
 </a>

@@ -9,10 +9,9 @@
 <thead>
 <tr>
 <th>
-<input class="check-all" type="checkbox" />
+<input class="check-all" type="checkbox" />全选
 </th>
-<th>
-序号</th>
+
 <th>
 检查时间</th>
 <th>
@@ -44,14 +43,10 @@
 <tbody>
 {%for $i = 0; $i < count($data); $i++%}
 <tr>
+
 <td>
-<input type="checkbox" data-id="{%$data[$i]['id']|f_escape_xml%}"/>
-</td>
-<td>
-<a>
-{%$data[$i]['serialnumber']|f_escape_xml%}
-</a>
-</td>
+              <input type="checkbox" data-id="{%$data[$i]['id']%}"/>
+            </td>
 <td>
 {%$data[$i]['checktime']|f_escape_xml%}
 </td>
@@ -68,16 +63,16 @@
 {%$data[$i]['responsibleperson']|f_escape_xml%}
 </td>
 <td>
-{%$data[$i]['Illegalcontent']|f_escape_xml%}
+{%$data[$i]['Illegalcontent']|f_escape_xml|truncate:30%}
 </td>
 <td>
-<a href="" class="edit"  data-editinfo='{"page":"twocontrarymanage/editecurityprodu","id":{%$data[$i]["id"]|f_escape_xml%}}'  title="修改两违问题">
+<a href="" class="edit"  data-editinfo='{"page":"twocontrarymanage/editecurityprodu","id":{%$data[$i]["id"]|f_escape_xml%}}'  title="两违问题修改">
 <img src="/web/static/cadrerealistic/images/icons/pencil_2d05354.png" alt="编辑" />
 </a>
-<a href="" title="点击删除"   data-deleteinfo='{"channelid":"twocontrarymanage-form","page":"twocontrarymanage/delete","id":{%$data[$i]["id"]|f_escape_xml%}}' class="delete">
+<a href="" title="两违问题删除"   data-deleteinfo='{"channelid":"twocontrarymanage-form","page":"twocontrarymanage/delete","id":{%$data[$i]["id"]|f_escape_xml%}}' class="delete">
 <img src="/web/static/cadrerealistic/images/icons/cross_bc68ad4.png"  alt="删除" />
 </a>
-<a href="" title="两违问题管理详情"  class="detail"  data-detailinfo='{"page":"twocontrarymanage/view","id":{%$data[$i]["id"]|f_escape_xml%}}'>
+<a href="" title="两违问题详情"  class="detail"  data-detailinfo='{"page":"twocontrarymanage/view","id":{%$data[$i]["id"]|f_escape_xml%}}'>
 <img src="/web/static/cadrerealistic/images/icons/detail_4ffc6a5.png" alt="详情" />
 </a>
 <a href="index.php?r=cadrerealistic/addsaferisk" title="收录为安全风险问题">

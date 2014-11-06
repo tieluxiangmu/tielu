@@ -8,9 +8,18 @@ cadrerealisticdetail = {
     },
     render: function() {
         var me = this;
+        me.cancel = $('#js-btn-cancelcardreal');
+
     },
     bind: function() {
         var me = this;
-    }
+        me.cancel.on('click', me.closeDialog);
+    },
+    closeDialog: function() {
+        var list = top.window.$.dialog.list;
+        for(var d in list) {
+            list[d].close();
+        }
+    },
 }
 module.exports = cadrerealisticdetail;

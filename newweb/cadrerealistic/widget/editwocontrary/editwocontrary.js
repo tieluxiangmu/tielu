@@ -2,7 +2,7 @@ var editecurityprodu = editecurityprodu || {},
     url = 'index.php?r=twocontrarymanage/listtwocontrary';
 editecurityprodu = {
     init: function() {
-        // åˆå§‹åŒ–ç»‘å®šå…ƒç´ ä»¥åŠäº‹ä»¶
+        // ³õÊ¼»¯°ó¶¨ÔªËØÒÔ¼°ÊÂ¼ş
         var me = this;
         me.render();
         me.bind();
@@ -10,12 +10,16 @@ editecurityprodu = {
     render: function() {
         var me = this;
         me.submit = $('#js-btn-editwocontrary');
-        me.listenerpage(); //è´Ÿè´£ç›‘å¬ä¿®æ”¹åçš„æ•°æ® è¿›è¡Œæ— åˆ·çš„æ›´æ”¹
+        me.cancel = $('#js-btn-cancelwocontrary');
+
+        me.listenerpage(); //¸ºÔğ¼àÌıĞŞ¸ÄºóµÄÊı¾İ ½øĞĞÎŞË¢µÄ¸ü¸Ä
     },
     bind: function() {
         var me = this;
-        me.listenerpage(); //è´Ÿè´£ç›‘å¬ä¿®æ”¹åçš„æ•°æ® è¿›è¡Œæ— åˆ·çš„æ›´æ”¹
+        me.listenerpage(); //¸ºÔğ¼àÌıĞŞ¸ÄºóµÄÊı¾İ ½øĞĞÎŞË¢µÄ¸ü¸Ä
         (me.submit).on('click', $.proxy(me._submitEvent, this));
+        me.cancel.on('click', $.proxy(me.closeDialog, this));
+
     },
     listenerpage: function() {
         var api = frameElement.api,
@@ -37,7 +41,7 @@ editecurityprodu = {
             }
         });
     },
-    //éªŒè¯è¡¨å•
+    //ÑéÖ¤±íµ¥
     formValidate: function() {
         var $validate = $('#twocontrarymanage-form').validate({
             errorElement: "span",
@@ -76,14 +80,22 @@ editecurityprodu = {
         });
         return $validate;
     },
+    closeDialog: function() {
+        var list = top.window.$.dialog.list;
+        for(var d in list) {
+            list[d].close();
+        }
+    },
     _submitEvent: function(e) {
         //e.stopPropagation();
         var me = this;
         if (!me.formValidate().form()) {
             e.preventDefault();
-            jError('è¯·æŒ‰ç³»ç»Ÿè¦æ±‚å¡«å†™ä¸¤è¿é—®é¢˜ï¼');
+            jError('Çë°´ÏµÍ³ÒªÇóÌîĞ´Á½Î¥ÎÊÌâ£¡');
             return false;
         }
+        alert('dsd');
+        me.closeDialog();
     }
 }
 module.exports = editecurityprodu;

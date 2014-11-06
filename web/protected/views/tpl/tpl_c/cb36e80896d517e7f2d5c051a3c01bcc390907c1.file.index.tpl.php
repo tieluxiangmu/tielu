@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2014-11-04 02:04:10
+<?php /* Smarty version Smarty-3.1.13, created on 2014-11-06 11:14:54
          compiled from "D:\wamp\www\web\protected\views\tpl\templates\index\page\index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:42455458341a262e39-33293241%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -13,7 +13,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '6730cc0f8d0edb19731f980e1e71c59d39b67783' => 
     array (
       0 => 'D:\\wamp\\www\\web\\protected\\views\\tpl\\templates\\common\\page\\layout.tpl',
-      1 => 1412678176,
+      1 => 1415270324,
       2 => 'file',
     ),
   ),
@@ -21,9 +21,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
   'unifunc' => 'content_5458341a364f36_63154989',
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5458341a364f36_63154989')) {function content_5458341a364f36_63154989($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
