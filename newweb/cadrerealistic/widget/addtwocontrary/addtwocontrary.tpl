@@ -29,31 +29,17 @@
                             检查单位
                         </label>
                         <select name="Twocontrarymanage[inspectionunit]" id="Twocontrarymanage_inspectionunit"  class="small-input">
-                            <option value="荣昌">荣昌</option>
-                            <option value="峰高铺">峰高铺</option>
-                            <option value="大足">大足</option>
-                            <option value="长河碥">长河碥</option>
-                            <option value="双石桥">双石桥</option>
-                            <option value="永川">永川</option>
+                            <option value="路局">路局</option>
+                            <option value="车务段">车务段</option>
+                            <option value="车间">车间</option>
+                            <option value="班组">班组</option>
                         </select>
                     </p>
                     <p>
                         <label>
                             检查人
                         </label>
-                        <select name="Twocontrarymanage[rummager]" id="Twocontrarymanage_rummager" class="small-input">
-                                <option selected="selected" value="">请选择检查人</option>
-                                <option value="余戈">余戈</option>
-                                <option value="蔡泽琪">蔡泽琪</option>
-                                <option value="李洁">李洁</option>
-                                <option value="樊鹏">樊鹏</option>
-                                <option value="樊鹏">樊鹏</option>
-                                <option value="潘晓明">潘晓明</option>
-                                <option value="刘宁">刘宁</option>
-                                <option value="田兴明">田兴明</option>
-                                <option value="汤献忠">汤献忠</option>
-                                <option value="汤献忠">汤献忠</option>
-                        </select>
+                        <input class="text-input small-input" type="text"  name="Twocontrarymanage[rummager]" id="Twocontrarymanage_rummager" />
                     </p>
                     <p>
                         <label>

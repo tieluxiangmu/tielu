@@ -10,7 +10,7 @@
         <thead>
           <tr>
             <th>
-              <input class="check-all" type="checkbox" />全选
+              <input class="check-all" type="checkbox" />
             </th>
             <th>
               日期
@@ -27,7 +27,7 @@
             <th>
               发现问题
             </th>
-            <th style="width:100px;">
+            <th>
               两违类别/件数
             </th>
             <th>
@@ -56,7 +56,9 @@
               {%$data[$i]['dateofentry']%}
             </td>
             <td>
+              <a>
                {%$data[$i]['checkmodel']%}
+              </a>
             </td>
             <td>
                 {%$data[$i]['company']%}
@@ -65,19 +67,19 @@
                {%$data[$i]['cadresonduty']%}
             </td>
             <td>
-                {%$data[$i]['foundproblem']|truncate:40:""%}
+                {%$data[$i]['foundproblem']%}
             </td>
             <td>
                 {%$data[$i]['categorynumber']%}
             </td>
             <td>
-              <a href="" class="edit"  data-editinfo='{"page":"realinvestigation/editcadrerealistic","id":{%$data[$i]["id"]%}}'  title="写实修改">
+              <a href="" class="edit"  data-editinfo='{"page":"realinvestigation/editcadrerealistic","id":{%$data[$i]["id"]%}}'  title="修改干部写实管理">
                 <img src="/static/images/icons/pencil.png" alt="编辑" />
               </a>
-              <a href="" title="写实删除"   data-deleteinfo='{"channelid":"realinvestigation-form","page":"realinvestigation/delete","id":{%$data[$i]["id"]%}}' class="delete">
+              <a href="" title="点击删除"   data-deleteinfo='{"channelid":"realinvestigation-form","page":"realinvestigation/delete","id":{%$data[$i]["id"]%}}' class="delete">
                 <img src="/static/images/icons/cross.png"  alt="删除" />
               </a>
-              <a href="" title="写实详情"  class="detail"  data-detailinfo='{"page":"realinvestigation/view","id":{%$data[$i]["id"]%}}'>
+              <a href="" title="干部写实管理详情"  class="detail"  data-detailinfo='{"page":"realinvestigation/view","id":{%$data[$i]["id"]%}}'>
                 <img src="/static/images/icons/detail.png" alt="详情" />
               </a>
             </td>

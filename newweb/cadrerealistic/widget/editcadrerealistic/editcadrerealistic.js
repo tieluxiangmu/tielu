@@ -10,22 +10,11 @@ editcadrerealistic = {
     render: function() {
         var me = this;
         me.submit = $('#js-btn-editcardreal');
-        me.cancel = $('#js-btn-cancelcardreal');
     },
     bind: function() {
         var me = this;
         me.listenerpage(); //负责监听修改后的数据 进行无刷的更改
-        $(me.submit).on('click', $.proxy(me._submitEvent, this));
-        me.cancel.on('click', $.proxy(me.closeDialog, this));
-    },
-    closeDialog: function() {
-        var list = top.window.$.dialog.list;
-        for(var d in list) {
-            list[d].close();
-        }
-        for(var d in list) {
-            list[d].close();
-        }
+        (me.submit).on('click', $.proxy(me._submitEvent, this));
     },
     listenerpage: function() {
         var api = frameElement.api,
@@ -94,8 +83,6 @@ editcadrerealistic = {
             jError('请按系统要求填写干部写实数据！');
             return false;
         }
-        me.closeDialog();
-        
     }
 }
 module.exports = editcadrerealistic;
