@@ -1,15 +1,15 @@
 <div class="content-box">
 <div class="content-box-header">
 <h3>
-干部写实管理</h3>
+干部写实管理表</h3>
 <ul class="content-box-tabs">
 <li>
 <a href="#tab1" class="default-tab current">
-管理干部写实</a>
+管理写实</a>
 </li>
 <li>
 <a href="#tab2">
-添加干部写实</a>
+添加写实</a>
 </li>
 </ul>
 <div class="clear">
@@ -20,15 +20,17 @@
 <form class="search">
 <fieldset>
 <p>
-<span class="spantitle">日&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;期</span>
-<input class="Wdate text-input small-input" onclick="WdatePicker()" style="width:240px !important" type="text" id="js-input-sdateofentry"/>
-<span class="spantitle">到</span>
-<input class="Wdate text-input small-input" style="width:240px !important" onclick="WdatePicker()" type="text" id="js-input-edateofentry"/>
+<span>
+请选择日期</span>
+<input class="Wdate text-input small-input" onclick="WdatePicker()" type="text" id="js-input-sdateofentry"/>
+<span>到</span>
+<input class="Wdate text-input small-input" onclick="WdatePicker()" type="text" id="js-input-edateofentry"/>
 </p>
 <p>
-<span class="spantitle">检&nbsp;&nbsp;查&nbsp;&nbsp;人</span>
+<span>
+检查人</span>
 <select class="chosen-select" id="checkperson">
-<option selected="selected" value=""></option>
+<option selected="selected" value="">请选择</option>
 <option value="余戈">余戈</option>
 <option value="蔡泽琪">蔡泽琪</option>
 <option value="李洁">李洁</option>
@@ -40,9 +42,10 @@
 <option value="汤献忠">汤献忠</option>
 <option value="黄成福">黄成福</option>
 </select>
-<span class="spantitle">检查方式</span>
+<span>
+检查方式</span>
 <select class="chosen-select" id="checkmodel">
-<option selected="selected" value=""></option>
+<option selected="selected" value="">请选择</option>
 <option value="添乘">
 添乘</option>
 <option value="昼查">
@@ -52,9 +55,10 @@
 </select>
 </p>
 <p>
-<span class="spantitle">值班干部</span>
+<span>
+值班干部</span>
 <select class="chosen-select" id="adresonduty">
-<option selected="selected" value=""></option>
+<option selected="selected" value="">请选择</option>
 <option value="钟世能">钟世能</option>
 <option value="代高勇">代高勇</option>
 <option value="张建辉">张建辉</option>
@@ -66,9 +70,10 @@
 <option value="罗尤宽">罗尤宽</option>
 <option value="黄毅">黄毅</option>
 </select>
-<span class="spantitle">两违类别</span>
+<span>
+两违类别</span>
 <select class="chosen-select" id="categorynumber">
-<option selected="selected" value=""></option>
+<option selected="selected" value="">请选择</option>
 <option value="A">
 A</option>
 <option value="B">
@@ -78,8 +83,8 @@ C</option>
 </select>
 </p>
 <p class="btn-con">
-<input class="button btn btn-primary" id="submitseacrh-btn" type="button" value="开始查询"/>
-<input class="btn btn-success exportexcel" data-excelinfo='{"conid":"js-p-listcadrerealistic","page":"realinvestigation/exportuserexcel"}' type="button" value="导出Excel"/>
+<input class="button btn btn-primary" id="submitseacrh-btn" type="button" value="确认查询"/>
+<input class="btn btn-success exportexcel" data-excelinfo='{"conid":"js-p-listcadrerealistic","page":"realinvestigation/exportuserexcel"}' type="button" value="导出excel"/>
 <input class="btn btn-warning deleteall" data-deleteinfo='{"channelid":"realinvestigation-form","conid":"js-p-listcadrerealistic","page":"realinvestigation/delete"}' type="button" value="确认删除"/>
 </p>
 </fieldset>
@@ -116,7 +121,6 @@ C</option>
 <option value="汤献忠">汤献忠</option>
 <option value="汤献忠">汤献忠</option>
 </select>
-<span class="tips"></span>
 </p>
 <p>
 <label>
@@ -127,13 +131,12 @@ C</option>
 <option value="夜查">夜查</option>
 <option value="昼查">昼查</option>
 </select>
-<span class="tips"></span>
 </p>
 <p>
 <label>
 单位</label>
 <select name="Realinvestigation[company]" id="Realinvestigation_company" class="small-input">
-<option value="" selected="selected"></option>
+<option value="" selected="selected">请选择单位</option>
 <option value="荣昌">荣昌</option>
 <option value="峰高铺">峰高铺</option>
 <option value="大足">大足</option>
@@ -141,13 +144,12 @@ C</option>
 <option value="双石桥">双石桥</option>
 <option value="永川">永川</option>
 </select>
-<span class="tips">请选择单位</span>
 </p>
 <p>
 <label>
 值班干部</label>
 <select name="Realinvestigation[cadresonduty]" id="Realinvestigation_cadresonduty" class="small-input">
-<option value="" selected="selected"></option>
+<option value="" selected="selected">请选择值班干部</option>
 <option value="钟世能">钟世能</option>
 <option value="代高勇">代高勇</option>
 <option value="张建辉">张建辉</option>
@@ -159,7 +161,6 @@ C</option>
 <option value="罗尤宽">罗尤宽</option>
 <option value="黄毅">黄毅</option>
 </select>
-<span class="tips">请选择值班干部</span>
 </p>
 <p>
 <label>
@@ -176,11 +177,10 @@ C</option>
 <label>
 两违类别/件数</label>
 <select class="small-input" name="Realinvestigation[categorynumber]" id="Realinvestigation_categorynumber">
-<option selected="selected" value=""></option>
+<option selected="selected" value="">请选择两违类别/件数</option>
 <option value="A1">A1</option>
 <option value="B2">B2</option>
 </select>
-<span class="tips">请选择两违类别/件数</span>
 </p>
 <p>
 <label>
@@ -192,7 +192,7 @@ C</option>
 改进意见</label>
 <textarea class="text-input textarea" name="Realinvestigation[improvement]" id="Realinvestigation_improvement" cols="79" rows="10"></textarea>
 </p>
-<p style="text-align:center;">
+<p>
 <input class="btn btn-primary" data-formtype="add" type="submit" value="直接保存为干部写实" id="js-btn-cardreal"/>
 <select class="btnsleetct" name="dropdown" class="small-input" id="js-select-cadrerealistic">
 <option value="0">
