@@ -152,11 +152,13 @@ class SafetyriskController extends Controller
 	        	 if (isset($_REQUEST['coordinationpart'])) {
 	                $sql.= " and  coordinationpart='" . $_REQUEST['coordinationpart'] . "'";
 	            }
-	            $sql.= "   order by id desc  {$page->limit}";
-	            $data = $safetyrisk->findAllBySql($sql);
-	            //每一页显示的记录条数
 	            $pagesize = 20;
-	            $count = count($data);
+	            $pageparam = !empty($_GET["page"]) ? $_GET["page"] : 1;
+	            $sql.= "  order by id desc";
+	            //每一页显示的记录条数
+	            $count = count($safetyrisk->findAllBySql($sql));
+	            $sql.= "  limit ".($pageparam-1)*$pagesize.", $pagesize";
+	            $data =  $safetyrisk->findAllBySql($sql);
 	            //获取总页数
 	            $page = new Page($count, $pagesize);
 	            $show_page = $page->fpage();

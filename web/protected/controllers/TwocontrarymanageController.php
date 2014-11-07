@@ -166,11 +166,13 @@ class TwocontrarymanageController extends Controller
 	            if (isset($_REQUEST['productionleader'])) {
 	                $sql.= " and  productionleader='" . $_REQUEST['productionleader'] . "'";
 	            }
-	            $sql.= "   order by id desc  {$page->limit}";
-	            $data = $twocontion->findAllBySql($sql);
-	            //每一页显示的记录条数
 	            $pagesize = 20;
-	            $count = count($data);
+	            $pageparam = !empty($_GET["page"]) ? $_GET["page"] : 1;
+	            $sql.= "  order by id desc";
+	            //每一页显示的记录条数
+	            $count = count( $twocontion->findAllBySql($sql));
+	            $sql.= "  limit ".($pageparam-1)*$pagesize.", $pagesize";
+	            $data =  $twocontion->findAllBySql($sql);
 	            //获取总页数
 	            $page = new Page($count, $pagesize);
 	            $show_page = $page->fpage();

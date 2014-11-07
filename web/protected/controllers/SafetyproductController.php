@@ -158,11 +158,15 @@ class SafetyproductController extends Controller
             if (isset($_REQUEST['currentstatus'])) {
                 $sql.= " and  currentstatus='" . $_REQUEST['currentstatus'] . "'";
             }
-            $sql.= "   order by id desc  {$page->limit}";
-            $data = $safetyproduction->findAllBySql($sql);
-            //每一页显示的记录条数
+            // $sql.= "   order by id desc  {$page->limit}";
+            // $data = $safetyproduction->findAllBySql($sql);
             $pagesize = 20;
-            $count = count($data);
+            $pageparam = !empty($_GET["page"]) ? $_GET["page"] : 1;
+            $sql.= "  order by id desc";
+            //每一页显示的记录条数
+            $count = count($safetyproduction ->findAllBySql($sql));
+            $sql.= "  limit ".($pageparam-1)*$pagesize.", $pagesize";
+            $data = $safetyproduction ->findAllBySql($sql);
             //获取总页数
             $page = new Page($count, $pagesize);
             $show_page = $page->fpage();
