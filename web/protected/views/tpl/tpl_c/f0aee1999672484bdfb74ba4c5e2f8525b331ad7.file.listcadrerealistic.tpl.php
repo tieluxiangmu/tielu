@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2014-11-06 12:05:17
+<?php /* Smarty version Smarty-3.1.13, created on 2014-11-07 04:48:51
          compiled from "D:\wamp\www\web\protected\views\tpl\templates\cadrerealistic\page\listcadrerealistic.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2713354583576f12523-68838956%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f0aee1999672484bdfb74ba4c5e2f8525b331ad7' => 
     array (
       0 => 'D:\\wamp\\www\\web\\protected\\views\\tpl\\templates\\cadrerealistic\\page\\listcadrerealistic.tpl',
-      1 => 1415275515,
+      1 => 1415335730,
       2 => 'file',
     ),
   ),
@@ -94,7 +94,7 @@ if (!is_callable('smarty_modifier_truncate')) include 'D:\\wamp\\www\\web\\prote
 
 </td>
 <td>
-<?php echo smarty_modifier_f_escape_xml(smarty_modifier_truncate($_smarty_tpl->tpl_vars['data']->value[$_smarty_tpl->tpl_vars['i']->value]['foundproblem'],40,''));?>
+<?php echo smarty_modifier_f_escape_xml(smarty_modifier_truncate($_smarty_tpl->tpl_vars['data']->value[$_smarty_tpl->tpl_vars['i']->value]['foundproblem'],40));?>
 
 </td>
 <td>

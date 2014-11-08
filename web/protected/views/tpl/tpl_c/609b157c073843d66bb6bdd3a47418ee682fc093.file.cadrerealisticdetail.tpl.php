@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2014-11-06 12:05:22
+<?php /* Smarty version Smarty-3.1.13, created on 2014-11-07 04:48:53
          compiled from "D:\wamp\www\web\protected\views\tpl\templates\cadrerealistic\page\cadrerealisticdetail.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:20520545b5c96c50671-79821230%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,13 +7,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '609b157c073843d66bb6bdd3a47418ee682fc093' => 
     array (
       0 => 'D:\\wamp\\www\\web\\protected\\views\\tpl\\templates\\cadrerealistic\\page\\cadrerealisticdetail.tpl',
-      1 => 1415275515,
+      1 => 1415335730,
       2 => 'file',
     ),
     '6730cc0f8d0edb19731f980e1e71c59d39b67783' => 
     array (
       0 => 'D:\\wamp\\www\\web\\protected\\views\\tpl\\templates\\common\\page\\layout.tpl',
-      1 => 1415270324,
+      1 => 1415332424,
       2 => 'file',
     ),
   ),

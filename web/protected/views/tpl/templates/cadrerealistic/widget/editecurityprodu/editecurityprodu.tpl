@@ -44,7 +44,12 @@
 <tr>
 <td>问题目前状况</td>
 <td colspan="3">
-<textarea class="text-input textarea" name="Safetyproduct[currentstatus]" id="Safetyproduct_currentstatus" cols="79" rows="5">{%$model['currentstatus']|f_escape_xml%}</textarea>
+<select class="text-input small-input chosen-select" name="Safetyproduct[currentstatus]" id="Safetyproduct_currentstatus">
+<option selected="selected" value="">请选择</option>
+<option value="已整改">已整改</option>
+<option value="整改中">整改中</option>
+<option value="未整改">未整改</option>
+</select>
 </td>
 </tr>
 <tr>
@@ -62,5 +67,6 @@
 </form>
 {%script%}
 $('#Safetyproduct_checkperson').find("option[value='{%$model['checkperson']|f_escape_js%}']").attr("selected", "selected");
+$('#Safetyproduct_currentstatus').find("option[value='{%$model['currentstatus']|f_escape_js%}']").attr("selected", "selected");
 require("cadrerealistic:widget/editecurityprodu/editecurityprodu.js").init();
 {%/script%}

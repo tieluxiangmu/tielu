@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2014-11-06 12:07:56
+<?php /* Smarty version Smarty-3.1.13, created on 2014-11-07 03:57:30
          compiled from "D:\wamp\www\web\protected\views\tpl\templates\cadrerealistic\widget\ecurityprodu\ecurityprodu.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:183455458358d1690e3-29759805%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'b28246c2e663a796140151f3a33eb66418c93ff7' => 
     array (
       0 => 'D:\\wamp\\www\\web\\protected\\views\\tpl\\templates\\cadrerealistic\\widget\\ecurityprodu\\ecurityprodu.tpl',
-      1 => 1415275515,
+      1 => 1415332649,
       2 => 'file',
     ),
   ),
@@ -32,7 +32,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <div class="content-box">
 <div class="content-box-header">
 <h3>
-安全生产管理表</h3>
+安全生产管理</h3>
 <ul class="content-box-tabs">
 <li>
 <a href="#tab1" class="default-tab current">

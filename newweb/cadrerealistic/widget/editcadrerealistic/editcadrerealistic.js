@@ -15,6 +15,7 @@ editcadrerealistic = {
         var me = this;
         me.listenerpage(); //负责监听修改后的数据 进行无刷的更改
         (me.submit).on('click', $.proxy(me._submitEvent, this));
+        $('#js-btn-cancelcardreal').on('click',$.proxy(me.closeDialog, this));
     },
     listenerpage: function() {
         var api = frameElement.api,
@@ -75,6 +76,12 @@ editcadrerealistic = {
         });
         return $validate;
     },
+    closeDialog: function() {
+        var list = top.window.$.dialog.list;
+        for(var d in list) {
+            list[d].close();
+        }
+    },
     _submitEvent: function(e) {
         //e.stopPropagation();
         var me = this;
@@ -83,6 +90,7 @@ editcadrerealistic = {
             jError('请按系统要求填写干部写实数据！');
             return false;
         }
+        me.closeDialog();
     }
 }
 module.exports = editcadrerealistic;

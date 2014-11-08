@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2014-11-06 12:05:22
+<?php /* Smarty version Smarty-3.1.13, created on 2014-11-07 04:48:53
          compiled from "D:\wamp\www\web\protected\views\tpl\templates\cadrerealistic\widget\cadrerealisticdetail\cadrerealisticdetail.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1766545b5c96dd86e4-14979532%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ce2e72cf99eab77b41f8b1eb0772052f36712814' => 
     array (
       0 => 'D:\\wamp\\www\\web\\protected\\views\\tpl\\templates\\cadrerealistic\\widget\\cadrerealisticdetail\\cadrerealisticdetail.tpl',
-      1 => 1415275515,
+      1 => 1415335730,
       2 => 'file',
     ),
   ),
@@ -30,47 +30,47 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <table class="table table-bordered table-striped">
 <tbody>
 <tr>
-<td  class="spantitle">
+<td class="spantitle">
 日期</td>
 <td>
 <?php echo smarty_modifier_f_escape_xml($_smarty_tpl->tpl_vars['model']->value['dateofentry']);?>
 
 </td>
-<td  class="spantitle">
+<td class="spantitle">
 时间</td>
-<td>
+<td >
 <?php echo smarty_modifier_f_escape_xml($_smarty_tpl->tpl_vars['model']->value['timeofentry']);?>
 
-</td >
-<td  class="spantitle">
+</td>
+<td class="spantitle">
 检查人</td>
-<td  class="spantitle">
+<td>
 <?php echo smarty_modifier_f_escape_xml($_smarty_tpl->tpl_vars['model']->value['checkperson']);?>
 
 </td>
 </tr>
 <tr>
-<td  class="spantitle">
+<td class="spantitle">
 检查方式</td>
 <td>
 <?php echo smarty_modifier_f_escape_xml($_smarty_tpl->tpl_vars['model']->value['checkmodel']);?>
 
 </td>
-<td  class="spantitle">
+<td class="spantitle">
 单位</td>
-<td >
+<td>
 <?php echo smarty_modifier_f_escape_xml($_smarty_tpl->tpl_vars['model']->value['company']);?>
 
 </td>
-<td  class="spantitle">
+<td class="spantitle">
 值班干部</td>
-<td>
+<td >
 <?php echo smarty_modifier_f_escape_xml($_smarty_tpl->tpl_vars['model']->value['cadresonduty']);?>
 
 </td>
 </tr>
 <tr>
-<td  class="spantitle">
+<td class="spantitle">
 发现问题</td>
 <td colspan="5">
 <?php echo smarty_modifier_f_escape_xml($_smarty_tpl->tpl_vars['model']->value['foundproblem']);?>
@@ -78,13 +78,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 </td>
 </tr>
 <tr>
-<td colspan="2"  class="spantitle">
+<td colspan="2" class="spantitle">
 是否下发检查通知书</td>
 <td>
 <?php echo smarty_modifier_f_escape_xml($_smarty_tpl->tpl_vars['model']->value['noticeflag']);?>
 
 </td>
-<td colspan="2"  class="spantitle">
+<td colspan="2" class="spantitle">
 两违类别/件数</td>
 <td>
 <?php echo smarty_modifier_f_escape_xml($_smarty_tpl->tpl_vars['model']->value['categorynumber']);?>
@@ -92,7 +92,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 </td>
 </tr>
 <tr>
-<td  class="spantitle">
+<td class="spantitle">
 检查内容</td>
 <td colspan="5">
 <?php echo smarty_modifier_f_escape_xml($_smarty_tpl->tpl_vars['model']->value['checkcontents']);?>
@@ -100,7 +100,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 </td>
 </tr>
 <tr>
-<td  class="spantitle">
+<td class="spantitle">
 改进意见</td>
 <td colspan="5">
 <?php echo smarty_modifier_f_escape_xml($_smarty_tpl->tpl_vars['model']->value['improvement']);?>
@@ -108,13 +108,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 </td>
 </tr>
 <tr>
-<td  class="spantitle">
+<td class="spantitle">
 考核扣分</td>
-<td  class="spantitle">
+<td>
 <?php echo smarty_modifier_f_escape_xml($_smarty_tpl->tpl_vars['model']->value['evaluationpoints']);?>
 
 </td>
-<td  class="spantitle">
+<td class="spantitle">
 扣分原因</td>
 <td colspan="3">
 <?php echo smarty_modifier_f_escape_xml($_smarty_tpl->tpl_vars['model']->value['pointsreasons']);?>
@@ -122,7 +122,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 </td>
 </tr>
 <tr>
-<td  class="spantitle">
+<td class="spantitle">
 考核主体</td>
 <td colspan="5">
 <?php echo smarty_modifier_f_escape_xml($_smarty_tpl->tpl_vars['model']->value['assessmentmain']);?>
@@ -130,7 +130,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 </td>
 </tr>
 <tr>
-<td  class="spantitle">
+<td class="spantitle">
 评语</td>
 <td colspan="5">
 <?php echo smarty_modifier_f_escape_xml($_smarty_tpl->tpl_vars['model']->value['comment']);?>
@@ -138,7 +138,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 </td>
 </tr>
 <tr>
-<td  class="spantitle">
+<td class="spantitle">
 整改情况</td>
 <td colspan="5">
 <?php echo smarty_modifier_f_escape_xml($_smarty_tpl->tpl_vars['model']->value['rectification']);?>
@@ -147,8 +147,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 </tr>
 </tbody>
 </table>
-<div style="text-align:center;margin-bottom:20px">
-<input type="buttoon" data-formtype="cancel" style="width:100px;margin-left:20px;"class="btn" id="js-btn-cancelcardreal" value="关闭窗口"/>
+<div class="btn-container" style="margin-bottom:20px;">
+<input type="button" style="margin-left:20px;" data-formtype="update" class="btn" id="js-btn-cancelcardreal" value="关闭"/>
 </div>
 <?php if(!class_exists('FISPagelet', false)){require_once('D:/wamp/www/web/protected/extensions/smarty/plugins/lib/FISPagelet.class.php');}ob_start();?>
 require("cadrerealistic:widget/cadrerealisticdetail/cadrerealisticdetail.js").init();
