@@ -14,12 +14,12 @@
  * @property string $tel
  * @property string $photo
  */
-class UserInfo extends CActiveRecord
+class Userinfo extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return UserInfo the static model class
+	 * @return Userinfo the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
