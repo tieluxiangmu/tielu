@@ -66,16 +66,6 @@
               <option value="罗尤宽">罗尤宽</option>
               <option value="黄毅">黄毅</option>
             </select>
-            <span class="spantitle">两违类别 </span>
-            <select class="chosen-select" id="categorynumber">
-              <option selected="selected" value=""></option>
-              <option value="A">
-              A </option>
-              <option value="B">
-              B </option>
-              <option value="B">
-              C </option>
-            </select>
           </p>
           <p class="btn-con">
             <input class="button btn btn-primary" id="submitseacrh-btn" type="button" value="开始查询"/>
@@ -96,9 +86,11 @@
             <input class="text-input small-input" onclick="WdatePicker()" type="text" name="Realinvestigation[dateofentry]" id="Realinvestigation_dateofentry"/>
           </p>
           <p>
-            <label>
-            时间 </label>
-            <input class="text-input small-input Wdate" type="text" name="Realinvestigation[timeofentry]" id="Realinvestigation_timeofentry" onfocus="WdatePicker({dateFmt:'H:mm:ss'})"/>
+            <label>时间 </label>
+            <input class="text-input small-input Wdate" type="text" name="Realinvestigation_stime"  id="Realinvestigation_stime" onfocus="WdatePicker({dateFmt:'H:mm'})"/>
+            <span style="margin:0 1px;">到</span>
+            <input class="text-input small-input Wdate" type="text" name="Realinvestigation_etime" id="Realinvestigation_etime" onfocus="WdatePicker({dateFmt:'H:mm'})"/>
+            <input  type="hidden" name="Realinvestigation[timeofentry]" id="Realinvestigation_timeofentry" />
           </p>
           <p>
             <label>检查人 </label>
@@ -116,8 +108,8 @@
           </p>
           <p>
             <label>单位 </label>
-            <select name="Realinvestigation[company]" id="Realinvestigation_company" class="small-input">
-              <option value="" selected="selected">开始查询</option>
+            <input type="hidden" name="Realinvestigation[company]" id="Realinvestigation_company"/>
+            <select  id="Real_company" class="chosen-select small-input" multiple="multiple">
               <option value="段领导">段领导</option>
               <option value="安全科">安全科</option>
               <option value="技信科">技信科</option>
@@ -204,8 +196,19 @@
             否
           </p>
           <p>
-            <label> 两违类别/件数 如A3 </label>
-             <input class="text-input small-input" type="text"  name="Realinvestigation[categorynumber]" id="Realinvestigation_categorynumber"/>
+            <label> 两违类别 </label>
+            <select class="small-input" iname="Realinvestigation[category]" id="Realinvestigation_category">
+              <option selected="selected" value=""></option>
+              <option value="A">
+              A </option>
+              <option value="B">
+              B </option>
+              <option value="B">
+              C </option>
+            </select>
+              <span> 件数 </span>
+             <input class="text-input small-input" type="number"  name="Realinvestigation[number]" id="Realinvestigation_number" min="0"/>
+              <input  type="hidden"  name="Realinvestigation[categorynumber]" id="Realinvestigation_categorynumber"/>
           </p>
           <p>
             <label>

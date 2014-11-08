@@ -46,6 +46,12 @@ cadrerealistic = {
         me.load(url, 'init', true);
         //提交成功更新数据
         listener.on('realinvestigation-form', 'success', function(event, info) {
+            $('#Realinvestigation_dateofentry').focus();
+            $('#Real_company_chosen .chosen-choices li').html('');
+            $('#realinvestigation-form input, #realinvestigation-form select, #realinvestigation-form textarea').val('');
+            $('#js-btn-cardreal').val('直接保存为干部写实');
+            $('#js-input-cadcontinue').val('继续');
+            $('#js-input-cadrealcancel').val('取消操作');
             if (info == "add") {
                 //录入成功将url更换至最新
                 window.history.pushState({}, document.title, 'index.php?r=realinvestigation/index');
@@ -88,7 +94,10 @@ cadrerealistic = {
                 'Realinvestigation[dateofentry]': {
                     required: true
                 },
-                'Realinvestigation[timeofentry]': {
+                'Realinvestigation_stime': {
+                    required: true
+                },
+                'Realinvestigation_etime': {
                     required: true
                 },
                 'Realinvestigation[checkperson]': {
@@ -103,7 +112,10 @@ cadrerealistic = {
                 'Realinvestigation[noticeflag]': {
                     required: true
                 },
-                'Realinvestigation[categorynumber]': {
+                'Realinvestigation[category]': {
+                    required: true
+                },
+                'Realinvestigation[number]': {
                     required: true
                 },
                 'Realinvestigation[checkcontents]': {
@@ -113,9 +125,6 @@ cadrerealistic = {
                     required: true
                 },
                 'Realinvestigation[checkmodel]': {
-                    required: true
-                },
-                'Realinvestigation[company]': {
                     required: true
                 }
             },
@@ -215,9 +224,19 @@ cadrerealistic = {
             e.preventDefault();
             jError('请按系统要求填写干部写实数据！');
             return false;
+        };
+        var _company = commonhelp.getchosenSelect('Real_company');
+        if (_company) {
+            $('#Realinvestigation_company').val(_company);
+        } else {
+            jNotify('请先选择单位！', {
+                HorizontalPosition: 'center',
+                VerticalPosition: 'center'
+            });
+            //return false;
         }
-        $('#Realinvestigation_dateofentry').focus();
-        $('#realinvestigation-form input, #realinvestigation-form select, #realinvestigation-form textarea').val('');
+        $('#Realinvestigation_timeofentry').val($('#Realinvestigation_stime').val() + "-" + $('#Realinvestigation_etime').val());
+        $('#Realinvestigation_categorynumber').val($('#Realinvestigation_category').val() + $('#Realinvestigation_number').val());
     }
 }
 module.exports = cadrerealistic;
