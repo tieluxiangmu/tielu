@@ -4,7 +4,7 @@
 var WEBFIS_CONFIG = {
     deploy: {
         receiver: 'http://127.0.0.1/web/receiver.php',
-        root: '/Applications/XAMPP/xamppfiles/htdocs/'
+        root: 'D:xampp/htdocs'
     },
     roadmap: {
         domain: {
