@@ -34,7 +34,7 @@
             </a>
         </li>
         <li>
-            <a class="shortcut-button" href="index.php?r=WorkInfo/Listtwocontrary">
+            <a class="shortcut-button" href="">
                 <span>
                     <img src="/static/images/summary.png" alt="工作情况汇总" />
                     <br />
