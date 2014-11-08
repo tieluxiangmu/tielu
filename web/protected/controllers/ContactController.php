@@ -5,9 +5,10 @@ class ContactController extends Controller
 	public function actionIndex()
 	{
 		$contactmodel=new Contact();
+        //查询联系人 需要根据字段修改
         $contactinfo=$contactmodel->findBySql("SELECT * FROM `tl_contact` ",array());
         $smarty = Yii::app()->smarty;
-        $smarty->_smarty->assign('contactinfo',$contactinfo);
+        $smarty->_smarty->assign('data',$contactinfo);
         $smarty->_smarty->display('contact/page/view.tpl');
     }
 
