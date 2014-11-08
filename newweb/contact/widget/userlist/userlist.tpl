@@ -1,4 +1,3 @@
-{%print_r($data)%}
 <table class="table-striped">
 	<thead>
 		<tr>
@@ -7,16 +6,18 @@
 			<th>手机号</th>
 			<th>单位名称</th>
 			<th>职位名称</th>
+			<th>邮箱</th>
 		</tr>
 	</thead>
 	<tbody>
 	{%for $i = 0; $i < count($data); $i++%}
 		<tr>
-			<td>{%$data[$i]['username']%}</td>
+			<td>{%$data[$i]['name']%}</td>
 			<td>{%$data[$i]['tel']%}</td>
-			<td>{%$data[$i]['other']%}</td>
-			<td>{%$data[$i]['username']%}</td>
-			<td>{%$data[$i]['username']%}</td>
+			<td>{%$data[$i]['mobile']%}</td>
+			<td>{%$data[$i]['department']%}</td>
+			<td>{%$data[$i]['position']%}</td>
+			<td>{%$data[$i]['email']%}</td>
 		</tr>
 	{%/for%}
 	</tbody>
