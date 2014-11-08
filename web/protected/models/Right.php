@@ -1,21 +1,19 @@
 <?php
 
 /**
- * This is the model class for table "{{department}}".
+ * This is the model class for table "{{right}}".
  *
- * The followings are the available columns in table '{{department}}':
+ * The followings are the available columns in table '{{right}}':
  * @property integer $id
- * @property string $name
- * @property integer $typeid
- * @property integer $parentId
- * @property integer $type
+ * @property string $tablename
+ * @property string $role
  */
-class Department extends CActiveRecord
+class Right extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return Department the static model class
+	 * @return Right the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -27,7 +25,7 @@ class Department extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return '{{department}}';
+		return '{{right}}';
 	}
 
 	/**
@@ -38,12 +36,11 @@ class Department extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('name, typeid', 'required'),
-			array('typeid, parentId, type', 'numerical', 'integerOnly'=>true),
-			array('name', 'length', 'max'=>50),
+			array('tablename, role', 'required'),
+			array('tablename, role', 'length', 'max'=>20),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, name, typeid, parentId, type', 'safe', 'on'=>'search'),
+			array('id, tablename, role', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -65,12 +62,31 @@ class Department extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'name' => 'Name',
-			'typeid' => 'Typeid',
-			'parentId' => 'Parent',
-			'type' => 'Type',
+			'tablename' => 'Tablename',
+			'role' => 'Role',
 		);
 	}
+
+
+	/*
+	 *	用户是否对表格具有更新权限
+	 *	$user ,用户的信息
+	 *  $tablename 用户要操作的表格名称 ，如果是否有权限更新两违表  twocontrary
+	 */
+	public function isUserHasModifiedRightWithTable($user, $tablename) {
+		$departmentType = $user['departmenttype'];
+		$role = Role::model() -> find('departmenttype=:departmenttype', array(
+			'departmenttype' => $departmenttype,
+		));
+		$roleId = $role->attributes['id'];
+
+		$right = $this->find('role=:roleId and tablename = :$tablename');
+		if($right) {
+			return true;
+		}
+		return false;
+	}
+
 
 	/**
 	 * Retrieves a list of models based on the current search/filter conditions.
@@ -84,16 +100,11 @@ class Department extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('name',$this->name,true);
-		$criteria->compare('typeid',$this->typeid);
-		$criteria->compare('parentId',$this->parentId);
-		$criteria->compare('type',$this->type);
+		$criteria->compare('tablename',$this->tablename,true);
+		$criteria->compare('role',$this->role,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
-	}
-	public function getDepartmentTypes() {
-		return json_decode(CJSON::encode($this->findAll('type=1')));
 	}
 }

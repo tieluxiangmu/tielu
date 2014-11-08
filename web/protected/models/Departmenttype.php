@@ -1,21 +1,18 @@
 <?php
 
 /**
- * This is the model class for table "{{department}}".
+ * This is the model class for table "{{departmenttype}}".
  *
- * The followings are the available columns in table '{{department}}':
+ * The followings are the available columns in table '{{departmenttype}}':
  * @property integer $id
  * @property string $name
- * @property integer $typeid
- * @property integer $parentId
- * @property integer $type
  */
-class Department extends CActiveRecord
+class Departmenttype extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return Department the static model class
+	 * @return Departmenttype the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -27,7 +24,7 @@ class Department extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return '{{department}}';
+		return '{{departmenttype}}';
 	}
 
 	/**
@@ -38,12 +35,11 @@ class Department extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('name, typeid', 'required'),
-			array('typeid, parentId, type', 'numerical', 'integerOnly'=>true),
-			array('name', 'length', 'max'=>50),
+			array('name', 'required'),
+			array('name', 'length', 'max'=>40),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, name, typeid, parentId, type', 'safe', 'on'=>'search'),
+			array('id, name', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -66,9 +62,6 @@ class Department extends CActiveRecord
 		return array(
 			'id' => 'ID',
 			'name' => 'Name',
-			'typeid' => 'Typeid',
-			'parentId' => 'Parent',
-			'type' => 'Type',
 		);
 	}
 
@@ -85,15 +78,9 @@ class Department extends CActiveRecord
 
 		$criteria->compare('id',$this->id);
 		$criteria->compare('name',$this->name,true);
-		$criteria->compare('typeid',$this->typeid);
-		$criteria->compare('parentId',$this->parentId);
-		$criteria->compare('type',$this->type);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
-	}
-	public function getDepartmentTypes() {
-		return json_decode(CJSON::encode($this->findAll('type=1')));
 	}
 }
