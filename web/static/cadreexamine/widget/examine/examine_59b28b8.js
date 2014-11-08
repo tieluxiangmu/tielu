@@ -1,0 +1,1 @@
+define("cadreexamine:widget/examine/examine.js",function(e,n,i){var o=o||{};o={init:function(){console.log("work")}},i.exports=o});

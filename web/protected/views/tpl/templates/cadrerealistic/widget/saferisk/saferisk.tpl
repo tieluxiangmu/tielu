@@ -74,8 +74,8 @@
 <option value="配合部门1">
 配合部门1</option>
 </select>
-<input class="button btn btn-primary" type="button"  id="submitseacrh-btn" value="开始查询"/>
-<input class="btn btn-success exportexcel" data-excelinfo='{"conid":"js-p-listsafetyrisk","page":"safetyrisk/exportuserexcel"}' type="button" value="导出Excel"/>
+<input class="button btn btn-primary" type="button"  id="submitseacrh-btn" value="确认查询"/>
+<input class="btn btn-success exportexcel" data-excelinfo='{"conid":"js-p-listsafetyrisk","page":"safetyrisk/exportuserexcel"}' type="button" value="导出excel"/>
 <input class="btn btn-warning  deleteall" data-deleteinfo='{"channelid":"safetyrisk-form","conid":"js-p-listsafetyrisk","page":"safetyrisk/delete"}' type="button" value="确认删除" />
 </p>
 </fieldset>

@@ -1,6 +1,6 @@
 <?php
 
-class ContactController extends Controller
+class ContactController extends CController
 {
 	public function actionContact() {
 		$this->render('contact');

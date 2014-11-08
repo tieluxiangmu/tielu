@@ -24,9 +24,9 @@
 <li>
 <a class="shortcut-button" href="">
 <span>
-<img src="/web/static/index/images/bookshelf_75f07d4.png" alt="相关资料" />
+<img src="/web/static/index/images/check_1abb341.png" alt="相关资料" />
 <br />
-相关资料</span>
+干部考核</span>
 </a>
 </li>
 <li>
@@ -43,14 +43,6 @@
 <img src="/web/static/index/images/transfer_4bbceb0.png" alt="联系人" />
 <br />
 联系人</span>
-</a>
-</li>
-<li>
-<a class="shortcut-button" href="" rel="">
-<span>
-<img src="/web/static/index/images/search_0f7ebbd.png" alt="查询" />
-<br />
-查询</span>
 </a>
 </li>
 </ul>
