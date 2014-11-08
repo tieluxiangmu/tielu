@@ -18,7 +18,8 @@ saferisk = {
         var me = this;
         me.setSearchword();
         $(".chosen-select").chosen({
-            no_results_text: "没有查找结果!"
+            no_results_text: "没有查找结果!",
+            width: '250px'
         });
         (me.submitseacrhbtn).on('click', $.proxy(me._submitseacrhEvent, this));
         me.load(url, 'init', true);

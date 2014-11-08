@@ -4,19 +4,19 @@
 <table class="table table-bordered table-striped">
     <tbody>
         <tr>
-            <td>
+            <td class="spantitle">
                 日期
             </td>
             <td>
                 {%$model['dateofentry']%}
             </td>
-            <td>
+            <td class="spantitle">
                 时间
             </td>
-            <td>
+            <td >
                {%$model['timeofentry']%}
             </td>
-            <td>
+            <td class="spantitle">
                 检查人
             </td>
             <td>
@@ -24,27 +24,27 @@
             </td>
         </tr>
         <tr>
-            <td>
+            <td class="spantitle">
                 检查方式
             </td>
             <td>
                  {%$model['checkmodel']%}
             </td>
-            <td>
+            <td class="spantitle">
                 单位
             </td>
             <td>
                  {%$model['company']%}
             </td>
-            <td>
+            <td class="spantitle">
                 值班干部
             </td>
-            <td>
+            <td >
                 {%$model['cadresonduty']%}
             </td>
         </tr>
         <tr>
-            <td>
+            <td class="spantitle">
                 发现问题
             </td>
             <td colspan="5">
@@ -52,13 +52,13 @@
             </td>
         </tr>
         <tr>
-            <td colspan="2">
+            <td colspan="2" class="spantitle">
                 是否下发检查通知书
             </td>
             <td>
                   {%$model['noticeflag']%}
             </td>
-            <td colspan="2">
+            <td colspan="2" class="spantitle">
                 两违类别/件数
             </td>
             <td>
@@ -66,7 +66,7 @@
             </td>
         </tr>
         <tr>
-            <td>
+            <td class="spantitle">
                 检查内容
             </td>
             <td colspan="5">
@@ -74,7 +74,7 @@
             </td>
         </tr>
         <tr>
-            <td>
+            <td class="spantitle">
                 改进意见
             </td>
             <td colspan="5">
@@ -82,13 +82,13 @@
             </td>
         </tr>
         <tr>
-            <td>
+            <td class="spantitle">
                 考核扣分
             </td>
             <td>
              {%$model['evaluationpoints']%}
             </td>
-            <td>
+            <td class="spantitle">
                 扣分原因
             </td>
             <td colspan="3">
@@ -96,7 +96,7 @@
             </td>
         </tr>
         <tr>
-            <td>
+            <td class="spantitle">
                 考核主体
             </td>
             <td colspan="5">
@@ -104,7 +104,7 @@
             </td>
         </tr>
         <tr>
-            <td>
+            <td class="spantitle">
                 评语
             </td>
             <td colspan="5">
@@ -112,7 +112,7 @@
             </td>
         </tr>
         <tr>
-            <td>
+            <td class="spantitle">
                 整改情况
             </td>
             <td colspan="5">
@@ -121,6 +121,10 @@
         </tr>
     </tbody>
 </table>
+ <div class="btn-container" style="margin-bottom:20px;">
+          
+           <input type="button" style="margin-left:20px;" data-formtype="update" class="btn" id="js-btn-cancelcardreal" value="关闭"/>
+        </div>
 {%script%}
 require("cadrerealisticdetail.js").init();
 {%/script%}

@@ -6,7 +6,7 @@
 <div class="content-box">
   <div class="content-box-header">
     <h3>
-      两违章问题管理表
+      两违章问题管理
     </h3>
     <ul class="content-box-tabs">
       <li>
@@ -81,9 +81,9 @@
             </select>
             </p>
             <p class="btn-con">
-           <input class="button btn btn-primary" id="submitseacrh-btn" type="button" value="确认查询"
+           <input class="button btn btn-primary" id="submitseacrh-btn" type="button" value="开始查询"
             />
-            <input class="btn btn-success  exportexcel" data-excelinfo='{"conid":"js-p-listtwocontrary","page":"twocontrarymanage/exportuserexcel"}' type="button" value="导出excel" />
+            <input class="btn btn-success  exportexcel" data-excelinfo='{"conid":"js-p-listtwocontrary","page":"twocontrarymanage/exportuserexcel"}' type="button" value="导出Excel" />
             <input class="btn btn-warning deleteall" data-deleteinfo='{"channelid":"twocontrarymanage-form","conid":"js-p-listtwocontrary","page":"twocontrarymanage/delete"}'  type="button" value="确认删除" />
           </p>
         </fieldset>

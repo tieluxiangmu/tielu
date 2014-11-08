@@ -20,7 +20,7 @@
       <form class="search">
         <fieldset>
           <p>
-            <span class="spantitle">选择日期 </span>
+            <span class="spantitle">日期 </span>
             <input class="Wdate text-input small-input" onclick="WdatePicker()" type="text" id="js-input-sdateofentry"/>
             <span class="spantitle">到</span>
             <input class="Wdate text-input small-input" onclick="WdatePicker()" type="text" id="js-input-edateofentry"/>
@@ -28,7 +28,7 @@
           <p>
             <span class="spantitle">检&nbsp;&nbsp;查&nbsp;&nbsp;人 </span>
             <select class="chosen-select" id="checkperson">
-              <option selected="selected" value="">请选择</option>
+              <option selected="selected" value=""></option>
               <option value="余戈">余戈</option>
               <option value="蔡泽琪">蔡泽琪</option>
               <option value="李洁">李洁</option>
@@ -42,7 +42,7 @@
             </select>
             <span class="spantitle">检查方式 </span>
             <select class="chosen-select" id="checkmodel">
-              <option selected="selected" value="">请选择</option>
+              <option selected="selected" value=""></option>
               <option value="添乘">
               添乘</option>
               <option value="昼查">
@@ -54,7 +54,7 @@
           <p>
             <span class="spantitle">值班干部 </span>
             <select class="chosen-select" id="adresonduty">
-              <option selected="selected" value="">请选择</option>
+              <option selected="selected" value=""></option>
               <option value="钟世能">钟世能</option>
               <option value="代高勇">代高勇</option>
               <option value="张建辉">张建辉</option>
@@ -68,7 +68,7 @@
             </select>
             <span class="spantitle">两违类别 </span>
             <select class="chosen-select" id="categorynumber">
-              <option selected="selected" value="">请选择</option>
+              <option selected="selected" value=""></option>
               <option value="A">
               A </option>
               <option value="B">
@@ -78,8 +78,8 @@
             </select>
           </p>
           <p class="btn-con">
-            <input class="button btn btn-primary" id="submitseacrh-btn" type="button" value="确认查询"/>
-            <input class="btn btn-success exportexcel" data-excelinfo='{"conid":"js-p-listcadrerealistic","page":"realinvestigation/exportuserexcel"}' type="button" value="导出excel"/>
+            <input class="button btn btn-primary" id="submitseacrh-btn" type="button" value="开始查询"/>
+            <input class="btn btn-success exportexcel" data-excelinfo='{"conid":"js-p-listcadrerealistic","page":"realinvestigation/exportuserexcel"}' type="button" value="导出Excel"/>
             <input class="btn btn-warning deleteall" data-deleteinfo='{"channelid":"realinvestigation-form","conid":"js-p-listcadrerealistic","page":"realinvestigation/delete"}' type="button" value="确认删除"/>
           </p>
         </fieldset>
@@ -107,7 +107,7 @@
           <p>
             <label>检查方式 </label>
             <select name="Realinvestigation[checkmodel]" id="Realinvestigation_checkmodel" class="small-input">
-              <option value="" selected="selected">请选择检查方式</option>
+              <option value="" selected="selected"></option>
               <option value="添乘">添乘</option>
               <option value="昼查">昼查</option>
               <option value="夜查">夜查</option>
@@ -117,7 +117,7 @@
           <p>
             <label>单位 </label>
             <select name="Realinvestigation[company]" id="Realinvestigation_company" class="small-input">
-              <option value="" selected="selected">请选择单位</option>
+              <option value="" selected="selected">开始查询</option>
               <option value="段领导">段领导</option>
               <option value="安全科">安全科</option>
               <option value="技信科">技信科</option>
@@ -217,7 +217,7 @@
             改进意见 </label>
             <textarea class="text-input textarea" name="Realinvestigation[improvement]" id="Realinvestigation_improvement" cols="79" rows="10"></textarea>
           </p>
-          <p>
+          <p class="btn-container">
             <input class="btn btn-primary" data-formtype="add" type="submit" value="直接保存为干部写实" id="js-btn-cardreal"/>
             <select class="btnsleetct" name="dropdown" class="small-input" id="js-select-cadrerealistic">
               <option value="0">
