@@ -105,6 +105,11 @@ class RealinvestigationController extends Controller {
             if ($model->save()) {
                 $res['success'] = true;
                 $res['message'] = "干部写实数据录入成功！";
+                //发送邮件
+                $inserInfo=$_POST['Realinvestigation'];
+                if($inserInfo['noticeflag']=='是'){
+                    $this->actionsendEmail($inserInfo);
+                }
             } else {
                 $res['message'] = "干部写实数据录入失败，请重试！";
             }
@@ -203,5 +208,53 @@ class RealinvestigationController extends Controller {
         }
         return $model;
     }
+    /**
+     *   发送检查通知书邮件
+     */
+    public function actionsendEmail($values){
+        //创建word文档
+        Yii::import('application.components');
+        require_once("PHPWord.php");
+        $PHPWord = new PHPWord();
+        $document = $PHPWord->loadTemplate('./docfile/template/template_test.docx');
+        $document->setValue('company',$values['company']);
+        $document->setValue('Realinvestigation',$values['cadresonduty']);
+        $document->setValue('checkcontents',$values['checkcontents']);
+        $document->setValue('checktime',$values['dateofentry'].' '.$values['Realinvestigation']);
+        $document->setValue('foundproblem',$values['foundproblem']);
+        $document->setValue('improvement',$values['improvement']);
+        $document->setValue('username',$_SESSION['name']);
+        $document->setValue('checkdate',$values['dateofentry']);
+        $filename='./docfile/'.time().'.docx';
+        $document->save($filename);
+        //保存成功开始发送邮件
+        if(!empty($document)){
+            //查询接收邮件用户邮箱
+            $userinfomodel=Userinfo::model();
+            $sql="select email from {{userinfo}} where name = ".$_POST['cadresonduty'];
+            $result=Yii::app()->db->createCommand($sql);
+            $rows = $result->queryAll();
+            $mailto=$rows['email'];
+            Yii::import('application.components');
+            require_once("EMailer.php");
+            $mailer=new EMailer();
+            $mailer->IsSMTP();
+            $mailer->Host = MAIL_SMTP;
+            $mailer->SMTPAuth = true;
+            $mailer->Port = 25;
+            $mailer->CharSet  = "UTF-8";
+            $mailer->Encoding = "base64";
+            $mailer->Username = MAIL_NAME;
+            $mailer->Password = MAIL_PWD;
+            $mailer->From = MAIL_FROM;
+            $mailer->FromName = $_SESSION['name'];
+            $mailer->AddAddress($mailto, $_POST['cadresonduty']);
+            $mailer->Subject = MAIL_SUBJECT;
+            $mailer->AddAttachment($web_path.str_replace('\\','/',$filename),'检查通报.docx');
+            $mailer->Send();
+//            if(!empty($mailer)){
+//                $realinvermodel=Realinvestigation::model();
+//            }
+        }
+    }
 }
-

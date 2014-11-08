@@ -55,12 +55,12 @@ return array(
 		),*/
 		// MySQL databasep配置类
 		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=safetyinfo_Database',
+			'connectionString' => 'mysql:host=localhost;dbname='.DATABASE,
 			'emulatePrepare' => true,
-			'username' => 'root',
-			'password' => '',
-			'charset' => 'utf8',
-			'tablePrefix' => 'tl_',
+			'username' => NAME,
+			'password' => PASSWORD,
+			'charset' => CHARSET,
+			'tablePrefix' => TABLEPREFIX,
 			//'enableParamLogging' => true,//调试的时候展现sql语句
 		),
 		'errorHandler'=>array(

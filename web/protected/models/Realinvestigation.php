@@ -21,6 +21,7 @@
  * @property string $assessmentmain
  * @property string $comment
  * @property string $rectification
+ * @property string $filepath
  */
 class Realinvestigation extends CActiveRecord
 {
@@ -54,10 +55,11 @@ class Realinvestigation extends CActiveRecord
 			array('foundproblem, checkcontents, improvement, pointsreasons, comment, rectification', 'length', 'max'=>500),
 			array('noticeflag', 'length', 'max'=>10),
 			array('evaluationpoints, assessmentmain', 'length', 'max'=>50),
+			array('filepath', 'length', 'max'=>255),
 			array('dateofentry, timeofentry', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, dateofentry, timeofentry, checkperson, checkmodel, company, cadresonduty, foundproblem, noticeflag, categorynumber, checkcontents, improvement, evaluationpoints, pointsreasons, assessmentmain, comment, rectification', 'safe', 'on'=>'search'),
+			array('id, dateofentry, timeofentry, checkperson, checkmodel, company, cadresonduty, foundproblem, noticeflag, categorynumber, checkcontents, improvement, evaluationpoints, pointsreasons, assessmentmain, comment, rectification, filepath', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -79,22 +81,23 @@ class Realinvestigation extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'dateofentry' => '日期',
-			'timeofentry' => '时间',
-			'checkperson' => '检查人',
-			'checkmodel' => '检查方式',
-			'company' => '单位',
-			'cadresonduty' => '值班干部',
-			'foundproblem' => '发现问题',
-			'noticeflag' => '是否下发检查通知书',
-			'categorynumber' => '两违类别/件数',
-			'checkcontents' => '检查内容',
-			'improvement' => '改进意见',
-			'evaluationpoints' => '考核扣分',
-			'pointsreasons' => '扣分原因',
-			'assessmentmain' => '考核主体',
-			'comment' => '评语',
-			'rectification' => '整改情况'
+			'dateofentry' => 'Dateofentry',
+			'timeofentry' => 'Timeofentry',
+			'checkperson' => 'Checkperson',
+			'checkmodel' => 'Checkmodel',
+			'company' => 'Company',
+			'cadresonduty' => 'Cadresonduty',
+			'foundproblem' => 'Foundproblem',
+			'noticeflag' => 'Noticeflag',
+			'categorynumber' => 'Categorynumber',
+			'checkcontents' => 'Checkcontents',
+			'improvement' => 'Improvement',
+			'evaluationpoints' => 'Evaluationpoints',
+			'pointsreasons' => 'Pointsreasons',
+			'assessmentmain' => 'Assessmentmain',
+			'comment' => 'Comment',
+			'rectification' => 'Rectification',
+			'filepath' => 'Filepath',
 		);
 	}
 
@@ -126,6 +129,7 @@ class Realinvestigation extends CActiveRecord
 		$criteria->compare('assessmentmain',$this->assessmentmain,true);
 		$criteria->compare('comment',$this->comment,true);
 		$criteria->compare('rectification',$this->rectification,true);
+		$criteria->compare('filepath',$this->filepath,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
