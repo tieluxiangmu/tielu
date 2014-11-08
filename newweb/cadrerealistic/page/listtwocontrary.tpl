@@ -10,7 +10,7 @@
         <thead>
           <tr>
             <th>
-              <input class="check-all" type="checkbox" /> 全选
+              <input class="check-all" type="checkbox" />
             </th>
             <th>
               序号

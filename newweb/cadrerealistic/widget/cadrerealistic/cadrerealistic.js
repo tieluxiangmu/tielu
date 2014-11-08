@@ -33,8 +33,7 @@ cadrerealistic = {
         var me = this;
         me.setSearchword();
         $(".chosen-select").chosen({
-            no_results_text: "没有查找结果!",
-            width: '250px'
+            no_results_text: "没有查找结果!"
         });
         (me.cadcontinue).on('click', $.proxy(me._submitEvent, this));
         me._cadcontinueEvent();
@@ -216,8 +215,6 @@ cadrerealistic = {
             jError('请按系统要求填写干部写实数据！');
             return false;
         }
-        $('#Realinvestigation_dateofentry').focus();
-        $('#realinvestigation-form input, #realinvestigation-form select, #realinvestigation-form textarea').val('');
     }
 }
 module.exports = cadrerealistic;

@@ -19,19 +19,7 @@
                 <tr>
                   <td>检查人</td>
                   <td>           
-                      <select class="text-input small-input chosen-select" name="Safetyproduct[checkperson]" id="Safetyproduct_checkperson">
-                        <option selected="selected" value="">请选择</option>
-                        <option value="余戈">余戈</option>
-                        <option value="蔡泽琪">蔡泽琪</option>
-                        <option value="李洁">李洁</option>
-                        <option value="樊鹏">樊鹏</option>
-                        <option value="刘远平">刘远平</option>
-                        <option value="潘晓明">潘晓明</option>
-                        <option value="刘宁">刘宁</option>
-                        <option value="田兴明">田兴明</option>
-                        <option value="汤献忠">汤献忠</option>
-                        <option value="黄成福">黄成福</option>
-                    </select>
+                  <input  class="text-input small-input" name="Safetyproduct[checkperson]" id="Safetyproduct_checkperson"  value="{%$model['checkperson']%}" />
                   </td>
                   <td>销号时间</td>
                   <td><input  class="text-input small-input" onclick="WdatePicker()" type="text" name="Safetyproduct[registertime]" id="Safetyproduct_registertime"  value="{%$model['registertime']%}" /></td>
@@ -68,7 +56,6 @@
         </table>
 </form>
 {%script%}
-$('#Safetyproduct_checkperson').find("option[value='{%$model['checkperson']%}']").attr("selected", "selected");
 $('#Safetyproduct_currentstatus').find("option[value='{%$model['currentstatus']%}']").attr("selected", "selected");
 require("editecurityprodu.js").init();
 {%/script%}

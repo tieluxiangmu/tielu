@@ -33,6 +33,7 @@
                             <option value="车务段">车务段</option>
                             <option value="车间">车间</option>
                             <option value="班组">班组</option>
+                            <option value="小组">小组</option>
                         </select>
                     </p>
                     <p>
@@ -59,12 +60,7 @@
                         <label>
                             责任人
                         </label>
-                        <select class="small-input" name="Twocontrarymanage[responsibleperson]" id="Twocontrarymanage_responsibleperson">
-                         <option selected="selected" value="">请选择责任人</option>
-                            <option value="责任人1">
-                                责任人1
-                            </option>
-                        </select>
+                        <input class="text-input small-input" type="text"  nname="Twocontrarymanage[responsibleperson]" id="Twocontrarymanage_responsibleperson" />
                     </p>
                     <p>
                         <label>
@@ -75,8 +71,11 @@
                     <p>
                         <label>
                             政治面貌
-                        </label>
-                        <input class="text-input small-input" type="text" name="Twocontrarymanage[politicalaffiliation]" id="Twocontrarymanage_politicalaffiliation"/>
+                        </label> <select name="Twocontrarymanage[politicalaffiliation]" id="Twocontrarymanage_politicalaffiliation" class="small-input">
+                            <option selected="selected" value="">请选择</option>
+                            <option value="荣昌">党员</option>
+                            <option value="峰高铺">群众</option>
+                        </select>
                     </p>
                     <p>
                         <label>
@@ -88,7 +87,7 @@
                         <label>
                             处理结果
                         </label>
-                        <textarea class="text-input textarea wysiwyg" name="Twocontrarymanage[processingresults]" id="Twocontrarymanage_processingresults" cols="79" rows="5"></textarea>
+                        <input type="number" type="text" class="text-input textarea wysiwyg" name="Twocontrarymanage[processingresults]" id="Twocontrarymanage_processingresults">
                     </p>
                     <p>
                         <label>
@@ -96,15 +95,16 @@
                         </label>
                         <select name="Twocontrarymanage[llegalcategory]" id="Twocontrarymanage_llegalcategory" class="small-input">
                             <option value="">请选择违章类别</option>
-                            <option value="A1">A1</option>
-                            <option value="B2">B2</option>
+                            <option value="A">A</option>
+                            <option value="B">B</option>
+                            <option value="C">C</option>
                         </select>
                     </p>
                     <p>
                         <label>
                             责任人扣分
                         </label>
-                        <input class="text-input small-input"  name="Twocontrarymanage[deduction]" id="Twocontrarymanage_deduction" />
+                        <input class="text-input small-input"  name="Twocontrarymanage[deduction]" id="Twocontrarymanage_deduction" type="number" />
                     </p>
                     <p>
                         <label>
@@ -116,13 +116,13 @@
                         <label>
                             扣积分情况
                         </label>
-                         <textarea class="text-input textarea"  name="Twocontrarymanage[buckleintegral]" id="Twocontrarymanage_buckleintegral" cols="79" rows="5"></textarea>
+                        <input class="text-input small-input" name="Twocontrarymanage[buckleintegral]" id="Twocontrarymanage_buckleintegral" type="number"/>
                     </p>
                     <p>
                         <label>
                             （班组长）扣积分情况
                         </label>
-                         <textarea class="text-input textarea"  name="Twocontrarymanage[teamleaderIntegral]" id="Twocontrarymanage_teamleaderIntegral" cols="79" rows="5"></textarea>
+                         <input class="text-input small-input" name="Twocontrarymanage[buckleintegral]" id="Twocontrarymanage_buckleintegral" type="number"/>
                     </p>
                     <p>
                         <input class="btn btn-primary" id="js-input-addsaferisk" type="submit"

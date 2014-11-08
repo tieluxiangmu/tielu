@@ -150,7 +150,7 @@
                         <label>
                             责任人
                         </label>
-                         <input class="text-input small-input" name="Safetyproduct[dutyperson]" id="Safetyproduct_dutyperson" onClick="WdatePicker()"/>
+                         <input class="text-input small-input" name="Safetyproduct[dutyperson]" id="Safetyproduct_dutyperson" />
                     </p>
                     <p>
                         <label>
@@ -162,7 +162,7 @@
                         <label>
                             检查人
                         </label>
-                        <input class="text-input small-input" name="Safetyproduct[checkperson]" id="Safetyproduct_checkperson" onClick="WdatePicker()"/>
+                        <input class="text-input small-input" name="Safetyproduct[checkperson]" id="Safetyproduct_checkperson" />
                     </p>
                     <p>
                         <span style="display:none;" id="js-span-jumpurl"></span>
