@@ -4,7 +4,7 @@ class ContactController extends Controller
 {
 	public function actionIndex()
 	{
-		$contactmodel=new contact();
+		$contactmodel=new Contact();
         $contactinfo=$contactmodel->findBySql("SELECT * FROM `tl_contact` ",array());
         $smarty = Yii::app()->smarty;
         $smarty->_smarty->assign('contactinfo',$contactinfo);
