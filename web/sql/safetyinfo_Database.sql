@@ -1,13 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.1.6
+-- version 3.4.10.1
 -- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Generation Time: 2014-11-08 04:13:02
--- 服务器版本： 5.6.16
--- PHP Version: 5.5.9
+-- 主机: localhost
+-- 生成日期: 2014 年 11 月 08 日 05:16
+-- 服务器版本: 5.5.20
+-- PHP 版本: 5.3.10
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `safetyinfo_Database`
+-- 数据库: `safetyinfo_database`
 --
 
 -- --------------------------------------------------------
@@ -28,9 +28,33 @@ SET time_zone = "+00:00";
 
 CREATE TABLE IF NOT EXISTS `tl_department` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '部门表ID',
-  `department` text NOT NULL COMMENT '部门名',
+  `name` varchar(50) NOT NULL COMMENT '部门名',
+  `typeid` int(11) NOT NULL COMMENT '部门类型编号',
+  `parentId` int(11) DEFAULT NULL COMMENT '父部门',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='单位名列表' AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `tl_departmenttype`
+--
+
+CREATE TABLE IF NOT EXISTS `tl_departmenttype` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(40) COLLATE utf8_bin NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=5 ;
+
+--
+-- 转存表中的数据 `tl_departmenttype`
+--
+
+INSERT INTO `tl_departmenttype` (`id`, `name`) VALUES
+(1, '车务段领导'),
+(2, '车务段科室'),
+(3, '协管站'),
+(4, '班组');
 
 -- --------------------------------------------------------
 
@@ -167,6 +191,30 @@ INSERT INTO `tl_realinvestigation` (`id`, `dateofentry`, `timeofentry`, `checkpe
 (132, '2014-10-05', '21:47:21', '余戈', '添乘', '荣昌', '代高勇', '发现了部分问题', '是', 'A1', '检查内容', '改进意见', NULL, NULL, NULL, NULL, NULL),
 (133, '2014-11-06', '16:18:00', '袁志佳', '昼查', '南海公司', '张文星', '发现问题', '是', 'A3', '检查内容', '改进意见', NULL, NULL, NULL, NULL, NULL),
 (134, '2014-11-11', '17:25:30', '测试', '夜查', '技信科', '问问', '说说', '是', '是', '是', '是', NULL, NULL, NULL, NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `tl_role`
+--
+
+CREATE TABLE IF NOT EXISTS `tl_role` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'id',
+  `name` varchar(50) COLLATE utf8_bin NOT NULL COMMENT '权限名称，',
+  `departmenttype` int(11) DEFAULT NULL COMMENT '部门类型ID',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=6 ;
+
+--
+-- 转存表中的数据 `tl_role`
+--
+
+INSERT INTO `tl_role` (`id`, `name`, `departmenttype`) VALUES
+(1, '超级管理员', 0),
+(2, 'level1', 1),
+(3, 'level1', 2),
+(4, 'leve2', 3),
+(5, 'level3', 4);
 
 -- --------------------------------------------------------
 
@@ -401,18 +449,24 @@ DELIMITER ;
 
 CREATE TABLE IF NOT EXISTS `tl_userinfo` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '用户ID',
-  `username` varchar(30) NOT NULL COMMENT '用户名',
-  `upassword` varchar(100) NOT NULL COMMENT '用户密码MD5',
+  `name` varchar(30) NOT NULL COMMENT '用户名',
+  `password` varchar(100) NOT NULL COMMENT '用户密码MD5',
+  `departmenttype` int(11) NOT NULL,
+  `department` varchar(30) NOT NULL,
+  `position` varchar(50) NOT NULL,
+  `mobile` varchar(11) DEFAULT NULL COMMENT '手机号',
+  `tel` varchar(13) DEFAULT NULL COMMENT '办公电话',
+  `photo` varchar(200) DEFAULT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `username` (`username`)
+  UNIQUE KEY `username` (`name`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='用户信息表' AUTO_INCREMENT=2 ;
 
 --
 -- 转存表中的数据 `tl_userinfo`
 --
 
-INSERT INTO `tl_userinfo` (`id`, `username`, `upassword`) VALUES
-(1, 'admin', '21232f297a57a5a743894a0e4a801fc3');
+INSERT INTO `tl_userinfo` (`id`, `name`, `password`, `departmenttype`, `department`, `position`, `mobile`, `tel`, `photo`) VALUES
+(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 0, '', '', NULL, NULL, NULL);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
