@@ -2,12 +2,17 @@
 
 class ContactController extends Controller
 {
+	public function actionContact() {
+		$this->render('contact');
+	}	
+
 	public function actionIndex()
 	{
 		$contactmodel=new Userinfo();
         $contactinfo=$contactmodel->findBySql("SELECT `id`,`name`,`department`,`position`,`mobile`,`tel`,`photo` FROM `tl_userinfo` ",array());
         $smarty = Yii::app()->smarty;
         $smarty->_smarty->assign('data',$contactinfo);
+
         $smarty->_smarty->display('contact/page/view.tpl');
     }
 
