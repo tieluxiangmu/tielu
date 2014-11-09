@@ -1,7 +1,7 @@
 <div class="content-box">
     <div class="content-box-header">
         <h3>
-            我的日程{%info.authority%}{%info.me%}
+            我的日程
         </h3>
         <div class="clear">
         </div>
