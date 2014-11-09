@@ -14,6 +14,10 @@
 	{%require name="common:static/css/invalid.css"%}
 	{%require name="common:static/css/jNotify.jquery.css"%}
 	{%require name="common:static/css/chosen.css"%}
+	{%require name="common:static/css/zTreeStyle.css"%}
+	{%require name="common:static/css/jquery.autocomplete.css"%}
+	
+
 	<script type="text/javascript">
 	window.Request = {
 		QueryString : function(item){
@@ -29,6 +33,9 @@
 		{%require name="common:static/js/chosen.jquery.js"%}
 		{%require name="common:static/js/jquery.validate.js"%}
 		{%require name="common:static/js/validate-ex.js"%}
+		{%require name="common:static/js/jquery.ztree.all-3.5.js"%}
+		{%require name="common:static/js/jquery.autocomplete.js"%}
+
 		<!--livereload-->
 		{%block name="main"%}
 		<div id="sidebar">
