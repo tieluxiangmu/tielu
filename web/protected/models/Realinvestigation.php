@@ -9,12 +9,14 @@
  * @property string $timeofentry
  * @property string $checkperson
  * @property string $checkmodel
+ * @property string $ischeck45
  * @property string $company
  * @property string $cadresonduty
  * @property string $foundproblem
  * @property string $noticeflag
  * @property string $categorynumber
  * @property string $checkcontents
+ * @property integer $checkcount
  * @property string $improvement
  * @property string $evaluationpoints
  * @property string $pointsreasons
@@ -51,15 +53,16 @@ class Realinvestigation extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
+			array('checkcount', 'numerical', 'integerOnly'=>true),
+			array('timeofentry', 'length', 'max'=>200),
 			array('checkperson, checkmodel, company, cadresonduty, categorynumber', 'length', 'max'=>100),
 			array('foundproblem, checkcontents, improvement, pointsreasons, comment, rectification', 'length', 'max'=>500),
 			array('noticeflag', 'length', 'max'=>10),
 			array('evaluationpoints, assessmentmain', 'length', 'max'=>50),
-			array('filepath', 'length', 'max'=>255),
-			array('dateofentry, timeofentry', 'safe'),
+			array('dateofentry, ischeck45, filepath', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, dateofentry, timeofentry, checkperson, checkmodel, company, cadresonduty, foundproblem, noticeflag, categorynumber, checkcontents, improvement, evaluationpoints, pointsreasons, assessmentmain, comment, rectification, filepath', 'safe', 'on'=>'search'),
+			array('id, dateofentry, timeofentry, checkperson, checkmodel, ischeck45, company, cadresonduty, foundproblem, noticeflag, categorynumber, checkcontents, checkcount, improvement, evaluationpoints, pointsreasons, assessmentmain, comment, rectification, filepath', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -85,12 +88,14 @@ class Realinvestigation extends CActiveRecord
 			'timeofentry' => 'Timeofentry',
 			'checkperson' => 'Checkperson',
 			'checkmodel' => 'Checkmodel',
+			'ischeck45' => 'Ischeck45',
 			'company' => 'Company',
 			'cadresonduty' => 'Cadresonduty',
 			'foundproblem' => 'Foundproblem',
 			'noticeflag' => 'Noticeflag',
 			'categorynumber' => 'Categorynumber',
 			'checkcontents' => 'Checkcontents',
+			'checkcount' => 'Checkcount',
 			'improvement' => 'Improvement',
 			'evaluationpoints' => 'Evaluationpoints',
 			'pointsreasons' => 'Pointsreasons',
@@ -117,12 +122,14 @@ class Realinvestigation extends CActiveRecord
 		$criteria->compare('timeofentry',$this->timeofentry,true);
 		$criteria->compare('checkperson',$this->checkperson,true);
 		$criteria->compare('checkmodel',$this->checkmodel,true);
+		$criteria->compare('ischeck45',$this->ischeck45,true);
 		$criteria->compare('company',$this->company,true);
 		$criteria->compare('cadresonduty',$this->cadresonduty,true);
 		$criteria->compare('foundproblem',$this->foundproblem,true);
 		$criteria->compare('noticeflag',$this->noticeflag,true);
 		$criteria->compare('categorynumber',$this->categorynumber,true);
 		$criteria->compare('checkcontents',$this->checkcontents,true);
+		$criteria->compare('checkcount',$this->checkcount);
 		$criteria->compare('improvement',$this->improvement,true);
 		$criteria->compare('evaluationpoints',$this->evaluationpoints,true);
 		$criteria->compare('pointsreasons',$this->pointsreasons,true);
