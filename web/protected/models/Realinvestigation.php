@@ -22,6 +22,9 @@
  * @property string $comment
  * @property string $rectification
  * @property string $filepath
+ * @property integer $level2
+ * @property integer $level3
+ * @property string $commit
  */
 class Realinvestigation extends CActiveRecord
 {
@@ -51,15 +54,17 @@ class Realinvestigation extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
+			array('level2, level3', 'numerical', 'integerOnly'=>true),
 			array('checkperson, checkmodel, company, cadresonduty, categorynumber', 'length', 'max'=>100),
 			array('foundproblem, checkcontents, improvement, pointsreasons, comment, rectification', 'length', 'max'=>500),
 			array('noticeflag', 'length', 'max'=>10),
 			array('evaluationpoints, assessmentmain', 'length', 'max'=>50),
 			array('filepath', 'length', 'max'=>255),
+			array('commit', 'length', 'max'=>33),
 			array('dateofentry, timeofentry', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, dateofentry, timeofentry, checkperson, checkmodel, company, cadresonduty, foundproblem, noticeflag, categorynumber, checkcontents, improvement, evaluationpoints, pointsreasons, assessmentmain, comment, rectification, filepath', 'safe', 'on'=>'search'),
+			array('id, dateofentry, timeofentry, checkperson, checkmodel, company, cadresonduty, foundproblem, noticeflag, categorynumber, checkcontents, improvement, evaluationpoints, pointsreasons, assessmentmain, comment, rectification, filepath, level2, level3, commit', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -98,6 +103,9 @@ class Realinvestigation extends CActiveRecord
 			'comment' => 'Comment',
 			'rectification' => 'Rectification',
 			'filepath' => 'Filepath',
+			'level2' => 'Level2',
+			'level3' => 'Level3',
+			'commit' => 'Commit',
 		);
 	}
 
@@ -130,6 +138,9 @@ class Realinvestigation extends CActiveRecord
 		$criteria->compare('comment',$this->comment,true);
 		$criteria->compare('rectification',$this->rectification,true);
 		$criteria->compare('filepath',$this->filepath,true);
+		$criteria->compare('level2',$this->level2);
+		$criteria->compare('level3',$this->level3);
+		$criteria->compare('commit',$this->commit,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
