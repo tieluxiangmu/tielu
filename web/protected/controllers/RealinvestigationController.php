@@ -216,7 +216,7 @@ class RealinvestigationController extends Controller {
         Yii::import('application.components');
         require_once("PHPWord.php");
         $PHPWord = new PHPWord();
-        $document = $PHPWord->loadTemplate('./docfile/template/template_test.docx');
+        $document = $PHPWord->loadTemplate('./docfile/template/template_test.docx');//$_session['derpartment']
         $document->setValue('company',$values['company']);
         $document->setValue('Realinvestigation',$values['cadresonduty']);
         $document->setValue('checkcontents',$values['checkcontents']);
@@ -230,11 +230,11 @@ class RealinvestigationController extends Controller {
         //保存成功开始发送邮件
         if(!empty($document)){
             //查询接收邮件用户邮箱
-            $userinfomodel=Userinfo::model();
-            $sql="select email from {{userinfo}} where name = ".$_POST['cadresonduty'];
-            $result=Yii::app()->db->createCommand($sql);
-            $rows = $result->queryAll();
-            $mailto=$rows['email'];
+            $name=$values['cadresonduty'];
+            $sql="select * from {{userinfo}} where name='{$name}'";
+            $command = Yii::app()->db->createCommand($sql);
+            $rows = $command->queryAll();
+            $mailto=$rows[0]['email'];
             Yii::import('application.components');
             require_once("EMailer.php");
             $mailer=new EMailer();
@@ -250,11 +250,19 @@ class RealinvestigationController extends Controller {
             $mailer->FromName = $_SESSION['name'];
             $mailer->AddAddress($mailto, $_POST['cadresonduty']);
             $mailer->Subject = MAIL_SUBJECT;
+            $mailer->Body = MAIL_BODY;
             $mailer->AddAttachment($web_path.str_replace('\\','/',$filename),'检查通报.docx');
             $mailer->Send();
-//            if(!empty($mailer)){
-//                $realinvermodel=Realinvestigation::model();
-//            }
+            if(!empty($mailer)){
+                $sql="select * from {{realinvestigation}} order by id desc limit 1";
+                $result=Yii::app()->db->createCommand($sql);
+                $result=$result->queryAll();
+                $id=$result[0]['id'];
+                //插件path
+                $sql="update {{realinvestigation}} set `filepath`='{$filename}' where `id`='{$id}'";
+                $result=Yii::app()->db->createCommand($sql);
+                $result=$result->queryAll();
+            }
         }
     }
 }
