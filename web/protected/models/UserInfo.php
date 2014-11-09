@@ -112,6 +112,21 @@ class Userinfo extends CActiveRecord
 		);
 	}
 
+	/*
+	 *	获取$userid 对应的所有下属
+	 *
+	 */
+	public function getSubordinatesByUserId($userid) {
+
+	}
+
+	public function getUsersByName($name) {
+		var_dump($name);
+		$users = $this->findAll('name like "%:name%"', array(
+			'name' => $name,
+		))->attributes;
+		return CJSON::encode($users);
+	}
 	/**
 	 * Retrieves a list of models based on the current search/filter conditions.
 	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
