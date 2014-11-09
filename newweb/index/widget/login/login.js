@@ -11,10 +11,14 @@ login = {
     },
     bind: function() {
         this.loginbtn.click(function() {
-            //location.href = "/web";
             $.ajax({
-                url: '',
+                url: 'index.php?r=userinfo/login',
                 dataType: 'json',
+                method: 'POST',
+                data: {
+                    name: $('input[name=name]').val(),
+                    password: $('input[name=password]').val()
+                },
                 success: function(json) {
                     if(json.success) {
                         location.href = "/web"

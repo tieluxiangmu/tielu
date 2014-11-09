@@ -12,7 +12,7 @@
     </div>
     <div id="login-content">
         <div class="form-content">
-            <form action="index.php?r=site/login">
+            <form action="index.php?r=user/login">
                 <div class="notification information png_bg">
                     <div>
                        请妥善保管好您的用户名和密码！
