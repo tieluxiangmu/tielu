@@ -2123,3 +2123,37 @@ Stack trace:
 #12 D:\xampp\htdocs\framework\base\CApplication.php(169): CWebApplication->processRequest()
 #13 D:\xampp\htdocs\web\index.php(11): CWebApplication->run()
 REQUEST_URI=/web/index.php?r=cadreexamine
+2014/11/09 10:20:57 [error] [exception.SmartyException] exception 'SmartyException' with message 'Unable to load template file 'workinfo/page/index.tpl'' in D:\xampp\htdocs\web\protected\extensions\smarty\sysplugins\smarty_internal_templatebase.php:127
+Stack trace:
+#0 D:\xampp\htdocs\web\protected\extensions\smarty\sysplugins\smarty_internal_templatebase.php(374): Smarty_Internal_TemplateBase->fetch('workinfo/page/i...', NULL, NULL, NULL, true)
+#1 D:\xampp\htdocs\web\protected\controllers\WorkInfoController.php(22): Smarty_Internal_TemplateBase->display('workinfo/page/i...')
+#2 D:\xampp\htdocs\framework\web\actions\CInlineAction.php(49): WorkInfoController->actionListtwocontrary()
+#3 D:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\xampp\htdocs\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 D:\xampp\htdocs\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\xampp\htdocs\framework\web\CWebApplication.php(282): CController->run('Listtwocontrary')
+#7 D:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController('WorkInfo/Listtw...')
+#8 D:\xampp\htdocs\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#9 D:\xampp\htdocs\web\index.php(11): CApplication->run()
+#10 {main}
+REQUEST_URI=/web/index.php?r=WorkInfo/Listtwocontrary
+HTTP_REFERER=http://localhost/web/
+---
+2014/11/09 10:22:17 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'goal' in 'field list'. The SQL statement executed was: select department,name,position,goal from tl_userinfo;.
+2014/11/09 10:22:17 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'goal' in 'field list'. The SQL statement executed was: select department,name,position,goal from tl_userinfo;' in D:\xampp\htdocs\framework\db\CDbCommand.php:541
+Stack trace:
+#0 D:\xampp\htdocs\framework\db\CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 D:\xampp\htdocs\framework\db\ar\CActiveRecord.php(1527): CDbCommand->queryAll()
+#2 D:\xampp\htdocs\web\protected\controllers\WorkInfoController.php(30): CActiveRecord->findAllBySql('select departme...')
+#3 D:\xampp\htdocs\framework\web\actions\CInlineAction.php(49): WorkInfoController->actionselectResult()
+#4 D:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\xampp\htdocs\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 D:\xampp\htdocs\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\xampp\htdocs\framework\web\CWebApplication.php(282): CController->run('selectResult')
+#8 D:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController('WorkInfo/select...')
+#9 D:\xampp\htdocs\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 D:\xampp\htdocs\web\index.php(11): CApplication->run()
+#11 {main}
+REQUEST_URI=/web/index.php?r=WorkInfo/selectResult&start_time=2014-11-07&end_time=2014-11-19
+HTTP_REFERER=http://localhost/web/index.php?r=WorkInfo/Listtwocontrary
+---

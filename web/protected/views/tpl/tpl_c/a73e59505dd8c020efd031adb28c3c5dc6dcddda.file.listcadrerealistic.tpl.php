@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2014-11-09 09:17:01
+<?php /* Smarty version Smarty-3.1.13, created on 2014-11-09 11:03:09
          compiled from "D:\xampp\htdocs\web\protected\views\tpl\templates\cadrerealistic\page\listcadrerealistic.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:26767545dd97a797443-84182277%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'a73e59505dd8c020efd031adb28c3c5dc6dcddda' => 
     array (
       0 => 'D:\\xampp\\htdocs\\web\\protected\\views\\tpl\\templates\\cadrerealistic\\page\\listcadrerealistic.tpl',
-      1 => 1415440409,
+      1 => 1415527386,
       2 => 'file',
     ),
   ),
@@ -27,6 +27,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_545dd97a843298_38866442')) {function content_545dd97a843298_38866442($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_escape')) include 'D:\\xampp\\htdocs\\web\\protected\\extensions\\smarty\\plugins\\modifier.escape.php';
 if (!is_callable('smarty_modifier_f_escape_xml')) include 'D:\\xampp\\htdocs\\web\\protected\\extensions\\smarty\\plugins\\modifier.f_escape_xml.php';
+if (!is_callable('smarty_modifier_truncate')) include 'D:\\xampp\\htdocs\\web\\protected\\extensions\\smarty\\plugins\\modifier.truncate.php';
 ?><?php if ((count($_smarty_tpl->tpl_vars['data']->value)==0)){?>
 <div class="notification attention png_bg"><a href="#" class="close">
 <img src="/web/static/cadrerealistic/images/icons/cross_grey_small_b635c2e.png" title="关闭" alt="可关闭这个提示">
@@ -38,8 +39,7 @@ if (!is_callable('smarty_modifier_f_escape_xml')) include 'D:\\xampp\\htdocs\\we
 <thead>
 <tr>
 <th>
-<input class="check-all" type="checkbox" />
-</th>
+<input class="check-all" type="checkbox" />全选</th>
 <th>
 日期</th>
 <th>
@@ -50,7 +50,7 @@ if (!is_callable('smarty_modifier_f_escape_xml')) include 'D:\\xampp\\htdocs\\we
 值班干部</th>
 <th>
 发现问题</th>
-<th>
+<th style="width:100px;">
 两违类别/件数</th>
 <th>
 相关操作</th>
@@ -82,10 +82,8 @@ if (!is_callable('smarty_modifier_f_escape_xml')) include 'D:\\xampp\\htdocs\\we
 
 </td>
 <td>
-<a>
 <?php echo smarty_modifier_f_escape_xml($_smarty_tpl->tpl_vars['data']->value[$_smarty_tpl->tpl_vars['i']->value]['checkmodel']);?>
 
-</a>
 </td>
 <td>
 <?php echo smarty_modifier_f_escape_xml($_smarty_tpl->tpl_vars['data']->value[$_smarty_tpl->tpl_vars['i']->value]['company']);?>
@@ -96,7 +94,7 @@ if (!is_callable('smarty_modifier_f_escape_xml')) include 'D:\\xampp\\htdocs\\we
 
 </td>
 <td>
-<?php echo smarty_modifier_f_escape_xml($_smarty_tpl->tpl_vars['data']->value[$_smarty_tpl->tpl_vars['i']->value]['foundproblem']);?>
+<?php echo smarty_modifier_f_escape_xml(smarty_modifier_truncate($_smarty_tpl->tpl_vars['data']->value[$_smarty_tpl->tpl_vars['i']->value]['foundproblem'],40));?>
 
 </td>
 <td>
@@ -105,14 +103,14 @@ if (!is_callable('smarty_modifier_f_escape_xml')) include 'D:\\xampp\\htdocs\\we
 </td>
 <td>
 <a href="" class="edit"  data-editinfo='{"page":"realinvestigation/editcadrerealistic","id":<?php echo smarty_modifier_f_escape_xml($_smarty_tpl->tpl_vars['data']->value[$_smarty_tpl->tpl_vars['i']->value]["id"]);?>
-}'  title="修改干部写实管理">
+}'  title="写实修改">
 <img src="/web/static/cadrerealistic/images/icons/pencil_2d05354.png" alt="编辑" />
 </a>
-<a href="" title="点击删除"   data-deleteinfo='{"channelid":"realinvestigation-form","page":"realinvestigation/delete","id":<?php echo smarty_modifier_f_escape_xml($_smarty_tpl->tpl_vars['data']->value[$_smarty_tpl->tpl_vars['i']->value]["id"]);?>
+<a href="" title="写实删除"   data-deleteinfo='{"channelid":"realinvestigation-form","page":"realinvestigation/delete","id":<?php echo smarty_modifier_f_escape_xml($_smarty_tpl->tpl_vars['data']->value[$_smarty_tpl->tpl_vars['i']->value]["id"]);?>
 }' class="delete">
 <img src="/web/static/cadrerealistic/images/icons/cross_bc68ad4.png"  alt="删除" />
 </a>
-<a href="" title="干部写实管理详情"  class="detail"  data-detailinfo='{"page":"realinvestigation/view","id":<?php echo smarty_modifier_f_escape_xml($_smarty_tpl->tpl_vars['data']->value[$_smarty_tpl->tpl_vars['i']->value]["id"]);?>
+<a href="" title="写实详情"  class="detail"  data-detailinfo='{"page":"realinvestigation/view","id":<?php echo smarty_modifier_f_escape_xml($_smarty_tpl->tpl_vars['data']->value[$_smarty_tpl->tpl_vars['i']->value]["id"]);?>
 }'>
 <img src="/web/static/cadrerealistic/images/icons/detail_4ffc6a5.png" alt="详情" />
 </a>

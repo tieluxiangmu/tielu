@@ -9,8 +9,7 @@
 <thead>
 <tr>
 <th>
-<input class="check-all" type="checkbox" />
-</th>
+<input class="check-all" type="checkbox" />全选</th>
 <th>
 编号</th>
 <th>
@@ -49,9 +48,7 @@
 {%$data[$i]['serialnumber']|f_escape_xml%}
 </td>
 <td>
-<a>
 {%$data[$i]['riskname']|f_escape_xml%}
-</a>
 </td>
 <td>
 {%$data[$i]['riskclass']|f_escape_xml%}
@@ -60,16 +57,16 @@
 {%$data[$i]['risksystem']|f_escape_xml%}
 </td>
 <td>
-{%$data[$i]['reasonofrisk']|f_escape_xml%}
+{%$data[$i]['reasonofrisk']|truncate:15:"..."|f_escape_xml%}
 </td>
 <td>
-{%$data[$i]['consequence']|f_escape_xml%}
+{%$data[$i]['consequence']|truncate:15:"...|f_escape_xml%}
 </td>
 <td>
-<a href="" class="edit"  data-editinfo='{"page":"safetyrisk/editsafetyrisk","id":{%$data[$i]["id"]|f_escape_xml%}}'  title="修改安全风险管理">
+<a href="" class="edit"  data-editinfo='{"page":"safetyrisk/editsafetyrisk","id":{%$data[$i]["id"]|f_escape_xml%}}'  title="安全风险修改">
 <img src="/web/static/cadrerealistic/images/icons/pencil_2d05354.png" alt="编辑" />
 </a>
-<a href="" title="点击删除"   data-deleteinfo='{"channelid":"safetyrisk-form","page":"safetyrisk/delete","id":{%$data[$i]["id"]|f_escape_xml%}}' class="delete">
+<a href="" title="安全风险删除"   data-deleteinfo='{"channelid":"safetyrisk-form","page":"safetyrisk/delete","id":{%$data[$i]["id"]|f_escape_xml%}}' class="delete">
 <img src="/web/static/cadrerealistic/images/icons/cross_bc68ad4.png"  alt="删除" />
 </a>
 <a href="" title="安全风险详情"  class="detail"  data-detailinfo='{"page":"safetyrisk/view","id":{%$data[$i]["id"]|f_escape_xml%}}'>

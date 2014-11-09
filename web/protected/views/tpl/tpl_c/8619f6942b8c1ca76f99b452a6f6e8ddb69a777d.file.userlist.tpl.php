@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2014-11-08 10:58:40
+<?php /* Smarty version Smarty-3.1.13, created on 2014-11-09 10:48:19
          compiled from "D:\xampp\htdocs\web\protected\views\tpl\templates\contact\widget\userlist\userlist.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:210545da91e54a434-58051032%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '8619f6942b8c1ca76f99b452a6f6e8ddb69a777d' => 
     array (
       0 => 'D:\\xampp\\htdocs\\web\\protected\\views\\tpl\\templates\\contact\\widget\\userlist\\userlist.tpl',
-      1 => 1415440715,
+      1 => 1415526493,
       2 => 'file',
     ),
   ),
@@ -25,14 +25,19 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_545da91e54e2b4_80407129')) {function content_545da91e54e2b4_80407129($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_f_escape_xml')) include 'D:\\xampp\\htdocs\\web\\protected\\extensions\\smarty\\plugins\\modifier.f_escape_xml.php';
-?><table class="table-striped">
+?><div class="content-box">
+<div class="content-box-header">
+<h3>筛选条件</h3>
+</div>
+<div class="content-box-content">
+<table class="table-striped">
 <thead>
 <tr>
 <th>姓名</th>
 <th>电话</th>
 <th>手机号</th>
-<th>单位名称</th>
-<th>职位名称</th>
+<th>单位</th>
+<th>职位</th>
 <th>邮箱</th>
 </tr>
 </thead>
@@ -57,4 +62,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <?php }} ?>
 </tbody>
 </table>
+</div>
+</div>
 <?php }} ?>

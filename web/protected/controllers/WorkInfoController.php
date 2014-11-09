@@ -117,16 +117,14 @@ class WorkInfoController extends CController
 			$objActSheet->setCellValue('I3', '考核奖惩情况');
 		}
 
-		 foreach($res as $r){ //行写入
+		 foreach($res as $key => $r){ //行写入
 	        $span = ord("A");
-	        $column  = 5;
 	        foreach($r as $value){// 列写入
 	            $j = chr($span);
 
-	            $objActSheet->setCellValue($j.$column, $value);
+	            $objActSheet->setCellValue($j.($key + 5), $value);
 	            $span++;
 	        }
-	        $column++;
 	    }
 
 	    $fileName = iconv("utf-8", "gb2312", $fileName);

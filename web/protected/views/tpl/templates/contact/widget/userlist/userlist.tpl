@@ -1,11 +1,16 @@
+<div class="content-box">
+<div class="content-box-header">
+<h3>筛选条件</h3>
+</div>
+<div class="content-box-content">
 <table class="table-striped">
 <thead>
 <tr>
 <th>姓名</th>
 <th>电话</th>
 <th>手机号</th>
-<th>单位名称</th>
-<th>职位名称</th>
+<th>单位</th>
+<th>职位</th>
 <th>邮箱</th>
 </tr>
 </thead>
@@ -22,3 +27,5 @@
 {%/for%}
 </tbody>
 </table>
+</div>
+</div>
