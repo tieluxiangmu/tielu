@@ -1,0 +1,37 @@
+.calendar-wrapper{
+  width: 50%;
+  float: left;
+  padding-bottom: 50px;
+}
+.calendar-operation{
+	height: 30px;
+}
+.task-list{
+	float: left;
+	padding-left: 1em;
+	padding-top: 34px;
+}
+.task-list li{
+	margin-bottom: 1em;
+}
+
+.add-task{
+	clear: both;
+	padding-bottom: 50px;
+}
+table.task-list-table{}
+td.op-calendar-new-relative.selected-date{
+	background-color: rgb(195, 188, 188);
+}
+
+a.task-close{
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	line-height: 12px;
+	border-radius: 6px;
+	font-size: 10px;
+	text-align: center;
+	background-color: #006dcc;
+	color: #fff;
+}

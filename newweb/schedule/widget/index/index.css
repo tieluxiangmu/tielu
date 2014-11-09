@@ -1,0 +1,24 @@
+.calendar-wrapper{
+  width: 50%;
+  float: left;
+  padding-bottom: 50px;
+}
+.calendar-operation{
+	height: 30px;
+}
+.task-list{
+	float: left;
+	padding-left: 1em;
+	padding-top: 34px;
+}
+.task-list li{
+	margin-bottom: 1em;
+}
+.tab-content:after{
+	content: '';
+	display: table;
+	clear: both;
+}
+td.op-calendar-new-relative.selected-date{
+	background-color: rgb(195, 188, 188);
+}
