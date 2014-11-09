@@ -1883,3 +1883,243 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/web/index.php?r=cadreexamine
 ---
+2014/11/09 04:28:44 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in D:\xampp\htdocs\framework\db\CDbConnection.php:381
+Stack trace:
+#0 D:\xampp\htdocs\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 D:\xampp\htdocs\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 D:\xampp\htdocs\framework\base\CModule.php(387): CDbConnection->init()
+#3 D:\xampp\htdocs\framework\base\CApplication.php(438): CModule->getComponent('db')
+#4 D:\xampp\htdocs\framework\db\ar\CActiveRecord.php(623): CApplication->getDb()
+#5 D:\xampp\htdocs\framework\db\ar\CActiveRecord.php(2309): CActiveRecord->getDbConnection()
+#6 D:\xampp\htdocs\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Twocontrarymanage))
+#7 D:\xampp\htdocs\web\protected\models\Twocontrarymanage.php(33): CActiveRecord::model('Twocontrarymana...')
+#8 D:\xampp\htdocs\web\protected\controllers\CadreexamineController.php(23): Twocontrarymanage::model()
+#9 D:\xampp\htdocs\framework\web\actions\CInlineAction.php(49): CadreexamineController->actionselectResult()
+#10 D:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 D:\xampp\htdocs\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 D:\xampp\htdocs\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 D:\xampp\htdocs\framework\web\CWebApplication.php(282): CController->run('selectresult')
+#14 D:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController('cadreexamine/se...')
+#15 D:\xampp\htdocs\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 D:\xampp\htdocs\web\index.php(11): CApplication->run()
+#17 {main}
+REQUEST_URI=/web/index.php?r=cadreexamine/selectresult
+---
+2014/11/09 04:29:11 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in D:\xampp\htdocs\framework\db\CDbConnection.php:381
+Stack trace:
+#0 D:\xampp\htdocs\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 D:\xampp\htdocs\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 D:\xampp\htdocs\framework\base\CModule.php(387): CDbConnection->init()
+#3 D:\xampp\htdocs\framework\base\CApplication.php(438): CModule->getComponent('db')
+#4 D:\xampp\htdocs\framework\db\ar\CActiveRecord.php(623): CApplication->getDb()
+#5 D:\xampp\htdocs\framework\db\ar\CActiveRecord.php(2309): CActiveRecord->getDbConnection()
+#6 D:\xampp\htdocs\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Twocontrarymanage))
+#7 D:\xampp\htdocs\web\protected\models\Twocontrarymanage.php(33): CActiveRecord::model('Twocontrarymana...')
+#8 D:\xampp\htdocs\web\protected\controllers\CadreexamineController.php(23): Twocontrarymanage::model()
+#9 D:\xampp\htdocs\framework\web\actions\CInlineAction.php(49): CadreexamineController->actionselectResult()
+#10 D:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 D:\xampp\htdocs\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 D:\xampp\htdocs\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 D:\xampp\htdocs\framework\web\CWebApplication.php(282): CController->run('selectresult')
+#14 D:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController('cadreexamine/se...')
+#15 D:\xampp\htdocs\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 D:\xampp\htdocs\web\index.php(11): CApplication->run()
+#17 {main}
+REQUEST_URI=/web/index.php?r=cadreexamine/selectresult
+---
+2014/11/09 04:29:12 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in D:\xampp\htdocs\framework\db\CDbConnection.php:381
+Stack trace:
+#0 D:\xampp\htdocs\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 D:\xampp\htdocs\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 D:\xampp\htdocs\framework\base\CModule.php(387): CDbConnection->init()
+#3 D:\xampp\htdocs\framework\base\CApplication.php(438): CModule->getComponent('db')
+#4 D:\xampp\htdocs\framework\db\ar\CActiveRecord.php(623): CApplication->getDb()
+#5 D:\xampp\htdocs\framework\db\ar\CActiveRecord.php(2309): CActiveRecord->getDbConnection()
+#6 D:\xampp\htdocs\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Twocontrarymanage))
+#7 D:\xampp\htdocs\web\protected\models\Twocontrarymanage.php(33): CActiveRecord::model('Twocontrarymana...')
+#8 D:\xampp\htdocs\web\protected\controllers\CadreexamineController.php(23): Twocontrarymanage::model()
+#9 D:\xampp\htdocs\framework\web\actions\CInlineAction.php(49): CadreexamineController->actionselectResult()
+#10 D:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 D:\xampp\htdocs\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 D:\xampp\htdocs\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 D:\xampp\htdocs\framework\web\CWebApplication.php(282): CController->run('selectresult')
+#14 D:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController('cadreexamine/se...')
+#15 D:\xampp\htdocs\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 D:\xampp\htdocs\web\index.php(11): CApplication->run()
+#17 {main}
+REQUEST_URI=/web/index.php?r=cadreexamine/selectresult
+---
+2014/11/09 04:29:40 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ischeck45' in 'where clause'. The SQL statement executed was: select id from tl_realinvestigation where checkperson='æŽæ´'
+    					and ischeck45='æ˜¯'.
+2014/11/09 04:29:40 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ischeck45' in 'where clause'. The SQL statement executed was: select id from tl_realinvestigation where checkperson='æŽæ´'
+    					and ischeck45='æ˜¯'' in D:\xampp\htdocs\framework\db\CDbCommand.php:541
+Stack trace:
+#0 D:\xampp\htdocs\framework\db\CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 D:\xampp\htdocs\framework\db\ar\CActiveRecord.php(1527): CDbCommand->queryAll()
+#2 D:\xampp\htdocs\web\protected\controllers\CadreexamineController.php(74): CActiveRecord->findAllBySql('select id from ...')
+#3 D:\xampp\htdocs\framework\web\actions\CInlineAction.php(49): CadreexamineController->actionselectResult()
+#4 D:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\xampp\htdocs\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 D:\xampp\htdocs\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\xampp\htdocs\framework\web\CWebApplication.php(282): CController->run('selectresult')
+#8 D:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController('cadreexamine/se...')
+#9 D:\xampp\htdocs\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 D:\xampp\htdocs\web\index.php(11): CApplication->run()
+#11 {main}
+REQUEST_URI=/web/index.php?r=cadreexamine/selectresult
+---
+2014/11/09 07:23:15 [error] [exception.SmartyException] exception 'SmartyException' with message 'Unable to load template file 'workinfo/page/index.tpl'' in D:\xampp\htdocs\web\protected\extensions\smarty\sysplugins\smarty_internal_templatebase.php:127
+Stack trace:
+#0 D:\xampp\htdocs\web\protected\extensions\smarty\sysplugins\smarty_internal_templatebase.php(374): Smarty_Internal_TemplateBase->fetch('workinfo/page/i...', NULL, NULL, NULL, true)
+#1 D:\xampp\htdocs\web\protected\controllers\WorkInfoController.php(22): Smarty_Internal_TemplateBase->display('workinfo/page/i...')
+#2 D:\xampp\htdocs\framework\web\actions\CInlineAction.php(49): WorkInfoController->actionListtwocontrary()
+#3 D:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\xampp\htdocs\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 D:\xampp\htdocs\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\xampp\htdocs\framework\web\CWebApplication.php(282): CController->run('Listtwocontrary')
+#7 D:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController('WorkInfo/Listtw...')
+#8 D:\xampp\htdocs\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#9 D:\xampp\htdocs\web\index.php(11): CApplication->run()
+#10 {main}
+REQUEST_URI=/web/index.php?r=WorkInfo/Listtwocontrary
+HTTP_REFERER=http://localhost/web/index.php
+---
+2014/11/09 07:35:26 [error] [exception.PHPExcel_Writer_Exception] exception 'PHPExcel_Writer_Exception' with message 'Could not close zip file /web/_1415514926.xlsx.' in D:\xampp\htdocs\web\protected\extensions\PHPExcel\PHPExcel\Writer\Excel2007.php:399
+Stack trace:
+#0 D:\xampp\htdocs\web\protected\controllers\CadreexamineController.php(205): PHPExcel_Writer_Excel2007->save('/web/_141551492...')
+#1 D:\xampp\htdocs\framework\web\actions\CInlineAction.php(49): CadreexamineController->actionselectResult()
+#2 D:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 D:\xampp\htdocs\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#4 D:\xampp\htdocs\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 D:\xampp\htdocs\framework\web\CWebApplication.php(282): CController->run('selectresult')
+#6 D:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController('cadreexamine/se...')
+#7 D:\xampp\htdocs\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#8 D:\xampp\htdocs\web\index.php(11): CApplication->run()
+#9 {main}
+REQUEST_URI=/web/index.php?r=cadreexamine/selectresult&year=2014&month=10&person=%E6%9D%8E%E6%B4%81&export=excel
+---
+2014/11/09 07:36:34 [error] [exception.PHPExcel_Writer_Exception] exception 'PHPExcel_Writer_Exception' with message 'Could not close zip file D:
+mpp\htdocs\web\protected_1415514994.xlsx.' in D:\xampp\htdocs\web\protected\extensions\PHPExcel\PHPExcel\Writer\Excel2007.php:399
+Stack trace:
+#0 D:\xampp\htdocs\web\protected\controllers\CadreexamineController.php(205): PHPExcel_Writer_Excel2007->save('D:?mpp\htdocs\w...')
+#1 D:\xampp\htdocs\framework\web\actions\CInlineAction.php(49): CadreexamineController->actionselectResult()
+#2 D:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 D:\xampp\htdocs\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#4 D:\xampp\htdocs\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 D:\xampp\htdocs\framework\web\CWebApplication.php(282): CController->run('selectresult')
+#6 D:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController('cadreexamine/se...')
+#7 D:\xampp\htdocs\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#8 D:\xampp\htdocs\web\index.php(11): CApplication->run()
+#9 {main}
+REQUEST_URI=/web/index.php?r=cadreexamine/selectresult&year=2014&month=10&person=%E6%9D%8E%E6%B4%81&export=excel
+---
+2014/11/09 08:32:57 [error] [exception.PHPExcel_Writer_Exception] exception 'PHPExcel_Writer_Exception' with message 'Could not close zip file attachment/¹ÜÀíÈËÔ±Á¿»¯¼ì²éÐ´Êµ¿¼ºË±í___2014Äê11ÔÂ09ÈÕ.xlsx.' in D:\xampp\htdocs\web\protected\extensions\PHPExcel\PHPExcel\Writer\Excel2007.php:399
+Stack trace:
+#0 D:\xampp\htdocs\web\protected\controllers\CadreexamineController.php(202): PHPExcel_Writer_Excel2007->save('attachment/????...')
+#1 D:\xampp\htdocs\framework\web\actions\CInlineAction.php(49): CadreexamineController->actionselectResult()
+#2 D:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 D:\xampp\htdocs\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#4 D:\xampp\htdocs\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 D:\xampp\htdocs\framework\web\CWebApplication.php(282): CController->run('selectresult')
+#6 D:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController('cadreexamine/se...')
+#7 D:\xampp\htdocs\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#8 D:\xampp\htdocs\web\index.php(11): CApplication->run()
+#9 {main}
+REQUEST_URI=/web/index.php?r=cadreexamine/selectresult&year=2014&month=10&person=%E6%9D%8E%E6%B4%81&export=excel
+---
+2014/11/09 08:33:39 [error] [exception.PHPExcel_Writer_Exception] exception 'PHPExcel_Writer_Exception' with message 'Could not close zip file attachment/¹ÜÀíÈËÔ±Á¿»¯¼ì²éÐ´Êµ¿¼ºË±í___2014Äê11ÔÂ09ÈÕ.xlsx.' in D:\xampp\htdocs\web\protected\extensions\PHPExcel\PHPExcel\Writer\Excel2007.php:399
+Stack trace:
+#0 D:\xampp\htdocs\web\protected\controllers\CadreexamineController.php(202): PHPExcel_Writer_Excel2007->save('attachment/????...')
+#1 D:\xampp\htdocs\framework\web\actions\CInlineAction.php(49): CadreexamineController->actionselectResult()
+#2 D:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 D:\xampp\htdocs\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#4 D:\xampp\htdocs\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 D:\xampp\htdocs\framework\web\CWebApplication.php(282): CController->run('selectresult')
+#6 D:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController('cadreexamine/se...')
+#7 D:\xampp\htdocs\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#8 D:\xampp\htdocs\web\index.php(11): CApplication->run()
+#9 {main}
+REQUEST_URI=/web/index.php?r=cadreexamine/selectresult&year=2014&month=10&person=%E6%9D%8E%E6%B4%81&export=excel
+---
+2014/11/09 08:34:04 [error] [exception.PHPExcel_Writer_Exception] exception 'PHPExcel_Writer_Exception' with message 'Could not close zip file attachment/¹ÜÀíÈËÔ±Á¿»¯¼ì²éÐ´Êµ¿¼ºË±í___2014Äê11ÔÂ09ÈÕ.xlsx.' in D:\xampp\htdocs\web\protected\extensions\PHPExcel\PHPExcel\Writer\Excel2007.php:399
+Stack trace:
+#0 D:\xampp\htdocs\web\protected\controllers\CadreexamineController.php(203): PHPExcel_Writer_Excel2007->save('attachment/????...')
+#1 D:\xampp\htdocs\framework\web\actions\CInlineAction.php(49): CadreexamineController->actionselectResult()
+#2 D:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 D:\xampp\htdocs\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#4 D:\xampp\htdocs\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 D:\xampp\htdocs\framework\web\CWebApplication.php(282): CController->run('selectresult')
+#6 D:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController('cadreexamine/se...')
+#7 D:\xampp\htdocs\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#8 D:\xampp\htdocs\web\index.php(11): CApplication->run()
+#9 {main}
+REQUEST_URI=/web/index.php?r=cadreexamine/selectresult&year=2014&month=10&person=%E6%9D%8E%E6%B4%81&export=excel
+---
+2014/11/09 08:46:28 [error] [exception.PHPExcel_Writer_Exception] exception 'PHPExcel_Writer_Exception' with message 'Could not close zip file attachment/ç®¡ç†äººå‘˜é‡åŒ–æ£€æŸ¥å†™å®žè€ƒæ ¸è¡¨___2014å¹´11æœˆ09æ—¥.xlsx.' in D:\xampp\htdocs\web\protected\extensions\PHPExcel\PHPExcel\Writer\Excel2007.php:399
+Stack trace:
+#0 D:\xampp\htdocs\web\protected\controllers\CadreexamineController.php(204): PHPExcel_Writer_Excel2007->save('attachment/????...')
+#1 D:\xampp\htdocs\framework\web\actions\CInlineAction.php(49): CadreexamineController->actionselectResult()
+#2 D:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 D:\xampp\htdocs\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#4 D:\xampp\htdocs\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 D:\xampp\htdocs\framework\web\CWebApplication.php(282): CController->run('selectresult')
+#6 D:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController('cadreexamine/se...')
+#7 D:\xampp\htdocs\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#8 D:\xampp\htdocs\web\index.php(11): CApplication->run()
+#9 {main}
+REQUEST_URI=/web/index.php?r=cadreexamine/selectresult&year=2014&month=10&person=%E6%9D%8E%E6%B4%81&export=excel
+---
+2014/11/09 08:55:47 [error] [exception.PHPExcel_Writer_Exception] exception 'PHPExcel_Writer_Exception' with message 'Could not close zip file attachment/¹ÜÀíÈËÔ±Á¿»¯¼ì²éÐ´Êµ¿¼ºË±í__Àî½à_2014Äê11ÔÂ09ÈÕ.xlsx.' in D:\xampp\htdocs\web\protected\extensions\PHPExcel\PHPExcel\Writer\Excel2007.php:399
+Stack trace:
+#0 D:\xampp\htdocs\web\protected\controllers\CadreexamineController.php(199): PHPExcel_Writer_Excel2007->save('attachment/????...')
+#1 D:\xampp\htdocs\framework\web\actions\CInlineAction.php(49): CadreexamineController->actionselectResult()
+#2 D:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 D:\xampp\htdocs\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#4 D:\xampp\htdocs\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 D:\xampp\htdocs\framework\web\CWebApplication.php(282): CController->run('selectresult')
+#6 D:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController('cadreexamine/se...')
+#7 D:\xampp\htdocs\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#8 D:\xampp\htdocs\web\index.php(11): CApplication->run()
+#9 {main}
+REQUEST_URI=/web/index.php?r=cadreexamine/selectresult&year=2014&month=10&person=%E6%9D%8E%E6%B4%81&export=excel
+---
+2014/11/09 08:55:57 [error] [exception.PHPExcel_Writer_Exception] exception 'PHPExcel_Writer_Exception' with message 'Could not close zip file attachment/¹ÜÀíÈËÔ±Á¿»¯¼ì²éÐ´Êµ¿¼ºË±í__Àî½à_2014Äê11ÔÂ09ÈÕ.xlsx.' in D:\xampp\htdocs\web\protected\extensions\PHPExcel\PHPExcel\Writer\Excel2007.php:399
+Stack trace:
+#0 D:\xampp\htdocs\web\protected\controllers\CadreexamineController.php(199): PHPExcel_Writer_Excel2007->save('attachment/????...')
+#1 D:\xampp\htdocs\framework\web\actions\CInlineAction.php(49): CadreexamineController->actionselectResult()
+#2 D:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 D:\xampp\htdocs\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#4 D:\xampp\htdocs\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 D:\xampp\htdocs\framework\web\CWebApplication.php(282): CController->run('selectresult')
+#6 D:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController('cadreexamine/se...')
+#7 D:\xampp\htdocs\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#8 D:\xampp\htdocs\web\index.php(11): CApplication->run()
+#9 {main}
+REQUEST_URI=/web/index.php?r=cadreexamine/selectresult&year=2014&month=10&person=%E6%9D%8E%E6%B4%81&export=excel
+---
+2014/11/09 09:10:35 [error] [php] Undefined variable: _SESSION (D:\xampp\htdocs\web\protected\controllers\CadreexamineController.php:215)
+Stack trace:
+#0 D:\xampp\htdocs\framework\web\CController.php(286): CadreexamineController->runAction()
+#1 D:\xampp\htdocs\framework\web\CController.php(265): CadreexamineController->runActionWithFilters()
+#2 D:\xampp\htdocs\framework\web\CWebApplication.php(282): CadreexamineController->run()
+#3 D:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\xampp\htdocs\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 D:\xampp\htdocs\web\index.php(11): CWebApplication->run()
+REQUEST_URI=/web/index.php?r=cadreexamine/selectresult&export=excel&year=2014&month=10&person=%E6%9D%8E%E6%B4%81&koufen=-5&koufenyuanyin=-5&kaohezhutipingyu=-5
+2014/11/09 09:11:04 [error] [php] include(FISResource.php): failed to open stream: No such file or directory (D:\xampp\htdocs\framework\YiiBase.php:421)
+Stack trace:
+#0 unknown(0): spl_autoload_call()
+#1 D:\xampp\htdocs\web\protected\extensions\smarty\plugins\lib\FISPagelet.class.php(2): class_exists()
+#2 D:\xampp\htdocs\web\protected\views\tpl\tpl_c\210c135836066ada1fda03d1ae632ed92145fcc2.file.index.tpl.php(30): require_once()
+#3 D:\xampp\htdocs\web\protected\extensions\smarty\sysplugins\smarty_internal_templatebase.php(180): content_545dbf9eefa364_21735061()
+#4 D:\xampp\htdocs\web\protected\extensions\smarty\sysplugins\smarty_internal_templatebase.php(374): Smarty->fetch()
+#5 D:\xampp\htdocs\web\protected\controllers\CadreexamineController.php(14): Smarty->display()
+#6 D:\xampp\htdocs\framework\web\actions\CInlineAction.php(49): CadreexamineController->actionIndex()
+#7 D:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 D:\xampp\htdocs\framework\web\CController.php(286): CadreexamineController->runAction()
+#9 D:\xampp\htdocs\framework\web\CController.php(265): CadreexamineController->runActionWithFilters()
+#10 D:\xampp\htdocs\framework\web\CWebApplication.php(282): CadreexamineController->run()
+#11 D:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 D:\xampp\htdocs\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#13 D:\xampp\htdocs\web\index.php(11): CWebApplication->run()
+REQUEST_URI=/web/index.php?r=cadreexamine

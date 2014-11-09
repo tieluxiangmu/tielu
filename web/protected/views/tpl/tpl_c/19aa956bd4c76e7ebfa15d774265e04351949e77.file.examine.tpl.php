@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2014-11-08 11:05:34
+<?php /* Smarty version Smarty-3.1.13, created on 2014-11-09 09:20:25
          compiled from "D:\xampp\htdocs\web\protected\views\tpl\templates\cadreexamine\widget\examine\examine.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:22943545dbfc149f8e3-97321859%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '19aa956bd4c76e7ebfa15d774265e04351949e77' => 
     array (
       0 => 'D:\\xampp\\htdocs\\web\\protected\\views\\tpl\\templates\\cadreexamine\\widget\\examine\\examine.tpl',
-      1 => 1415441132,
+      1 => 1415521223,
       2 => 'file',
     ),
   ),
@@ -76,13 +76,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 </p>
 <p>
 <a class="button btn btn-primary" id="search-btn">开始查询</a>
-<a class="button btn btn-success" style="margin-left: 15px;" id="export-excel" href="javascript:;">导出Excel</a>
 </p>
 </fieldset>
 </form>
 </div>
 </div>
-<table id="examine-result" cellpadding="0" cellspacing="0" width="1017" style="font-size:12px">
+<form class="result-wrap">
+</form>
+<a class="button btn btn-success" style="margin-top: 10px;margin-bottom:10px" id="export-excel" href="javascript:;">生成Excel并发送邮件</a>
+<table id="examine-result-tpl" cellpadding="0" cellspacing="0" width="1017" style="font-size:12px;display:none">
 <colgroup>
 <col width="72" style="width:72px"/>
 <col width="52" style=";width:52px"/>
@@ -102,7 +104,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 </tr>
 <tr height="38" style=";height:38px">
 <td colspan="11" height="38" width="1017">
-&nbsp; 单位（科室）：安全科&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 姓名：李洁&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; 填报时间：2014年2月&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+&nbsp; 单位（科室）：<i class="department">安全科</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 姓名：<i class="name">李洁</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; 填报时间：<i class="report-time">2014年2月</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
 </tr>
 <tr height="38" style=";height:38px">
 <td rowspan="2" height="76" width="72" style="border-top-style: none;">
@@ -110,18 +112,18 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <td colspan="2" width="111" style="border-right-width: 1px; border-right-color: black;">
 量化检查标准</td>
 <td colspan="8" width="835" style="border-right-width: 1px; border-right-color: black; border-left-style: none;">
-昼查5次，夜查2次，添乘1遍，检查四五等站3次，发放《安全检查通知书》4份，发现问题8个，查处“两违”3件，抽查重点安全风险3个。</td>
+昼查<i class="goal-zhoucha">5</i>次，夜查<i class="goal-yecha">2</i>次，添乘<i class="goal-tiancheng">1</i>遍，检查四五等站<i class="goal-jiacha">3</i>次，发放《安全检查通知书》<i class="goal-tongzhi">4</i>份，发现问题<i class="goal-faxianwenti">8</i>个，查处“两违”<i class="goal-liangwei">3</i>件，抽查重点安全风险<i class="goal-anquan">3</i>个。</td>
 </tr>
 <tr height="38" style=";height:38px">
 <td colspan="2" height="38" width="111" style="border-right-width: 1px; border-right-color: black;">
 实际完成情况</td>
 <td colspan="8" width="835" style="border-right-width: 1px; border-right-color: black; border-left-style: none;">
-昼查7次，夜查1次，添乘1遍，检查四五等站4次，发放《安全检查通知书》5份，发现问题13个，查处“两违”2件，抽查重点安全风险3个。</td>
+昼查<i class="real-zhoucha">5</i>次，夜查<i class="real-yecha">2</i>次，添乘<i class="real-tiancheng">1</i>遍，检查四五等站<i class="real-jiacha">3</i>次，发放《安全检查通知书》<i class="real-tongzhi">4</i>份，发现问题<i class="real-faxianwenti">8</i>个，查处“两违”<i class="real-liangwei">3</i>件，抽查重点安全风险<i class="real-anquan">3</i>个。</td>
 </tr>
-<tr height="48" style="height:48px">
+<tr class="list-title" height="48" style="height:48px">
 <td rowspan="5" height="342" width="72" style="border-bottom-width: 1px; border-bottom-color: black;">
 检查写实情况</td>
-<td width="52" style="border-top-style: none;">
+<td width="82" style="border-top-style: none;">
 日期</td>
 <td width="59" style="border-top-style: none; border-left-style: none;">
 时间</td>
@@ -133,100 +135,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 单位</td>
 <td width="59" style="border-top-style: none; border-left-style: none;">
 值班&nbsp; 干部</td>
-<td width="261" style="border-top-style: none; border-left-style: none;">
+<td width="201" style="border-top-style: none; border-left-style: none;">
 发现问题</td>
 <td width="239" style="border-top-style: none; border-left-style: none;">
 整改情况</td>
-<td width="55" style="border-top-style: none; border-left-style: none;">
+<td width="85" style="border-top-style: none; border-left-style: none;">
 是否下发检查通知书</td>
 <td width="59" style="border-top-style: none; border-left-style: none;">
 两违类别/件数</td>
-</tr>
-<tr height="77" style=";height:77px">
-<td height="77" width="52" style="border-top-style: none;">
-2月2日</td>
-<td width="59" style="border-top-style: none; border-left-style: none;">
-12：00&nbsp; —&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; 14：00</td>
-<td width="61" style="border-top-style: none; border-left-style: none;">
-李XX、王XX</td>
-<td width="43" style="border-top-style: none; border-left-style: none;">
-添乘检查</td>
-<td width="59" style="border-top-style: none; border-left-style: none;">
-XXX站</td>
-<td width="59" style="border-top-style: none; border-left-style: none;">
-张XX</td>
-<td width="261" style="border-top-style: none; border-left-style: none;">
-1、XXXXXXXXXXXXXXXXXXXX；&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2、XXXXXXXXXXXXXXXXXXXX</td>
-<td width="239" style="border-top-style: none; border-left-style: none;">
-1、XXXXXXXXXXXXXXXXXXXX；&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2、XXXXXXXXXXXXXXXXXXXX</td>
-<td width="55" style="border-top-style: none; border-left-style: none;">
-是</td>
-<td width="59" style="border-top-style: none; border-left-style: none;">
-C1</td>
-</tr>
-<tr height="77" style=";height:77px">
-<td height="77" width="52" style="border-top-style: none;">
-2月2日</td>
-<td width="59" style="border-top-style: none; border-left-style: none;">
-9：00&nbsp; —&nbsp; &nbsp; 11：00</td>
-<td width="61" style="border-top-style: none; border-left-style: none;">
-李XX、张XX</td>
-<td width="43" style="border-top-style: none; border-left-style: none;">
-昼查</td>
-<td width="59" style="border-top-style: none; border-left-style: none;">
-XXX站</td>
-<td width="59" style="border-top-style: none; border-left-style: none;">
-王XX</td>
-<td width="261" style="border-top-style: none; border-left-style: none;">
-1、XXXXXXXXXXXXXXXXXXXX；&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2、XXXXXXXXXXXXXXXXXXXX</td>
-<td width="239" style="border-top-style: none; border-left-style: none;">
-1、XXXXXXXXXXXXXXXXXXXX；&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2、XXXXXXXXXXXXXXXXXXXX</td>
-<td width="55" style="border-top-style: none; border-left-style: none;">
-是</td>
-<td width="59" style="border-top-style: none; border-left-style: none;">
-B1</td>
-</tr>
-<tr height="70" style=";height:70px">
-<td height="70" width="52" style="border-top-style: none;">
-2月5日</td>
-<td width="59" style="border-top-style: none; border-left-style: none;">
-23：00&nbsp; —&nbsp; &nbsp; 5：00</td>
-<td width="61" style="border-top-style: none; border-left-style: none;">
-李XX、张XX</td>
-<td width="43" style="border-top-style: none; border-left-style: none;">
-夜查</td>
-<td width="59" style="border-top-style: none; border-left-style: none;">
-XXX站</td>
-<td width="59" style="border-top-style: none; border-left-style: none;">
-王XX</td>
-<td width="261" style="border-top-style: none; border-left-style: none;">
-1、XXXXXXXXXXXXXXXXXXXX；&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2、XXXXXXXXXXXXXXXXXXXX</td>
-<td width="239" style="border-top-style: none; border-left-style: none;">
-1、XXXXXXXXXXXXXXXXXXXX；&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2、XXXXXXXXXXXXXXXXXXXX</td>
-<td width="55" style="border-top-style: none; border-left-style: none;">
-无</td>
-<td width="59" style="border-top-style: none; border-left-style: none;"></td>
-</tr>
-<tr height="70" style=";height:70px">
-<td height="70" width="52" style="border-top-style: none;">
-2月12日</td>
-<td width="59" style="border-top-style: none; border-left-style: none;">
-2：00&nbsp; —&nbsp; &nbsp; 3：00</td>
-<td width="61" style="border-top-style: none; border-left-style: none;">
-李XX、程XX</td>
-<td width="43" style="border-top-style: none; border-left-style: none;">
-夜查</td>
-<td width="59" style="border-top-style: none; border-left-style: none;">
-XXX站</td>
-<td width="59" style="border-top-style: none; border-left-style: none;">
-李XX</td>
-<td width="261" style="border-top-style: none; border-left-style: none;">
-无</td>
-<td width="239" style="border-top-style: none; border-left-style: none;">
-无</td>
-<td width="55" style="border-top-style: none; border-left-style: none;">
-无</td>
-<td width="59" style="border-top-style: none; border-left-style: none;"></td>
 </tr>
 <tr height="54" style=";height:54px">
 <td rowspan="3" height="192" width="72" style="border-bottom-width: 1px; border-bottom-color: black; border-top-style: none;">
@@ -234,21 +150,25 @@ XXX站</td>
 <td colspan="2" width="111" style="border-right-width: 1px; border-right-color: black; border-left-style: none;">
 考核扣分（根据标准每差1次/件/份扣2分）</td>
 <td colspan="2" width="104" style="border-right-width: 1px; border-right-color: black; border-left-style: none;">
--4</td>
+<input class="koufen text-input small-input" style="width:100px !important" placeholder="扣分" />
+</td>
 <td colspan="2" width="117" style="border-right-width: 1px; border-right-color: black; border-left-style: none;">
 扣分原因</td>
 <td colspan="4" width="613" style="border-right-width: 1px; border-right-color: black; border-left-style: none;">
-夜查差1件扣2分，查处“两违”差1件扣2分。</td>
+<textarea class="koufenyuanyin text-input textarea" placeholder="扣分原因"></textarea>
+</td>
 </tr>
 <tr height="95" style=";height:95px">
 <td colspan="2" height="95" width="111" style="border-left-style: none;">
 考核主体评语</td>
 <td colspan="8" width="835" style="border-right-width: 1px; border-right-color: black; border-left-style: none;">
-1、XXXXXXXXXXXXXXXXXXXX；2、XXXXXXXXXXXXXXXXXXXX。</td>
+<textarea class="kaohezhutipingyu text-input textarea"></textarea>
+</td>
 </tr>
 <tr height="43" style=";height:43px">
 <td colspan="10" height="43" width="945" style="border-right-width: 1px; border-right-color: black; border-left-style: none;">
-考核主体签名： XXXX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 时间：2014年8月31日</td>
+考核主体签名： &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 时间：<i class="time1">2014年8月31日</i>
+</td>
 </tr>
 </tbody>
 </table>

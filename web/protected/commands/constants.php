@@ -7,7 +7,7 @@
  */
 //数据库配置常量
 define('NAME','root');//数据库用户名
-define('PASSWORD','ncwcbc');//数据库密码
+define('PASSWORD','');//数据库密码
 define('DATABASE','safetyinfo_Database');//库名
 define('CHARSET','utf8');//字符集
 define('TABLEPREFIX','tl_');//数据表前缀
@@ -19,3 +19,5 @@ define('MAIL_PWD','1234567890.');//邮箱密码
 define('MAIL_FROM','chongqingtielu@163.com');//发件人地址
 define('MAIL_BODY','这里填写邮件主题内容通知模版，附件会自动生成并添加');//邮件主体内容
 define('MAIL_SUBJECT','安全检查通知书');//邮件主题
+
+define('KAOHE_MAIL_TO', '454908079@qq.com'); //管理人员量化检查写实考核表发送到的邮箱
