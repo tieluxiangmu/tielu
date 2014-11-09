@@ -19,6 +19,10 @@ class UserInfoController extends Controller
 		);
 	}
 
+	public function actionSuggest() {
+		$name = $_REQUEST['q'];
+		echo UserInfo::model() ->getUsersByName($name);
+	}
 	/**
 	 * Specifies the access control rules.
 	 * This method is used by the 'accessControl' filter.
@@ -65,20 +69,58 @@ class UserInfoController extends Controller
 	public function actionCreate()
 	{
 		$model=new UserInfo;
+		$smarty = Yii::app()->smarty;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-
 		if(isset($_POST['UserInfo']))
 		{
+			
+            $file = $_FILES['photo'];
+			$filename = "d:/upload/" . $file['name'];
+
+            if (($file["type"] == "image/gif")
+				|| ($file["type"] == "image/jpeg")
+				|| ($file["type"] == "image/png")){
+				  if ($file["error"] > 0){
+				  }else if (file_exists($filename)){
+				  }else{
+				      move_uploaded_file($file["tmp_name"], $filename);
+				  }
+			}
+			$_POST['UserInfo']['photo'] = $filename;
 			$model->attributes=$_POST['UserInfo'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+			if($model->save()) {
+       			echo '<script type="text/javascript">parent.window.location = "index.php?r=admin/index";</script>';
+			}else {
+				$this->redirect(Yii::app()->request->urlReferrer);
+			}
+	    	return ;
+			
+			//$this->redirect(array('view','id'=>$model->id));
 		}
-		$departmentTypes = Department::model()->getDepartmentTypes();
-		$smarty = Yii::app()->smarty;
-		$smarty->_smarty->assign('departmentTypes', $departmentTypes);
+		/*$departmentTypes = Department::model()->getDepartmentTypes();*/
+
+
+		$departmentId = intval($_REQUEST['departmentid']);
+
+		$department = Department::model()->find('id=:departmentid', array(
+			'departmentid' => $departmentId,
+		))->attributes;
+
+	    $parentDepartment = Department::model()->find('id=:departmentid', array(
+			'departmentid' => $department['parentId'],
+		))->attributes;
+
+		$departmentType = Departmenttype::model()->find('id=:id', array(
+			'id' => $department['typeid'],
+		))->attributes;
+
+		$smarty->_smarty->assign('departmentType', $departmentType);
+		$smarty->_smarty->assign('department', $department);
+		$smarty->_smarty->assign('parentDepartment', $parentDepartment);
+
 	    $smarty->_smarty->display('cadrerealistic/page/adduser.tpl');
 	}
 	public function actionLogin() {
@@ -93,6 +135,23 @@ class UserInfoController extends Controller
 		)->attributes;
 
 		if($user) {
+			$department = Department::model() -> find('id=:department',array(
+				'department' => $user['department']
+			))->attributes;
+			$role = Role::model()->find('departmenttype=:type', array(
+				'type' => $department['typeid']
+			))->attributes;
+
+			$level = $role['name'];
+			if($level == 'level2') {
+				$user['level2'] = $department['id'];
+
+			}else if($level == 'level3') {
+				$user['level3'] = $department['id'];
+				$user['level2'] = Department::model() -> find('id=:department', array(
+					'department' => $department['parentId'],
+				))->attributes['id'];
+			}
 			Yii::app()->session['user'] = $user;
 			echo json_encode(array(
 				'success' => true,

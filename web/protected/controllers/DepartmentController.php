@@ -27,7 +27,7 @@ class DepartmentController extends Controller
 
 	}
 	public function actionList() {
-		echo CJSON::encode(Department::model()->findAll());
+		echo CJSON::encode(Department::model()->findAll('typeid!=4'));
 		/*$departments = Department::model()->findAll();
 		$departments = json_decode(CJSON::encode($departments));*/
 		/*foreach ($departments as $dep) {
