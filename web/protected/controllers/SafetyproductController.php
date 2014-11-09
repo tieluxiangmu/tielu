@@ -121,7 +121,12 @@ class SafetyproductController extends Controller
         if ($_SERVER['HTTP_X_REQUESTED_WITH'] == "XMLHttpRequest") {
             //ajax传递的数据 我们给予返回 否则返回真正的数据页面带回参数再去加载
             $safetyproduction = Safetyproduct::model();
+            $level2=!empty(Yii::app()->session['level2'])?Yii::app()->session['level2']:'';
+            $level3=!empty(Yii::app()->session['level3'])?Yii::app()->session['level3']:'';
             $sql = "select * from {{safetyproduct}} where  1=1 ";
+            if(!empty($level2) && !empty($level3)){
+                $sql.=" and `level2`='{$level2}' and `level3`='{$level3}'";
+            }
             if (isset($_REQUEST['sstoragetime'])) {
                 $sql.= " and storagetime>='" . $_REQUEST['sstoragetime'] . "'";
             }

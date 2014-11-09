@@ -46,7 +46,12 @@ class RealinvestigationController extends Controller {
         if ($_SERVER['HTTP_X_REQUESTED_WITH'] == "XMLHttpRequest") {
             //ajax传递的数据 我们给予返回 否则返回真正的数据页面带回参数再去加载
             $realinvestigation = Realinvestigation::model();
-            $sql = "select * from {{realinvestigation}} where  1=1 ";
+            $level2=!empty(Yii::app()->session['level2'])?Yii::app()->session['level2']:'';
+            $level3=!empty(Yii::app()->session['level3'])?Yii::app()->session['level3']:'';
+            $sql = "select * from {{realinvestigation}} where  1=1";
+            if(!empty($level2) && !empty($level3)){
+                $sql.=" and `level2`='{$level2}' and `level3`='{$level3}'";
+            }
             if (isset($_REQUEST['sdateofentry'])) {
                 $sql.= " and dateofentry>='" . $_REQUEST['sdateofentry'] . "'";
             }
@@ -102,6 +107,9 @@ class RealinvestigationController extends Controller {
         );
         if (isset($_POST['Realinvestigation'])) {
             $model->attributes = $_POST['Realinvestigation'];
+            $model->attributes = array('level2'=>Yii::app()->session('level2'));
+            $model->attributes = array('level3'=>Yii::app()->session('level3'));
+            $model->attributes = array('commit'=>Yii::app()->session('username'));
             if ($model->save()) {
                 $res['success'] = true;
                 $res['message'] = "干部写实数据录入成功！";
@@ -253,16 +261,15 @@ class RealinvestigationController extends Controller {
             $mailer->Body = MAIL_BODY;
             $mailer->AddAttachment($web_path.str_replace('\\','/',$filename),'检查通报.docx');
             $mailer->Send();
-            if(!empty($mailer)){
-                $sql="select * from {{realinvestigation}} order by id desc limit 1";
-                $result=Yii::app()->db->createCommand($sql);
-                $result=$result->queryAll();
-                $id=$result[0]['id'];
-                //插件path
-                $sql="update {{realinvestigation}} set `filepath`='{$filename}' where `id`='{$id}'";
-                $result=Yii::app()->db->createCommand($sql);
-                $result=$result->queryAll();
-            }
+            //更新附件路径
+            $sql="select * from {{realinvestigation}} order by id desc limit 1";
+            $result=Yii::app()->db->createCommand($sql);
+            $result=$result->queryAll();
+            $id=$result[0]['id'];
+            //插件path
+            $sql="update {{realinvestigation}} set `filepath`='{$filename}' where `id`='{$id}'";
+            $result=Yii::app()->db->createCommand($sql);
+            $result->execute();
         }
     }
 }
