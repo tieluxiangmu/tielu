@@ -121,10 +121,9 @@ class Userinfo extends CActiveRecord
 	}
 
 	public function getUsersByName($name) {
-		var_dump($name);
-		$users = $this->findAll('name like "%:name%"', array(
-			'name' => $name,
-		))->attributes;
+		$sql = "select * from tl_userinfo where name like '%".$name."%'";
+		var_dump($sql);
+		$users = $this->findAllBySql($sql);
 		return CJSON::encode($users);
 	}
 	/**
