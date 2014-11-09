@@ -19,9 +19,22 @@ class UserInfoController extends Controller
 		);
 	}
 
+	public function actionGetSubordinatesByUser() {
+		$username = Yii::app()->session['user']['name'];
+		var_dump(Yii::app()->session['user']);
+		echo CJSON::encode(UserInfo::model()->getSubordinatesByUserId($username));
+	}
 	public function actionSuggest() {
 		$name = $_REQUEST['q'];
-		echo UserInfo::model() ->getUsersByName($name);
+		$res = array();
+
+		$users = UserInfo::model() ->getUsersByName($name);
+		foreach($users as $user) {
+			$res[] = $user->attributes;
+		}
+
+		echo CJSON::encode($res);
+
 	}
 	/**
 	 * Specifies the access control rules.
@@ -138,14 +151,13 @@ class UserInfoController extends Controller
 			$department = Department::model() -> find('id=:department',array(
 				'department' => $user['department']
 			))->attributes;
-			$role = Role::model()->find('departmenttype=:type', array(
-				'type' => $department['typeid']
-			))->attributes;
+			$sql = "select * from tl_role where departmenttype = ".$department['typeid'];
+			
+			$role = Role::model()->findBySql($sql)->attributes;
 
 			$level = $role['name'];
 			if($level == 'level2') {
 				$user['level2'] = $department['id'];
-
 			}else if($level == 'level3') {
 				$user['level3'] = $department['id'];
 				$user['level2'] = Department::model() -> find('id=:department', array(
