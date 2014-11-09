@@ -7,7 +7,7 @@
     </p>
     <ul class="shortcut-buttons-set">
         <li>
-            <a class="shortcut-button" href="">
+            <a class="shortcut-button" href="index.php?r=schedule/index">
                 <span>
                     <img src="/static/images/schedule.png" alt="日程" />
                     <br />
