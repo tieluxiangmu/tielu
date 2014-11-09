@@ -161,7 +161,8 @@ window.ui = {
         var checkboxs = $('#' + conid + " table tbody input:checkbox:checked"),
             result = [];
         if (checkboxs.length == 0) {
-            $.dialog.alert('请先选择要操作的数据！');
+            $.dialog.alert('请先通过记录左侧复选框<br/>
+                选择要导出的数据，或点击全部导出！');
             return false;
         } else {
             $.each(checkboxs, function() {

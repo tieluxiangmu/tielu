@@ -1,7 +1,7 @@
 <div class="content-box">
     <div class="content-box-header">
         <h3>
-            安全生产管理表
+            安全生产管理
         </h3>
         <ul class="content-box-tabs">
             <li>

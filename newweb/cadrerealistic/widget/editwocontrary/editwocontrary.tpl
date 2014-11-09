@@ -52,7 +52,7 @@
                 </tr>
                 <tr>
                   <td colspan="4" style="text-align: center !important;"> 
-                          <input type="submit" data-formtype="update" class="btn btn-primary" id="js-btn-editwocontrary" value="确认修改"/>
+                            <input type="submit" data-formtype="update" class="btn btn-primary" id="js-btn-editwocontrary" value="确认修改"/>
                   </td>
                 </tr>
               </tbody>
