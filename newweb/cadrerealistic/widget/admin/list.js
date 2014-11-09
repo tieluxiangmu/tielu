@@ -34,12 +34,12 @@ userAdmin = {
     init: function() {
        this.initZtree();
     },
-    addUser: function() {
+    addUser: function(id) {
        $.dialog({
             title: '添加人员',
             width: '700px',
             height: '800px',
-            content: 'url:index.php?r=userinfo/create'
+            content: 'url:index.php?r=userinfo/create&departmentid='+id
         }); 
     },
     initZtree: function() {
@@ -52,10 +52,12 @@ userAdmin = {
                 if(json && json.length) {
                     for(var i = 0, l = json.length; i < l; i++) {
                         text = '添加人员';
-                        json[i].name +='<button onclick="userAdmin.addUser();">'+text+'</button>';
+                        if(json[i].type != 1) {
+                            json[i].name +='<button class="btn-adduser" onclick="userAdmin.addUser('+json[i].id+');">'+text+'</button>';
+                        }
                     }
                 }
-                t = $.fn.zTree.init(tree, setting, json);
+                t = $.fn.zTree.init($('#userTree'), setting, json);
             }
         });
     }

@@ -1,3 +1,8 @@
+<style>
+    .btn-adduser{
+        margin-left:20px;
+    }
+</style>
 <div>
     <div>用户管理</div>
     <div>
