@@ -107,7 +107,6 @@ class PHPWord_Template {
         if($this->_objZip->close() === false) {
             throw new Exception('Could not close zip file.');
         }
-        
         rename($this->_tempFileName, $strFilename);
     }
 }

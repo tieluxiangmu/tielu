@@ -44,10 +44,11 @@ class RealinvestigationController extends Controller {
     public function actionRealinvestigationman() {
         header("charset=utf-8");
         if ($_SERVER['HTTP_X_REQUESTED_WITH'] == "XMLHttpRequest") {
+            var_dump(Yii::app()->session['user']);
             //ajax传递的数据 我们给予返回 否则返回真正的数据页面带回参数再去加载
             $realinvestigation = Realinvestigation::model();
-            $level2=!empty(Yii::app()->session['level2'])?Yii::app()->session['level2']:'';
-            $level3=!empty(Yii::app()->session['level3'])?Yii::app()->session['level3']:'';
+            $level2=!empty(Yii::app()->session['user']['level2'])?Yii::app()->session['user']['level2']:'';
+            $level3=!empty(Yii::app()->session['user']['level3'])?Yii::app()->session['user']['level3']:'';
             $sql = "select * from {{realinvestigation}} where  1=1";
             if(!empty($level2) && !empty($level3)){
                 $sql.=" and `level2`='{$level2}' and `level3`='{$level3}'";
@@ -107,9 +108,9 @@ class RealinvestigationController extends Controller {
         );
         if (isset($_POST['Realinvestigation'])) {
             $model->attributes = $_POST['Realinvestigation'];
-            $model->attributes = array('level2'=>Yii::app()->session('level2'));
-            $model->attributes = array('level3'=>Yii::app()->session('level3'));
-            $model->attributes = array('commit'=>Yii::app()->session('username'));
+            $model->attributes = array('level2'=>Yii::app()->session['user']['level2']);
+            $model->attributes = array('level3'=>Yii::app()->session['user']['level3']);
+            $model->attributes = array('commit'=>Yii::app()->session['user']['username']);
             if ($model->save()) {
                 $res['success'] = true;
                 $res['message'] = "干部写实数据录入成功！";
@@ -224,14 +225,14 @@ class RealinvestigationController extends Controller {
         Yii::import('application.components');
         require_once("PHPWord.php");
         $PHPWord = new PHPWord();
-        $document = $PHPWord->loadTemplate('./docfile/template/template_test.docx');//$_session['derpartment']
+        $document = $PHPWord->loadTemplate('./docfile/template/template_'.Yii::app()->session['user']['derpartment'].'.docx');//Yii::app()->session['user']['derpartment']
         $document->setValue('company',$values['company']);
         $document->setValue('Realinvestigation',$values['cadresonduty']);
         $document->setValue('checkcontents',$values['checkcontents']);
         $document->setValue('checktime',$values['dateofentry'].' '.$values['Realinvestigation']);
         $document->setValue('foundproblem',$values['foundproblem']);
         $document->setValue('improvement',$values['improvement']);
-        $document->setValue('username',$_SESSION['name']);
+        $document->setValue('username',Yii::app()->session['user']['name']);
         $document->setValue('checkdate',$values['dateofentry']);
         $filename='./docfile/'.time().'.docx';
         $document->save($filename);
@@ -255,11 +256,11 @@ class RealinvestigationController extends Controller {
             $mailer->Username = MAIL_NAME;
             $mailer->Password = MAIL_PWD;
             $mailer->From = MAIL_FROM;
-            $mailer->FromName = $_SESSION['name'];
+            $mailer->FromName =Yii::app()->session['derpartment']['name'];
             $mailer->AddAddress($mailto, $_POST['cadresonduty']);
             $mailer->Subject = MAIL_SUBJECT;
             $mailer->Body = MAIL_BODY;
-            $mailer->AddAttachment($web_path.str_replace('\\','/',$filename),'检查通报.docx');
+            $mailer->AddAttachment($web_path.str_replace('\\','/',$filename),'安全检查通知书_'.date('Y-m-d',time()).'.doc');
             $mailer->Send();
             //更新附件路径
             $sql="select * from {{realinvestigation}} order by id desc limit 1";

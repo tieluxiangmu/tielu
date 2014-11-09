@@ -7,7 +7,7 @@
  */
 //数据库配置常量
 define('NAME','root');//数据库用户名
-define('PASSWORD','');//数据库密码
+define('PASSWORD','ncwcbc');//数据库密码
 define('DATABASE','safetyinfo_Database');//库名
 define('CHARSET','utf8');//字符集
 define('TABLEPREFIX','tl_');//数据表前缀

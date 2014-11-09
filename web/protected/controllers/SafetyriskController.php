@@ -122,8 +122,8 @@ class SafetyriskController extends Controller
 	            //ajax传递的数据 我们给予返回 否则返回真正的数据页面带回参数再去加载
 	            $safetyrisk = Safetyrisk::model();
 	            $sql = "select * from {{safetyrisk}} where  1=1 ";
-                $level2=!empty(Yii::app()->session['level2'])?Yii::app()->session['level2']:'';
-                $level3=!empty(Yii::app()->session['level3'])?Yii::app()->session['level3']:'';
+                $level2=!empty(Yii::app()->session['user']['level2'])?Yii::app()->session['user']['level2']:'';
+                $level3=!empty(Yii::app()->session['user']['level3'])?Yii::app()->session['user']['level3']:'';
                 if(!empty($level2) && !empty($level3)){
                     $sql.=" and `level2`='{$level2}' and `level3`='{$level3}'";
                 }

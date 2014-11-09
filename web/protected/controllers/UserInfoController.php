@@ -152,6 +152,7 @@ class UserInfoController extends Controller
 					'department' => $department['parentId'],
 				))->attributes['id'];
 			}
+
 			Yii::app()->session['user'] = $user;
 			echo json_encode(array(
 				'success' => true,
