@@ -380,10 +380,12 @@ form input.text-input,form select,form textarea,form .wysiwyg{
     font-size:13px;
     background:#fff url('/static/images/bg-form-field.gif') top left repeat-x;
     border:1px solid #d5d5d5;
-    color:#333
+    color:#333;
+    width: 150px;
+    height: 10px;
 }
 form .small-input{
-    width:25% !important
+    width:25%;
 }
 form .medium-input{
     width:50% !important

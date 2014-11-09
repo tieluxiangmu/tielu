@@ -58,9 +58,7 @@
               {%$data[$i]['serialnumber']%}
             </td>
             <td>
-              <a>
                {%$data[$i]['riskname']%}
-              </a>
             </td>
             <td>
                 {%$data[$i]['riskclass']%}
@@ -69,16 +67,16 @@
                {%$data[$i]['risksystem']%}
             </td>
             <td>
-                {%$data[$i]['reasonofrisk']%}
+                {%$data[$i]['reasonofrisk']|truncate:15:"..."%}
             </td>
             <td>
-                {%$data[$i]['consequence']%}
+                {%$data[$i]['consequence']|truncate:15:"...%}
             </td>
             <td>
-              <a href="" class="edit"  data-editinfo='{"page":"safetyrisk/editsafetyrisk","id":{%$data[$i]["id"]%}}'  title="修改安全风险管理">
+              <a href="" class="edit"  data-editinfo='{"page":"safetyrisk/editsafetyrisk","id":{%$data[$i]["id"]%}}'  title="安全风险修改">
                 <img src="/static/images/icons/pencil.png" alt="编辑" />
               </a>
-              <a href="" title="点击删除"   data-deleteinfo='{"channelid":"safetyrisk-form","page":"safetyrisk/delete","id":{%$data[$i]["id"]%}}' class="delete">
+              <a href="" title="安全风险删除"   data-deleteinfo='{"channelid":"safetyrisk-form","page":"safetyrisk/delete","id":{%$data[$i]["id"]%}}' class="delete">
                 <img src="/static/images/icons/cross.png"  alt="删除" />
               </a>
               <a href="" title="安全风险详情"  class="detail"  data-detailinfo='{"page":"safetyrisk/view","id":{%$data[$i]["id"]%}}'>

@@ -64,13 +64,6 @@ examine = {
     	$('.result-wrap').empty();
 
     	var name = data.userinfo.name;
-    	$('i.name', tableArea).html(name);
-
-    	var report_time = data.time.year + '年' + data.time.month + '月';
-    	$('i.report-time', tableArea).html(report_time);
-
-    	var department = data.userinfo.department;
-    	$('i.department', tableArea).html(department);
 
     	var goal_zhoucha = data.userinfo.zhoucha;
     	$('i.goal-zhoucha', tableArea).html(goal_zhoucha);
@@ -145,6 +138,7 @@ examine = {
 		$('tr.list-title', tableArea).after(tr_ele);
 
 		tableArea.show().attr('id', 'examine-result');
+		$('.result-wrap').append($('<h3 style = "font-size:16px;font-weight:bold;">被考核员工：'+name+'</h3>'))
 		$('.result-wrap').append(tableArea);
     }
 }

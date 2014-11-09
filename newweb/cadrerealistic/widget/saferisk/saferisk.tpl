@@ -6,7 +6,7 @@
 <div class="content-box">
   <div class="content-box-header">
     <h3>
-      安全风险题管理表
+      安全风险管理
     </h3>
     <ul class="content-box-tabs">
       <li>
@@ -24,35 +24,35 @@
         <fieldset>
            <p>
             <span>
-              实施日期
+              <strong>实施日期</strong>
             </span>
-            <input class="text-input small-input" onClick="WdatePicker()" type="text" id="simplementdate" />
+            <input class="text-input small-input" style="width:150px !important;height:10px" onClick="WdatePicker()" type="text" id="simplementdate" />
             <span>到</span>
-            <input class="text-input small-input" onClick="WdatePicker()" type="text" id="eimplementdate" />
+            <input class="text-input small-input" style="width:150px !important;height:10px" onClick="WdatePicker()" type="text" id="eimplementdate" />
           </p>
           <p>
             <span>
-              完成日期
+              <strong>完成日期</strong>
             </span>
-            <input class="text-input small-input" onClick="WdatePicker()" type="text" id="scompletiondate" />
+            <input class="text-input small-input" style="width:150px !important;height:10px" onClick="WdatePicker()" type="text" id="scompletiondate" />
             <span>到</span>
-            <input class="text-input small-input" onClick="WdatePicker()" type="text" id="ecompletiondate" />
+            <input class="text-input small-input" style="width:150px !important;height:10px" onClick="WdatePicker()" type="text" id="ecompletiondate" />
           </p>
            <p>
             <span>
-              风险分类
+              <strong>风险分类</strong>
             </span>
-            <select class="small-input chosen-select" id="riskclass">
-              <option value="">请选择</option>
+            <select class="small-input chosen-select" id="riskclass" style="width:120px">
+              <option selected="selected" value=""></option>
               <option value="风险分类1">
                 风险分类1
               </option>
             </select>
-            <span>
-              系统
+            <span style="margin-left:44px">
+              <strong>系统</strong>
             </span>
-            <select class="small-input chosen-select" id="risksystem">
-              <option value="">请选择</option>
+            <select class="small-input chosen-select" id="risksystem" style="width:120px">
+              <option selected="selected" value=""></option>
               <option value="系统1">
                 系统1
               </option>
@@ -60,19 +60,19 @@
           </p>
            <p>
             <span>
-              负责领导
+              <strong>负责领导</strong>
             </span>
-            <select class="small-input chosen-select" id="responsibilitylead">
-              <option value="">请选择</option>
+            <select class="small-input chosen-select" id="responsibilitylead" style="width:120px">
+              <option selected="selected" value=""></option>
               <option value="负责领导1">
                 负责领导1
               </option>
             </select>
-            <span>
-              责任部门
+            <span style="margin-left:20px">
+              <strong>责任部门</strong>
             </span>
-            <select class="small-input chosen-select" id="dutypartments">
-              <option value="">请选择</option>
+            <select class="small-input chosen-select" id="dutypartments" style="width:120px">
+              <option selected="selected" value=""></option>
               <option value="责任部门1">
                 责任部门1
               </option>
@@ -80,17 +80,19 @@
           </p>
             <p >
             <span>
-              配合部门
+              <strong>配合部门</strong>
             </span>
             <select class="small-input chosen-select" id="coordinationpart">
-              <option value="">请选择</option>
+              <option selected="selected" value=""></option>
               <option value="配合部门1">
                 配合部门1
               </option>
             </select>
-           <input class="button btn btn-primary" type="button"  id="submitseacrh-btn" value="开始查询"/>
-            <input class="btn btn-success exportexcel" data-excelinfo='{"conid":"js-p-listsafetyrisk","page":"safetyrisk/exportuserexcel"}' type="button" value="导出Excel"/>
-            <input class="btn btn-warning  deleteall" data-deleteinfo='{"channelid":"safetyrisk-form","conid":"js-p-listsafetyrisk","page":"safetyrisk/delete"}' type="button" value="确认删除" />
+           <div>
+             <input class="button btn btn-primary" type="button"  id="submitseacrh-btn" value="开始查询"/>
+              <input class="btn btn-success exportexcel" data-excelinfo='{"conid":"js-p-listsafetyrisk","page":"safetyrisk/exportuserexcel"}' type="button" value="导出Excel"/>
+              <input class="btn btn-warning  deleteall" data-deleteinfo='{"channelid":"safetyrisk-form","conid":"js-p-listsafetyrisk","page":"safetyrisk/delete"}' type="button" value="确认删除" />
+           </div>
           </p>
         </fieldset>
       </form>

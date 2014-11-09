@@ -20,13 +20,13 @@
       <form class="search">
         <fieldset>
           <p>
-            <span class="spantitle">日期 </span>
+            <span class="spantitle" style="padding-left:12px">日　期</span>
             <input class="Wdate text-input small-input" onclick="WdatePicker()" type="text" id="js-input-sdateofentry"/>
             <span class="spantitle">到</span>
             <input class="Wdate text-input small-input" onclick="WdatePicker()" type="text" id="js-input-edateofentry"/>
           </p>
           <p>
-            <span class="spantitle">检&nbsp;&nbsp;查&nbsp;&nbsp;人 </span>
+            <span class="spantitle" style="padding-left:12px">检查人</span>
             <input class="text-input small-input" type="text"  id="checkperson" />
             <span class="spantitle">检查方式 </span>
             <select class="chosen-select" id="checkmodel">
