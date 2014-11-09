@@ -116,15 +116,19 @@ class Userinfo extends CActiveRecord
 	 *	获取$userid 对应的所有下属
 	 *
 	 */
-	public function getSubordinatesByUserId($userid) {
-
+	public function getSubordinatesByUserId($username) {
+		$sql = "select * from tl_userinfo where parentLeader = '$username'";
+		$users = $this->findAllBySql($sql);
+		$res = array();
+		foreach($users as $user) {
+			$res[] = $user->attributes;
+		}
+		return $res;
 	}
 
 	public function getUsersByName($name) {
-		$sql = "select * from tl_userinfo where name like '%".$name."%'";
-		var_dump($sql);
-		$users = $this->findAllBySql($sql);
-		return CJSON::encode($users);
+		$users = $this->findAllByAttributes("name like '%".$name."%'");
+		return $users;
 	}
 	/**
 	 * Retrieves a list of models based on the current search/filter conditions.
