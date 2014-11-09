@@ -12,7 +12,7 @@
     </div>
     <div id="login-content">
         <div class="form-content">
-            <form action="/newweb/">
+            <form action="index.php?r=site/login">
                 <div class="notification information png_bg">
                     <div>
                        请妥善保管好您的用户名和密码！
@@ -22,7 +22,7 @@
                     <label>
                         用&nbsp;&nbsp;户&nbsp;&nbsp;名
                     </label>
-                    <input class="text-input" type="text" />
+                    <input class="text-input" type="text" name="name"/>
                 </p>
                 <div class="clear">
                 </div>
@@ -30,7 +30,7 @@
                     <label>
                         用户密码
                     </label>
-                    <input class="text-input" type="password" />
+                    <input class="text-input" type="password" name="password"/>
                 </p>
                 <div class="clear">
                 </div>

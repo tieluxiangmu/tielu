@@ -11,7 +11,18 @@ login = {
     },
     bind: function() {
         this.loginbtn.click(function() {
-            location.href = "/web";
+            //location.href = "/web";
+            $.ajax({
+                url: '',
+                dataType: 'json',
+                success: function(json) {
+                    if(json.success) {
+                        location.href = "/web"
+                    }else {
+                        alert(json.msg);
+                    }
+                }
+            });
         });
     }
 }
