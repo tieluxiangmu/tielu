@@ -25,7 +25,7 @@
             </a>
         </li>
         <li>
-            <a class="shortcut-button" href="">
+            <a class="shortcut-button" href="index.php?r=cadreexamine">
                 <span>
                     <img src="/static/images/check.png" alt="相关资料" />
                     <br />
@@ -43,7 +43,7 @@
             </a>
         </li>
         <li>
-            <a class="shortcut-button" href="">
+            <a class="shortcut-button" href="index.php?r=contact/Index">
                 <span>
                     <img src="/static/images/transfer.png" alt="联系人" />
                     <br />
