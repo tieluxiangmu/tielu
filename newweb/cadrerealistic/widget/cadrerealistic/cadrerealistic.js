@@ -47,7 +47,7 @@ cadrerealistic = {
         //提交成功更新数据
         listener.on('realinvestigation-form', 'success', function(event, info) {
             $('#Realinvestigation_dateofentry').focus();
-            $('#Real_company_chosen .chosen-choices li').html('');
+            $('#Real_company_chosen').find('.search-choice').remove();
             $('#realinvestigation-form input, #realinvestigation-form select, #realinvestigation-form textarea').val('');
             $('#js-btn-cardreal').val('直接保存为干部写实');
             $('#js-input-cadcontinue').val('继续');
@@ -74,15 +74,19 @@ cadrerealistic = {
         /*用户刷新URL的时候把用户的筛选数据回填*/
         var sdateofentry = Request.QueryString('sdateofentry'),
             edateofentry = Request.QueryString('edateofentry'),
-            checkperson = decodeURIComponent(Request.QueryString('checkperson')),
+            _checkperson = decodeURIComponent(Request.QueryString('checkperson')),
             checkmodel = decodeURIComponent(Request.QueryString('checkmodel')),
-            adresonduty = decodeURIComponent(Request.QueryString('adresonduty')),
+            _adresonduty = decodeURIComponent(Request.QueryString('adresonduty')),
             categorynumber = decodeURIComponent(Request.QueryString('categorynumber'));
         sdateofentry && $('#js-input-sdateofentry').val(sdateofentry);
         edateofentry && $('#js-input-edateofentry').val(sdateofentry);
-        checkperson && $('#checkperson').find("option[value='" + checkperson + "']").attr("selected", "selected");
+        if (_checkperson && String(_checkperson) != "null") {
+            $('#checkperson').val(_checkperson);
+        };
+        if (_adresonduty && String(_adresonduty) != "null") {
+            $('#adresonduty').val(_adresonduty);
+        };
         checkmodel && $('#checkmodel').find("option[value='" + checkmodel + "']").attr("selected", "selected");
-        adresonduty && $('#adresonduty').find("option[value='" + adresonduty + "']").attr("selected", "selected");
         categorynumber && $('#categorynumber').find("option[value='" + categorynumber + "']").attr("selected", "selected");
 
     },
@@ -115,8 +119,16 @@ cadrerealistic = {
                 'Realinvestigation[category]': {
                     required: true
                 },
-                'Realinvestigation[number]': {
+                'Realinvestigation[ischeck45]': {
                     required: true
+                },
+                'Realinvestigation[checkcount]': {
+                    required: true,
+                    digits: true
+                },
+                'Realinvestigation[number]': {
+                    required: true,
+                    digits: true
                 },
                 'Realinvestigation[checkcontents]': {
                     required: true
@@ -127,6 +139,9 @@ cadrerealistic = {
                 'Realinvestigation[checkmodel]': {
                     required: true
                 }
+            },
+            messages: {
+                digits: "请输入正整数！",
             },
             errorPlacement: function(error, element) {
                 if (element.is(":radio")) {
@@ -155,7 +170,7 @@ cadrerealistic = {
                 /*从干部写实到安全生产管理map参数关系*/
                 var twoparams = {
                     checktime: $('#Realinvestigation_dateofentry').val(), //检查时间<=日期
-                    rummager: $('#Realinvestigation_checkperson  option:selected').val(), //检查人<=检查人
+                    rummager: $('#Realinvestigation_checkperson').val(), //检查人<=检查人
                     company: $('#Realinvestigation_company  option:selected').val(), //被查单位<=单位
                     Illegalcontent: $('#Realinvestigation_foundproblem').val(), //违章内容<=发现问题
                     llegalcategory: $('#Realinvestigation_categorynumber option:selected').val() //违章类别<=两违类别/件数
@@ -193,7 +208,7 @@ cadrerealistic = {
         if ($('#js-input-edateofentry').val()) {
             _url += "&edateofentry=" + $('#js-input-edateofentry').val();
         };
-        var checkperson = commonhelp.getchosensingleSelect('checkperson');
+        var checkperson = $('#checkperson').val();
         if (checkperson) {
             _url += "&checkperson=" + checkperson;
         };
@@ -201,7 +216,7 @@ cadrerealistic = {
         if (checkmodel) {
             _url += "&checkmodel=" + checkmodel;
         };
-        var adresonduty = commonhelp.getchosensingleSelect('adresonduty');
+        var adresonduty = $('#adresonduty').val();
         if (adresonduty) {
             _url += "&adresonduty=" + adresonduty;
         };

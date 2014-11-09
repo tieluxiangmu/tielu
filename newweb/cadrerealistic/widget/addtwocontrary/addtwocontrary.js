@@ -27,6 +27,10 @@ addtwocontrary = {
         (me.addtwocontrary).on('click', $.proxy(me._submitEvent, this));
         (me.cancelbtn).on('click', $.proxy(me._cancelEvent, this));
         me.listenerjump();
+        $(".chosen-select").chosen({
+            no_results_text: "没有查找结果!",
+            width: '250px'
+        });
     },
     _cancelEvent: function() {
         location.href = "index.php?r=realinvestigation/index";

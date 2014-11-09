@@ -27,45 +27,19 @@
           </p>
           <p>
             <span class="spantitle">检&nbsp;&nbsp;查&nbsp;&nbsp;人 </span>
-            <select class="chosen-select" id="checkperson">
-              <option selected="selected" value=""></option>
-              <option value="余戈">余戈</option>
-              <option value="蔡泽琪">蔡泽琪</option>
-              <option value="李洁">李洁</option>
-              <option value="樊鹏">樊鹏</option>
-              <option value="刘远平">刘远平</option>
-              <option value="潘晓明">潘晓明</option>
-              <option value="刘宁">刘宁</option>
-              <option value="田兴明">田兴明</option>
-              <option value="汤献忠">汤献忠</option>
-              <option value="黄成福">黄成福</option>
-            </select>
+            <input class="text-input small-input" type="text"  id="checkperson" />
             <span class="spantitle">检查方式 </span>
             <select class="chosen-select" id="checkmodel">
               <option selected="selected" value=""></option>
-              <option value="添乘">
-              添乘</option>
-              <option value="昼查">
-              昼查</option>
-              <option value="夜查">
-              夜查</option>
+              <option value="添乘">添乘</option>
+              <option value="昼查">昼查</option>
+              <option value="夜查">夜查</option>
+              <option value="检查四五等站">检查四五等站</option>
             </select>
           </p>
           <p>
             <span class="spantitle">值班干部 </span>
-            <select class="chosen-select" id="adresonduty">
-              <option selected="selected" value=""></option>
-              <option value="钟世能">钟世能</option>
-              <option value="代高勇">代高勇</option>
-              <option value="张建辉">张建辉</option>
-              <option value="文桂明">文桂明</option>
-              <option value="苏国勇">苏国勇</option>
-              <option value="杨柳">杨柳</option>
-              <option value="张正国">张正国</option>
-              <option value="谢强">谢强</option>
-              <option value="罗尤宽">罗尤宽</option>
-              <option value="黄毅">黄毅</option>
-            </select>
+            <input class="text-input small-input" type="text"  id="adresonduty" />
           </p>
           <p class="btn-con">
             <input class="button btn btn-primary" id="submitseacrh-btn" type="button" value="开始查询"/>
@@ -105,6 +79,12 @@
               <option value="夜查">夜查</option>
               <option value="检查四五等站">检查四五等站</option>
             </select>
+          </p>
+          <p>
+            <label>是否检查四五等站 </label>
+            <input value="是" type="radio" name="Realinvestigation[ischeck45]"/>
+            是 <input value="否" type="radio" name="Realinvestigation[ischeck45]"/>
+            否
           </p>
           <p>
             <label>单位 </label>
@@ -178,6 +158,9 @@
               <option value="水江站">水江站</option>
               <option value="鸭江站">鸭江站</option>
             </select>
+            <span class="addChose" data-choseid="Real_company_chosen">
+              列表中没有要输入的单位？<img src="/static/images/icons/addnoresult.png" class="addchosen" />
+            </span>
           </p>
           <p>
             <label>值班干部 </label>
@@ -197,7 +180,7 @@
           </p>
           <p>
             <label> 两违类别 </label>
-            <select class="small-input" iname="Realinvestigation[category]" id="Realinvestigation_category">
+            <select class="small-input" name="Realinvestigation[category]" id="Realinvestigation_category">
               <option selected="selected" value=""></option>
               <option value="A">
               A </option>
@@ -211,8 +194,11 @@
               <input  type="hidden"  name="Realinvestigation[categorynumber]" id="Realinvestigation_categorynumber"/>
           </p>
           <p>
-            <label>
-            检查内容 </label>
+            <label>检查问题数 </label>
+            <input class="text-input small-input" type="number"  name="Realinvestigation[checkcount]" id="Realinvestigation_checkcount" min="0"/>
+          </p>
+          <p>
+            <label>检查内容 </label>
             <textarea class="text-input textarea wysiwyg" name="Realinvestigation[checkcontents]" id="Realinvestigation_checkcontents" cols="79" rows="5"></textarea>
           </p>
           <p>
