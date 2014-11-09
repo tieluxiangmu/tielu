@@ -12,7 +12,7 @@
               <tbody>
                  <tr>
                   <td>整改情况</td>
-                  <td colspan="3">
+                  <td colspan="4">
                   <textarea class="text-input textarea" name="Safetyproduct[rectification]" id="Safetyproduct_rectification" cols="79" rows="5">{%$model['rectification']%}</textarea>
                   </td>
                 </tr>
@@ -26,13 +26,13 @@
                 </tr>
                 <tr>
                   <td>备注</td>
-                  <td colspan="3">
+                  <td colspan="4">
                      <textarea class="text-input textarea" name="Safetyproduct[comments]" id="Safetyproduct_comments" cols="79" rows="5">{%$model['comments']%}</textarea>
                   </td>
                 </tr>
                 <tr>
                   <td>问题目前状况</td>
-                  <td colspan="3">
+                  <td colspan="4">
                      <select class="text-input small-input chosen-select" name="Safetyproduct[currentstatus]" id="Safetyproduct_currentstatus">
                         <option selected="selected" value="">请选择</option>
                         <option value="已整改">已整改</option>
@@ -43,7 +43,7 @@
                 </tr>
                 <tr>
                   <td>解决方案</td>
-                  <td colspan="3">
+                  <td colspan="4">
                   <textarea class="text-input textarea" name="Safetyproduct[thesolution]" id="Safetyproduct_thesolution" cols="79" rows="5">{%$model['thesolution']%}</textarea>
                   </td>
                 </tr>
