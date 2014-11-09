@@ -83,9 +83,9 @@ class ScheduleController extends Controller
 
 	public function getSubordinate() {
 		$authority = $this->getAuthority();
-		if ($authority === 1) {//书记只能给自己设置日程
+		if ($authority === 2) {//书记只能给自己设置日程
 			$subordinate = array($this->getName());
-		} else if ($authority === 2) {//主管为下级（非书记）设置日程
+		} else if ($authority === 1) {//主管为下级（非书记）设置日程
 			$subordinate = UserInfo::model()->getSubordinatesByUserId($this->getName());
 		} else {
 			$subordinate = array();
