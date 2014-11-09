@@ -1,9 +1,13 @@
-#examine-result.table{
+#examine-result{
 	border-collapse:collapse;
 	margin-bottom: 15px;
 }
 
-#examine-result.table, #examine-result th, #examine-result td
+#examine-result, #examine-result th, #examine-result td
 {
 	border: 1px solid #ccc;
+}
+
+#examine-result i{
+	font-style: normal;
 }
