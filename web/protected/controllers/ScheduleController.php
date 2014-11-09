@@ -23,7 +23,8 @@ class ScheduleController extends Controller
 	{
 		$info = array(
 			'authority' => $this->getAuthority(),
-			'subordinate' => $this->getSubordinate()
+			'subordinate' => $this->getSubordinate(),
+			'user' => $this->getName()
 		);
 		$smarty = Yii::app()->smarty;
 		$smarty->_smarty->assign('info', $info);
@@ -64,7 +65,7 @@ class ScheduleController extends Controller
 	 * 获取某一天的任务列表
 	 */
 	public function actionGetTask() {
-		$owner = isset($_REQUEST['owner']) ? $_REQUEST['owner'] : 'me';
+		$owner = isset($_REQUEST['owner']) ? $_REQUEST['owner'] : $this->getName();
 		$date = $_REQUEST['task_date'];
 		$sql = 'select * from {{schedule}} where owner = "'.$owner.'" and task_date like "'.$date.'%"';
 		$rest = Schedule::model() -> findAllBySql($sql);
@@ -89,7 +90,7 @@ class ScheduleController extends Controller
 		} else {
 			$subordinate = array();
 		}
-		//$subordinate = array('张三', '李四', '袁志佳', 'me');
+		$subordinate = array('张三', '李四', '袁志佳');
 		return $subordinate;
 	}
 
