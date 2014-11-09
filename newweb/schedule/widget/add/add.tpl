@@ -38,9 +38,9 @@
 	        <option value="12">12</option>
 	      </select>
 
-	      <span>&nbsp;&nbsp;&nbsp;&nbsp;对象</span>
+	      <span>&nbsp;&nbsp;&nbsp;&nbsp;设置对象</span>
 		  <select name="target">
-		  	<option value="">请选择</option>
+		  	<option value="{%$info.user%}">我自己</option>
 		  	{%foreach from=$info.subordinate item=subordinate%}
 		  		<option value="{%$subordinate%}">{%$subordinate%}</option>
 		  	{%/foreach%}
@@ -79,7 +79,10 @@
 	  </div>
 
 	</div>
-	<div id="taskList" class="task-list">
+	<div class="task-list">
+		<h3>日程列表</h3>
+		<div id="taskList">
+		</div>
 	</div>
 
 	<div id="addTask" class="add-task">
@@ -88,12 +91,12 @@
 			<form data-isneedrefresh="need"  id="add-form" action="index.php?r=schedule/add" method="post">
 				<fieldset>
 					<!-- <legend><strong>添加日程</strong></legend>-->
-					<p>
+					<p style="display:none;">
 						<label for="owner">
 							日程对象
 						</label>
 						<select name="owner">
-						  	<option value="">请选择</option>
+						  	<option value="{%$info.user%}">我自己</option>
 						  	{%foreach from=$info.subordinate item=subordinate%}
 						  		<option value="{%$subordinate%}">{%$subordinate%}</option>
 						  	{%/foreach%}

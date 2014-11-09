@@ -71,8 +71,12 @@
   </div>
 
 </div>
-<div id="taskList" class="task-list">
-<div>
+<div class="task-list">
+  <h3>日程列表</h3>
+  <div id="taskList">
+  </div>
+</div>
+
 {%require name="schedule:static/css/calendar.css"%}
 {%require name="schedule:static/js/calendar.js"%}
 

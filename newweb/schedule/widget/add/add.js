@@ -23,7 +23,7 @@ function bindEvent() {
 		id = $(me).attr('data-schedule-id');
 		deleteTask(id, function (data) {
 			ui.notifyDialog(data.message);
-			data.success && $(me).closest('li').remove();
+			data.success && $(me).closest('tr').remove();
 		});
 	});
 

@@ -8,8 +8,8 @@
 }
 .task-list{
 	float: left;
-	padding-left: 1em;
-	padding-top: 34px;
+	padding-left: 5em;
+	padding-top: 50px;
 }
 .task-list li{
 	margin-bottom: 1em;
@@ -23,7 +23,9 @@ table.task-list-table{}
 td.op-calendar-new-relative.selected-date{
 	background-color: rgb(195, 188, 188);
 }
-
+.task-list-table tr{
+	border-bottom: 1px solid transparent;
+}
 a.task-close{
 	display: inline-block;
 	width: 12px;
@@ -34,4 +36,5 @@ a.task-close{
 	text-align: center;
 	background-color: #006dcc;
 	color: #fff;
+	cursor: pointer;
 }
