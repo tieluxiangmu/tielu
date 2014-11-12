@@ -29,8 +29,27 @@ class AdminController extends Controller
 	}
 	*/
 
+	public function accessRules()
+	{
+		return array(
+			array('allow',  // allow all users to perform 'index' and 'view' actions
+				'actions'=>array('index','view'),
+				'users'=>array('@'),
+			),
+			
+			array('deny',  // deny all users
+				'users'=>array('*'),
+			),
+		);
+	}
+
+
 	public function actionIndex() {
 		$smarty = Yii::app()->smarty;
+		$user = Yii::app()->session['user'];
+		if(!$user || $user['name'] != 'admin') {
+			$this->redirect('index.php?r=site/login');
+		}
 	    $smarty->_smarty->display('cadrerealistic/page/admin.tpl');
 	}
 }

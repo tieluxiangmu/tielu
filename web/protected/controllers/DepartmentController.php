@@ -27,15 +27,8 @@ class DepartmentController extends Controller
 
 	}
 	public function actionList() {
-		echo CJSON::encode(Department::model()->findAll('typeid!=4'));
-		/*$departments = Department::model()->findAll();
-		$departments = json_decode(CJSON::encode($departments));*/
-		/*foreach ($departments as $dep) {
-			var_dump($dep->typeid);
-			if($dep->typeid == '2') {
-				$dep->nparentId = '2	';
-			}
-		}*/
+		echo CJSON::encode(Department::model()->findAll('typeid!="班组"'));
+		
 
 		
 	}
@@ -63,8 +56,8 @@ class DepartmentController extends Controller
 				'users'=>array('*'),
 			),
 		);
-	}*/
-
+	}
+*/
 	/**
 	 * Displays a particular model.
 	 * @param integer $id the ID of the model to be displayed
