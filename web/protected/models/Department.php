@@ -39,7 +39,7 @@ class Department extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('name, typeid', 'required'),
-			array('typeid, parentId, type', 'numerical', 'integerOnly'=>true),
+			array('parentId, type', 'numerical', 'integerOnly'=>true),
 			array('name', 'length', 'max'=>50),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.

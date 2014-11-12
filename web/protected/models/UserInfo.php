@@ -7,15 +7,15 @@
  * @property integer $id
  * @property string $name
  * @property string $password
- * @property integer $departmenttype
+ * @property string $departmenttype
  * @property string $department
  * @property string $position
  * @property string $mobile
  * @property string $tel
  * @property string $photo
  * @property string $positionType
- * @property integer $parentDanwei
- * @property integer $parentLeader
+ * @property string $parentDanwei
+ * @property string $parentLeader
  * @property integer $xiesi
  * @property integer $zhoucha
  * @property integer $yecha
@@ -56,8 +56,8 @@ class Userinfo extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('name, password, departmenttype, department, position', 'required'),
-			array('departmenttype, parentDanwei, parentLeader, xiesi, zhoucha, yecha, tiancheng, jiancha, tongzhi, faxianwenti, liangwei, anquan', 'numerical', 'integerOnly'=>true),
-			array('name, department, email', 'length', 'max'=>30),
+			array('xiesi, zhoucha, yecha, tiancheng, jiancha, tongzhi, faxianwenti, liangwei, anquan', 'numerical', 'integerOnly'=>true),
+			array('name, department, departmenttype, parentLeader, parentDanwei,email', 'length', 'max'=>30),
 			array('password', 'length', 'max'=>100),
 			array('position', 'length', 'max'=>50),
 			array('mobile', 'length', 'max'=>11),
@@ -113,10 +113,40 @@ class Userinfo extends CActiveRecord
 	}
 
 	/*
-	 *	获取$userid 对应的所有下属
+	 *  日程表获取下属
 	 *
 	 */
-	public function getSubordinatesByUserId($username) {
+	public function getSubordinatesWithCalendarByUserName($username) {
+		$user = $this->find('name=:username', array(
+			'username' =>  $username,
+		))->attributes;
+
+		$res = array();
+		if($user['department'] == '车务段领导') {
+			$res [] = $user;
+		}else {
+			if($user['positionType'] ==  '主管') {
+				$res[] = $user;
+				$users = $this->findAll('department = :department and positionType = : positionType', array(
+					'department' => $user['department'],
+					'positionType' => '职员',
+				));
+				foreach($users as $u) {
+					$res[] = $u->attributes;
+				}
+			}else if($user['positionType'] == '书记') {
+				$res[] = $user;
+			}else{
+
+			}
+		}
+		return $res;
+	}
+	/* 
+	 *	工作考核表获取下属
+	 *
+	 */
+	public function getSubordinatesWithKaoheByUserName($username) {
 		$sql = "select * from tl_userinfo where parentLeader = '$username'";
 		$users = $this->findAllBySql($sql);
 		$res = array();
@@ -125,7 +155,6 @@ class Userinfo extends CActiveRecord
 		}
 		return $res;
 	}
-
 	public function getUsersByName($name) {
 		$users = $this->findAllByAttributes("name like '%".$name."%'");
 		return $users;
