@@ -21,8 +21,8 @@
                         <label>
                             风险名称
                         </label>
-                        <select name="Safetyrisk[riskname]" id="Safetyrisk_riskname" class="small-input">
-                            <option value="" selected="selected">请选择风险名称</option>
+                        <input type="hidden" name="Safetyrisk[riskname]" id="Safetyrisk_riskname" value="" />
+                        <select id="safe_risk"  class="chosen-select  small-input" multiple="multiple">
                             <option value="防止错办">防止错办</option>
                             <option value="调车安全">调车安全</option>
                             <option value="作业">汛期防洪工作</option>
@@ -40,8 +40,8 @@
                         <label>
                             风险分类
                         </label>
-                        <select name="Safetyrisk[riskclass]" id="Safetyrisk_riskclass" class="small-input">
-                            <option value="" selected="selected">请选择风险分类</option>
+                        <input type="hidden" name="Safetyrisk[riskclass]" id="Safetyrisk_riskclass"/>
+                        <select id="safety_riskclass" class="chosen-select small-input" multiple="multiple">
                             <option value="管理">管理</option>
                             <option value="设备">设备</option>
                             <option value="作业">作业</option>
@@ -53,7 +53,6 @@
                             系统
                         </label>
                         <select  name="Safetyrisk[risksystem]" id="Safetyrisk_risksystem" class="small-input">
-                            <option value="" selected="selected">请选择系统</option>
                             <option value="行车">行车</option>
                             <option value="客运">客运</option>
                             <option value="货运">货运</option>
@@ -82,8 +81,8 @@
                         <label>
                             分布情况
                         </label>
-                        <select  name="Safetyrisk[distribution]" id="Safetyrisk_distribution" class="small-input">
-                            <option value="" selected="selected">请选择分布情况</option>
+                        <input type="hidden" name="Safetyrisk[distribution]" id="Safetyrisk_distribution">
+                        <select id="safe_distribution"   class="chosen-select small-input" multiple="multiple">
                             <option value="管内各站">管内各站</option>
                             <option value="管内各客运办理站">管内各客运办理站</option>
                             <option value="管内各货运办理站">管内各货运办理站</option>
@@ -108,7 +107,7 @@
                         <label>
                             负责领导
                         </label>
-                        <select name="Safetyrisk[responsibilitylead]" id="Safetyrisk_responsibilitylead" class="small-input">
+                        <select name="Safetyrisk[responsibilitylead]" id="Safetyrisk_responsibilitylead" class="small-input chosen">
                             <option value="" selected="selected">请选择负责领导</option>
                             <option value="责任领导1">
                                 责任领导1
@@ -119,8 +118,8 @@
                         <label>
                             责任部门
                         </label>
-                           <select name="Safetyrisk[dutypartments]" id="Safetyrisk_dutypartments" class="small-input">
-                            <option value="" selected="selected">请选择责任部门</option>
+                        <input type="hidden" name="Safetyrisk[dutypartments]" id="Safetyrisk_dutypartments"/>
+                           <select id="safetyrisk_duty"  class="small-input chosen-select" multiple="multiple">
                             <option value="安全科">安全科</option>
                             <option value="技信科">技信科</option>
                             <option value="货管部">货管部</option>
@@ -139,8 +138,8 @@
                         <label>
                             配合部门
                         </label>
-                        <select name="Safetyrisk[coordinationpart]" id="Safetyrisk_coordinationpart" class="small-input">
-                            <option value="" selected="selected">请选择配合部门</option>
+                        <input type="hidden" name="Safetyrisk[coordinationpart]" id="Safetyrisk_coordinationpart"/>
+                        <select id="safetyriskcoord"  class="small-input chosen-select" multiple="multiple">
                             <option value="安全科">安全科</option>
                             <option value="技信科">技信科</option>
                             <option value="货管部">货管部</option>

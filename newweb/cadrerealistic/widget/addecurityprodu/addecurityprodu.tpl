@@ -38,8 +38,8 @@
                         <label>
                             单位
                         </label>
-                        <select name="Safetyproduct[company]" id="Safetyproduct_company" class="small-input">
-                            <option value="" selected="selected">请选择单位</option>
+                        <input type="hidden" name="Safetyproduct[company]" id="Safetyproduct_company" />
+                        <select multiple="multiple"  id="safe-company" class="small-input chosen-select">
                             <option value="段领导">段领导</option>
                             <option value="安全科">安全科</option>
                             <option value="技信科">技信科</option>
@@ -59,8 +59,8 @@
                             <option value="南海公司">南海公司</option>
                             <option value="宏盛公司">宏盛公司</option>
                             <option value="腾能公司">腾能公司</option>
-                            <option value="">隆昌协管站</option>
-                            <option value="隆昌协管站">大足协管站</option>
+                            <option value="隆昌协管站">隆昌协管站</option>
+                            <option value="大足协管站">大足协管站</option>
                             <option value="永川协管站">永川协管站</option>
                             <option value="江津协管站">江津协管站</option>
                             <option value="綦江协管站">綦江协管站</option>
@@ -131,8 +131,8 @@
                         <label>
                             责任部门
                         </label>
-                        <select name="Safetyproduct[dutydepartment]" id="Safetyproduct_dutydepartment" class="small-input">
-                            <option value="" selected="selected">请选择责任部门</option>
+                        <input type="hidden" name="Safetyproduct[dutydepartment]" id="Safetyproduct_dutydepartment"/>
+                        <select  id="Safepro_duty" class="chosen-select small-input" multiple="multiple">
                             <option value="安全科">安全科</option>
                             <option value="技信科">技信科</option>
                             <option value="货管部">货管部</option>

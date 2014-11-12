@@ -1,4 +1,5 @@
-var addecurityprodu = addecurityprodu || {};
+var addecurityprodu = addecurityprodu || {},
+    commonhelp = window.ui;
 addecurityprodu = {
     init: function() {
         // 初始化绑定元素以及事件
@@ -27,6 +28,10 @@ addecurityprodu = {
         } else {
             me.addsaferiskbtn.show(100);
         }
+        $(".chosen-select").chosen({
+            no_results_text: "没有查找结果!",
+            width: '250px'
+        });
     },
     bind: function() {
         var me = this;
@@ -57,9 +62,6 @@ addecurityprodu = {
                 'Safetyproduct[infosources]': {
                     required: true
                 },
-                'Safetyproduct[company]': {
-                    required: true
-                },
                 'Safetyproduct[theproblem]': {
                     required: true
                 },
@@ -67,9 +69,6 @@ addecurityprodu = {
                     required: true
                 },
                 'Safetyproduct[thesolution]': {
-                    required: true
-                },
-                'Safetyproduct[dutydepartment]': {
                     required: true
                 },
                 'Safetyproduct[dutyperson]': {
@@ -106,6 +105,17 @@ addecurityprodu = {
             e.preventDefault();
             jError('请按系统要求填写安全生产数据！');
             return false;
+        }
+        var _safecompany = commonhelp.getchosenSelect('safe_company'),
+            _dutypart = commonhelp.getchosenSelect('Safepro_duty');
+        if (_safecompany && _dutypart) {
+            $('#Safetyproduct_company').val(_safecompany);
+            $('#Safetyproduct_dutydepartment').val(_dutypart);
+        } else {
+            jNotify('请按照系统要求填写！', {
+                HorizontalPosition: 'center',
+                VerticalPosition: 'center'
+            });
         }
     }
 }

@@ -95,12 +95,14 @@ ecurityprodu = {
             _url += "&dutydepartment=" + dutydepartment;
         };
         //责任人
-        var dutyperson = commonhelp.getchosensingleSelect('dutyperson');
+        //var dutyperson = commonhelp.getchosensingleSelect('dutyperson');
+        var dutyperson = $('#dutyperson').val();
         if (dutyperson) {
             _url += "&dutyperson=" + dutyperson;
         };
         //检查人
-        var checkperson = commonhelp.getchosensingleSelect('checkperson');
+        //var checkperson = commonhelp.getchosensingleSelect('checkperson');
+        var checkperson = $('#checkperson').val();
         if (checkperson) {
             _url += "&checkperson=" + checkperson;
         };

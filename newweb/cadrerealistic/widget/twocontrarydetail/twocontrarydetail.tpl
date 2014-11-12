@@ -48,8 +48,10 @@
     <td>{%$model['buckleintegral']%}</td>
   </tr>
     <tr>
-    <td>（班组长）扣积分情况</td>
-    <td colspan="3">{%$model['teamleaderIntegral']%}</td>
+    <td>班组长</td>
+    <td>{%$model['teamleader']%}</td>
+    <td>扣积分情况</td>
+    <td>{%$model['teamleaderIntegral']%}</td>
   </tr>
     </tbody>
 </table>

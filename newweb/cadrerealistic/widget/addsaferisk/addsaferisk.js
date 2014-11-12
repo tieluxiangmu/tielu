@@ -1,4 +1,5 @@
-var addsaferisk = addsaferisk || {};
+var addsaferisk = addsaferisk || {},
+    commonhelp = window.ui;
 addsaferisk = {
     init: function() {
         // 初始化绑定元素以及事件
@@ -16,6 +17,10 @@ addsaferisk = {
         var me = this;
         (me.submitbtn).on('click', $.proxy(me._submitEvent, this));
         (me.cancelbtn).on('click', $.proxy(me._cancelEvent, this));
+        $(".chosen-select").chosen({
+            no_results_text: "没有查找结果!",
+            width: '250px'
+        });
     },
     _cancelEvent: function() {
         location.href = "index.php?r=realinvestigation/index";
@@ -25,12 +30,6 @@ addsaferisk = {
         var $validate = $('#safetyrisk-form').validate({
             errorElement: "span",
             rules: {
-                'Safetyrisk[riskname]': {
-                    required: true
-                },
-                'Safetyrisk[riskclass]': {
-                    required: true
-                },
                 'Safetyrisk[risksystem]': {
                     required: true
                 },
@@ -43,9 +42,6 @@ addsaferisk = {
                 'Safetyrisk[measures]': {
                     required: true
                 },
-                'Safetyrisk[distribution]': {
-                    required: true
-                },
                 'Safetyrisk[furtherproof]': {
                     required: true
                 },
@@ -53,12 +49,6 @@ addsaferisk = {
                     required: true
                 },
                 'Safetyrisk[responsibilitylead]': {
-                    required: true
-                },
-                'Safetyrisk[dutypartments]': {
-                    required: true
-                },
-                'Safetyrisk[coordinationpart]': {
                     required: true
                 },
                 'Safetyrisk[implementdate]': {
@@ -85,12 +75,31 @@ addsaferisk = {
         return $validate;
     },
     _submitEvent: function(e) {
-        //e.stopPropagation();
         var me = this;
+        //e.stopPropagation();
         if (!me.formValidate().form()) {
             e.preventDefault();
-            jError('
-                        请按系统要求填写安全风险数据！ ');
+            jError('请按系统要求填写安全风险数据！');
+            return false;
+        }
+        var _saferisk = commonhelp.getchosenSelect('safe_risk'), //风险名称
+            _safetyriskclass = commonhelp.getchosenSelect('safety_riskclass'), //风险分类
+            _safedistribution = commonhelp.getchosenSelect('safe_distribution'), //分布情况
+            _safetyriskcoord = commonhelp.getchosenSelect('safetyriskcoord'), //配合部门
+            _safetyriskduty = commonhelp.getchosenSelect('safetyrisk_duty'); //责任部门
+        alert(_saferisk);
+        if (_saferisk && _safetyriskclass && _safedistribution && _safetyriskduty) {
+            $('#Safetyrisk_riskname').val(_saferisk);
+            $('#Safetyrisk_riskclass').val(_safetyriskclass);
+            $('#Safetyrisk_distribution').val(_safedistribution);
+            $('#Safetyrisk_coordinationpart').val(_safetyriskcoord);
+            $('#Safetyrisk_dutypartments').val(_safetyriskduty);
+        } else {
+            e.preventDefault();
+            jNotify('请按照系统要求填写！', {
+                HorizontalPosition: 'center',
+                VerticalPosition: 'center'
+            });
             return false;
         }
     }

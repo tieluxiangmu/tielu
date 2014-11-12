@@ -46,8 +46,9 @@
                         <label>
                             被查单位
                         </label>
-                        <select name="Twocontrarymanage[company]" id="Twocontrarymanage_company" class="chosen-select small-input" multiple="multiple">
-                        <option value="段领导">段领导</option>
+                        <input type="hidden" name="Twocontrarymanage[company]" id="Twocontrarymanage_company" />
+                        <select id="twocompany_select"  multiple="multiple" class="chosen-select small-input">
+                          <option value="段领导">段领导</option>
                           <option value="安全科">安全科</option>
                           <option value="技信科">技信科</option>
                           <option value="货管部">货管部</option>
@@ -147,7 +148,7 @@
                         <label>
                             处理结果
                         </label>
-                        <input type="number" type="text" class="text-input textarea wysiwyg" name="Twocontrarymanage[processingresults]" id="Twocontrarymanage_processingresults">
+                        <input type="number" type="text" class="text-input textarea wysiwyg" name="Twocontrarymanage[processingresults]" id="Twocontrarymanage_processingresults"/>
                     </p>
                     <p>
                         <label>
@@ -164,7 +165,7 @@
                         <label>
                             责任人扣分
                         </label>
-                        <input class="text-input small-input"  name="Twocontrarymanage[deduction]" id="Twocontrarymanage_deduction" type="number" min="0"/>
+                        <input class="text-input small-input"  name="Twocontrarymanage[deduction]" id="Twocontrarymanage_deduction" type="number"/>
                     </p>
                     <p>
                         <label>
@@ -180,9 +181,15 @@
                     </p>
                     <p>
                         <label>
-                            （班组长）扣积分情况
+                            （班组长）
                         </label>
-                         <input class="text-input small-input" name="Twocontrarymanage[buckleintegral]" id="Twocontrarymanage_buckleintegral" type="number"/>
+                         <input class="text-input small-input" name="Twocontrarymanage[teamleader]" id="Twocontrarymanage_teamleader" type="text"/>
+                    </p>
+                      <p>
+                        <label>
+                            扣积分情况
+                        </label>
+                         <input class="text-input small-input" name="Twocontrarymanage[teamleaderIntegral]" id="Twocontrarymanage_teamleaderIntegral" type="number"/>
                     </p>
                     <p>
                         <input class="btn btn-primary" id="js-input-addsaferisk" type="submit"
