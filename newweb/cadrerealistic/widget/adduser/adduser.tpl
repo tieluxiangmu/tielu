@@ -20,7 +20,7 @@
         <p>
             <label class="spantitle" for="UserInfo_departmenttype" class="required">单位类型： <span class="required">*</span></label> 
             <span>{%$departmentType.name%}</span>
-            <input class="text-input small-input"  name="UserInfo[departmenttype]" value="{%$departmentType.id%}" id="UserInfo_departmenttype" type="hidden" />
+            <input class="text-input small-input"  name="UserInfo[departmenttype]" value="{%$departmentType.name%}" id="UserInfo_departmenttype" type="hidden" />
         </p>
         
 
@@ -28,14 +28,14 @@
             <label class="spantitle" for="UserInfo_department" class="required">单位名称： <span class="required">*</span></label>
             <span>{%$department.name%}</span>
 
-            <input class="text-input small-input"  name="UserInfo[department]" value="{%$department.id%}" id="UserInfo_department" type="hidden" />
+            <input class="text-input small-input"  name="UserInfo[department]" value="{%$department.name%}" id="UserInfo_department" type="hidden" />
         </p>
         
         <p>
             <label class="spantitle" for="UserInfo_parentDanwei">上级单位：</label> 
             <span>{%$parentDepartment.name%}</span>
 
-            <input class="text-input small-input" name="UserInfo[parentDanwei]" id="UserInfo_parentDanwei" type="hidden"  value="{%$parentDepartment.id%}"/>
+            <input class="text-input small-input" name="UserInfo[parentDanwei]" id="UserInfo_parentDanwei" type="hidden"  value="{%$parentDepartment.name%}"/>
         </p>
         
         <p>
