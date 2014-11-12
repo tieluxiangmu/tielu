@@ -7,7 +7,7 @@
     </p>
     <ul class="shortcut-buttons-set">
         <li>
-            <a class="shortcut-button" href="">
+            <a class="shortcut-button" href="index.php?r=schedule/index">
                 <span>
                     <img src="/static/images/schedule.png" alt="日程" />
                     <br />
@@ -34,7 +34,7 @@
             </a>
         </li>
         <li>
-            <a class="shortcut-button" href="">
+            <a class="shortcut-button" href="index.php?r=workinfo/index">
                 <span>
                     <img src="/static/images/summary.png" alt="工作情况汇总" />
                     <br />
@@ -43,7 +43,7 @@
             </a>
         </li>
         <li>
-            <a class="shortcut-button" href="">
+            <a class="shortcut-button" href="index.php?r=contact/index">
                 <span>
                     <img src="/static/images/transfer.png" alt="联系人" />
                     <br />

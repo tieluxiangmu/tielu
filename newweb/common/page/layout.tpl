@@ -46,22 +46,22 @@
 		        <div id="profile-links">
 		            姓名：
 		            <a href="#" title="姓名">
-		                谭自力
+		                {%$smarty.session.user.name%}
 		            </a>
 		            <br />
 		            职务：
 		            <a href="#messages" rel="modal" title="职务">
-		                万盛站长
+		                {%$smarty.session.user.position%}
 		            </a>
 		            <br />
 		            办公电话：
 		            <a href="#messages" rel="modal" title="">
-		                22981
+		                {%$smarty.session.user.tel%}
 		            </a>
 		            <br />
 		            手机：
 		            <a href="#messages" rel="modal" title="">
-		                18566778899
+		                {%$smarty.session.user.mobile%}
 		            </a>
 		            <br />
 		            <div class="spliter">
@@ -71,7 +71,7 @@
 		                    系统主页
 		                </a>
 		                |
-		                <a href="#" title="退出">
+		                <a href="index.php?r=userinfo/logout" title="退出">
 		                    退出
 		                </a>
 		            </p>
