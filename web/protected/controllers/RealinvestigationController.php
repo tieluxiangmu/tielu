@@ -27,6 +27,10 @@ class RealinvestigationController extends Controller {
     }
     /*集成显示 修改 详情的主宰页面*/
     public function actionIndex() {
+        $user = Yii::app()->session['user'];
+        if(!$user) {
+            $this->redirect('index.php?r=site/login');
+        }
         $smarty = Yii::app()->smarty;
         $urlparam = "";
         foreach ($_REQUEST as $key => $value) {
@@ -44,7 +48,6 @@ class RealinvestigationController extends Controller {
     public function actionRealinvestigationman() {
         header("charset=utf-8");
         if ($_SERVER['HTTP_X_REQUESTED_WITH'] == "XMLHttpRequest") {
-            var_dump(Yii::app()->session['user']);
             //ajax传递的数据 我们给予返回 否则返回真正的数据页面带回参数再去加载
             $realinvestigation = Realinvestigation::model();
             $level2=!empty(Yii::app()->session['user']['level2'])?Yii::app()->session['user']['level2']:'';
@@ -260,7 +263,7 @@ class RealinvestigationController extends Controller {
             $mailer->AddAddress($mailto, $_POST['cadresonduty']);
             $mailer->Subject = MAIL_SUBJECT;
             $mailer->Body = MAIL_BODY;
-            $mailer->AddAttachment($web_path.str_replace('\\','/',$filename),'安全检查通知书_'.date('Y-m-d',time()).'.doc');
+            $mailer->AddAttachment(WEB_BASE.str_replace('\\','/',$filename),'安全检查通知书_'.date('Y-m-d',time()).'.doc');
             $mailer->Send();
             //更新附件路径
             $sql="select * from {{realinvestigation}} order by id desc limit 1";

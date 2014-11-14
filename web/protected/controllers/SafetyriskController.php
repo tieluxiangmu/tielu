@@ -121,7 +121,7 @@ class SafetyriskController extends Controller
 	        if ($_SERVER['HTTP_X_REQUESTED_WITH'] == "XMLHttpRequest") {
 	            //ajax传递的数据 我们给予返回 否则返回真正的数据页面带回参数再去加载
 	            $safetyrisk = Safetyrisk::model();
-	            $sql = "select * from {{safetyrisk}} where  1=1 ";
+	            $sql = "select * from tl_safetyrisk where  1=1 ";
                 $level2=!empty(Yii::app()->session['user']['level2'])?Yii::app()->session['user']['level2']:'';
                 $level3=!empty(Yii::app()->session['user']['level3'])?Yii::app()->session['user']['level3']:'';
                 if(!empty($level2) && !empty($level3)){
@@ -164,12 +164,16 @@ class SafetyriskController extends Controller
 	            $count = count($safetyrisk->findAllBySql($sql));
 	            $sql.= "  limit ".($pageparam-1)*$pagesize.", $pagesize";
 	            $data =  $safetyrisk->findAllBySql($sql);
+	            $result = array();
+	            foreach ($data as $d) {
+	            	$result[] = $d->attributes;
+	            }
 	            //获取总页数
 	            $page = new Page($count, $pagesize);
 	            $show_page = $page->fpage();
 	            $smarty = Yii::app()->smarty;
 	            $smarty->_smarty->assign('show_page', $show_page); //分页HTML
-	            $smarty->_smarty->assign('data', $data); //数据展现
+	            $smarty->_smarty->assign('data', $result); //数据展现
 	            $smarty->_smarty->display('cadrerealistic/page/listsafetyrisk.tpl');
 	        } else {
 	            $urlparam = "";
@@ -179,7 +183,7 @@ class SafetyriskController extends Controller
 	                };
 	                $urlparam.= "&" . $key . "=" . $value;
 	            }
-	            $this->redirect('index.php?r=safetyrisk/index' . $urlparam);
+	            //$this->redirect('index.php?r=safetyrisk/index' . $urlparam);
 	        }
 	    }
 	    /*根据用户的选择导出excel*/

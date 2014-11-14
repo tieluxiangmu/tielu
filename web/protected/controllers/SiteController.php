@@ -15,6 +15,9 @@ class SiteController extends CController
 	{
 		$smarty = Yii::app()->smarty;
 		//$smarty->_smarty->assign('domin','127.0.0.1'); 
+		if(!Yii::app()->session['user']) {
+			$this->redirect('index.php?r=site/login');
+		}
 		$smarty->_smarty->display('index/page/index.tpl');
 	}
 	//登陆页action render view

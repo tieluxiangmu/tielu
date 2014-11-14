@@ -6,6 +6,11 @@ class CadreexamineController extends CController
 	public function actionIndex()
 	{
         $smarty = Yii::app()->smarty;
+
+        $user = Yii::app()->session['user'];
+        if(!$user) {
+            $this->redirect('index.php?r=site/login');
+        }
         
         $data = array();
 

@@ -91,7 +91,7 @@ class UserInfoController extends Controller
 		{
 			
             $file = $_FILES['photo'];
-			$filename = "d:/upload/" . $file['name'];
+			$filename = WEB_BASE."/attachment/" . $file['name'];
 
             if (($file["type"] == "image/gif")
 				|| ($file["type"] == "image/jpeg")
@@ -126,8 +126,8 @@ class UserInfoController extends Controller
 			'departmentid' => $department['parentId'],
 		))->attributes;
 
-		$departmentType = Departmenttype::model()->find('id=:id', array(
-			'id' => $department['typeid'],
+		$departmentType = Departmenttype::model()->find('name=:name', array(
+			'name' => $department['typeid'],
 		))->attributes;
 
 		$smarty->_smarty->assign('departmentType', $departmentType);
@@ -135,6 +135,12 @@ class UserInfoController extends Controller
 		$smarty->_smarty->assign('parentDepartment', $parentDepartment);
 
 	    $smarty->_smarty->display('cadrerealistic/page/adduser.tpl');
+	}
+	public function actionLogout() {
+			Yii::app()->session['user'] = null;
+			$this->redirect('index.php?r=site/login');
+
+
 	}
 	public function actionLogin() {
 		$password = $_REQUEST['password'];
@@ -148,12 +154,12 @@ class UserInfoController extends Controller
 		)->attributes;
 
 		if($user) {
-			$department = Department::model() -> find('id=:department',array(
+			$department = Department::model() -> find('name=:department',array(
 				'department' => $user['department']
 			))->attributes;
-			$sql = "select * from tl_role where departmenttype = ".$department['typeid'];
-			
+			$sql = "select * from tl_role where departmenttype = '".$department['typeid']."'";
 			$role = Role::model()->findBySql($sql)->attributes;
+			
 
 			$level = $role['name'];
 			if($level == 'level2') {
