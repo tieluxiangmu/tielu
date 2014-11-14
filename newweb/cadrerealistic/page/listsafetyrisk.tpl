@@ -70,7 +70,7 @@
                 {%$data[$i]['reasonofrisk']|truncate:15:"..."%}
             </td>
             <td>
-                {%$data[$i]['consequence']|truncate:15:"...%}
+                {%$data[$i]['consequence']|truncate:15:"..."%}
             </td>
             <td>
               <a href="" class="edit"  data-editinfo='{"page":"safetyrisk/editsafetyrisk","id":{%$data[$i]["id"]%}}'  title="安全风险修改">

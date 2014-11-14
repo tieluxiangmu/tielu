@@ -44,6 +44,7 @@
             </span>
             <select class="small-input chosen-select" id="riskclass" multiple="multiple">
               <option value="管理">管理</option>
+              <option value="设备">设备</option>
               <option value="作业">作业</option>
               <option value="环境">环境</option>
             </select>
@@ -61,28 +62,31 @@
             <span>
               <strong>负责领导</strong>
             </span>
-            <select class="small-input chosen-select" id="responsibilitylead" style="width:120px">
+            <select class="small-input chosen-select" id="responsibilitylead" style="width:120px" multiple="true">
               <option selected="selected" value=""></option>
-              <option value="负责领导1">
-                负责领导1
+              <option value="余戈">
+                余戈
+              </option><option value="蔡泽琪">
+                蔡泽琪
               </option>
+              
             </select>
             <span style="margin-left:20px">
               <strong>责任部门</strong>
             </span>
             <select class="small-input chosen-select" id="dutypartments" style="width:120px" multiple="multiple">
-                      <option value="安全科">安全科</option>
-                          <option value="技信科">技信科</option>
-                          <option value="货管部">货管部</option>
-                          <option value="客营科">客营科</option>
-                          <option value="劳人科">劳人科</option>
-                          <option value="财计科">财计科</option>
-                          <option value="保卫科">保卫科</option>
-                          <option value="职教科">职教科</option>
-                          <option value="办公室">办公室</option>
-                          <option value="党工室">党工室</option>
-                          <option value="装卸车间">装卸车间</option>
-                          <option value="乘务车间">乘务车间</option>  
+                <option value="安全科">安全科</option>
+                <option value="技信科">技信科</option>
+                <option value="货管部">货管部</option>
+                <option value="客营科">客营科</option>
+                <option value="劳人科">劳人科</option>
+                <option value="财计科">财计科</option>
+                <option value="保卫科">保卫科</option>
+                <option value="职教科">职教科</option>
+                <option value="办公室">办公室</option>
+                <option value="党工室">党工室</option>
+                <option value="装卸车间">装卸车间</option>
+                <option value="乘务车间">乘务车间</option>  
             </select>
           </p>
             <p >

@@ -5,6 +5,10 @@ editsafetyrisk = {
         // 初始化绑定元素以及事件
         var me = this;
         me.render();
+        $(".chosen-select").chosen({
+            no_results_text: "没有查找结果!",
+            width: '250px'
+        });
         me.bind();
     },
     render: function() {

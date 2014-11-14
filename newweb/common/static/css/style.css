@@ -401,7 +401,8 @@ form textarea{
 }
 form select{
     padding:4px;
-    background:#fff
+    background:#fff;
+    height:30px;
 }
 form input[type="checkbox"],form input[type="radio"]{
     padding:0;

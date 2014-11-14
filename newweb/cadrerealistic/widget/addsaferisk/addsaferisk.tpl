@@ -52,7 +52,7 @@
                         <label>
                             系统
                         </label>
-                        <select  name="Safetyrisk[risksystem]" id="Safetyrisk_risksystem" class="small-input">
+                        <select  name="Safetyrisk[risksystem]" id="Safetyrisk_risksystem" class="small-input chosen_select">
                             <option value="行车">行车</option>
                             <option value="客运">客运</option>
                             <option value="货运">货运</option>
@@ -63,19 +63,19 @@
                         <label>
                             风险原因（致因）
                         </label>
-                        <textarea class="text-input textarea wysiwyg"  name="Safetyrisk[reasonofrisk]" id="Safetyrisk_reasonofrisk" cols="79" rows="5"></textarea>
+                        <textarea class="text-input textarea wysiwyg"  name="Safetyrisk[reasonofrisk]" id="Safetyrisk_reasonofrisk" cols="79" style="height:200px"></textarea>
                     </p>
                     <p>
                         <label>
                             可能后果
                         </label>
-                        <textarea class="text-input textarea wysiwyg"  name="Safetyrisk[consequence]" id="Safetyrisk_consequence" cols="79" rows="5"></textarea>
+                        <textarea class="text-input textarea wysiwyg"  name="Safetyrisk[consequence]" id="Safetyrisk_consequence" cols="79" style="height:200px"></textarea>
                     </p>
                     <p>
                         <label>
                             既有措施及有效性（问题）
                         </label>
-                        <textarea class="text-input textarea wysiwyg"  name="Safetyrisk[measures]" id="Safetyrisk_measures" cols="79" rows="5"></textarea>
+                        <textarea class="text-input textarea wysiwyg"  name="Safetyrisk[measures]" id="Safetyrisk_measures" cols="79" style="height:200px"></textarea>
                     </p>
                      <p>
                         <label>
@@ -95,13 +95,13 @@
                         <label>
                             进一步防控措施
                         </label>
-                        <textarea class="text-input textarea wysiwyg"  name="Safetyrisk[furtherproof]" id="Safetyrisk_furtherproof" cols="79" rows="5"></textarea>
+                        <textarea class="text-input textarea wysiwyg"  name="Safetyrisk[furtherproof]" id="Safetyrisk_furtherproof" cols="79" style="height:200px"></textarea>
                     </p>
                     <p>
                         <label>
                             应急（预警）处置措施
                         </label>
-                        <textarea class="text-input textarea wysiwyg"  name="Safetyrisk[emergencyhand]" id="Safetyrisk_emergencyhand" cols="79" rows="5"></textarea>
+                        <textarea class="text-input textarea wysiwyg"  name="Safetyrisk[emergencyhand]" id="Safetyrisk_emergencyhand" cols="79" style="height:200px"></textarea>
                     </p>
                     <p>
                         <label>
@@ -164,13 +164,13 @@
                         <label>
                             备注客车
                         </label>
-                        <textarea class="text-input textarea wysiwyg"  name="Safetyrisk[notethebus]" id="Safetyrisk_notethebus" cols="79" rows="5"></textarea>
+                        <textarea class="text-input textarea wysiwyg"  name="Safetyrisk[notethebus]" id="Safetyrisk_notethebus" cols="79" style="height:200px"></textarea>
                     </p>
                     <p>
                         <label>
                             备注高铁
                         </label>
-                        <textarea class="text-input textarea wysiwyg"  name="Safetyrisk[notehighspeedrail]" id="Safetyrisk_notehighspeedrail" cols="79" rows="5"></textarea>
+                        <textarea class="text-input textarea wysiwyg"  name="Safetyrisk[notehighspeedrail]" id="Safetyrisk_notehighspeedrail" cols="79" style="height:200px"></textarea>
                     </p>
                     <p>
                         <input class="btn btn-success" type="submit" id="js-input-submitsaferisk" value="确定保存" />
