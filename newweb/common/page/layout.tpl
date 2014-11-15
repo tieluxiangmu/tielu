@@ -41,11 +41,11 @@
 		<div id="sidebar">
 		    <div id="sidebar-wrapper">
 		        <a href="#">
-		            <img id="pic" src="/static/images/tzl.jpg" alt="用户照片" />
+		            <img id="pic" src="/web{%$smarty.session.user.photo%}" alt="用户照片" />
 		        </a>
 		        <div id="profile-links">
 		            姓名：
-		            <a href="#" title="姓名">
+		            <a href="index.php?r=userinfo/update&id={%$smarty.session.user.id%}" title="姓名">
 		                {%$smarty.session.user.name%}
 		            </a>
 		            <br />
