@@ -26,19 +26,22 @@ class SafetyriskController extends Controller
 	 */
 	public function actionCreate()
 	{
-	        $model=new Safetyrisk;
-	        $res = array('success' => false, 'message' => '请传入要录入的安全风险管理数据！');
-	        if (isset($_POST['Safetyrisk'])) {
-	            $model->attributes = $_POST['Safetyrisk'];
-	            if ($model->save()) {
-	                $res['success'] = true;
-	                $res['message'] = '安全风险管理数据录入成功！';
-	            } else {
-	                $res['message'] = '安全风险管理数据录入失败，请重试！';
-	            }
-	        }
-	        header('Content-type:json/application;charset=utf-8');
-	        echo json_encode($res);
+        $model=new Safetyrisk;
+        $res = array('success' => false, 'message' => '请传入要录入的安全风险管理数据！');
+        if (isset($_POST['Safetyrisk'])) {
+            $model->attributes = $_POST['Safetyrisk'];
+            $model->attributes = array('level2'=>Yii::app()->session['user']['level2']);
+            $model->attributes = array('level3'=>Yii::app()->session['user']['level3']);
+            $model->attributes = array('commit'=>Yii::app()->session['user']['name']);
+            if ($model->save()) {
+                $res['success'] = true;
+                $res['message'] = '安全风险管理数据录入成功！';
+            } else {
+                $res['message'] = '安全风险管理数据录入失败，请重试！';
+            }
+        }
+        header('Content-type:json/application;charset=utf-8');
+        echo json_encode($res);
 	}
 	   /*编辑安全生产管理页面*/
 	    public function actionEditsafetyrisk() {
@@ -124,9 +127,12 @@ class SafetyriskController extends Controller
 	            $sql = "select * from tl_safetyrisk where  1=1 ";
                 $level2=!empty(Yii::app()->session['user']['level2'])?Yii::app()->session['user']['level2']:'';
                 $level3=!empty(Yii::app()->session['user']['level3'])?Yii::app()->session['user']['level3']:'';
-                if(!empty($level2) && !empty($level3)){
-                    $sql.=" and `level2`='{$level2}' and `level3`='{$level3}'";
-                }
+                if($level2) {
+	                $sql.=" and `level2`='{$level2}'";
+	            }
+	            if($level3) {
+	                $sql.=" and `level3`='{$level3}'";
+	            }
 	            if (isset($_REQUEST['simplementdate'])) {
 	                $sql.= " and implementdate>='" . $_REQUEST['simplementdate'] . "'";
 	            }

@@ -49,6 +49,9 @@ class TwocontrarymanageController extends Controller
 	        );
 	        if (isset($_POST['Twocontrarymanage'])) {
 	            $model->attributes = $_POST['Twocontrarymanage'];
+	            $model->attributes = array('level2'=>Yii::app()->session['user']['level2']);
+	            $model->attributes = array('level3'=>Yii::app()->session['user']['level3']);
+	            $model->attributes = array('commit'=>Yii::app()->session['user']['name']);
 	            if ($model->save()) {
 	                $res['success'] = true;
 	                $res['message'] = "两违管理数据录入成功！";
@@ -144,10 +147,13 @@ class TwocontrarymanageController extends Controller
                 $level2=!empty(Yii::app()->session['user']['level2'])?Yii::app()->session['user']['level2']:'';
                 $level3=!empty(Yii::app()->session['user']['level3'])?Yii::app()->session['user']['level3']:'';
 	            $sql = "select * from {{twocontrarymanage}} where  1=1 ";
-                if(!empty($level2) && !empty($level3)){
-                    $sql.=" and `level2`='{$level2}' and `level3`='{$level3}'";
-                }
-	             if (isset($_REQUEST['schecktime'])) {
+                if($level2) {
+	                $sql.=" and `level2`='{$level2}'";
+	            }
+	            if($level3) {
+	                $sql.=" and `level3`='{$level3}'";
+	            }
+	            if (isset($_REQUEST['schecktime'])) {
 	                $sql.= " and checktime>='" . $_REQUEST['schecktime'] . "'";
 	            }
 	            if (isset($_REQUEST['echecktime'])) {

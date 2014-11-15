@@ -30,6 +30,9 @@ class SafetyproductController extends Controller
         $res = array('success' => false, 'message' => '请传入要录入的安全生产数据！');
         if (isset($_POST['Safetyproduct'])) {
             $model->attributes = $_POST['Safetyproduct'];
+            $model->attributes = array('level2'=>Yii::app()->session['user']['level2']);
+            $model->attributes = array('level3'=>Yii::app()->session['user']['level3']);
+            $model->attributes = array('commit'=>Yii::app()->session['user']['name']);
             if ($model->save()) {
                 $res['success'] = true;
                 $res['message'] = '安全生产数据录入成功！';
@@ -124,8 +127,12 @@ class SafetyproductController extends Controller
             $level2=!empty(Yii::app()->session['user']['level2'])?Yii::app()->session['user']['level2']:'';
             $level3=!empty(Yii::app()->session['user']['level3'])?Yii::app()->session['user']['level3']:'';
             $sql = "select * from {{safetyproduct}} where  1=1 ";
-            if(!empty($level2) && !empty($level3)){
-                $sql.=" and `level2`='{$level2}' and `level3`='{$level3}'";
+
+            if($level2) {
+                $sql.=" and `level2`='{$level2}'";
+            }
+            if($level3) {
+                $sql.=" and `level3`='{$level3}'";
             }
             if (isset($_REQUEST['sstoragetime'])) {
                 $sql.= " and storagetime>='" . $_REQUEST['sstoragetime'] . "'";
