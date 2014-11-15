@@ -9,7 +9,7 @@ examine = {
             var person = $('#person-select').val();
 
             if(year == '' || month == '' || person == '') {
-            	alert('筛选条件选择不完整');
+            	$.dialog.alert('筛选条件选择不完整');
             	return;
             }
             var url = '/web/index.php?r=cadreexamine/selectresult&';
@@ -54,15 +54,16 @@ examine = {
             url += '&month=' + month;
             url += '&person=' + encodeURIComponent(person);
             url += '&koufen=' + koufen;
-            url += '&koufenyuanyin=' + encodeURIComponent(koufenyuanyin);
-            url += '&kaohezhutipingyu=' + encodeURIComponent(kaohezhutipingyu);
             url += '&realwork=' + encodeURIComponent(real_work);
 
 	        $.post(
 	        	url,
-	        	{},
+	        	{
+                    'koufenyuanyin': koufenyuanyin,
+                    'kaohezhutipingyu': kaohezhutipingyu
+                },
 	        	function(data){
-	        		alert('已发送Excel至邮箱');
+	        		$.dialog.alert('已发送Excel至邮箱');
 	        	},
 	        	'json'
 	        );
@@ -77,7 +78,7 @@ examine = {
     	$('.result-wrap').empty();
 
         var name = data.userinfo.name;
-        
+
     	var master = data.master;
         $('i.sign', tableArea).text(master);
 

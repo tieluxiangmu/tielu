@@ -13,7 +13,7 @@
 <div class="calendar-wrapper">
 
   <div class="calendar-operation">
-      <select name="SY" onchange="calendarApp.change()">
+      <select name="SY" class="chosen-select small-input" style="width:100px" onchange="calendarApp.change()">
         <option value="2012">2012</option>
         <option value="2013">2013</option>
         <option value="2014" selected>2014</option>
@@ -21,7 +21,7 @@
         <option value="2016">2016</option>
         <option value="2017">2017</option>
       </select>
-      <select name="SM" onchange="calendarApp.change()">
+      <select name="SM" class="chosen-select small-input" style="width:100px" onchange="calendarApp.change()">
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
