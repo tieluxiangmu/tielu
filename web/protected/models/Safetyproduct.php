@@ -19,6 +19,9 @@
  * @property string $registertime
  * @property string $comments
  * @property string $currentstatus
+ * @property integer $level2
+ * @property integer $level3
+ * @property string $commit
  */
 class Safetyproduct extends CActiveRecord
 {
@@ -90,6 +93,9 @@ class Safetyproduct extends CActiveRecord
 			'registertime' => '销号时间',
 			'comments' => '备注',
 			'currentstatus' => '问题目前状况',
+			'level2' => 'Level2',
+			'level3' => 'Level3',
+			'commit' => 'Commit',
 		);
 	}
 
