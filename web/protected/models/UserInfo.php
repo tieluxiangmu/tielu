@@ -112,6 +112,14 @@ class Userinfo extends CActiveRecord
 		);
 	}
 
+	public function getAllSegmentLeaders() {
+		$users = $this->findAll('department="车务段领导"');
+		$ret = array();
+		foreach($users as $user){
+			$ret[] = $user->attributes;
+		}
+		return $ret;
+	}
 	/*
 	 *  日程表获取下属
 	 *
@@ -127,10 +135,8 @@ class Userinfo extends CActiveRecord
 		}else {
 			if($user['positionType'] ==  '主管') {
 				$res[] = $user;
-				$users = $this->findAll('department = :department and positionType = : positionType', array(
-					'department' => $user['department'],
-					'positionType' => '职员',
-				));
+				$sql = "select * from tl_userinfo where department = '".$user['department']."' and positionType = '职员'";
+				$users = $this->findAllBySql($sql);
 				foreach($users as $u) {
 					$res[] = $u->attributes;
 				}
