@@ -40,9 +40,8 @@
 
 	      <span>&nbsp;&nbsp;&nbsp;&nbsp;设置对象</span>
 		  <select name="target">
-		  	<option value="{%$info.user%}">我自己</option>
 		  	{%foreach from=$info.subordinate item=subordinate%}
-		  		<option value="{%$subordinate%}">{%$subordinate%}</option>
+		  		<option value="{%$subordinate.name%}">{%$subordinate.name%}</option>
 		  	{%/foreach%}
 		  </select>
 
@@ -96,9 +95,8 @@
 							日程对象
 						</label>
 						<select name="owner">
-						  	<option value="{%$info.user%}">我自己</option>
 						  	{%foreach from=$info.subordinate item=subordinate%}
-						  		<option value="{%$subordinate%}">{%$subordinate%}</option>
+						  		<option value="{%$subordinate.name%}">{%$subordinate.name%}</option>
 						  	{%/foreach%}
 						</select>
 					</p>
