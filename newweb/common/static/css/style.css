@@ -384,6 +384,12 @@ form input.text-input,form select,form textarea,form .wysiwyg{
     width: 150px;
     height: 10px;
 }
+form select{
+    height:30px;
+}
+form textarea{
+    height:100px;
+}
 form .small-input{
     width:25%;
 }
