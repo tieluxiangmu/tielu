@@ -22,6 +22,16 @@
 td.op-calendar-new-relative.selected-date{
 	background-color: rgb(195, 188, 188);
 }
+td.op-calendar-new-relative.selected-date a .op-calendar-new-daynumber,
+td.op-calendar-new-relative.selected-date a .op-calendar-new-lday{
+	color: #ff6000!important;
+}
+
+td.op-calendar-new-relative.has-schedule-date{
+	background-color: #f3f9ff;
+	border: 1px solid #c8dcfb;
+}
+
 .task-list-table tr{
 	border-bottom: 1px solid transparent;
 }

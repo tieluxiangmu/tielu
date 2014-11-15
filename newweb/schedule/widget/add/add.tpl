@@ -14,6 +14,7 @@
 	<div class="calendar-wrapper">
 
 	  <div class="calendar-operation">
+	  	<form>
 	  	  <span style="line-height:30px">日期</span>
 	      <select name="SY" class="chosen-select small-input" style="width:100px" onchange="calendarApp.change()">
 	        <option value="2012">2012</option>
@@ -44,7 +45,7 @@
 		  		<option value="{%$subordinate.name%}">{%$subordinate.name%}</option>
 		  	{%/foreach%}
 		  </select>
-
+		  </form>
 	  </div>
 
 	  <div>

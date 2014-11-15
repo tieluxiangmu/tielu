@@ -13,6 +13,7 @@
 <div class="calendar-wrapper">
 
   <div class="calendar-operation">
+    <form>
       <select name="SY" class="chosen-select small-input" style="width:100px" onchange="calendarApp.change()">
         <option value="2012">2012</option>
         <option value="2013">2013</option>
@@ -38,6 +39,7 @@
       {%if $info.authority == 'zhuguan' or $info.authority == 'shuji'%}
         &nbsp;&nbsp;&nbsp;&nbsp;<a class="btn btn-primary" href="index.php?r=schedule/addSchedule">日程设置</a>
       {%/if%}
+    </form>
   </div>
 
   <div>
