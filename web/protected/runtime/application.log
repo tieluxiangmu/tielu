@@ -2344,3 +2344,69 @@ Stack trace:
 REQUEST_URI=/web/index.php?r=schedule/index
 HTTP_REFERER=http://localhost/web/
 ---
+2014/11/15 09:38:39 [error] [exception.SmartyCompilerException] exception 'SmartyCompilerException' with message 'Syntax Error in template &quot;D:\xampp\htdocs\web\protected\views\tpl\templates\cadrerealistic\page\listsafetyrisk.tpl&quot;  on line 66 &quot;&amp;lt;a href=&amp;quot;&amp;quot; class=&amp;quot;edit&amp;quot;  data-editinfo='{&amp;quot;page&amp;quot;:&amp;quot;safetyrisk/editsafetyrisk&amp;quot;,&amp;quot;id&amp;quot;:{%$data[$i][&amp;quot;id&amp;quot;]|f_escape_xml%}}'  title=&amp;quot;安全风险修改&amp;quot;&amp;gt;&quot;  - Unexpected &quot;&quot;&quot;, expected one of: &quot;%}&quot; , &quot; &quot; , ATTR' in D:\xampp\htdocs\web\protected\extensions\smarty\sysplugins\smarty_internal_templatecompilerbase.php:665
+Stack trace:
+#0 D:\xampp\htdocs\web\protected\extensions\smarty\sysplugins\smarty_internal_templateparser.php(3144): Smarty_Internal_TemplateCompilerBase->trigger_template_error()
+#1 D:\xampp\htdocs\web\protected\extensions\smarty\sysplugins\smarty_internal_templateparser.php(3209): Smarty_Internal_Templateparser->yy_syntax_error(78, '"')
+#2 D:\xampp\htdocs\web\protected\extensions\smarty\sysplugins\smarty_internal_smartytemplatecompiler.php(105): Smarty_Internal_Templateparser->doParse(78, '"')
+#3 D:\xampp\htdocs\web\protected\extensions\smarty\sysplugins\smarty_internal_templatecompilerbase.php(200): Smarty_Internal_SmartyTemplateCompiler->doCompile('{%if (count($da...')
+#4 D:\xampp\htdocs\web\protected\extensions\smarty\sysplugins\smarty_internal_template.php(187): Smarty_Internal_TemplateCompilerBase->compileTemplate(Object(Smarty_Internal_Template))
+#5 D:\xampp\htdocs\web\protected\extensions\smarty\sysplugins\smarty_internal_templatebase.php(164): Smarty_Internal_Template->compileTemplateSource()
+#6 D:\xampp\htdocs\web\protected\extensions\smarty\sysplugins\smarty_internal_templatebase.php(374): Smarty_Internal_TemplateBase->fetch('cadrerealistic/...', NULL, NULL, NULL, true)
+#7 D:\xampp\htdocs\web\protected\controllers\SafetyriskController.php(185): Smarty_Internal_TemplateBase->display('cadrerealistic/...')
+#8 D:\xampp\htdocs\framework\web\actions\CInlineAction.php(49): SafetyriskController->actionListysafetyrisk()
+#9 D:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 D:\xampp\htdocs\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 D:\xampp\htdocs\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\xampp\htdocs\framework\web\CWebApplication.php(282): CController->run('listysafetyrisk')
+#13 D:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController('safetyrisk/list...')
+#14 D:\xampp\htdocs\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 D:\xampp\htdocs\web\index.php(11): CApplication->run()
+#16 {main}
+REQUEST_URI=/web/index.php?r=safetyrisk/listysafetyrisk
+HTTP_REFERER=http://localhost/web/index.php?r=safetyrisk/index
+---
+2014/11/15 09:38:42 [error] [exception.SmartyCompilerException] exception 'SmartyCompilerException' with message 'Syntax Error in template &quot;D:\xampp\htdocs\web\protected\views\tpl\templates\cadrerealistic\page\listsafetyrisk.tpl&quot;  on line 66 &quot;&amp;lt;a href=&amp;quot;&amp;quot; class=&amp;quot;edit&amp;quot;  data-editinfo='{&amp;quot;page&amp;quot;:&amp;quot;safetyrisk/editsafetyrisk&amp;quot;,&amp;quot;id&amp;quot;:{%$data[$i][&amp;quot;id&amp;quot;]|f_escape_xml%}}'  title=&amp;quot;安全风险修改&amp;quot;&amp;gt;&quot;  - Unexpected &quot;&quot;&quot;, expected one of: &quot;%}&quot; , &quot; &quot; , ATTR' in D:\xampp\htdocs\web\protected\extensions\smarty\sysplugins\smarty_internal_templatecompilerbase.php:665
+Stack trace:
+#0 D:\xampp\htdocs\web\protected\extensions\smarty\sysplugins\smarty_internal_templateparser.php(3144): Smarty_Internal_TemplateCompilerBase->trigger_template_error()
+#1 D:\xampp\htdocs\web\protected\extensions\smarty\sysplugins\smarty_internal_templateparser.php(3209): Smarty_Internal_Templateparser->yy_syntax_error(78, '"')
+#2 D:\xampp\htdocs\web\protected\extensions\smarty\sysplugins\smarty_internal_smartytemplatecompiler.php(105): Smarty_Internal_Templateparser->doParse(78, '"')
+#3 D:\xampp\htdocs\web\protected\extensions\smarty\sysplugins\smarty_internal_templatecompilerbase.php(200): Smarty_Internal_SmartyTemplateCompiler->doCompile('{%if (count($da...')
+#4 D:\xampp\htdocs\web\protected\extensions\smarty\sysplugins\smarty_internal_template.php(187): Smarty_Internal_TemplateCompilerBase->compileTemplate(Object(Smarty_Internal_Template))
+#5 D:\xampp\htdocs\web\protected\extensions\smarty\sysplugins\smarty_internal_templatebase.php(164): Smarty_Internal_Template->compileTemplateSource()
+#6 D:\xampp\htdocs\web\protected\extensions\smarty\sysplugins\smarty_internal_templatebase.php(374): Smarty_Internal_TemplateBase->fetch('cadrerealistic/...', NULL, NULL, NULL, true)
+#7 D:\xampp\htdocs\web\protected\controllers\SafetyriskController.php(185): Smarty_Internal_TemplateBase->display('cadrerealistic/...')
+#8 D:\xampp\htdocs\framework\web\actions\CInlineAction.php(49): SafetyriskController->actionListysafetyrisk()
+#9 D:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 D:\xampp\htdocs\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 D:\xampp\htdocs\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\xampp\htdocs\framework\web\CWebApplication.php(282): CController->run('listysafetyrisk')
+#13 D:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController('safetyrisk/list...')
+#14 D:\xampp\htdocs\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 D:\xampp\htdocs\web\index.php(11): CApplication->run()
+#16 {main}
+REQUEST_URI=/web/index.php?r=safetyrisk/listysafetyrisk
+HTTP_REFERER=http://localhost/web/index.php?r=safetyrisk/index
+---
+2014/11/15 09:38:47 [error] [exception.SmartyCompilerException] exception 'SmartyCompilerException' with message 'Syntax Error in template &quot;D:\xampp\htdocs\web\protected\views\tpl\templates\cadrerealistic\page\listsafetyrisk.tpl&quot;  on line 66 &quot;&amp;lt;a href=&amp;quot;&amp;quot; class=&amp;quot;edit&amp;quot;  data-editinfo='{&amp;quot;page&amp;quot;:&amp;quot;safetyrisk/editsafetyrisk&amp;quot;,&amp;quot;id&amp;quot;:{%$data[$i][&amp;quot;id&amp;quot;]|f_escape_xml%}}'  title=&amp;quot;安全风险修改&amp;quot;&amp;gt;&quot;  - Unexpected &quot;&quot;&quot;, expected one of: &quot;%}&quot; , &quot; &quot; , ATTR' in D:\xampp\htdocs\web\protected\extensions\smarty\sysplugins\smarty_internal_templatecompilerbase.php:665
+Stack trace:
+#0 D:\xampp\htdocs\web\protected\extensions\smarty\sysplugins\smarty_internal_templateparser.php(3144): Smarty_Internal_TemplateCompilerBase->trigger_template_error()
+#1 D:\xampp\htdocs\web\protected\extensions\smarty\sysplugins\smarty_internal_templateparser.php(3209): Smarty_Internal_Templateparser->yy_syntax_error(78, '"')
+#2 D:\xampp\htdocs\web\protected\extensions\smarty\sysplugins\smarty_internal_smartytemplatecompiler.php(105): Smarty_Internal_Templateparser->doParse(78, '"')
+#3 D:\xampp\htdocs\web\protected\extensions\smarty\sysplugins\smarty_internal_templatecompilerbase.php(200): Smarty_Internal_SmartyTemplateCompiler->doCompile('{%if (count($da...')
+#4 D:\xampp\htdocs\web\protected\extensions\smarty\sysplugins\smarty_internal_template.php(187): Smarty_Internal_TemplateCompilerBase->compileTemplate(Object(Smarty_Internal_Template))
+#5 D:\xampp\htdocs\web\protected\extensions\smarty\sysplugins\smarty_internal_templatebase.php(164): Smarty_Internal_Template->compileTemplateSource()
+#6 D:\xampp\htdocs\web\protected\extensions\smarty\sysplugins\smarty_internal_templatebase.php(374): Smarty_Internal_TemplateBase->fetch('cadrerealistic/...', NULL, NULL, NULL, true)
+#7 D:\xampp\htdocs\web\protected\controllers\SafetyriskController.php(185): Smarty_Internal_TemplateBase->display('cadrerealistic/...')
+#8 D:\xampp\htdocs\framework\web\actions\CInlineAction.php(49): SafetyriskController->actionListysafetyrisk()
+#9 D:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 D:\xampp\htdocs\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 D:\xampp\htdocs\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\xampp\htdocs\framework\web\CWebApplication.php(282): CController->run('listysafetyrisk')
+#13 D:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController('safetyrisk/list...')
+#14 D:\xampp\htdocs\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 D:\xampp\htdocs\web\index.php(11): CApplication->run()
+#16 {main}
+REQUEST_URI=/web/index.php?r=safetyrisk/listysafetyrisk
+HTTP_REFERER=http://localhost/web/index.php?r=safetyrisk/listysafetyrisk
+---

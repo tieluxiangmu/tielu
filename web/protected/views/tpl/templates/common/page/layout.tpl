@@ -14,6 +14,8 @@
 {%require name="common:static/css/invalid.css"%}
 {%require name="common:static/css/jNotify.jquery.css"%}
 {%require name="common:static/css/chosen.css"%}
+{%require name="common:static/css/zTreeStyle.css"%}
+{%require name="common:static/css/jquery.autocomplete.css"%}
 <script type="text/javascript">
 	window.Request = {
 		QueryString : function(item){
@@ -29,31 +31,37 @@
 {%require name="common:static/js/chosen.jquery.js"%}
 {%require name="common:static/js/jquery.validate.js"%}
 {%require name="common:static/js/validate-ex.js"%}
+{%require name="common:static/js/jquery.ztree.all-3.5.js"%}
+{%require name="common:static/js/jquery.autocomplete.js"%}
 {%block name="main"%}
 <div id="sidebar">
 <div id="sidebar-wrapper">
 <a href="#">
-<img id="pic" src="/web/static/common/images/tzl_f00be3d.jpg" alt="用户照片" />
+<img id="pic" src="/web{%$smarty.session.user.photo|f_escape_path%}" alt="用户照片" />
 </a>
 <div id="profile-links">
-姓名：<a href="#" title="姓名">
-谭自力</a>
+姓名：<a id="profile-edit" href="javascript:void(0);" data-uid="{%$smarty.session.user.id|f_escape_xml%}"title="姓名">
+{%$smarty.session.user.name|f_escape_xml%}
+</a>
 <br />
 职务：<a href="#messages" rel="modal" title="职务">
-万盛站长</a>
+{%$smarty.session.user.position|f_escape_xml%}
+</a>
 <br />
 办公电话：<a href="#messages" rel="modal" title="">
-22981</a>
+{%$smarty.session.user.tel|f_escape_xml%}
+</a>
 <br />
 手机：<a href="#messages" rel="modal" title="">
-18566778899</a>
+{%$smarty.session.user.mobile|f_escape_xml%}
+</a>
 <br />
 <div class="spliter">
 </div>
 <p>
 <a href="/web" title="点击进入系统主页">
 系统主页</a>
-|<a href="#" title="退出">
+|<a href="index.php?r=userinfo/logout" title="退出">
 退出</a>
 </p>
 </div>
@@ -73,6 +81,15 @@
 <script type="text/javascript" src="/web/static/libs/My97DatePicker/WdatePicker.js"></script>
 {%script%}
 			require('common:widget/weblistener/weblistener.js').init();
+			$('#profile-edit').on('click', function() {
+				var id = $('#profile-edit').attr('data-uid');
+				$.dialog({
+		            title: '编辑',
+		            width: '500px',
+		            height: '300px',
+		            content: 'url:index.php?r=userinfo/update&id='+id
+		        }); 
+			});
 			setTimeout(function(){
 				listener.trigger('com.myTest', 'say', '全站通信信使');
 			},100);	

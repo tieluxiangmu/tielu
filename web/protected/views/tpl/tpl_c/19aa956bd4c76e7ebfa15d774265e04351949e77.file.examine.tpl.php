@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2014-11-15 07:47:31
+<?php /* Smarty version Smarty-3.1.13, created on 2014-11-15 09:27:39
          compiled from "D:\xampp\htdocs\web\protected\views\tpl\templates\cadreexamine\widget\examine\examine.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:22943545dbfc149f8e3-97321859%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '19aa956bd4c76e7ebfa15d774265e04351949e77' => 
     array (
       0 => 'D:\\xampp\\htdocs\\web\\protected\\views\\tpl\\templates\\cadreexamine\\widget\\examine\\examine.tpl',
-      1 => 1416034049,
+      1 => 1416038390,
       2 => 'file',
     ),
   ),
@@ -62,7 +62,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 </select>
 <span class="spantitle" style="margin-left: 30px;">下属</span>
 <select class="chosen-select small-input" id="person-select" style="width:150px">
-<option value="李洁">李洁</option>
 <option selected="selected" value="">请选择</option>
 <?php  $_smarty_tpl->tpl_vars['i'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['i']->value = 0;
   if ($_smarty_tpl->tpl_vars['i']->value<count($_smarty_tpl->tpl_vars['data']->value['subordinate'])){ for ($_foo=true;$_smarty_tpl->tpl_vars['i']->value<count($_smarty_tpl->tpl_vars['data']->value['subordinate']); $_smarty_tpl->tpl_vars['i']->value++){

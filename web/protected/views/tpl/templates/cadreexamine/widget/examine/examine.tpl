@@ -31,7 +31,6 @@
 </select>
 <span class="spantitle" style="margin-left: 30px;">下属</span>
 <select class="chosen-select small-input" id="person-select" style="width:150px">
-<option value="李洁">李洁</option>
 <option selected="selected" value="">请选择</option>
 {%for $i = 0; $i < count($data.subordinate); $i++%}
 <option value="{%$data.subordinate[$i]['name']|f_escape_xml%}">{%$data.subordinate[$i]['name']|f_escape_xml%}</option>
