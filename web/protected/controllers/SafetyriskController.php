@@ -113,6 +113,8 @@ class SafetyriskController extends Controller
 	            };
 	            $urlparam.= "&" . $key . "=" . $value;
 	        }
+        	$user = Yii::app()->session['user'];
+	        
 	        $smarty->_smarty->assign('urlparam', $urlparam);
 	        $smarty->_smarty->display('cadrerealistic/page/saferisk.tpl');
 	}

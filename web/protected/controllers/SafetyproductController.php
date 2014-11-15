@@ -113,6 +113,7 @@ class SafetyproductController extends Controller
             };
             $urlparam.= "&" . $key . "=" . $value;
         }
+        $user = Yii::app()->session['user'];
         $smarty->_smarty->assign('urlparam', $urlparam);
         $smarty->_smarty->display('cadrerealistic/page/ecurityprodu.tpl');
     }

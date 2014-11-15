@@ -74,7 +74,22 @@ class UserInfoController extends Controller
 	}
 
 
+	private function uploadPhoto() {
+		$file = $_FILES['photo'];
+		$filename = WEB_BASE."/attachment/" . $file['name'];
+		$fname = "/attachment/" . $file['name'];
+        if (($file["type"] == "image/gif")
+			|| ($file["type"] == "image/jpeg")
+			|| ($file["type"] == "image/png")){
+			  if ($file["error"] > 0){
+			  }else if (file_exists($filename)){
+			  }else{
+			      move_uploaded_file($file["tmp_name"], $filename);
+			  }
+		}
+		$_POST['UserInfo']['photo'] = $fname;
 
+	}
 	/**
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
@@ -90,19 +105,7 @@ class UserInfoController extends Controller
 		if(isset($_POST['UserInfo']))
 		{
 			
-            $file = $_FILES['photo'];
-			$filename = WEB_BASE."/attachment/" . $file['name'];
-
-            if (($file["type"] == "image/gif")
-				|| ($file["type"] == "image/jpeg")
-				|| ($file["type"] == "image/png")){
-				  if ($file["error"] > 0){
-				  }else if (file_exists($filename)){
-				  }else{
-				      move_uploaded_file($file["tmp_name"], $filename);
-				  }
-			}
-			$_POST['UserInfo']['photo'] = $filename;
+            $this->uploadPhoto();
 			$model->attributes=$_POST['UserInfo'];
 			if($model->save()) {
        			echo '<script type="text/javascript">parent.window.location = "index.php?r=admin/index";</script>';
@@ -192,20 +195,22 @@ class UserInfoController extends Controller
 	public function actionUpdate($id)
 	{
 		$model=$this->loadModel($id);
+		$smarty = Yii::app()->smarty;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
 		if(isset($_POST['UserInfo']))
 		{
+			$this->uploadPhoto();
 			$model->attributes=$_POST['UserInfo'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+			if($model->save()) {
+				$this->redirect("index.php");
+			}
 		}
 
-		$this->render('update',array(
-			'model'=>$model,
-		));
+		$smarty->_smarty->assign('model', $model);
+	    $smarty->_smarty->display('cadrerealistic/page/edituser.tpl');
 	}
 
 	/**
