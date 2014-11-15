@@ -39,6 +39,9 @@ return array(
 	          'smarty'=>array(
 		    'class'=>'application.extensions.CSmarty',
 	          ),
+	          'session'=>array(
+			        'timeout'=>7200,
+			    ),
 		// uncomment the following to enable URLs in path-format
 		/*
 		'urlManager'=>array(
