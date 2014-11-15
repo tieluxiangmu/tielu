@@ -45,7 +45,7 @@
 		        </a>
 		        <div id="profile-links">
 		            姓名：
-		            <a href="index.php?r=userinfo/update&id={%$smarty.session.user.id%}" title="姓名">
+		            <a id="profile-edit" href="javascript:void(0);" data-uid="{%$smarty.session.user.id%}"title="姓名">
 		                {%$smarty.session.user.name%}
 		            </a>
 		            <br />
@@ -93,6 +93,15 @@
 		<script type="text/javascript" src="/web/static/libs/My97DatePicker/WdatePicker.js"></script>
 		{%script%}
 			require('common:widget/weblistener/weblistener.js').init();
+			$('#profile-edit').on('click', function() {
+				var id = $('#profile-edit').attr('data-uid');
+				$.dialog({
+		            title: '编辑',
+		            width: '500px',
+		            height: '300px',
+		            content: 'url:index.php?r=userinfo/update&id='+id
+		        }); 
+			});
 			setTimeout(function(){
 				listener.trigger('com.myTest', 'say', '全站通信信使');
 			},100);	
