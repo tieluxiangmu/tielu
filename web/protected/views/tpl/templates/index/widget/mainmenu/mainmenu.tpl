@@ -6,7 +6,7 @@
 您可以点击下方按钮进行操作</p>
 <ul class="shortcut-buttons-set">
 <li>
-<a class="shortcut-button" href="">
+<a class="shortcut-button" href="index.php?r=schedule/index">
 <span>
 <img src="/web/static/index/images/schedule_a86794f.png" alt="日程" />
 <br />
@@ -22,7 +22,7 @@
 </a>
 </li>
 <li>
-<a class="shortcut-button" href="">
+<a class="shortcut-button" href="index.php?r=cadreexamine">
 <span>
 <img src="/web/static/index/images/check_1abb341.png" alt="相关资料" />
 <br />
@@ -38,7 +38,7 @@
 </a>
 </li>
 <li>
-<a class="shortcut-button" href="">
+<a class="shortcut-button" href="index.php?r=contact/Index">
 <span>
 <img src="/web/static/index/images/transfer_4bbceb0.png" alt="联系人" />
 <br />

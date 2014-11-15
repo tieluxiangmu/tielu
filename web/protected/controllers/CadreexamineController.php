@@ -11,8 +11,9 @@ class CadreexamineController extends CController
         if(!$user) {
             $this->redirect('index.php?r=site/login');
         }
-        
+
         $data = array();
+    	$data['subordinate'] = UserInfo::model()->getSubordinatesWithKaoheByUserName(Yii::app()->session['user']['name']);
 
         $smarty->_smarty->assign('data',$data);
 
@@ -27,6 +28,8 @@ class CadreexamineController extends CController
 		$koufen = isset($_GET['koufen']) ? $_GET['koufen'] : '';
 		$koufenyuanyin = isset($_GET['koufenyuanyin']) ? $_GET['koufenyuanyin'] : '';
 		$kaohezhutipingyu = isset($_GET['kaohezhutipingyu']) ? $_GET['kaohezhutipingyu'] : '';
+		$realwork = isset($_GET['realwork']) ? $_GET['realwork'] : '';
+		$realwork = explode('|', $realwork);
 
 		$nowMonthData = $year . '-' . $month . '-01';
 		$nextMonthDate = strtotime('next month', strtotime($nowMonthData));
@@ -93,7 +96,7 @@ class CadreexamineController extends CController
 
 		$command = Yii::app()->db->createCommand($sql_foundproblem);  
 		$rows = $command->queryAll();
-    	$data['stat']['foundproblem'] = $rows[0]['foundproblemcount'];
+    	$data['stat']['foundproblem'] = intval($rows[0]['foundproblemcount']);
 
     	$_data = $Realinvest->findAllBySql($sql_two);
     	$data['stat']['two'] = count($_data);
@@ -112,6 +115,65 @@ class CadreexamineController extends CController
     	$data['time']['year'] = $year;
     	$data['time']['month'] = $month;
     	$data['time']['now'] = date('Y年m月d日');
+
+    	$data['master'] = Yii::app()->session['user']['name'];
+
+    	//计算扣分
+    	$score = 0;
+    	$reason = array();
+    	if($data['userinfo']['zhoucha'] > $data['stat']['zhoucha']) {
+    		$_score = $data['userinfo']['zhoucha'] -  $data['stat']['zhoucha'];
+    		$reason[] = '昼查目标数：' . $data['userinfo']['zhoucha'] . ', 完成数：' . $data['stat']['zhoucha'] . ', 扣' . ($_score * 2) . '分';
+
+    		$score += $data['userinfo']['zhoucha'] -  $data['stat']['zhoucha'];
+
+    	}
+    	if($data['userinfo']['yecha'] > $data['stat']['yecha']) {
+    		$_score = $data['userinfo']['yecha'] -  $data['stat']['yecha'];
+    		$reason[] = '夜查目标数：' . $data['userinfo']['yecha'] . ', 完成数：' . $data['stat']['yecha'] . ', 扣' . ($_score * 2) . '分';
+
+    		$score += $data['userinfo']['yecha'] -  $data['stat']['yecha'];
+    	}
+    	if($data['userinfo']['tiancheng'] > $data['stat']['tiancheng']) {
+    		$_score = $data['userinfo']['tiancheng'] -  $data['stat']['tiancheng'];
+    		$reason[] = '添乘目标数：' . $data['userinfo']['tiancheng'] . ', 完成数：' . $data['stat']['tiancheng'] . ', 扣' . ($_score * 2) . '分';
+
+    		$score += $data['userinfo']['tiancheng'] -  $data['stat']['tiancheng'];
+    	}
+    	if($data['userinfo']['jiancha'] > $data['stat']['siwu']) {
+    		$_score = $data['userinfo']['jiancha'] -  $data['stat']['siwu'];
+    		$reason[] = '检查四五等站目标数：' . $data['userinfo']['jiancha'] . ', 完成数：' . $data['stat']['siwu'] . ', 扣' . ($_score * 2) . '分';
+
+    		$score += $data['userinfo']['jiancha'] -  $data['stat']['siwu'];
+    	}
+    	if($data['userinfo']['tongzhi'] > $data['stat']['noticeflag']) {
+    		$_score = $data['userinfo']['tongzhi'] -  $data['stat']['noticeflag'];
+    		$reason[] = '发放《安全检查通知书》目标数：' . $data['userinfo']['tongzhi'] . ', 完成数：' . $data['stat']['noticeflag'] . ', 扣' . ($_score * 2) . '分';
+
+    		$score += $data['userinfo']['tongzhi'] -  $data['stat']['noticeflag'];
+    	}
+    	if($data['userinfo']['faxianwenti'] > $data['stat']['foundproblem']) {
+    		$_score = $data['userinfo']['faxianwenti'] -  $data['stat']['foundproblem'];
+    		$reason[] = '发现问题目标数：' . $data['userinfo']['faxianwenti'] . ', 完成数：' . $data['stat']['foundproblem'] . ', 扣' . ($_score * 2) . '分';
+
+    		$score += $data['userinfo']['faxianwenti'] -  $data['stat']['foundproblem'];
+    	}
+    	if($data['userinfo']['liangwei'] > $data['stat']['two']) {
+    		$_score = $data['userinfo']['liangwei'] -  $data['stat']['two'];
+    		$reason[] = '查处“两违”目标数：' . $data['userinfo']['liangwei'] . ', 完成数：' . $data['stat']['two'] . ', 扣' . ($_score * 2) . '分';
+
+    		$score += $data['userinfo']['liangwei'] -  $data['stat']['two'];
+    	}
+    	if($data['userinfo']['anquan'] > $data['stat']['saferisk']) {
+    		$_score = $data['userinfo']['anquan'] -  $data['stat']['saferisk'];
+    		$reason[] = '抽查重点安全风险目标数：' . $data['userinfo']['anquan'] . ', 完成数：' . $data['stat']['saferisk'] . ', 扣' . ($_score * 2) . '分';
+
+    		$score += $data['userinfo']['anquan'] -  $data['stat']['saferisk'];
+    	}
+
+    	$data['deduct']['score'] = $score * -2;
+    	$data['deduct']['reason'] = join('; ', $reason);
+
 
     	if(empty($export)) {
 	    	echo json_encode($data);
@@ -146,7 +208,7 @@ class CadreexamineController extends CController
 		$objActSheet->setCellValue('B5', '实际完成情况');
 
 		$objActSheet->mergeCells('D5:K5');
-		$objActSheet->setCellValue('D5', '昼查'.$data['stat']['zhoucha'].'次，夜查'.$data['stat']['yecha'].'次，添乘'.$data['stat']['tiancheng'].'遍，检查四五等站'.$data['stat']['siwu'].'次，发放《安全检查通知书》'.$data['stat']['noticeflag'].'份，发现问题'.$data['stat']['foundproblem'].'个，查处“两违”'.$data['stat']['two'].'件，抽查重点安全风险'.$data['stat']['saferisk'].'个。');
+		$objActSheet->setCellValue('D5', '昼查'.$realwork[0].'次，夜查'.$realwork[1].'次，添乘'.$realwork[2].'遍，检查四五等站'.$realwork[3].'次，发放《安全检查通知书》'.$realwork[4].'份，发现问题'.$realwork[5].'个，查处“两违”'.$realwork[6].'件，抽查重点安全风险'.$realwork[7].'个。');
 
 		$objActSheet->mergeCells('A6:A' . (count($data['list']) + 6));
 		$objActSheet->setCellValue('A6', '检查写实情况');
@@ -224,8 +286,6 @@ class CadreexamineController extends CController
         $mailer->Body = '请查收考核报告';
         $mailer->AddAttachment(dirname(__FILE__) . '/../../attachment/' . $fileName1, $fileName);
         $mailer->Send();
-
-		echo '[]';
 	}
 }
 

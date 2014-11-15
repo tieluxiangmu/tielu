@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2014-11-09 09:57:27
+<?php /* Smarty version Smarty-3.1.13, created on 2014-11-15 06:02:44
          compiled from "D:\xampp\htdocs\web\protected\views\tpl\templates\index\widget\mainmenu\mainmenu.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:15036545da765eed758-92932907%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'a1ed1fa5bda4875cf174c8f2297fbe7e3eb240d3' => 
     array (
       0 => 'D:\\xampp\\htdocs\\web\\protected\\views\\tpl\\templates\\index\\widget\\mainmenu\\mainmenu.tpl',
-      1 => 1415523258,
+      1 => 1416027687,
       2 => 'file',
     ),
   ),
@@ -27,7 +27,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 您可以点击下方按钮进行操作</p>
 <ul class="shortcut-buttons-set">
 <li>
-<a class="shortcut-button" href="">
+<a class="shortcut-button" href="index.php?r=schedule/index">
 <span>
 <img src="/web/static/index/images/schedule_a86794f.png" alt="日程" />
 <br />
@@ -43,7 +43,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 </a>
 </li>
 <li>
-<a class="shortcut-button" href="">
+<a class="shortcut-button" href="index.php?r=cadreexamine">
 <span>
 <img src="/web/static/index/images/check_1abb341.png" alt="相关资料" />
 <br />
@@ -59,7 +59,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 </a>
 </li>
 <li>
-<a class="shortcut-button" href="">
+<a class="shortcut-button" href="index.php?r=contact/Index">
 <span>
 <img src="/web/static/index/images/transfer_4bbceb0.png" alt="联系人" />
 <br />
