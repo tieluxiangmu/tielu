@@ -36,6 +36,18 @@ examine = {
             var koufenyuanyin = $('#examine-result .koufenyuanyin').val();
             var kaohezhutipingyu = $('#examine-result .kaohezhutipingyu').val();
 
+            var real_work = [];
+            real_work.push($('#examine-result .real-zhoucha').val());
+            real_work.push($('#examine-result .real-yecha').val());
+            real_work.push($('#examine-result .real-tiancheng').val());
+            real_work.push($('#examine-result .real-jiancha').val());
+            real_work.push($('#examine-result .real-tongzhi').val());
+            real_work.push($('#examine-result .real-faxianwenti').val());
+            real_work.push($('#examine-result .real-liangwei').val());
+            real_work.push($('#examine-result .real-anquan').val());
+
+            real_work = real_work.join('|');
+
             var url = '/web/index.php?r=cadreexamine/selectresult';
             url += '&export=excel';
             url += '&year=' + year;
@@ -44,6 +56,7 @@ examine = {
             url += '&koufen=' + koufen;
             url += '&koufenyuanyin=' + encodeURIComponent(koufenyuanyin);
             url += '&kaohezhutipingyu=' + encodeURIComponent(kaohezhutipingyu);
+            url += '&realwork=' + encodeURIComponent(real_work);
 
 	        $.post(
 	        	url,
@@ -63,7 +76,10 @@ examine = {
 
     	$('.result-wrap').empty();
 
-    	var name = data.userinfo.name;
+        var name = data.userinfo.name;
+        
+    	var master = data.master;
+        $('i.sign', tableArea).text(master);
 
     	var goal_zhoucha = data.userinfo.zhoucha;
     	$('i.goal-zhoucha', tableArea).html(goal_zhoucha);
@@ -90,37 +106,43 @@ examine = {
     	$('i.goal-anquan', tableArea).html(goal_anquan);
 
     	var real_zhoucha = data.stat.zhoucha;
-    	$('i.real-zhoucha', tableArea).html(real_zhoucha);
+    	$('input.real-zhoucha', tableArea).val(real_zhoucha);
 
     	var real_yecha = data.stat.yecha;
-    	$('i.real-yecha', tableArea).html(real_yecha);
+    	$('input.real-yecha', tableArea).val(real_yecha);
 
     	var real_tiancheng = data.stat.tiancheng;
-    	$('i.real-tiancheng', tableArea).html(real_tiancheng);
+    	$('input.real-tiancheng', tableArea).val(real_tiancheng);
 
     	var real_jiancha = data.stat.siwu;
-    	$('i.real-jiancha', tableArea).html(real_jiancha);
+    	$('input.real-jiancha', tableArea).val(real_jiancha);
 
     	var real_tongzhi = data.stat.noticeflag;
-    	$('i.real-tongzhi', tableArea).html(real_tongzhi);
+    	$('input.real-tongzhi', tableArea).val(real_tongzhi);
 
     	var real_faxianwenti = data.stat.foundproblem;
-    	$('i.real-faxianwenti', tableArea).html(real_faxianwenti);
+    	$('input.real-faxianwenti', tableArea).val(real_faxianwenti);
 
     	var real_liangwei = data.stat.two;
-    	$('i.real-liangwei', tableArea).html(real_liangwei);
+    	$('input.real-liangwei', tableArea).val(real_liangwei);
 
     	var real_anquan = data.stat.saferisk;
-    	$('i.real-anquan', tableArea).html(real_anquan);
+    	$('input.real-anquan', tableArea).val(real_anquan);
 	    
-    	var time1 = data.time.now;
-    	$('i.time1', tableArea).html(time1);
+        var time1 = data.time.now;
+        $('i.time1', tableArea).html(time1);
+
+        var score = data.deduct.score;
+        $('input.koufen', tableArea).val(score);
+
+        var reason = data.deduct.reason;
+        $('.koufenyuanyin', tableArea).val(reason);
 
 	    $('.list-title > td:first', tableArea).attr('rowspan', data.list.length + 1);
 	    var tr_html = [];
     	for(var i = 0, len = data.list.length; i < len; i++) {
     		var item = data.list[i];
-    		tr_html.push('<tr height="77">');
+    		tr_html.push('<tr height="50">');
     		tr_html.push('<td>' + item.dateofentry + '</td>');
     		tr_html.push('<td>' + item.timeofentry + '</td>');
     		tr_html.push('<td>' + item.checkperson + '</td>');
