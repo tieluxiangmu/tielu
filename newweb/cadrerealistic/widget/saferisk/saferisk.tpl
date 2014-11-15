@@ -63,12 +63,11 @@
               <strong>负责领导</strong>
             </span>
             <select class="small-input chosen-select" id="responsibilitylead" style="width:120px" multiple="true">
-              <option selected="selected" value=""></option>
-              <option value="余戈">
-                余戈
-              </option><option value="蔡泽琪">
-                蔡泽琪
-              </option>
+              <option value="">请选择</option>
+
+              {%foreach from=$leaders item=leader%}
+                <option value="{%$leader.name%}">{%$leader.name%}</option>
+              {%/foreach%}
               
             </select>
             <span style="margin-left:20px">

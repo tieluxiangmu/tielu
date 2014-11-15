@@ -91,7 +91,10 @@
                   <td>负责领导</td>
                   <td>           
                       <select class="text-input small-input chosen-select" name="Safetyrisk[responsibilitylead]" id="Safetyrisk_responsibilitylead" multiple="multiple" >
-                        <option value="余戈">余戈</option>
+                        
+                      {%foreach from=$leaders item=leader%}
+                        <option value="{%$leader.name%}">{%$leader.name%}</option>
+                      {%/foreach%}
                     </select>
                   </td>
                   <td>责任部门</td>
