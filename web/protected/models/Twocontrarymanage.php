@@ -20,6 +20,9 @@
  * @property string $productionleader
  * @property string $buckleintegral
  * @property string $teamleaderIntegral
+ * @property integer $level2
+ * @property integer $level3
+ * @property string $commit
  */
 class Twocontrarymanage extends CActiveRecord
 {
@@ -49,13 +52,17 @@ class Twocontrarymanage extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
+			array('level2, level3', 'numerical', 'integerOnly'=>true),
+			array('commit', 'length', 'max'=>33),
+			
 			array('serialnumber', 'length', 'max'=>50),
 			array('inspectionunit, rummager, company, responsibleperson, jobname, politicalaffiliation, llegalcategory, deduction, productionleader, buckleintegral, teamleaderIntegral', 'length', 'max'=>100),
 			array('Illegalcontent, processingresults', 'length', 'max'=>500),
 			array('checktime', 'safe'),
+
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, serialnumber, checktime, inspectionunit, rummager, company, responsibleperson, jobname, politicalaffiliation, Illegalcontent, processingresults, llegalcategory, deduction, productionleader, buckleintegral, teamleaderIntegral', 'safe', 'on'=>'search'),
+			array('id, serialnumber, checktime, inspectionunit, rummager, company, responsibleperson, jobname, politicalaffiliation, Illegalcontent, processingresults, llegalcategory, deduction, productionleader, buckleintegral, teamleaderIntegral,level2, level3, commit', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -92,6 +99,9 @@ class Twocontrarymanage extends CActiveRecord
 			'productionleader' => '所在生产小组长（值班员）',
 			'buckleintegral' => '扣积分情况',
 			'teamleaderIntegral' => '（班组长）扣积分情况',
+			'level2' => 'Level2',
+			'level3' => 'Level3',
+			'commit' => 'Commit',
 		);
 	}
 

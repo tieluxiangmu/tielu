@@ -51,13 +51,15 @@ class Safetyproduct extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
+			array('level2, level3', 'numerical', 'integerOnly'=>true),
+			array('commit', 'length', 'max'=>33),
 			array('serialnumber, dutyperson, checkperson', 'length', 'max'=>50),
 			array('infosources, theproblem, thesolution, rectification, comments, currentstatus', 'length', 'max'=>500),
 			array('company, dutydepartment', 'length', 'max'=>100),
 			array('storagetime, deadline, registertime', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, serialnumber, infosources, company, theproblem, storagetime, thesolution, dutydepartment, dutyperson, deadline, rectification, checkperson, registertime, comments, currentstatus', 'safe', 'on'=>'search'),
+			array('id, serialnumber, infosources, company, theproblem, storagetime, thesolution, dutydepartment, dutyperson, deadline, rectification, checkperson, registertime, comments, currentstatus,level2, level3, commit', 'safe', 'on'=>'search'),
 		);
 	}
 

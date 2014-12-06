@@ -22,6 +22,9 @@
  * @property string $completiondate
  * @property string $notethebus
  * @property string $notehighspeedrail
+  * @property integer $level2
+ * @property integer $level3
+ * @property string $commit
  */
 class Safetyrisk extends CActiveRecord
 {
@@ -51,13 +54,15 @@ class Safetyrisk extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
+			array('level2, level3', 'numerical', 'integerOnly'=>true),
+			array('commit', 'length', 'max'=>33),
 			array('serialnumber', 'length', 'max'=>50),
 			array('riskname, riskclass, risksystem, responsibilitylead, dutypartments, coordinationpart', 'length', 'max'=>100),
 			array('reasonofrisk, consequence, measures, distribution, furtherproof, emergencyhand, notethebus, notehighspeedrail', 'length', 'max'=>500),
 			array('implementdate, completiondate', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, serialnumber, riskname, riskclass, risksystem, reasonofrisk, consequence, measures, distribution, furtherproof, emergencyhand, responsibilitylead, dutypartments, coordinationpart, implementdate, completiondate, notethebus, notehighspeedrail', 'safe', 'on'=>'search'),
+			array('id, serialnumber, riskname, riskclass, risksystem, reasonofrisk, consequence, measures, distribution, furtherproof, emergencyhand, responsibilitylead, dutypartments, coordinationpart, implementdate, completiondate, notethebus, notehighspeedrail,level2, level3, commit', 'safe', 'on'=>'search'),
 		);
 	}
 
