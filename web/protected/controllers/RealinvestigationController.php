@@ -245,7 +245,7 @@ class RealinvestigationController extends Controller {
                     $document->setValue('username',$_SESSION['user']['name']);
                     $document->setValue('checkdate',$values['dateofentry']);
                     $filename='/docfile/'.time().'.docx';
-                    $document->save(WEB_BASE.s$filename);
+                    $document->save(WEB_BASE.$filename);
                     //保存成功开始发送邮件
                     if(!empty($document)){
                             //查询接收邮件用户邮箱
