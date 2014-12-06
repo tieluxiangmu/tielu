@@ -30,31 +30,30 @@ class Excelhlep {
             $objectPHPExcel->getActiveSheet()->setCellValue($AZ[$key].(string)1, $value);
             //$objPHPExcel->getActiveSheet()->getStyleByColumnAndRow($AZ[$key], 1)->getFont()->setBold(true);
         }
+        $tag = 0;
         for ($k = 0; $k < count($exceldata); $k++){
-
-        	if($exceldata[$k]['currentstatus'] === "已整改" ){
-        		$tag = 1;
-        	}else if ($exceldata[$k]['currentstatus'] === "整改中" ){
-        		$tag = 2;
-        	}else if ($exceldata[$k]['currentstatus'] === "未整改"){
-        		$tag = 3;
-        	} 
-
-			foreach ($excelcolumns as $excelkey => $excelvalue) {
-
-				$objectPHPExcel->getActiveSheet()->setCellValue($AZ[$excelkey].($k+2), $exceldata[$k][$excelvalue]);
-				if($tag === 1){
-					$objFillA5 = $objectPHPExcel->getActiveSheet()->getStyle($AZ[$excelkey].($k+2))->getFill();
-					$objFillA5->setFillType(PHPExcel_Style_Fill::FILL_SOLID)->getStartColor()->setARGB('#00FF00'); 
-				}else if($tag === 2){
-					$objFillA5 = $objectPHPExcel->getActiveSheet()->getStyle($AZ[$excelkey].($k+2))->getFill();
-					$objFillA5->setFillType(PHPExcel_Style_Fill::FILL_SOLID)->getStartColor()->setARGB('#FFFF00'); 
-				}else if($tag === 3){
-					$objFillA5 = $objectPHPExcel->getActiveSheet()->getStyle($AZ[$excelkey].($k+2))->getFill();
-					$objFillA5->setFillType(PHPExcel_Style_Fill::FILL_SOLID)->getStartColor()->setARGB('#FF0000'); 
-				}
-				
-			}
+            if (isset($exceldata[$k]['currentstatus'])) {
+                        if($exceldata[$k]['currentstatus'] === "已整改" ){
+                            $tag = 1;
+                        }else if ($exceldata[$k]['currentstatus'] === "整改中" ){
+                            $tag = 2;
+                        }else if ($exceldata[$k]['currentstatus'] === "未整改"){
+                            $tag = 3;
+                        } 
+            }
+	foreach ($excelcolumns as $excelkey => $excelvalue) {
+		$objectPHPExcel->getActiveSheet()->setCellValue($AZ[$excelkey].($k+2), $exceldata[$k][$excelvalue]);
+		if($tag === 1){
+			$objFillA5 = $objectPHPExcel->getActiveSheet()->getStyle($AZ[$excelkey].($k+2))->getFill();
+			$objFillA5->setFillType(PHPExcel_Style_Fill::FILL_SOLID)->getStartColor()->setARGB('#00FF00'); 
+		}else if($tag === 2){
+			$objFillA5 = $objectPHPExcel->getActiveSheet()->getStyle($AZ[$excelkey].($k+2))->getFill();
+			$objFillA5->setFillType(PHPExcel_Style_Fill::FILL_SOLID)->getStartColor()->setARGB('#FFFF00'); 
+		}else if($tag === 3){
+			$objFillA5 = $objectPHPExcel->getActiveSheet()->getStyle($AZ[$excelkey].($k+2))->getFill();
+			$objFillA5->setFillType(PHPExcel_Style_Fill::FILL_SOLID)->getStartColor()->setARGB('#FF0000'); 
+		}	
+	}
         }
         ob_end_clean();
         ob_start();
