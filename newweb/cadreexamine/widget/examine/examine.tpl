@@ -1,6 +1,6 @@
 <div class="content-box">
   <div class="content-box-header">
-    <h3>筛选条件</h3>
+    <h3>干部考核筛选条件</h3>
   </div>
   <div class="content-box-content">
     <form>
