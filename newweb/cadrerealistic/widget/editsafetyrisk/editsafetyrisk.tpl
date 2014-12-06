@@ -34,7 +34,7 @@
                 <tr>
                   <td class="spantitle">风险分类</td>
                   <td>           
-                      <select class="text-input small-input chosen-select" nname="Safetyrisk[riskclass]" id="Safetyrisk_riskclass" multiple="multiple" data-value="{%$model['riskclass']%}">
+                      <select class="text-input small-input chosen-select" name="Safetyrisk[riskclass]" id="Safetyrisk_riskclass" multiple="multiple" data-value="{%$model['riskclass']%}">
                         <option value="管理" >管理</option>
                         <option value="设备" >设备</option>
                         <option value="作业" >作业</option>
@@ -58,7 +58,7 @@
                   </td>
                 </tr>
                 <tr>
-                  <td>可能后果</td>
+                  <td class="spantitle">可能后果</td>
                   <td colspan="3">
                   <textarea class="text-input textarea" name="Safetyrisk[consequence]" id="Safetyrisk_consequence" cols="79" height="100px">{%$model['consequence']%}</textarea>
                   </td>
@@ -153,6 +153,8 @@
                 <tr>
                   <td colspan="4" style="text-align: center !important;"> 
                           <input type="submit" data-formtype="update" class="btn btn-primary" id="js-btn-editsafetyrisk" value="确认修改"/>
+                            <input type="button" style="margin-left:20px;" data-formtype="update" class="btn" id="js-btn-cancelcardreal" value="撤销修改">
+
                   </td>
                 </tr>
               </tbody>

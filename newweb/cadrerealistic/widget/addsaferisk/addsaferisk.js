@@ -77,26 +77,31 @@ addsaferisk = {
     _submitEvent: function(e) {
         var me = this;
         //e.stopPropagation();
+        $('.chosen-select[multiple]').each(function() {
+            var name = $(this).attr('name');
+            var $form = $(this).parents('form');
+            var id = $(this).attr('id');
+            var value = commonhelp.getchosenSelect(id);
+            if(value){
+                $('<input type="hidden" name="'+name+'" value="'+value.join('|')+'">').appendTo($form);
+            }
+        });
         if (!me.formValidate().form()) {
             e.preventDefault();
             jError('请按系统要求填写安全风险数据！');
             return false;
         }
-        var _saferisk = commonhelp.getchosenSelect('safe_risk'), //风险名称
-            _safetyriskclass = commonhelp.getchosenSelect('safety_riskclass'), //风险分类
-            _safedistribution = commonhelp.getchosenSelect('safe_distribution'), //分布情况
-            _safetyriskcoord = commonhelp.getchosenSelect('safetyriskcoord'), //配合部门
-            _safetyriskduty = commonhelp.getchosenSelect('safetyrisk_duty'); //责任部门
-        alert(_saferisk);
+        var _saferisk = commonhelp.getchosenSelect('Safetyrisk_riskname'), //风险名称
+            _safetyriskclass = commonhelp.getchosenSelect('Safetyrisk_riskclass'), //风险分类
+            _safedistribution = commonhelp.getchosenSelect('Safetyrisk_distribution'), //分布情况
+            _safetyriskcoord = commonhelp.getchosenSelect('Safetyrisk_coordinationpart'), //配合部门
+            _safetyriskduty = commonhelp.getchosenSelect('Safetyrisk_dutypartments'); //责任部门
+   
         if (_saferisk && _safetyriskclass && _safedistribution && _safetyriskduty) {
-            $('#Safetyrisk_riskname').val(_saferisk);
-            $('#Safetyrisk_riskclass').val(_safetyriskclass);
-            $('#Safetyrisk_distribution').val(_safedistribution);
-            $('#Safetyrisk_coordinationpart').val(_safetyriskcoord);
-            $('#Safetyrisk_dutypartments').val(_safetyriskduty);
+           
         } else {
             e.preventDefault();
-            jNotify('请按照系统要求填写！', {
+            jNotify('请按系统要求填写安全风险数据！', {
                 HorizontalPosition: 'center',
                 VerticalPosition: 'center'
             });

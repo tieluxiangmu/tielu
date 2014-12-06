@@ -6,7 +6,7 @@
      <tr>
       <td class="spantitle">编号</td>
       <td>{%$model['serialnumber']%}</td>
-      <td>风险名称</td>
+      <td class="spantitle">风险名称</td>
       <td>{%$model['riskname']%}</td>
     </tr>
     <tr>

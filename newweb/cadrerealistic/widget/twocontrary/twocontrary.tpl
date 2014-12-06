@@ -1,7 +1,5 @@
 <style type="text/css">
-  #ecurityprodu .small-input{
-    width: 40% !important;
-  }
+ 
 </style>
 <div class="content-box">
   <div class="content-box-header">
@@ -23,32 +21,32 @@
       <form class="search" id="ecurityprodu">
         <fieldset>
           <p>
-            <span>
+            <span class="spantitle" style="padding-left:12px">
               检查时间
             </span>
             <input class="text-input small-input" onClick="WdatePicker()" type="text" id="schecktime" />
-            <span>到</span>
+            <span class="spantitle" style="padding-left:12px">到</span>
             <input class="text-input small-input" onClick="WdatePicker()" type="text" id="echecktime" />
           </p>
           <p>
-          <span>
+            <span class="spantitle" style="padding-left:12px">
               检查单位
             </span>
             <select class="chosen-select"  id="inspectionunit">
-                <option value=""></option>
+                <option value="">请选择</option>
                 <option value="路局">路局</option>
                 <option value="车务段">车务段</option>
                 <option value="车间">车间</option>
                 <option value="班组">班组</option>
                 <option value="小组">小组</option>
             </select>
-          <span>
+            <span class="spantitle" style="padding-left:12px">
               检查人
             </span>
             <input class="text-input small-input" type="text" id="rummager"/>
           </p>
           <p>
-           <span>被查单位</span>
+            <span class="spantitle" style="padding-left:12px">被查单位</span>
             <select class="chosen-select" id="company" multiple="multiple">
               <option value=""></option>
               <option value="段领导">段领导</option>
@@ -119,26 +117,27 @@
               <option value="水江站">水江站</option>
               <option value="鸭江站">鸭江站</option>
             </select>
-            <span>责任人</span>
-              <input class="text-input small-input" type="text" id="responsibleperson"/>
+            <span class="spantitle" style="padding-left:12px">责任人</span>
+            <input class="text-input small-input" type="text" id="responsibleperson"/>
             </p>
            <p>
-           <span>违章类别</span>
+           <span class="spantitle" style="padding-left:12px">违章类别</span>
             <select class="chosen-select" id="llegalcategory">
               <option value=""></option>
               <option value="A">A</option>
               <option value="B">B</option>
               <option value="C">C</option>
             </select>
-          <span>所在生产小组长</span>
-           <input class="text-input small-input" type="text" id="productionleader"/>
+            <span class="spantitle" style="padding-left:12px">所在生产小组长</span>
+            <input class="text-input small-input" type="text" id="productionleader"/>
+            <span class="btn-con">
+               <input class="button btn btn-primary" id="submitseacrh-btn" type="button" value="开始查询"
+                />
+                <input class="btn btn-success  exportexcel" data-excelinfo='{"conid":"js-p-listtwocontrary","page":"twocontrarymanage/exportuserexcel"}' type="button" value="导出Excel" />
+                <input class="btn btn-warning deleteall" data-deleteinfo='{"channelid":"twocontrarymanage-form","conid":"js-p-listtwocontrary","page":"twocontrarymanage/delete"}'  type="button" value="确认删除" />
+            </span>
             </p>
-            <p class="btn-con">
-           <input class="button btn btn-primary" id="submitseacrh-btn" type="button" value="开始查询"
-            />
-            <input class="btn btn-success  exportexcel" data-excelinfo='{"conid":"js-p-listtwocontrary","page":"twocontrarymanage/exportuserexcel"}' type="button" value="导出Excel" />
-            <input class="btn btn-warning deleteall" data-deleteinfo='{"channelid":"twocontrarymanage-form","conid":"js-p-listtwocontrary","page":"twocontrarymanage/delete"}'  type="button" value="确认删除" />
-          </p>
+            
         </fieldset>
       </form>
       <p id="js-p-listtwocontrary"></p>

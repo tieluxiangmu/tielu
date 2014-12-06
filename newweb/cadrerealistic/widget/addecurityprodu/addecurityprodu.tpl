@@ -27,7 +27,7 @@
                                 车务段检查
                             </option>
                             <option value="车间检查">
-                                车务段检查
+                                车间检查
                             </option>
                              <option value="班组检查">
                                 班组检查
@@ -110,7 +110,7 @@
                         </select>
                     </p>
                     <p>
-                        <label>
+                        <label class="textarea-lbl">
                             问题点
                         </label>
                         <textarea class="text-input textarea wysiwyg" name="Safetyproduct[theproblem]" id="Safetyproduct_theproblem" cols="79" rows="5"></textarea>
@@ -122,7 +122,7 @@
                         <input class="text-input small-input" onClick="WdatePicker()" type="text" name="Safetyproduct[storagetime]" id="Safetyproduct_storagetime" />
                     </p>
                     <p>
-                        <label>
+                        <label  class="textarea-lbl">
                             解决方案
                         </label>
                         <textarea class="text-input textarea wysiwyg" name="Safetyproduct[thesolution]" id="Safetyproduct_thesolution" cols="79" rows="5"></textarea>

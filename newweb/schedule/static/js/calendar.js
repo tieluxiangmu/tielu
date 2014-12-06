@@ -376,7 +376,7 @@
                 shangbanDays = shangbanEndDate = 0;
             }
             gHtml  = '<div class="op-calendar-new-lday">'+gHtml+'</div>';
-            return '<td class="'+clsName+'"><a href="">'+lHtml+gHtml+bhtml+'</a></td>';
+            return '<td class="'+clsName+'"><a href="javascript:void(0);">'+lHtml+gHtml+bhtml+'</a></td>';
         }
         var tempHtml = '';
         for(i = 0; i < 6; i++) {

@@ -381,14 +381,12 @@ form input.text-input,form select,form textarea,form .wysiwyg{
     background:#fff url('/static/images/bg-form-field.gif') top left repeat-x;
     border:1px solid #d5d5d5;
     color:#333;
-    width: 150px;
-    height: 15px;
 }
 form select{
     height:30px;
 }
 form textarea{
-    height:100px;
+    
 }
 form .small-input{
     width:25%;
@@ -402,7 +400,6 @@ form .large-input{
     padding:8px !important
 }
 form textarea{
-    width:97.5% !important;
     font-family:Arial,Helvetica,sans-serif
 }
 form select{

@@ -53,7 +53,7 @@ function getTask(date, month, year) {
 	var owner = $('[name=target]').val().trim();
 	year = year || new Date().getFullYear();
 	month = month || new Date().getMonth() + 1;
-	taskDate = 'task_date=' + year + '-' + month + (date ? ('-' + date) : '');
+	taskDate = 'task_date=' + year + '-' + month + (date ? ('-' + (date<10?'0'+date:date)) : '');
 	owner = owner ? ('owner=' + owner) : '';
 
 	config = {

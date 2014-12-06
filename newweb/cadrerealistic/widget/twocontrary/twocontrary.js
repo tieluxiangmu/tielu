@@ -55,17 +55,17 @@ twocontrary = {
             _url += "&inspectionunit=" + inspectionunit;
         };
         //检查人
-        var rummager = commonhelp.getchosensingleSelect('rummager');
+        var rummager = $('#rummager').val();
         if (rummager) {
             _url += "&rummager=" + rummager;
         };
         //被查单位
-        var company = commonhelp.getchosensingleSelect('company');
+        var company = commonhelp.getchosenSelect('company');
         if (company) {
             _url += "&company=" + company;
         };
         //责任人
-        var responsibleperson = commonhelp.getchosensingleSelect('responsibleperson');
+        var responsibleperson = $('#responsibleperson').val();
         if (responsibleperson) {
             _url += "&responsibleperson=" + responsibleperson;
         };
@@ -75,7 +75,7 @@ twocontrary = {
             _url += "&llegalcategory=" + llegalcategory;
         };
         //所在生产小组长
-        var productionleader = commonhelp.getchosensingleSelect('productionleader');
+        var productionleader = $('#productionleader').val();
         if (productionleader) {
             _url += "&productionleader=" + productionleader;
         };
@@ -112,11 +112,23 @@ twocontrary = {
         schecktime && $('#schecktime').val(schecktime);
         echecktime && $('#echecktime').val(echecktime);
         inspectionunit && $('#inspectionunit').find("option[value='" + inspectionunit + "']").attr("selected", "selected");
-        rummager && $('#rummager').find("option[value='" + rummager + "']").attr("selected", "selected");
-        company && $('#company').find("option[value='" + company + "']").attr("selected", "selected");
-        responsibleperson && $('#responsibleperson').find("option[value='" + responsibleperson + "']").attr("selected", "selected");
-        llegalcategory && $('#llegalcategory').find("option[value='" + llegalcategory + "']").attr("selected", "selected");
-        productionleader && $('#productionleader').find("option[value='" + productionleader + "']").attr("selected", "selected");
+        rummager && $('#rummager').val(rummager);
+        
+        $('#company').attr('data-value', company);
+        $('.chosen-select[multiple]').each(function() {
+            var id = $(this).attr('id');
+            var value = $(this).attr('data-value');
+            if(value){
+                value = value.split(',');
+                for (var i = 0; i < value.length; i++) {
+                    $('#'+id).find("option[value='" + value[i] + "']").attr("selected", "selected");
+                }
+            }
+        });
+
+        responsibleperson && $('#responsibleperson').val(responsibleperson);
+        llegalcategory && $('#llegalcategory').val(llegalcategory);
+        productionleader && $('#productionleader').val(productionleader);
     }
 }
 module.exports = twocontrary;

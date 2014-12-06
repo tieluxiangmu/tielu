@@ -13,12 +13,17 @@ editsafetyrisk = {
         });
         me.bind();
     },
+    closeDialog: function() {
+        var list = top.window.$.dialog.list;
+        for(var d in list) {
+            list[d].close();
+        }
+    },
     render: function() {
         var me = this;
         me.submit = $('#js-btn-editsafetyrisk');
         me.listenerpage(); //负责监听修改后的数据 进行无刷的更改
 
-      
         $('.chosen-select[multiple]').each(function() {
             var id = $(this).attr('id');
             var value = $(this).attr('data-value');
@@ -33,6 +38,7 @@ editsafetyrisk = {
     bind: function() {
         var me = this;
         me.listenerpage(); //负责监听修改后的数据 进行无刷的更改
+        $('#js-btn-cancelcardreal').on('click',$.proxy(me.closeDialog, this));
 
         (me.submit).on('click', $.proxy(me._submitEvent, this));
     },
@@ -131,12 +137,12 @@ editsafetyrisk = {
                 $('<input type="hidden" name="'+name+'" value="'+value.join('|')+'">').appendTo($form);
             }
         });
-    if (!me.formValidate().form()) {
+        if (!me.formValidate().form()) {
             e.preventDefault();
             jError('请按系统要求填写安全风险数据！');
             return false;
         }
-
+        me.closeDialog();
 
             
     }

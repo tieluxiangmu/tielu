@@ -9,7 +9,7 @@
     <div class="content-box-content">
         <div class="tab-content" id="tab2">
 
-{%if $info.authority == 'zhuguan' or $info.authority == 'shuji'%}
+{%if $info.authority == '主管' or $info.authority == '书记'%}
 
 	<div class="calendar-wrapper">
 

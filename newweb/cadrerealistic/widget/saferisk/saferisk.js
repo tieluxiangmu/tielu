@@ -14,6 +14,7 @@ saferisk = {
         $('#js-a-saferisk').addClass('current');
         me.submitseacrhbtn = $('#submitseacrh-btn');
     },
+    
     bind: function() {
         var me = this;
         me.setSearchword();
@@ -23,6 +24,7 @@ saferisk = {
         });
         (me.submitseacrhbtn).on('click', $.proxy(me._submitseacrhEvent, this));
         me.load(url, 'init', true);
+
         //删除更新数据
         listener.on('safetyrisk-form', 'success', function(event, info) {
             if (info == "delete") {
@@ -71,7 +73,7 @@ saferisk = {
             _url += "&ecompletiondate=" + ecompletiondate;
         };
         //风险分类
-        var riskclass = commonhelp.getchosensingleSelect('riskclass');
+        var riskclass = commonhelp.getchosenSelect('riskclass');
         if (riskclass) {
             _url += "&riskclass=" + riskclass;
         };
@@ -86,17 +88,17 @@ saferisk = {
             _url += "&responsibilitylead=" + responsibilitylead;
         };
         //责任人
-        var dutyperson = commonhelp.getchosensingleSelect('dutyperson');
+        var dutyperson = commonhelp.getchosenSelect('dutyperson');
         if (dutyperson) {
             _url += "&dutyperson=" + dutyperson;
         };
         //责任部门
-        var dutypartments = commonhelp.getchosensingleSelect('dutypartments');
+        var dutypartments = commonhelp.getchosenSelect('dutypartments');
         if (dutypartments) {
             _url += "&dutypartments=" + dutypartments;
         };
         //配合部门
-        var coordinationpart = commonhelp.getchosensingleSelect('coordinationpart');
+        var coordinationpart = commonhelp.getchosenSelect('coordinationpart');
         if (coordinationpart) {
             _url += "&coordinationpart=" + coordinationpart;
         };
@@ -108,6 +110,7 @@ saferisk = {
         });
         _url = "";
     },
+
     setSearchword: function() {
         /*用户刷新URL的时候把用户的筛选数据回填*/
         var simplementdate = Request.QueryString('simplementdate'),
@@ -124,12 +127,24 @@ saferisk = {
         eimplementdate && $('#eimplementdate').val(eimplementdate);
         scompletiondate && $('#scompletiondate').val(scompletiondate);
         ecompletiondate && $('#ecompletiondate').val(ecompletiondate);
-        riskclass && $('#riskclass').find("option[value='" + riskclass + "']").attr("selected", "selected");
         risksystem && $('#risksystem').find("option[value='" + risksystem + "']").attr("selected", "selected");
-        responsibilitylead && $('#responsibilitylead').find("option[value='" + responsibilitylead + "']").attr("selected", "selected");
-        dutyperson && $('#dutyperson').find("option[value='" + dutyperson + "']").attr("selected", "selected");
-        coordinationpart && $('#coordinationpart').find("option[value='" + coordinationpart + "']").attr("selected", "selected");
-        dutypartments && $('#dutypartments').find("option[value='" + dutypartments + "']").attr("selected", "selected");
+
+        $('#riskclass').attr('data-value', riskclass);
+        $('#responsibilitylead').attr('data-value', responsibilitylead);
+        $('#dutyperson').attr('data-value', dutyperson);
+        $('#coordinationpart').attr('data-value', coordinationpart);
+        $('#dutypartments').attr('data-value', dutypartments);
+
+        $('.chosen-select[multiple]').each(function() {
+            var id = $(this).attr('id');
+            var value = $(this).attr('data-value');
+            if(value){
+                value = value.split(',');
+                for (var i = 0; i < value.length; i++) {
+                    $('#'+id).find("option[value='" + value[i] + "']").attr("selected", "selected");
+                }
+            }
+        });
     }
 }
 module.exports = saferisk;

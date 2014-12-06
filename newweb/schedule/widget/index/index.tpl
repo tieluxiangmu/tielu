@@ -14,6 +14,7 @@
 
   <div class="calendar-operation">
     <form>
+      <span class="spantitle">年份</span>
       <select name="SY" class="chosen-select small-input" style="width:100px" onchange="calendarApp.change()">
         <option value="2012">2012</option>
         <option value="2013">2013</option>
@@ -22,6 +23,8 @@
         <option value="2016">2016</option>
         <option value="2017">2017</option>
       </select>
+      <span class="spantitle">月份</span>
+
       <select name="SM" class="chosen-select small-input" style="width:100px" onchange="calendarApp.change()">
         <option value="1">1</option>
         <option value="2">2</option>
@@ -36,7 +39,7 @@
         <option value="11">11</option>
         <option value="12">12</option>
       </select>
-      {%if $info.authority == 'zhuguan' or $info.authority == 'shuji'%}
+      {%if $info.authority == '主管' or $info.authority == '书记'%}
         &nbsp;&nbsp;&nbsp;&nbsp;<a class="btn btn-primary" href="index.php?r=schedule/addSchedule">日程设置</a>
       {%/if%}
     </form>

@@ -153,10 +153,8 @@ ecurityprodu = {
         $('#company').attr('data-value', company);
         $('#dutydepartment').attr('data-value', dutydepartment);
         $('.chosen-select[multiple]').each(function() {
-
             var id = $(this).attr('id');
             var value = $(this).attr('data-value');
-            
             if(value){
                 value = value.split(',');
                 for (var i = 0; i < value.length; i++) {

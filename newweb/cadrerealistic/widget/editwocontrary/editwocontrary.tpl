@@ -56,6 +56,7 @@
                 <tr>
                   <td colspan="4" style="text-align: center !important;"> 
                             <input type="submit" data-formtype="update" class="btn btn-primary" id="js-btn-editwocontrary" value="确认修改"/>
+                            <input type="button" style="margin-left:20px;" data-formtype="update" class="btn" id="js-btn-cancelcardreal" value="撤销修改">
                   </td>
                 </tr>
               </tbody>

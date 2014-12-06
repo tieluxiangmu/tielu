@@ -78,7 +78,7 @@
                 {%$data[$i]['responsibleperson']%}
             </td>
             <td>
-                {%$data[$i]['Illegalcontent']%}
+                {%$data[$i]['Illegalcontent']|truncate:30:'...'%}
             </td>
             <td>
               <a href="" class="edit"  data-editinfo='{"page":"twocontrarymanage/editecurityprodu","id":{%$data[$i]["id"]%}}'  title="修改两违问题">

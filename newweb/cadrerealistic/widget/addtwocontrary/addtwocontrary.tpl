@@ -29,6 +29,7 @@
                             检查单位
                         </label>
                         <select name="Twocontrarymanage[inspectionunit]" id="Twocontrarymanage_inspectionunit"  class="small-input">
+                          <option value=""></option>
                             <option value="路局">路局</option>
                             <option value="车务段">车务段</option>
                             <option value="车间">车间</option>
@@ -46,8 +47,8 @@
                         <label>
                             被查单位
                         </label>
-                        <input type="hidden" name="Twocontrarymanage[company]" id="Twocontrarymanage_company" />
-                        <select id="twocompany_select"  multiple="multiple" class="chosen-select small-input">
+                       
+                        <select id="Twocontrarymanage_company"  multiple="multiple" class="chosen-select small-input" name="Twocontrarymanage[company]">
                           <option value="段领导">段领导</option>
                           <option value="安全科">安全科</option>
                           <option value="技信科">技信科</option>
@@ -139,23 +140,23 @@
                         </select>
                     </p>
                     <p>
-                        <label>
+                        <label class="textarea-lbl">
                             违章内容
                         </label>
                         <textarea class="text-input textarea wysiwyg" name="Twocontrarymanage[Illegalcontent]" id="Twocontrarymanage_Illegalcontent" cols="79" rows="5"></textarea>
                     </p>
                     <p>
-                        <label>
+                        <label> 
                             处理结果
                         </label>
-                        <input type="number" type="text" class="text-input textarea wysiwyg" name="Twocontrarymanage[processingresults]" id="Twocontrarymanage_processingresults"/>
+                        <input  type="text" class="text-input textarea wysiwyg" name="Twocontrarymanage[processingresults]" id="Twocontrarymanage_processingresults"/>
                     </p>
                     <p>
                         <label>
                             违章类别
                         </label>
                         <select name="Twocontrarymanage[llegalcategory]" id="Twocontrarymanage_llegalcategory" class="small-input">
-                            <option value="">请选择违章类别</option>
+                            <option value=""></option>
                             <option value="A">A</option>
                             <option value="B">B</option>
                             <option value="C">C</option>

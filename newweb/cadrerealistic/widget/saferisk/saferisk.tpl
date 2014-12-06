@@ -21,24 +21,27 @@
       <form class="search" id="ecurityprodu">
         <fieldset>
            <p>
-            <span>
-              <strong>实施日期</strong>
+            <span class="spantitle" style="padding-left:12px;">
+              实施日期
             </span>
             <input class="text-input small-input" style="width:150px !important;height:10px" onClick="WdatePicker()" type="text" id="simplementdate" />
-            <span>到</span>
+            <span class="spantitle" style="padding-left:12px;">
+            到</span>
             <input class="text-input small-input" style="width:150px !important;height:10px" onClick="WdatePicker()" type="text" id="eimplementdate" />
           </p>
           <p>
-            <span>
-              <strong>完成日期</strong>
+            <span class="spantitle" style="padding-left:12px;">
+           
+              完成日期
             </span>
             <input class="text-input small-input" style="width:150px !important;height:10px" onClick="WdatePicker()" type="text" id="scompletiondate" />
-            <span>到</span>
+            <span class="spantitle" style="padding-left:12px;">
+            到</span>
             <input class="text-input small-input" style="width:150px !important;height:10px" onClick="WdatePicker()" type="text" id="ecompletiondate" />
           </p>
            <p>
-            <span>
-              <strong>风险分类</strong>
+            <span class="spantitle" style="padding-left:12px;">
+              风险分类
             </span>
             <select class="small-input chosen-select" id="riskclass" multiple="multiple">
               <option value="管理">管理</option>
@@ -46,10 +49,11 @@
               <option value="作业">作业</option>
               <option value="环境">环境</option>
             </select>
-            <span style="margin-left:44px">
-              <strong>系统</strong>
+            <span class="spantitle" style="padding-left:12px;">
+              系统
             </span>
             <select class="small-input chosen-select" id="risksystem" style="width:120px">
+              <option value="">请选择</option>
                  <option value="行车">行车</option>
                   <option value="客运">客运</option>
                   <option value="货运">货运</option>
@@ -57,8 +61,8 @@
             </select>
           </p>
            <p>
-            <span>
-              <strong>负责领导</strong>
+            <span class="spantitle" style="padding-left:12px;">
+              负责领导
             </span>
             <select class="small-input chosen-select" id="responsibilitylead" style="width:120px" multiple="true">
               <option value=""></option>
@@ -68,8 +72,8 @@
               {%/foreach%}
               
             </select>
-            <span style="margin-left:20px">
-              <strong>责任部门</strong>
+            <span class="spantitle" style="padding-left:12px;">
+              责任部门
             </span>
             <select class="small-input chosen-select" id="dutypartments" style="width:120px" multiple="multiple">
                 <option value="安全科">安全科</option>
@@ -87,8 +91,8 @@
             </select>
           </p>
             <p >
-            <span>
-              <strong>配合部门</strong>
+            <span class="spantitle" style="padding-left:12px;">
+              配合部门
             </span>
             <select class="small-input chosen-select" id="coordinationpart"  multiple="multiple">
                           <option value="安全科">安全科</option>
@@ -104,11 +108,11 @@
                           <option value="装卸车间">装卸车间</option>
                           <option value="乘务车间">乘务车间</option>  
             </select>
-           <div>
+           <span>
              <input class="button btn btn-primary" type="button"  id="submitseacrh-btn" value="开始查询"/>
               <input class="btn btn-success exportexcel" data-excelinfo='{"conid":"js-p-listsafetyrisk","page":"safetyrisk/exportuserexcel"}' type="button" value="导出Excel"/>
               <input class="btn btn-warning  deleteall" data-deleteinfo='{"channelid":"safetyrisk-form","conid":"js-p-listsafetyrisk","page":"safetyrisk/delete"}' type="button" value="确认删除" />
-           </div>
+           </span>
           </p>
         </fieldset>
       </form>

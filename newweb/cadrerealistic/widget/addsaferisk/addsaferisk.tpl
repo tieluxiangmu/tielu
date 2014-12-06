@@ -21,8 +21,7 @@
                         <label>
                             风险名称
                         </label>
-                        <input type="hidden" name="Safetyrisk[riskname]" id="Safetyrisk_riskname" value="" />
-                        <select id="safe_risk"  class="chosen-select  small-input" multiple="multiple">
+                        <select  name="Safetyrisk[riskname]" id="Safetyrisk_riskname"  class="chosen-select  small-input" multiple="multiple">
                             <option value="防止错办">防止错办</option>
                             <option value="调车安全">调车安全</option>
                             <option value="作业">汛期防洪工作</option>
@@ -40,8 +39,7 @@
                         <label>
                             风险分类
                         </label>
-                        <input type="hidden" name="Safetyrisk[riskclass]" id="Safetyrisk_riskclass"/>
-                        <select id="safety_riskclass" class="chosen-select small-input" multiple="multiple">
+                        <select name="Safetyrisk[riskclass]" id="Safetyrisk_riskclass" class="chosen-select small-input" multiple="multiple">
                             <option value="管理">管理</option>
                             <option value="设备">设备</option>
                             <option value="作业">作业</option>
@@ -53,6 +51,7 @@
                             系统
                         </label>
                         <select  name="Safetyrisk[risksystem]" id="Safetyrisk_risksystem" class="small-input chosen_select">
+                            <option value=""></option>
                             <option value="行车">行车</option>
                             <option value="客运">客运</option>
                             <option value="货运">货运</option>
@@ -60,19 +59,19 @@
                         </select>
                     </p>
                      <p>
-                        <label>
+                        <label class="textarea-lbl">
                             风险原因（致因）
                         </label>
                         <textarea class="text-input textarea wysiwyg"  name="Safetyrisk[reasonofrisk]" id="Safetyrisk_reasonofrisk" cols="79" style="height:200px"></textarea>
                     </p>
                     <p>
-                        <label>
+                        <label class="textarea-lbl">
                             可能后果
                         </label>
                         <textarea class="text-input textarea wysiwyg"  name="Safetyrisk[consequence]" id="Safetyrisk_consequence" cols="79" style="height:200px"></textarea>
                     </p>
                     <p>
-                        <label>
+                        <label class="textarea-lbl">
                             既有措施及有效性（问题）
                         </label>
                         <textarea class="text-input textarea wysiwyg"  name="Safetyrisk[measures]" id="Safetyrisk_measures" cols="79" style="height:200px"></textarea>
@@ -81,8 +80,7 @@
                         <label>
                             分布情况
                         </label>
-                        <input type="hidden" name="Safetyrisk[distribution]" id="Safetyrisk_distribution">
-                        <select id="safe_distribution"   class="chosen-select small-input" multiple="multiple">
+                        <select name="Safetyrisk[distribution]" id="Safetyrisk_distribution"   class="chosen-select small-input" multiple="multiple">
                             <option value="管内各站">管内各站</option>
                             <option value="管内各客运办理站">管内各客运办理站</option>
                             <option value="管内各货运办理站">管内各货运办理站</option>
@@ -92,13 +90,13 @@
                         </select>
                     </p>
                     <p>
-                        <label>
+                        <label class="textarea-lbl">
                             进一步防控措施
                         </label>
                         <textarea class="text-input textarea wysiwyg"  name="Safetyrisk[furtherproof]" id="Safetyrisk_furtherproof" cols="79" style="height:200px"></textarea>
                     </p>
                     <p>
-                        <label>
+                        <label class="textarea-lbl">
                             应急（预警）处置措施
                         </label>
                         <textarea class="text-input textarea wysiwyg"  name="Safetyrisk[emergencyhand]" id="Safetyrisk_emergencyhand" cols="79" style="height:200px"></textarea>
@@ -118,8 +116,7 @@
                         <label>
                             责任部门
                         </label>
-                        <input type="hidden" name="Safetyrisk[dutypartments]" id="Safetyrisk_dutypartments"/>
-                           <select id="safetyrisk_duty"  class="small-input chosen-select" multiple="multiple">
+                           <select name="Safetyrisk[dutypartments]" id="Safetyrisk_dutypartments"  class="small-input chosen-select" multiple="multiple">
                             <option value="安全科">安全科</option>
                             <option value="技信科">技信科</option>
                             <option value="货管部">货管部</option>
@@ -138,8 +135,7 @@
                         <label>
                             配合部门
                         </label>
-                        <input type="hidden" name="Safetyrisk[coordinationpart]" id="Safetyrisk_coordinationpart"/>
-                        <select id="safetyriskcoord"  class="small-input chosen-select" multiple="multiple">
+                        <select name="Safetyrisk[coordinationpart]" id="Safetyrisk_coordinationpart"  class="small-input chosen-select" multiple="multiple">
                             <option value="安全科">安全科</option>
                             <option value="技信科">技信科</option>
                             <option value="货管部">货管部</option>
@@ -161,13 +157,13 @@
                         <input class="text-input small-input"  name="Safetyrisk[implementdate]" id="Safetyrisk_implementdate"   onClick="WdatePicker()"/>
                     </p>
                     <p>
-                        <label>
+                        <label class="textarea-lbl">
                             备注客车
                         </label>
                         <textarea class="text-input textarea wysiwyg"  name="Safetyrisk[notethebus]" id="Safetyrisk_notethebus" cols="79" style="height:200px"></textarea>
                     </p>
                     <p>
-                        <label>
+                        <label class="textarea-lbl">
                             备注高铁
                         </label>
                         <textarea class="text-input textarea wysiwyg"  name="Safetyrisk[notehighspeedrail]" id="Safetyrisk_notehighspeedrail" cols="79" style="height:200px"></textarea>
