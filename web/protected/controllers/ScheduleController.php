@@ -11,7 +11,12 @@ class ScheduleController extends Controller
 			'authority' => $this->getAuthority(),
 			'user' => $this->getName()
 		);
+		$user = $_SESSION['user'];
+		if(!$user) {
+			$this->redirect('index.php?r=site/login');
+		}
 		$smarty = Yii::app()->smarty;
+
 		$smarty->_smarty->assign('info', $info);
 		$smarty->_smarty->display('schedule/page/index.tpl');
 	}
@@ -21,11 +26,16 @@ class ScheduleController extends Controller
 	 */
 	public function actionAddSchedule()
 	{
+		$user = $_SESSION['user'];
+        if(!$user) {
+            $this->redirect('index.php?r=site/login');
+        }
 		$info = array(
 			'authority' => $this->getAuthority(),
 			'subordinate' => $this->getSubordinate(),
 			'user' => $this->getName()
 		);
+
 		$smarty = Yii::app()->smarty;
 		$smarty->_smarty->assign('info', $info);
 		$smarty->_smarty->display('schedule/page/add.tpl');
@@ -73,7 +83,7 @@ class ScheduleController extends Controller
 	}
 
 	public function getName() {
-		return Yii::app()->session['user'];
+		return $_SESSION['user']['name'];
 	}
 
 	public function getAuthority() {//TODO
@@ -82,15 +92,8 @@ class ScheduleController extends Controller
 	}
 
 	public function getSubordinate() {
-		$authority = $this->getAuthority();
-		if ($authority === 2) {//书记只能给自己设置日程
-			$subordinate = array($this->getName());
-		} else if ($authority === 1) {//主管为下级（非书记）设置日程
-			$subordinate = UserInfo::model()->getSubordinatesByUserId($this->getName());
-		} else {
-			$subordinate = array();
-		}
-		$subordinate = array('张三', '李四', '袁志佳');
+		
+		$subordinate = UserInfo::model()->getSubordinatesWithCalendarByUserName($_SESSION['user']['name']);
 		return $subordinate;
 	}
 

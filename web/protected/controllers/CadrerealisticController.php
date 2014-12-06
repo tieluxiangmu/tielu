@@ -13,12 +13,20 @@ class CadrerealisticController extends CController
 	public function actionAddtwocontrary()
 	{
 		$smarty = Yii::app()->smarty;
+		$user = $_SESSION['user'];
+        if(!$user) {
+            $this->redirect('index.php?r=site/login');
+        }
 		$smarty->_smarty->display('cadrerealistic/page/addtwocontrary.tpl');
 	}
 	/*安全生产管理录入页面*/
 	public function actionAddecurityprodu()
 	{
 		$smarty = Yii::app()->smarty;
+		$user = $_SESSION['user'];
+        if(!$user) {
+            $this->redirect('index.php?r=site/login');
+        }
 		$smarty->_smarty->display('cadrerealistic/page/addecurityprodu.tpl');
 	}
 	/* 该controller是干部写实的最后一个step 尤为重要
@@ -27,6 +35,10 @@ class CadrerealisticController extends CController
 	public function actionAddsaferisk()
 	{
 		$smarty = Yii::app()->smarty;
+		$user = $_SESSION['user'];
+        if(!$user) {
+            $this->redirect('index.php?r=site/login');
+        }
 		$smarty->_smarty->display('cadrerealistic/page/addsaferisk.tpl');
 	}
 	/*=======================================================*/

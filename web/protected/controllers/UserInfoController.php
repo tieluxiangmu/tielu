@@ -20,8 +20,8 @@ class UserInfoController extends Controller
 	}
 
 	public function actionGetSubordinatesByUser() {
-		$username = Yii::app()->session['user']['name'];
-		var_dump(Yii::app()->session['user']);
+		$username = $_SESSION['user']['name'];
+		var_dump($_SESSION['user']);
 		echo CJSON::encode(UserInfo::model()->getSubordinatesByUserId($username));
 	}
 	public function actionSuggest() {
@@ -76,18 +76,22 @@ class UserInfoController extends Controller
 
 	private function uploadPhoto() {
 		$file = $_FILES['photo'];
-		$filename = WEB_BASE."/attachment/" . $file['name'];
-		$fname = "/attachment/" . $file['name'];
-        if (($file["type"] == "image/gif")
-			|| ($file["type"] == "image/jpeg")
-			|| ($file["type"] == "image/png")){
-			  if ($file["error"] > 0){
-			  }else if (file_exists($filename)){
-			  }else{
-			      move_uploaded_file($file["tmp_name"], $filename);
-			  }
+		if($file && $file['name']) {
+			$filename = WEB_BASE."/attachment/" . $file['name'];
+			$fname = "/attachment/" . $file['name'];
+	        if (($file["type"] == "image/gif")
+				|| ($file["type"] == "image/jpeg")
+				|| ($file["type"] == "image/png")){
+				  if ($file["error"] > 0){
+				  }else if (file_exists($filename)){
+				  }else{
+				      move_uploaded_file($file["tmp_name"], $filename);
+				  }
+			}
+			$fname = iconv("GBK", "UTF-8", $fname);
+			$_POST['UserInfo']['photo'] = $fname;
 		}
-		$_POST['UserInfo']['photo'] = $fname;
+		
 
 	}
 	/**
@@ -107,6 +111,7 @@ class UserInfoController extends Controller
 			
             $this->uploadPhoto();
 			$model->attributes=$_POST['UserInfo'];
+			$model->attributes['password'] = md5($model->attributes['password']);
 			if($model->save()) {
        			echo '<script type="text/javascript">parent.window.location = "index.php?r=admin/index";</script>';
 			}else {
@@ -140,13 +145,11 @@ class UserInfoController extends Controller
 	    $smarty->_smarty->display('cadrerealistic/page/adduser.tpl');
 	}
 	public function actionLogout() {
-			Yii::app()->session['user'] = null;
-			$this->redirect('index.php?r=site/login');
-
-
+		$_SESSION['user'] = null;
+		$this->redirect('index.php?r=site/login');
 	}
 	public function actionLogin() {
-		$password = $_REQUEST['password'];
+		$password = md5($_REQUEST['password']);
 		$name = $_REQUEST['name'];
 
 		$user = UserInfo::model() -> find('name=:name and password = :password ',
@@ -155,7 +158,6 @@ class UserInfoController extends Controller
 				'password' => $password,
 			)
 		)->attributes;
-
 		if($user) {
 			$department = Department::model() -> find('name=:department',array(
 				'department' => $user['department']
@@ -173,8 +175,7 @@ class UserInfoController extends Controller
 					'department' => $department['parentId'],
 				))->attributes['id'];
 			}
-
-			Yii::app()->session['user'] = $user;
+			$_SESSION['user'] = $user;
 			echo json_encode(array(
 				'success' => true,
 			));
@@ -205,7 +206,12 @@ class UserInfoController extends Controller
 			$this->uploadPhoto();
 			$model->attributes=$_POST['UserInfo'];
 			if($model->save()) {
-				$this->redirect("index.php");
+				$_SESSION['user']['photo'] = $model->attributes['photo'];
+       			$_SESSION['user']['mobile'] = $model->attributes['mobile'];
+       			$_SESSION['user']['tel'] = $model->attributes['tel'];
+       			$_SESSION['user']['email'] = $model->attributes['email'];
+       			echo '<script type="text/javascript">parent.window.location = "index.php";</script>';
+       			return ;
 			}
 		}
 

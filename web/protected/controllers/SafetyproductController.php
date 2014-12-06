@@ -30,9 +30,9 @@ class SafetyproductController extends Controller
         $res = array('success' => false, 'message' => '请传入要录入的安全生产数据！');
         if (isset($_POST['Safetyproduct'])) {
             $model->attributes = $_POST['Safetyproduct'];
-            $model->attributes = array('level2'=>Yii::app()->session['user']['level2']);
-            $model->attributes = array('level3'=>Yii::app()->session['user']['level3']);
-            $model->attributes = array('commit'=>Yii::app()->session['user']['name']);
+            $model->attributes = array('level2'=>$_SESSION['user']['level2']);
+            $model->attributes = array('level3'=>$_SESSION['user']['level3']);
+            $model->attributes = array('commit'=>$_SESSION['user']['name']);
             if ($model->save()) {
                 $res['success'] = true;
                 $res['message'] = '安全生产数据录入成功！';
@@ -113,7 +113,10 @@ class SafetyproductController extends Controller
             };
             $urlparam.= "&" . $key . "=" . $value;
         }
-        $user = Yii::app()->session['user'];
+        $user = $_SESSION['user'];
+        if(!$user) {
+            $this->redirect('index.php?r=site/login');
+        }
         $smarty->_smarty->assign('urlparam', $urlparam);
         $smarty->_smarty->display('cadrerealistic/page/ecurityprodu.tpl');
     }
@@ -125,8 +128,8 @@ class SafetyproductController extends Controller
         if ($_SERVER['HTTP_X_REQUESTED_WITH'] == "XMLHttpRequest") {
             //ajax传递的数据 我们给予返回 否则返回真正的数据页面带回参数再去加载
             $safetyproduction = Safetyproduct::model();
-            $level2=!empty(Yii::app()->session['user']['level2'])?Yii::app()->session['user']['level2']:'';
-            $level3=!empty(Yii::app()->session['user']['level3'])?Yii::app()->session['user']['level3']:'';
+            $level2=!empty($_SESSION['user']['level2'])?$_SESSION['user']['level2']:'';
+            $level3=!empty($_SESSION['user']['level3'])?$_SESSION['user']['level3']:'';
             $sql = "select * from {{safetyproduct}} where  1=1 ";
 
             if($level2) {

@@ -7,13 +7,13 @@ class CadreexamineController extends CController
 	{
         $smarty = Yii::app()->smarty;
 
-        $user = Yii::app()->session['user'];
+        $user = $_SESSION['user'];
         if(!$user) {
             $this->redirect('index.php?r=site/login');
         }
 
         $data = array();
-    	$data['subordinate'] = UserInfo::model()->getSubordinatesWithKaoheByUserName(Yii::app()->session['user']['name']);
+    	$data['subordinate'] = UserInfo::model()->getSubordinatesWithKaoheByUserName($_SESSION['user']['name']);
 
         $smarty->_smarty->assign('data',$data);
 
@@ -116,7 +116,7 @@ class CadreexamineController extends CController
     	$data['time']['month'] = $month;
     	$data['time']['now'] = date('Y年m月d日');
 
-    	$data['master'] = Yii::app()->session['user']['name'];
+    	$data['master'] = $_SESSION['user']['name'];
 
     	//计算扣分
     	$score = 0;
@@ -260,7 +260,7 @@ class CadreexamineController extends CController
 		$objActSheet->setCellValue('D'.($another_start+1), $kaohezhutipingyu);
 
 		$objActSheet->mergeCells('B'.($another_start+2).':K'.($another_start+2));
-		$objActSheet->setCellValue('B'.($another_start+2), '考核主体签名:'.Yii::app()->session['user']['name'].'             时间：' . date('Y年m月d日'));
+		$objActSheet->setCellValue('B'.($another_start+2), '考核主体签名:'.$_SESSION['user']['name'].'             时间：' . date('Y年m月d日'));
 
 	    //$fileName1 = iconv("utf-8", "gb2312", $fileName);
 		$fileName1 = round(microtime(true)) . '.xlsx';

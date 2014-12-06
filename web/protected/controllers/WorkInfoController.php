@@ -17,7 +17,10 @@ class WorkInfoController extends CController
             };
             $urlparam.= "&" . $key . "=" . $value;
         }
-
+        $user = $_SESSION['user'];
+            if(!$user) {
+                $this->redirect('index.php?r=site/login');
+            }
         $smarty->_smarty->assign('urlparam', $urlparam);
         $smarty->_smarty->display('workinfo/page/index.tpl');
 	}

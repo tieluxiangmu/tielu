@@ -46,7 +46,7 @@ class AdminController extends Controller
 
 	public function actionIndex() {
 		$smarty = Yii::app()->smarty;
-		$user = Yii::app()->session['user'];
+		$user = $_SESSION['user'];
 		if(!$user || $user['name'] != 'admin') {
 			$this->redirect('index.php?r=site/login');
 		}

@@ -11,6 +11,10 @@ class ContactController extends CController
 		$contactmodel=Userinfo::model();
         $contactinfo=$contactmodel->findAllBySql("select * from {{userinfo}} ");
         $smarty = Yii::app()->smarty;
+        $user = $_SESSION['user'];
+        if(!$user) {
+        	$this->redirect('index.php');
+        }
         $smarty->_smarty->assign('data',$contactinfo);
         $smarty->_smarty->display('contact/page/view.tpl');
     }
