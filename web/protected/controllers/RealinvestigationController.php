@@ -245,7 +245,7 @@ class RealinvestigationController extends Controller {
                     $document->setValue('username',$_SESSION['user']['name']);
                     $document->setValue('checkdate',$values['dateofentry']);
                     $filename='/docfile/'.time().'.docx';
-                    $document->save($filename);
+                    $document->save(WEB_BASE.s$filename);
                     //保存成功开始发送邮件
                     if(!empty($document)){
                             //查询接收邮件用户邮箱
@@ -279,11 +279,12 @@ class RealinvestigationController extends Controller {
                             $result=$result->queryAll();
                             $id=$result[0]['id'];
                             //插件path
-                            $sql="update {{realinvestigation}} set `filepath`='{$filename}' where `id`='{$id}'";
+                            $sqlfile = WEB_BASE.$filename;
+                            $sql="update {{realinvestigation}} set `filepath`='{$sqlfile}' where `id`='{$id}'";
                             $result=Yii::app()->db->createCommand($sql);
                             $result->execute();
                         }else{
-                             $GLOBALS['isHavedword'] = "检查人【".$name."】无邮箱，请联系管理员添加。";
+                             $GLOBALS['isHavedword'] = "检查人【".$name."无邮箱，请联系管理员添加。";
                         }
                     }
             }else{
