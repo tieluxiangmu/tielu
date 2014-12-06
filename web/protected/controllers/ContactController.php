@@ -9,7 +9,7 @@ class ContactController extends CController
 	public function actionIndex()
 	{
 		$contactmodel=Userinfo::model();
-        $contactinfo=$contactmodel->findAllBySql("select * from {{userinfo}} ");
+        $contactinfo=$contactmodel->findAllBySql("select * from {{userinfo}} where name != 'admin' ");
         $smarty = Yii::app()->smarty;
         $user = $_SESSION['user'];
         if(!$user) {

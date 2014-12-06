@@ -234,7 +234,7 @@ class RealinvestigationController extends Controller {
             Yii::import('application.components');
             require_once("PHPWord.php");
             $PHPWord = new PHPWord();
-            $document = $PHPWord->loadTemplate('./docfile/template/template_'.$_SESSION['user']['department'].'.docx');//$_SESSION['user']['derpartment']
+            $document = $PHPWord->loadTemplate(WEB_BASE.'/docfile/template/template_'.$_SESSION['user']['department'].'.docx');//$_SESSION['user']['derpartment']
             if (isset($document)) {
                     $document->setValue('company',$values['company']);
                     $document->setValue('Realinvestigation',$values['cadresonduty']);

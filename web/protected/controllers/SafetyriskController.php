@@ -126,19 +126,19 @@ class SafetyriskController extends Controller
 	     * 安全风险管理 集成分页 by zhijia
 	     */
 	 public function actionListysafetyrisk() {
-	        header("charset=utf-8");
-	        if ($_SERVER['HTTP_X_REQUESTED_WITH'] == "XMLHttpRequest") {
+       	 header("charset=utf-8");
+        	if ($_SERVER['HTTP_X_REQUESTED_WITH'] == "XMLHttpRequest") {
 	            //ajax传递的数据 我们给予返回 否则返回真正的数据页面带回参数再去加载
 	            $safetyrisk = Safetyrisk::model();
 	            $sql = "select * from tl_safetyrisk where  1=1 ";
-                $level2=!empty($_SESSION['user']['level2'])?$_SESSION['user']['level2']:'';
-                $level3=!empty($_SESSION['user']['level3'])?$_SESSION['user']['level3']:'';
-                /*if($level2) {
+	            $level2=!empty($_SESSION['user']['level2'])?$_SESSION['user']['level2']:'';
+	            $level3=!empty($_SESSION['user']['level3'])?$_SESSION['user']['level3']:'';
+	            if($level2) {
 	                $sql.=" and `level2`='{$level2}'";
 	            }
 	            if($level3) {
 	                $sql.=" and `level3`='{$level3}'";
-	            }*/
+	            }
 	            if (isset($_REQUEST['simplementdate'])) {
 	                $sql.= " and implementdate>='" . $_REQUEST['simplementdate'] . "'";
 	            }
@@ -195,7 +195,8 @@ class SafetyriskController extends Controller
 	                };
 	                $urlparam.= "&" . $key . "=" . $value;
 	            }
-	            //$this->redirect('index.php?r=safetyrisk/index' . $urlparam);
+
+	            $this->redirect('index.php?r=safetyrisk/index' . $urlparam);
 	        }
 	    }
 	    /*根据用户的选择导出excel*/

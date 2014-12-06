@@ -52,6 +52,7 @@ class TwocontrarymanageController extends Controller
 	            $model->attributes = array('level2'=>$_SESSION['user']['level2']);
 	            $model->attributes = array('level3'=>$_SESSION['user']['level3']);
 	            $model->attributes = array('commit'=>$_SESSION['user']['name']);
+            
 	            if ($model->save()) {
 	                $res['success'] = true;
 	                $res['message'] = "两违管理数据录入成功！";
@@ -125,26 +126,27 @@ class TwocontrarymanageController extends Controller
 	 */
 	public function actionIndex()
 	{
-	        $smarty = Yii::app()->smarty;
-	        $urlparam = "";
-	        foreach ($_REQUEST as $key => $value) {
-	            if ($key == "r") {
-	                continue;
-	            };
-	            $urlparam.= "&" . $key . "=" . $value;
-	        }
-        	$user = $_SESSION['user'];
-			if(!$user) {
-				$this->redirect('index.php?r=site/login');
-			}
-	        $smarty->_smarty->assign('urlparam', $urlparam);
-	        $smarty->_smarty->display('cadrerealistic/page/twocontrary.tpl');
+        $smarty = Yii::app()->smarty;
+        $urlparam = "";
+        foreach ($_REQUEST as $key => $value) {
+            if ($key == "r") {
+                continue;
+            };
+            $urlparam.= "&" . $key . "=" . $value;
+        }
+    	$user = $_SESSION['user'];
+		if(!$user) {
+			$this->redirect('index.php?r=site/login');
+		}
+        $smarty->_smarty->assign('urlparam', $urlparam);
+        $smarty->_smarty->display('cadrerealistic/page/twocontrary.tpl');
 	}
 	    /**
 	     * 两违问题管理 集成分页 by zhijia
 	     */
 	    public function actionListtwocontrary() {
 	        header("charset=utf-8");
+	        
 	        if ($_SERVER['HTTP_X_REQUESTED_WITH'] == "XMLHttpRequest") {
 	            //ajax传递的数据 我们给予返回 否则返回真正的数据页面带回参数再去加载
 	            $twocontion = Twocontrarymanage::model();
@@ -197,6 +199,7 @@ class TwocontrarymanageController extends Controller
 	            $smarty->_smarty->display('cadrerealistic/page/listtwocontrary.tpl');
 	        } else {
 	            $urlparam = "";
+
 	            foreach ($_REQUEST as $key => $value) {
 	                if ($key == "r") {
 	                    continue;

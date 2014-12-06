@@ -77,7 +77,7 @@ class ScheduleController extends Controller
 	public function actionGetTask() {
 		$owner = isset($_REQUEST['owner']) ? $_REQUEST['owner'] : $this->getName();
 		$date = $_REQUEST['task_date'];
-		$sql = 'select * from {{schedule}} where owner = "'.$owner.'" and task_date like "'.$date.'%"';
+		$sql = 'select * from tl_schedule where owner = "'.$owner.'" and task_date="'.$date.'"';
 		$rest = Schedule::model() -> findAllBySql($sql);
 		echo CJSON::encode($rest);
 	}
@@ -87,8 +87,8 @@ class ScheduleController extends Controller
 	}
 
 	public function getAuthority() {//TODO
-		$authoritys = array('zhuguan', 'shuji', 'zhiyuan');
-		return $authoritys[0];
+		;
+		return $_SESSION['user']['positionType'];
 	}
 
 	public function getSubordinate() {
