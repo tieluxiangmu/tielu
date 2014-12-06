@@ -26,7 +26,7 @@ class RealinvestigationController extends Controller {
         $smarty->_smarty->display('cadrerealistic/page/editcadrerealistic.tpl');
     }
     /*集成显示 修改 详情的主宰页面*/
-    public function actionIndex() {
+    public function actionIndex() { 
         $user = $_SESSION['user'];
         if(!$user) {
             $this->redirect('index.php?r=site/login');
@@ -230,11 +230,11 @@ class RealinvestigationController extends Controller {
      *   发送检查通知书邮件
      */
     public function actionsendEmail($values){
-        //创建word文档
+           //创建word文档
             Yii::import('application.components');
             require_once("PHPWord.php");
             $PHPWord = new PHPWord();
-            $document = $PHPWord->loadTemplate('./docfile/template/template_'.$_SESSION['user']['derpartment'].'.docx');//$_SESSION['user']['derpartment']
+            $document = $PHPWord->loadTemplate('./docfile/template/template_'.$_SESSION['user']['department'].'.docx');//$_SESSION['user']['derpartment']
             if (isset($document)) {
                     $document->setValue('company',$values['company']);
                     $document->setValue('Realinvestigation',$values['cadresonduty']);
@@ -283,7 +283,8 @@ class RealinvestigationController extends Controller {
                         $result->execute();
                     }
             }else{
-                $GLOBALS['isHavedword'] ="暂无通知书模板，请联系管理员添加。";
+                $department = $_SESSION['user']['department'];
+                $GLOBALS['isHavedword'] ="暂无".$department."通知书模板，请联系管理员添加。";
             }
     }
 }
