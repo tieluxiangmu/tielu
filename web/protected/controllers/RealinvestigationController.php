@@ -125,6 +125,9 @@ class RealinvestigationController extends Controller {
                 if($inserInfo['noticeflag']=='是'){
                     $this->actionsendEmail($inserInfo);
                 }
+                if ($GLOBALS['isHavedword']) {
+                     $res['message'] = $res['message'].'<br/>'.$GLOBALS['isHavedword'];
+                }
             } else {
                 $res['message'] = "干部写实数据录入失败，请重试！";
             }
@@ -227,61 +230,60 @@ class RealinvestigationController extends Controller {
      *   发送检查通知书邮件
      */
     public function actionsendEmail($values){
-
         //创建word文档
-        try{
             Yii::import('application.components');
             require_once("PHPWord.php");
             $PHPWord = new PHPWord();
             $document = $PHPWord->loadTemplate('./docfile/template/template_'.$_SESSION['user']['derpartment'].'.docx');//$_SESSION['user']['derpartment']
-            $document->setValue('company',$values['company']);
-            $document->setValue('Realinvestigation',$values['cadresonduty']);
-            $document->setValue('checkcontents',$values['checkcontents']);
-            $document->setValue('checktime',$values['dateofentry'].' '.$values['Realinvestigation']);
-            $document->setValue('foundproblem',$values['foundproblem']);
-            $document->setValue('improvement',$values['improvement']);
-            $document->setValue('username',$_SESSION['user']['name']);
-            $document->setValue('checkdate',$values['dateofentry']);
-            $filename='./docfile/'.time().'.docx';
-            $document->save($filename);
-            //保存成功开始发送邮件
-            if(!empty($document)){
-                //查询接收邮件用户邮箱
-                $name=$values['cadresonduty'];
-                $sql="select * from {{userinfo}} where name='{$name}'";
-                $command = Yii::app()->db->createCommand($sql);
-                $rows = $command->queryAll();
-                $mailto=$rows[0]['email'];
-                Yii::import('application.components');
-                require_once("EMailer.php");
-                $mailer=new EMailer();
-                $mailer->IsSMTP();
-                $mailer->Host = MAIL_SMTP;
-                $mailer->SMTPAuth = true;
-                $mailer->Port = 25;
-                $mailer->CharSet  = "UTF-8";
-                $mailer->Encoding = "base64";
-                $mailer->Username = MAIL_NAME;
-                $mailer->Password = MAIL_PWD;
-                $mailer->From = MAIL_FROM;
-                $mailer->FromName =$_SESSION['derpartment']['name'];
-                $mailer->AddAddress($mailto, $_POST['cadresonduty']);
-                $mailer->Subject = MAIL_SUBJECT;
-                $mailer->Body = MAIL_BODY;
-                $mailer->AddAttachment(WEB_BASE.str_replace('\\','/',$filename),'安全检查通知书_'.date('Y-m-d',time()).'.doc');
-                $mailer->Send();
-                //更新附件路径
-                $sql="select * from {{realinvestigation}} order by id desc limit 1";
-                $result=Yii::app()->db->createCommand($sql);
-                $result=$result->queryAll();
-                $id=$result[0]['id'];
-                //插件path
-                $sql="update {{realinvestigation}} set `filepath`='{$filename}' where `id`='{$id}'";
-                $result=Yii::app()->db->createCommand($sql);
-                $result->execute();
+            if (isset($document)) {
+                    $document->setValue('company',$values['company']);
+                    $document->setValue('Realinvestigation',$values['cadresonduty']);
+                    $document->setValue('checkcontents',$values['checkcontents']);
+                    $document->setValue('checktime',$values['dateofentry'].' '.$values['Realinvestigation']);
+                    $document->setValue('foundproblem',$values['foundproblem']);
+                    $document->setValue('improvement',$values['improvement']);
+                    $document->setValue('username',$_SESSION['user']['name']);
+                    $document->setValue('checkdate',$values['dateofentry']);
+                    $filename='./docfile/'.time().'.docx';
+                    $document->save($filename);
+                    //保存成功开始发送邮件
+                    if(!empty($document)){
+                        //查询接收邮件用户邮箱
+                        $name=$values['cadresonduty'];
+                        $sql="select * from {{userinfo}} where name='{$name}'";
+                        $command = Yii::app()->db->createCommand($sql);
+                        $rows = $command->queryAll();
+                        $mailto=$rows[0]['email'];
+                        Yii::import('application.components');
+                        require_once("EMailer.php");
+                        $mailer=new EMailer();
+                        $mailer->IsSMTP();
+                        $mailer->Host = MAIL_SMTP;
+                        $mailer->SMTPAuth = true;
+                        $mailer->Port = 25;
+                        $mailer->CharSet  = "UTF-8";
+                        $mailer->Encoding = "base64";
+                        $mailer->Username = MAIL_NAME;
+                        $mailer->Password = MAIL_PWD;
+                        $mailer->From = MAIL_FROM;
+                        $mailer->FromName =$_SESSION['derpartment']['name'];
+                        $mailer->AddAddress($mailto, $_POST['cadresonduty']);
+                        $mailer->Subject = MAIL_SUBJECT;
+                        $mailer->Body = MAIL_BODY;
+                        $mailer->AddAttachment(WEB_BASE.str_replace('\\','/',$filename),'安全检查通知书_'.date('Y-m-d',time()).'.doc');
+                        $mailer->Send();
+                        //更新附件路径
+                        $sql="select * from {{realinvestigation}} order by id desc limit 1";
+                        $result=Yii::app()->db->createCommand($sql);
+                        $result=$result->queryAll();
+                        $id=$result[0]['id'];
+                        //插件path
+                        $sql="update {{realinvestigation}} set `filepath`='{$filename}' where `id`='{$id}'";
+                        $result=Yii::app()->db->createCommand($sql);
+                        $result->execute();
+                    }
+            }else{
+                $GLOBALS['isHavedword'] ="暂无通知书模板，请联系管理员添加。";
             }
-        }catch(Exception  $e){
-
-        }
     }
 }
