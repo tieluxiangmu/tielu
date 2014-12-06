@@ -7,5 +7,6 @@ require_once(dirname(__FILE__).'/../framework/yii.php');
 require_once(dirname(__FILE__).'/protected/commands/constants.php');
 // 引入config 全局run
 $config=dirname(__FILE__).'/protected/config/main.php';
-$web_path=dirname(__FILE__);
+session_start();
+define('WEB_BASE',dirname(__FILE__));
 Yii::createWebApplication($config)->run();
