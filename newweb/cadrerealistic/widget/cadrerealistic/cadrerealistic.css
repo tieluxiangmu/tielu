@@ -31,3 +31,7 @@ form#realinvestigation-form textarea{
 .btn-container{
     text-align: center;
 }
+.textarea-lbl{
+    float:left;
+    margin-top:2px;
+}

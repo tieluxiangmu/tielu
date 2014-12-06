@@ -382,7 +382,7 @@ form input.text-input,form select,form textarea,form .wysiwyg{
     border:1px solid #d5d5d5;
     color:#333;
     width: 150px;
-    height: 10px;
+    height: 15px;
 }
 form select{
     height:30px;
@@ -1012,8 +1012,8 @@ textarea.error,select.error{
   background-color: #f9f9f9;
 }
 select.small-input {
-height: 30px !important;
-vertical-align: bottom  !important;
+/* height: 30px !important;
+vertical-align: bottom  !important; */
 }
 .spantitle{
     font-weight: bolder;

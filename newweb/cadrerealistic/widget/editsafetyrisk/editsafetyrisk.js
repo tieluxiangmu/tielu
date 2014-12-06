@@ -8,6 +8,8 @@ editsafetyrisk = {
         $(".chosen-select").chosen({
             no_results_text: "没有查找结果!",
             width: '250px'
+        }).change(function(e) {
+
         });
         me.bind();
     },
@@ -15,10 +17,23 @@ editsafetyrisk = {
         var me = this;
         me.submit = $('#js-btn-editsafetyrisk');
         me.listenerpage(); //负责监听修改后的数据 进行无刷的更改
+
+      
+        $('.chosen-select[multiple]').each(function() {
+            var id = $(this).attr('id');
+            var value = $(this).attr('data-value');
+            if(value){
+                value = value.split('|');
+                for (var i = 0; i < value.length; i++) {
+                    $('#'+id).find("option[value='" + value[i] + "']").attr("selected", "selected");
+                }
+            }
+        });
     },
     bind: function() {
         var me = this;
         me.listenerpage(); //负责监听修改后的数据 进行无刷的更改
+
         (me.submit).on('click', $.proxy(me._submitEvent, this));
     },
     listenerpage: function() {
@@ -107,11 +122,23 @@ editsafetyrisk = {
     _submitEvent: function(e) {
         //e.stopPropagation();
         var me = this;
-        if (!me.formValidate().form()) {
+        $('.chosen-select[multiple]').each(function() {
+            var name = $(this).attr('name');
+            var $form = $(this).parents('form');
+            var id = $(this).attr('id');
+            var value = window.ui.getchosenSelect(id);
+            if(value){
+                $('<input type="hidden" name="'+name+'" value="'+value.join('|')+'">').appendTo($form);
+            }
+        });
+    if (!me.formValidate().form()) {
             e.preventDefault();
             jError('请按系统要求填写安全风险数据！');
             return false;
         }
+
+
+            
     }
 }
 module.exports = editsafetyrisk;

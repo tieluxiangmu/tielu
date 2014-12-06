@@ -40,12 +40,13 @@
           <p>
             <span class="spantitle">值班干部 </span>
             <input class="text-input small-input" type="text"  id="adresonduty" />
-          </p>
-          <p class="btn-con">
+               <span class="btn-con">
             <input class="button btn btn-primary" id="submitseacrh-btn" type="button" value="开始查询"/>
             <input class="btn btn-success exportexcel" data-excelinfo='{"conid":"js-p-listcadrerealistic","page":"realinvestigation/exportuserexcel"}' type="button" value="导出Excel"/>
             <input class="btn btn-warning deleteall" data-deleteinfo='{"channelid":"realinvestigation-form","conid":"js-p-listcadrerealistic","page":"realinvestigation/delete"}' type="button" value="确认删除"/>
+          </span>
           </p>
+       
         </fieldset>
       </form>
       <p id="js-p-listcadrerealistic">
@@ -167,7 +168,7 @@
             <input class="text-input small-input" type="text" name="Realinvestigation[cadresonduty]" id="Realinvestigation_cadresonduty"/>
           </p>
           <p>
-            <label>
+            <label class="textarea-lbl">
             发现问题 </label>
             <textarea class="text-input textarea" name="Realinvestigation[foundproblem]" id="Realinvestigation_foundproblem" cols="79" rows="5"></textarea>
           </p>
@@ -189,7 +190,7 @@
               <option value="B">
               C </option>
             </select>
-              <span> 件数 </span>
+              <label> 件数 </label>
              <input class="text-input small-input" type="number"  name="Realinvestigation[number]" id="Realinvestigation_number" min="0"/>
               <input  type="hidden"  name="Realinvestigation[categorynumber]" id="Realinvestigation_categorynumber"/>
           </p>
@@ -198,11 +199,11 @@
             <input class="text-input small-input" type="number"  name="Realinvestigation[checkcount]" id="Realinvestigation_checkcount" min="0"/>
           </p>
           <p>
-            <label>检查内容 </label>
-            <textarea class="text-input textarea wysiwyg" name="Realinvestigation[checkcontents]" id="Realinvestigation_checkcontents" cols="79" rows="5"></textarea>
+            <label class="textarea-lbl">检查内容 </label>
+            <textarea class="text-input textarea wysiwyg" name="Realinvestigation[checkcontents]" id="Realinvestigation_checkcontents" cols="79" rows="10"></textarea>
           </p>
           <p>
-            <label>
+            <label class="textarea-lbl">
             改进意见 </label>
             <textarea class="text-input textarea" name="Realinvestigation[improvement]" id="Realinvestigation_improvement" cols="79" rows="10"></textarea>
           </p>

@@ -30,7 +30,7 @@
                 </tr>
                 <tr>
                   <td class="spantitle">两违类别/件数</td>
-                  <td colspan="3">  <input name="Realinvestigation[categorynumber]" id="Realinvestigation_categorynumber"  class="text-input large-input" value="{%$model['categorynumber']%}"/></td>
+                  <td colspan="3">  <input name="Realinvestigation[categorynumber]" id="Realinvestigation_categorynumber"  class="text-input small-input" value="{%$model['categorynumber']%}"/></td>
                 </tr>
               </tbody>
         </table>

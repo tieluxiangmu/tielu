@@ -15,7 +15,7 @@
                   <td><input  class="text-input small-input" onclick="WdatePicker()" type="text" name="Safetyrisk[completiondate]" id="Safetyrisk_completiondate"   value="{%$model['completiondate']%}" /></td>
                   <td>风险名称</td>
                   <td> 
-                        <select id="safe_risk"  name="Safetyrisk[riskname]" class="chosen-select  small-input" multiple="multiple">
+                        <select id="safe_risk"  name="Safetyrisk[riskname]" class="chosen-select  small-input" multiple="multiple" data-value="{%$model['riskname']%}">
                             <option value="防止错办" >防止错办</option>
                             <option value="调车安全">调车安全</option>
                             <option value="汛期防洪工作">汛期防洪工作</option>
@@ -34,7 +34,7 @@
                 <tr>
                   <td>风险分类</td>
                   <td>           
-                      <select class="text-input small-input chosen-select" nname="Safetyrisk[riskclass]" id="Safetyrisk_riskclass" multiple="multiple">
+                      <select class="text-input small-input chosen-select" nname="Safetyrisk[riskclass]" id="Safetyrisk_riskclass" multiple="multiple" data-value="{%$model['riskclass']%}">
                         <option value="管理" >管理</option>
                         <option value="设备" >设备</option>
                         <option value="作业" >作业</option>
@@ -90,7 +90,7 @@
                 <tr>
                   <td>负责领导</td>
                   <td>           
-                      <select class="text-input small-input chosen-select" name="Safetyrisk[responsibilitylead]" id="Safetyrisk_responsibilitylead" multiple="multiple" >
+                      <select class="text-input small-input chosen-select" name="Safetyrisk[responsibilitylead]" id="Safetyrisk_responsibilitylead" multiple="multiple"  data-value="{%$model['responsibilitylead']%}">
                         
                       {%foreach from=$leaders item=leader%}
                         <option value="{%$leader.name%}">{%$leader.name%}</option>
@@ -152,17 +152,16 @@
                 </tr>
                 <tr>
                   <td colspan="4" style="text-align: center !important;"> 
-                          <input type="submit" data-formtype="update" class="btn btn-primary" id="js-btn-cancelcardreal" value="撤销修改"/>
+                          <input type="submit" data-formtype="update" class="btn btn-primary" id="js-btn-editsafetyrisk" value="确认修改"/>
                   </td>
                 </tr>
               </tbody>
         </table>
 </form>
 {%script%}
+
 $('#Safetyrisk_dutypartments').find("option[value='{%$model['dutypartments']%}']").attr("selected", "selected");
-$('#Safetyrisk_riskclass').find("option[value='{%$model['riskclass']%}']").attr("selected", "selected");
 $('#Safetyrisk_risksystem').find("option[value='{%$model['risksystem']%}']").attr("selected", "selected");
-$('#Safetyrisk_responsibilitylead').find("option[value='{%$model['responsibilitylead']%}']").attr("selected", "selected");
 $('#Safetyrisk_coordinationpart').find("option[value='{%$model['coordinationpart']%}']").attr("selected", "selected");
 require("editsafetyrisk.js").init();
 {%/script%}

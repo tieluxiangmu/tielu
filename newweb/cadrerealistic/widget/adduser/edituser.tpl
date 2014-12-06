@@ -13,6 +13,10 @@
             <input class="text-input small-input" size="30" maxlength="30" name="UserInfo[name]" id="UserInfo_name" type="text" value="{%$model['name']%}"/>         
         </p>
         <p>
+            <label class="spantitle" for="UserInfo_password" class="required ">密码： <span class="required">*</span></label> 
+            <input class="text-input small-input" size="30" maxlength="30" name="UserInfo[password]" id="UserInfo_password" type="text" value="{%$model['password']%}"/>         
+        </p>
+        <p>
             <label class="spantitle" for="UserInfo_mobile">电话：</label>     <input class="text-input small-input" size="11" maxlength="11" name="UserInfo[mobile]" id="UserInfo_mobile" type="text" value="{%$model['mobile']%}"/>         </p>
 
         <p>
