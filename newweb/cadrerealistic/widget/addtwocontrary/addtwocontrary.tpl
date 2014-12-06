@@ -133,7 +133,7 @@
                         <label>
                             政治面貌
                         </label> <select name="Twocontrarymanage[politicalaffiliation]" id="Twocontrarymanage_politicalaffiliation" class="small-input">
-                            <option selected="selected" value="">请选择</option>
+                            <option selected="selected" value=""></option>
                             <option value="荣昌">党员</option>
                             <option value="峰高铺">群众</option>
                         </select>

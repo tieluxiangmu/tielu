@@ -35,7 +35,7 @@
               检查单位
             </span>
             <select class="chosen-select"  id="inspectionunit">
-                <option value="">请选择</option>
+                <option value=""></option>
                 <option value="路局">路局</option>
                 <option value="车务段">车务段</option>
                 <option value="车间">车间</option>
@@ -50,7 +50,7 @@
           <p>
            <span>被查单位</span>
             <select class="chosen-select" id="company" multiple="multiple">
-              <option value="">请选择</option>
+              <option value=""></option>
               <option value="段领导">段领导</option>
               <option value="安全科">安全科</option>
               <option value="技信科">技信科</option>
@@ -125,7 +125,7 @@
            <p>
            <span>违章类别</span>
             <select class="chosen-select" id="llegalcategory">
-              <option value="">请选择</option>
+              <option value=""></option>
               <option value="A">A</option>
               <option value="B">B</option>
               <option value="C">C</option>

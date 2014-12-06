@@ -11,9 +11,9 @@
         <table class="table table-bordered">
               <tbody>
                 <tr>
-                  <td>完成日期</td>
+                  <td class="spantitle">完成日期</td>
                   <td><input  class="text-input small-input" onclick="WdatePicker()" type="text" name="Safetyrisk[completiondate]" id="Safetyrisk_completiondate"   value="{%$model['completiondate']%}" /></td>
-                  <td>风险名称</td>
+                  <td class="spantitle">风险名称</td>
                   <td> 
                         <select id="safe_risk"  name="Safetyrisk[riskname]" class="chosen-select  small-input" multiple="multiple" data-value="{%$model['riskname']%}">
                             <option value="防止错办" >防止错办</option>
@@ -32,7 +32,7 @@
                   </td>
                 </tr>
                 <tr>
-                  <td>风险分类</td>
+                  <td class="spantitle">风险分类</td>
                   <td>           
                       <select class="text-input small-input chosen-select" nname="Safetyrisk[riskclass]" id="Safetyrisk_riskclass" multiple="multiple" data-value="{%$model['riskclass']%}">
                         <option value="管理" >管理</option>
@@ -41,7 +41,7 @@
                         <option value="环境" >环境</option>
                     </select>
                   </td>
-                  <td>系统</td>
+                  <td class="spantitle">系统</td>
                   <td>
                     <select class="text-input small-input chosen-select" name="Safetyrisk[risksystem]" id="Safetyrisk_risksystem" >
                        <option value="行车">行车</option>
@@ -52,7 +52,7 @@
                   </td>
                 </tr>
                 <tr>
-                  <td>风险原因（致因）</td>
+                  <td class="spantitle">风险原因（致因）</td>
                   <td colspan="3">
                      <textarea class="text-input textarea"name="Safetyrisk[reasonofrisk]" id="Safetyrisk_reasonofrisk" cols="79" height="200px">{%$model['reasonofrisk']%}</textarea>
                   </td>
@@ -64,31 +64,31 @@
                   </td>
                 </tr>
                 <tr>
-                  <td>既有措施及有效性（问题）</td>
+                  <td class="spantitle">既有措施及有效性（问题）</td>
                   <td colspan="3">
                   <textarea class="text-input textarea" name="Safetyrisk[measures]" id="Safetyrisk_measures" cols="79" height="100px">{%$model['measures']%}</textarea>
                   </td>
                 </tr>
                 <tr>
-                  <td>分布情况</td>
+                  <td class="spantitle">分布情况</td>
                   <td colspan="3">
                   <textarea class="text-input textarea" name="Safetyrisk[distribution]" id="Safetyrisk_distribution" cols="79" height="100px">{%$model['distribution']%}</textarea>
                   </td>
                 </tr>
                  <tr>
-                  <td>进一步防控措施</td>
+                  <td class="spantitle">进一步防控措施</td>
                   <td colspan="3">
                   <textarea class="text-input textarea" name="Safetyrisk[furtherproof]" id="Safetyrisk_furtherproof"  cols="79" height="200px">{%$model['furtherproof']%}</textarea>
                   </td>
                 </tr>
                 <tr>
-                  <td>应急（预警）处置措施</td>
+                  <td class="spantitle">应急（预警）处置措施</td>
                   <td colspan="3">
                   <textarea class="text-input textarea" name="Safetyrisk[emergencyhand]" id="Safetyrisk_emergencyhand"  cols="79" height="200px">{%$model['emergencyhand']%}</textarea>
                   </td>
                 </tr>
                 <tr>
-                  <td>负责领导</td>
+                  <td class="spantitle">负责领导</td>
                   <td>           
                       <select class="text-input small-input chosen-select" name="Safetyrisk[responsibilitylead]" id="Safetyrisk_responsibilitylead" multiple="multiple"  data-value="{%$model['responsibilitylead']%}">
                         
@@ -97,7 +97,7 @@
                       {%/foreach%}
                     </select>
                   </td>
-                  <td>责任部门</td>
+                  <td class="spantitle">责任部门</td>
                   <td>
                     <select class="text-input small-input chosen-select" name="Safetyrisk[dutypartments]" id="Safetyrisk_dutypartments" >
                           <option value="安全科">安全科</option>
@@ -116,7 +116,7 @@
                   </td>
                 </tr>
                  <tr>
-                  <td>配合部门</td>
+                  <td class="spantitle">配合部门</td>
                   <td>           
                       <select class="text-input small-input chosen-select" name="Safetyrisk[coordinationpart]" id="Safetyrisk_coordinationpart" >
                         <option value="安全科">安全科</option>
@@ -133,19 +133,19 @@
                         <option value="乘务车间">乘务车间</option>  
                     </select>
                   </td>
-                  <td>实施日期</td>
+                  <td class="spantitle">实施日期</td>
                   <td>
                   <input  class="text-input small-input" onclick="WdatePicker()" type="text" name="Safetyrisk[implementdate]" id="Safetyrisk_implementdate"   value="{%$model['implementdate']%}" />
                   </td>
                 </tr>
                 <tr>
-                  <td>备注客车</td>
+                  <td class="spantitle">备注客车</td>
                   <td colspan="3">
                   <textarea class="text-input textarea" name="Safetyrisk[notethebus]" id="Safetyrisk_notethebus"  cols="79" height="100px">{%$model['notethebus']%}</textarea>
                   </td>
                 </tr>
                 <tr>
-                  <td>备注高铁</td>
+                  <td class="spantitle">备注高铁</td>
                   <td colspan="3">
                   <textarea class="text-input textarea" name="Safetyrisk[notehighspeedrail]" id="Safetyrisk_notehighspeedrail"  cols="79" height="100px">{%$model['notehighspeedrail']%}</textarea>
                   </td>

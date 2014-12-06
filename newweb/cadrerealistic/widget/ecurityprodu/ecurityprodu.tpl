@@ -1,7 +1,5 @@
 <style type="text/css">
-  #ecurityprodu .small-input{
-    width: 40% !important;
-  }
+  
 </style>
 <div class="content-box">
   <div class="content-box-header">
@@ -21,32 +19,32 @@
       <form class="search" id="ecurityprodu">
         <fieldset>
           <p>
-            <span>入库时间 </span>
+            <span class="spantitle" style="padding-left:12px">入库时间 </span>
             <input class="Wdate text-input small-input" onclick="WdatePicker()" type="text" id="sstoragetime" name="small-input"/>
-            <span>到</span>
+            <span class="spantitle" style="padding-left:12px">到</span>
             <input class="Wdate text-input small-input" onclick="WdatePicker()" type="text" id="estoragetime" name="small-input"/>
           </p>
           <p>
-            <span>完成期限</span>
+            <span class="spantitle" style="padding-left:12px">完成期限</span>
             <input class="Wdate text-input small-input" onclick="WdatePicker()" type="text" id="sdeadline" name="small-input"/>
-            <span>到</span>
+            <span class="spantitle" style="padding-left:12px">到</span>
             <input class="Wdate text-input small-input" onclick="WdatePicker()" type="text" id="edeadline" name="small-input"/>
           </p>
           <p>
-            <span>销号时间</span>
+            <span class="spantitle" style="padding-left:12px">销号时间</span>
             <input class="Wdate text-input small-input" onclick="WdatePicker()" type="text" id="sregistertime" name="small-input"/>
-            <span>到</span>
+            <span class="spantitle" style="padding-left:12px">到</span>
             <input class="Wdate text-input small-input" onclick="WdatePicker()" type="text" id="eregistertime" name="small-input"/>
           </p>
           <p>
-            <span>信息来源 </span>
+            <span class="spantitle" style="padding-left:12px">信息来源 </span>
             <select class="small-input chosen-select" id="infosources">
-              <option value="">请选择</option>
+              <option value=""></option>
               <option value="车务段检查">车务段检查 </option>
              <option value="车间检查">车间检查 </option>
              <option value="班组检查">班组检查 </option>
             </select>
-            <span>单位 </span>
+            <span class="spantitle" style="padding-left:12px">单位 </span>
             <select class="small-input chosen-select" multiple="multiple" id="company">
                             <option value="段领导">段领导</option>
                             <option value="安全科">安全科</option>
@@ -118,7 +116,7 @@
             </select>
           </p>
            <p>
-            <span>责任部门 </span>
+            <span class="spantitle" style="padding-left:12px">责任部门 </span>
             <select class="chosen-select" id="dutydepartment" multiple="true">
                             <option value="安全科">安全科</option>
                             <option value="技信科">技信科</option>
@@ -132,25 +130,27 @@
                             <option value="装卸车间">装卸车间</option>
                             <option value="乘务车间">乘务车间</option>
             </select>
-            <span>责任人 </span>
+            <span class="spantitle" style="padding-left:12px">责任人 </span>
              <input class="text-input small-input"  id="dutyperson" />
           </p>
           <p>
-            <span>检查人 </span>
+            <span class="spantitle" style="padding-left:12px">检查人 </span>
             <input class="text-input small-input"  id="checkperson" />
-           <span>目前问题状况 </span>
+           <span class="spantitle" style="padding-left:12px">目前问题状况 </span>
             <select class="small-input chosen-select" id="currentstatus">
-              <option value="">请选择</option>
+              <option value=""></option>
               <option value="已整改">已整改 </option>
               <option value="整改中">整改中 </option>
               <option value="未整改">未整改 </option>
             </select>
-          </p>
-          <p class="btn-con">
+
+                 <span class="btn-con">
              <input class="button btn btn-primary" id="submitseacrh-btn" type="button" value="开始查询"/>
             <input class="btn btn-success exportexcel" data-excelinfo='{"conid":"js-p-listecurityprodu","page":"safetyproduct/exportuserexcel"}' type="button" value="导出Excel"/>
             <input class="btn btn-warning deleteall" data-deleteinfo='{"channelid":"safetyproduct-form","conid":"js-p-listecurityprodu","page":"safetyproduct/delete"}' type="button" value="确认删除"/>
+          </span>
           </p>
+     
         </fieldset>
       </form>
       <p id="js-p-listecurityprodu"></p>

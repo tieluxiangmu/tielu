@@ -84,11 +84,14 @@ ecurityprodu = {
         if (infosources) {
             _url += "&infosources=" + infosources;
         };
+
         //单位
-        var company = commonhelp.getchosensingleSelect('company');
+        var company = commonhelp.getchosenSelect('company');
         if (company) {
             _url += "&company=" + company;
         };
+
+        
         //责任部门
         var dutydepartment = commonhelp.getchosenSelect('dutydepartment');
         if (dutydepartment) {
@@ -140,13 +143,28 @@ ecurityprodu = {
         sregistertime && $('#sregistertime').val(sregistertime);
         eregistertime && $('#eregistertime').val(eregistertime);
         infosources && $('#infosources').find("option[value='" + infosources + "']").attr("selected", "selected");
-        company && $('#company').find("option[value='" + company + "']").attr("selected", "selected");
-        if (dutydepartment) {
+        /*company && $('#company').find("option[value='" + company + "']").attr("selected", "selected");*/
+        /*if (dutydepartment) {
             var arrs = dutydepartment.split(',');
             for (var i = 0; i < arrs.length; i++) {
                 $('#dutydepartment').find("option[value='" + arrs[i] + "']").attr("selected", "selected");
             };
-        };
+        };*/
+        $('#company').attr('data-value', company);
+        $('#dutydepartment').attr('data-value', dutydepartment);
+        $('.chosen-select[multiple]').each(function() {
+
+            var id = $(this).attr('id');
+            var value = $(this).attr('data-value');
+            
+            if(value){
+                value = value.split(',');
+                for (var i = 0; i < value.length; i++) {
+                    $('#'+id).find("option[value='" + value[i] + "']").attr("selected", "selected");
+                }
+            }
+        });
+
         dutyperson && $('#dutyperson').find("option[value='" + dutyperson + "']").attr("selected", "selected");
         checkperson && $('#checkperson').find("option[value='" + checkperson + "']").attr("selected", "selected");
         currentstatus && $('#currentstatus').find("option[value='" + currentstatus + "']").attr("selected", "selected");

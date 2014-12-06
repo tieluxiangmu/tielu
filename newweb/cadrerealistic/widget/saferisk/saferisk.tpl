@@ -1,7 +1,5 @@
 <style type="text/css">
-  #ecurityprodu .small-input{
-    width: 40% !important;
-  }
+  
 </style>
 <div class="content-box">
   <div class="content-box-header">
@@ -63,7 +61,7 @@
               <strong>负责领导</strong>
             </span>
             <select class="small-input chosen-select" id="responsibilitylead" style="width:120px" multiple="true">
-              <option value="">请选择</option>
+              <option value=""></option>
 
               {%foreach from=$leaders item=leader%}
                 <option value="{%$leader.name%}">{%$leader.name%}</option>

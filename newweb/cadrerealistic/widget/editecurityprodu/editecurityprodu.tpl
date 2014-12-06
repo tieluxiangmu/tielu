@@ -3,35 +3,33 @@
     background: white !important;
     padding: 5px;
   }
-#safetyproduct-form  .small-input{
-    width: 90% !important;
-}
+
   </style>
   <form id="safetyproduct-form" action="index.php?r=safetyproduct/Update&id={%$id%}" method="post" data-isneedrefresh="need">
         <table class="table table-bordered">
               <tbody>
                  <tr>
-                  <td>整改情况</td>
+                  <td class="spantitle">整改情况</td>
                   <td colspan="4">
                   <textarea class="text-input textarea" name="Safetyproduct[rectification]" id="Safetyproduct_rectification" cols="79" rows="5">{%$model['rectification']%}</textarea>
                   </td>
                 </tr>
                 <tr>
-                  <td>检查人</td>
+                  <td class="spantitle">检查人</td>
                   <td>           
                   <input  class="text-input small-input" name="Safetyproduct[checkperson]" id="Safetyproduct_checkperson"  value="{%$model['checkperson']%}" />
                   </td>
-                  <td>销号时间</td>
+                  <td class="spantitle">销号时间</td>
                   <td><input  class="text-input small-input" onclick="WdatePicker()" type="text" name="Safetyproduct[registertime]" id="Safetyproduct_registertime"  value="{%$model['registertime']%}" /></td>
                 </tr>
                 <tr>
-                  <td>备注</td>
+                  <td class="spantitle">备注</td>
                   <td colspan="4">
                      <textarea class="text-input textarea" name="Safetyproduct[comments]" id="Safetyproduct_comments" cols="79" rows="5">{%$model['comments']%}</textarea>
                   </td>
                 </tr>
                 <tr>
-                  <td>问题目前状况</td>
+                  <td class="spantitle">问题目前状况</td>
                   <td colspan="4">
                      <select class="text-input small-input chosen-select" name="Safetyproduct[currentstatus]" id="Safetyproduct_currentstatus">
                         <option selected="selected" value="">请选择</option>
@@ -42,7 +40,7 @@
                   </td>
                 </tr>
                 <tr>
-                  <td>解决方案</td>
+                  <td class="spantitle">解决方案</td>
                   <td colspan="4">
                   <textarea class="text-input textarea" name="Safetyproduct[thesolution]" id="Safetyproduct_thesolution" cols="79" rows="5">{%$model['thesolution']%}</textarea>
                   </td>
@@ -50,6 +48,7 @@
                 <tr>
                   <td colspan="4" style="text-align: center !important;"> 
                           <input type="submit" data-formtype="update" class="btn btn-primary" id="js-btn-editecurityprodu" value="确认修改"/>
+                          <input type="button" style="margin-left:20px;" data-formtype="update" class="btn" id="js-btn-cancelcardreal" value="撤销修改">
                   </td>
                 </tr>
               </tbody>

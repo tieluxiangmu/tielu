@@ -67,7 +67,7 @@
                 {%$data[$i]['company']%}
             </td>
             <td>
-               {%$data[$i]['theproblem']%}
+               {%$data[$i]['theproblem']|truncate:40:"..."%}
             </td>
             <td>
                 {%$data[$i]['dutydepartment']%}
