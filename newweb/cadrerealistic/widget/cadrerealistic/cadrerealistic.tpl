@@ -159,9 +159,9 @@
               <option value="水江站">水江站</option>
               <option value="鸭江站">鸭江站</option>
             </select>
-            <span class="addChose" data-choseid="Real_company_chosen">
-              列表中没有要输入的单位？<img src="/static/images/icons/addnoresult.png" class="addchosen" />
-            </span>
+          <span class="addChose" data-choseid="Real_company_chosen">
+                <img width="29px" height="29px" src="/web/static/libs/icons/addnoresult.png" class="addchosen" title="没有要添加的单位？点我添加"/>
+          </span>
           </p>
           <p>
             <label>值班干部 </label>

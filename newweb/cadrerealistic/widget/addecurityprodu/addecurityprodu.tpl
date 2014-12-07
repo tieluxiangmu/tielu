@@ -108,6 +108,9 @@
                             <option value="水江站">水江站</option>
                             <option value="鸭江站">鸭江站</option>
                         </select>
+                     <span class="addChose" data-choseid="safe_company_chosen">
+                        <img width="29px" height="29px" src="/web/static/libs/icons/addnoresult.png" class="addchosen" title="没有要添加的单位？点我添加"/>
+                    </span>
                     </p>
                     <p>
                         <label class="textarea-lbl">

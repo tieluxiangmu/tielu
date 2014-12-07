@@ -34,6 +34,9 @@
                             <option value="危险货物匿报、谎报和夹带运输带来的安全隐患">危险货物匿报、谎报和夹带运输带来的安全隐患</option>
                              <option value="货车超偏载治理不到位">货车超偏载治理不到位</option>
                         </select>
+                        <span class="addChose" data-choseid="Safetyrisk_riskname_chosen">
+                            <img width="29px" height="29px" src="/web/static/libs/icons/addnoresult.png" class="addchosen" title="没有要添加的风险名称？点我添加"/>
+                        </span>
                     </p>
                     <p>
                         <label>
@@ -45,6 +48,9 @@
                             <option value="作业">作业</option>
                              <option value="环境">环境</option>
                         </select>
+                        <span class="addChose" data-choseid="Safetyrisk_riskclass_chosen">
+                            <img width="29px" height="29px" src="/web/static/libs/icons/addnoresult.png" class="addchosen" title="没有要添加的风险分类？点我添加"/>
+                        </span>
                     </p>
                     <p>
                         <label>
@@ -88,6 +94,9 @@
                             <option value="车辆停留的车站到发线、专用线">车辆停留的车站到发线、专用线</option>
                             <option value="“车站、专用线（专用铁路）、地方铁路装车及卸车作业”">“车站、专用线（专用铁路）、地方铁路装车及卸车作业”</option>
                         </select>
+                        <span class="addChose" data-choseid="Safetyrisk_distribution_chosen">
+                            <img width="29px" height="29px" src="/web/static/libs/icons/addnoresult.png" class="addchosen" title="没有要添加的分布情况？点我添加"/>
+                        </span>
                     </p>
                     <p>
                         <label class="textarea-lbl">
@@ -105,11 +114,14 @@
                         <label>
                             负责领导
                         </label>
-                        <select name="Safetyrisk[responsibilitylead]" id="Safetyrisk_responsibilitylead" class="small-input chosen">
+                        <select name="Safetyrisk[responsibilitylead]" id="Safetyrisk_responsibilitylead" class="small-input chosen-select" multiple="multiple">
                             {%foreach from=$leaders item=leader%}
                                 <option value="{%$leader.name%}">{%$leader.name%}</option>
-                              {%/foreach%}
+                            {%/foreach%}
                         </select>
+                        <span class="addChose" data-choseid="Safetyrisk_responsibilitylead_chosen">
+                            <img width="29px" height="29px" src="/web/static/libs/icons/addnoresult.png" class="addchosen" title="没有要添加的负责领导？点我添加"/>
+                        </span>
                     </p>
                     <p>
                         <label>
