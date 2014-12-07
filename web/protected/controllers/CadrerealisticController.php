@@ -39,6 +39,8 @@ class CadrerealisticController extends CController
         if(!$user) {
             $this->redirect('index.php?r=site/login');
         }
+        $leaders = UserInfo::model()->getAllSegmentLeaders();
+        $smarty->_smarty->assign('leaders', $leaders);
 		$smarty->_smarty->display('cadrerealistic/page/addsaferisk.tpl');
 	}
 	/*=======================================================*/
