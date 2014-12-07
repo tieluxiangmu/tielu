@@ -106,10 +106,9 @@
                             负责领导
                         </label>
                         <select name="Safetyrisk[responsibilitylead]" id="Safetyrisk_responsibilitylead" class="small-input chosen">
-                            <option value="" selected="selected">请选择负责领导</option>
-                            <option value="责任领导1">
-                                责任领导1
-                            </option>
+                            {%foreach from=$leaders item=leader%}
+                                <option value="{%$leader.name%}">{%$leader.name%}</option>
+                              {%/foreach%}
                         </select>
                     </p>
                     <p>

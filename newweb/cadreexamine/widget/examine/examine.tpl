@@ -36,7 +36,9 @@
           <option value="{%$data.subordinate[$i]['name']%}">{%$data.subordinate[$i]['name']%}</option>
           {%/for%}
         </select>
+        {%if count($data.subordinate) %}
         <a class="button btn btn-primary" id="search-btn" style="margin-left:20px">开始查询</a>
+        {%/if%}
       </p>
     </fieldset>
     </form>
@@ -46,8 +48,9 @@
 <form class="result-wrap">
     
 </form>
+{%if count($data.subordinate) %}
 <a class="button btn btn-success" style="margin-top: 10px;margin-bottom:10px" id="export-excel" href="javascript:;">生成Excel并发送邮件</a>
-
+{%/if%}
 <table id="examine-result-tpl" cellpadding="0" cellspacing="0" width="1017" style="font-size:12px;display:none">
     <colgroup>
         <col width="72" style="width:72px"/>

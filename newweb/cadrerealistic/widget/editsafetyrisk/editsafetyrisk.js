@@ -142,7 +142,7 @@ editsafetyrisk = {
             jError('请按系统要求填写安全风险数据！');
             return false;
         }
-        me.closeDialog();
+        /*me.closeDialog();*/
 
             
     }
