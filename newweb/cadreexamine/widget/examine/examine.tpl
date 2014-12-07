@@ -140,7 +140,7 @@
                 扣分原因
             </td>
             <td colspan="4" width="613" style="">
-                <textarea class="koufenyuanyin text-input textarea" style="height:50px" placeholder="扣分原因"></textarea>
+                <textarea cols="60" class="koufenyuanyin text-input textarea" style="height:80px" placeholder="扣分原因"></textarea>
             </td>
         </tr>
         <tr>
@@ -148,7 +148,7 @@
                 考核主体评语
             </td>
             <td colspan="8" width="835" style="">
-                <textarea class="kaohezhutipingyu text-input textarea" style="height:80px"></textarea>
+                <textarea cols="70" class="kaohezhutipingyu text-input textarea" style="height:80px"></textarea>
             </td>
         </tr>
         <tr height="43">
