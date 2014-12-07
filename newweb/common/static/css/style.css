@@ -1026,4 +1026,7 @@ vertical-align: bottom  !important; */
     height: 29px;
     cursor: pointer;
 }
-
+td {overflow:hidden;word-wrap: break-word;}
+td.spantitle{
+        width:100px !important;
+    }
