@@ -46,7 +46,7 @@
                 <tr>
                   <td class="spantitle">班组长</td>
                   <td colspan="">
-                  <input  class="text-input small-input"  type="text" name="Twocontrarymanage[  teamleader]" id="Twocontrarymanage_ teamleader" value="{%$model['teamleader']%}" />
+                  <input  class="text-input small-input"  type="text" name="Twocontrarymanage[teamleader]" id="Twocontrarymanage_teamleader" value="{%$model['teamleader']%}" />
                   </td>
                   <td class="spantitle">扣积分情况</td>
                   <td colspan="">

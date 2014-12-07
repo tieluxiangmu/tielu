@@ -24,20 +24,20 @@
             <span class="spantitle" style="padding-left:12px;">
               实施日期
             </span>
-            <input class="text-input small-input" style="width:150px !important;height:10px" onClick="WdatePicker()" type="text" id="simplementdate" />
+            <input class="Wdate text-input small-input" onClick="WdatePicker()" type="text" id="simplementdate" />
             <span class="spantitle" style="padding-left:12px;">
             到</span>
-            <input class="text-input small-input" style="width:150px !important;height:10px" onClick="WdatePicker()" type="text" id="eimplementdate" />
+            <input class="Wdate text-input small-input"  onClick="WdatePicker()" type="text" id="eimplementdate" />
           </p>
           <p>
             <span class="spantitle" style="padding-left:12px;">
            
               完成日期
             </span>
-            <input class="text-input small-input" style="width:150px !important;height:10px" onClick="WdatePicker()" type="text" id="scompletiondate" />
+            <input class="Wdate text-input small-input" onClick="WdatePicker()" type="text" id="scompletiondate" />
             <span class="spantitle" style="padding-left:12px;">
             到</span>
-            <input class="text-input small-input" style="width:150px !important;height:10px" onClick="WdatePicker()" type="text" id="ecompletiondate" />
+            <input class="Wdate text-input small-input" onClick="WdatePicker()" type="text" id="ecompletiondate" />
           </p>
            <p>
             <span class="spantitle" style="padding-left:12px;">

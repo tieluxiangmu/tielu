@@ -30,7 +30,7 @@ addecurityprodu = {
         }
         $(".chosen-select").chosen({
             no_results_text: "没有查找结果!",
-            width: '250px'
+            width: '265px'
         });
     },
     bind: function() {

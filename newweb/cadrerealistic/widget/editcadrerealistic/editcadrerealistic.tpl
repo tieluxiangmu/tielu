@@ -15,17 +15,17 @@
               <tbody>
                 <tr>
                   <td class="spantitle">整改情况</td>
-                  <td colspan="3"> <textarea name="Realinvestigation[rectification]" id="Realinvestigation_rectification" cols="79" rows="5">{%$model['rectification']%}</textarea></td>
+                  <td colspan="3"> <textarea name="Realinvestigation[rectification]" id="Realinvestigation_rectification" cols="40" rows="5">{%$model['rectification']%}</textarea></td>
                 </tr>
                 <tr>
                   <td class="spantitle">改进意见</td>
-                  <td colspan="3"><textarea  cols="79" rows="5" name="Realinvestigation[improvement]" id="Realinvestigation_improvement">{%$model['improvement']%}</textarea>
+                  <td colspan="3"><textarea  cols="40" rows="5" name="Realinvestigation[improvement]" id="Realinvestigation_improvement">{%$model['improvement']%}</textarea>
                   </td>
                 </tr>
                 <tr>
                   <td class="spantitle">发现问题</td>
                   <td colspan="3">
-                     <textarea  name="Realinvestigation[foundproblem]" id="Realinvestigation_foundproblem" name="textfield" cols="79" rows="5">{%$model['foundproblem']%}</textarea>
+                     <textarea  name="Realinvestigation[foundproblem]" id="Realinvestigation_foundproblem" name="textfield" cols="40" rows="5">{%$model['foundproblem']%}</textarea>
                   </td>
                 </tr>
                 <tr>

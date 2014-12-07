@@ -11,7 +11,7 @@
                  <tr>
                   <td class="spantitle">整改情况</td>
                   <td colspan="4">
-                  <textarea class="text-input textarea" name="Safetyproduct[rectification]" id="Safetyproduct_rectification" cols="79" rows="5">{%$model['rectification']%}</textarea>
+                  <textarea class="text-input textarea" name="Safetyproduct[rectification]" id="Safetyproduct_rectification" cols="40" rows="5">{%$model['rectification']%}</textarea>
                   </td>
                 </tr>
                 <tr>
@@ -25,7 +25,7 @@
                 <tr>
                   <td class="spantitle">备注</td>
                   <td colspan="4">
-                     <textarea class="text-input textarea" name="Safetyproduct[comments]" id="Safetyproduct_comments" cols="79" rows="5">{%$model['comments']%}</textarea>
+                     <textarea class="text-input textarea" name="Safetyproduct[comments]" id="Safetyproduct_comments" cols="40" rows="5">{%$model['comments']%}</textarea>
                   </td>
                 </tr>
                 <tr>
@@ -42,7 +42,7 @@
                 <tr>
                   <td class="spantitle">解决方案</td>
                   <td colspan="4">
-                  <textarea class="text-input textarea" name="Safetyproduct[thesolution]" id="Safetyproduct_thesolution" cols="79" rows="5">{%$model['thesolution']%}</textarea>
+                  <textarea class="text-input textarea" name="Safetyproduct[thesolution]" id="Safetyproduct_thesolution" cols="40" rows="5">{%$model['thesolution']%}</textarea>
                   </td>
                 </tr>
                 <tr>

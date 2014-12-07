@@ -7,7 +7,7 @@
 	border-radius: 5px;
 }
 .chosen-select{
-	width:40% !important;
+	/* width:40% !important; */
 }
 form label {
     display: inline-block;

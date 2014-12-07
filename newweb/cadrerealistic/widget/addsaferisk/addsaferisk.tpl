@@ -179,7 +179,7 @@
                         </label>
                         <textarea class="text-input textarea wysiwyg"  name="Safetyrisk[notehighspeedrail]" id="Safetyrisk_notehighspeedrail" cols="79" style="height:200px"></textarea>
                     </p>
-                    <p>
+                    <p class="btn-container">
                         <input class="btn btn-success" type="submit" id="js-input-submitsaferisk" value="确定保存" />
                         <input class="btn btn-warning" type="button" id="js-input-cancelsaferisk" value="取消操作" />
                     </p>

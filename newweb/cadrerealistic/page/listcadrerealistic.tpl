@@ -65,7 +65,7 @@
                {%$data[$i]['cadresonduty']%}
             </td>
             <td>
-                {%$data[$i]['foundproblem']|truncate:40%}
+                {%$data[$i]['foundproblem']|truncate:20%}
             </td>
             <td>
                 {%$data[$i]['categorynumber']%}

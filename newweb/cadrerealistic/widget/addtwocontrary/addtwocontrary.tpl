@@ -195,7 +195,7 @@
                         </label>
                          <input class="text-input small-input" name="Twocontrarymanage[teamleaderIntegral]" id="Twocontrarymanage_teamleaderIntegral" type="number"/>
                     </p>
-                    <p>
+                    <p class="btn-container">
                         <input class="btn btn-primary" id="js-input-addsaferisk" type="submit"
                         value="收录为安全风险" data-formtype="jump"/>
                         <input class="btn btn-success" type="submit"  id="js-input-addtwocontrary" value="直接保存为两违问题" />

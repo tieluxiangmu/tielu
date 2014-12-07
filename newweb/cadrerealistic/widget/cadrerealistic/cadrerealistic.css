@@ -7,7 +7,7 @@
 	border-radius: 5px;
 }
 .chosen-select{
-	width:40% !important;
+	/* width:40% !important; */
 }
 .btn-con{
 	text-align: right;
@@ -34,4 +34,7 @@ form#realinvestigation-form textarea{
 .textarea-lbl{
     float:left;
     margin-top:2px;
+}
+td.spantitle{
+    width:100px !important;
 }

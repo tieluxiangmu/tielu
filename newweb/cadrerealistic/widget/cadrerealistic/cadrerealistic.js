@@ -34,7 +34,7 @@ cadrerealistic = {
         me.setSearchword();
         $(".chosen-select").chosen({
             no_results_text: "没有查找结果!",
-            width: '250px'
+            width: '265px'
         });
         (me.cadcontinue).on('click', $.proxy(me._submitEvent, this));
         me._cadcontinueEvent();

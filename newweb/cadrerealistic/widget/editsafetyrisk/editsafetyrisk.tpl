@@ -54,37 +54,37 @@
                 <tr>
                   <td class="spantitle">风险原因（致因）</td>
                   <td colspan="3">
-                     <textarea class="text-input textarea"name="Safetyrisk[reasonofrisk]" id="Safetyrisk_reasonofrisk" cols="79" height="200px">{%$model['reasonofrisk']%}</textarea>
+                     <textarea class="text-input textarea"name="Safetyrisk[reasonofrisk]" id="Safetyrisk_reasonofrisk" cols="40" height="200px">{%$model['reasonofrisk']%}</textarea>
                   </td>
                 </tr>
                 <tr>
                   <td class="spantitle">可能后果</td>
                   <td colspan="3">
-                  <textarea class="text-input textarea" name="Safetyrisk[consequence]" id="Safetyrisk_consequence" cols="79" height="100px">{%$model['consequence']%}</textarea>
+                  <textarea class="text-input textarea" name="Safetyrisk[consequence]" id="Safetyrisk_consequence" cols="40" rows="5">{%$model['consequence']%}</textarea>
                   </td>
                 </tr>
                 <tr>
                   <td class="spantitle">既有措施及有效性（问题）</td>
                   <td colspan="3">
-                  <textarea class="text-input textarea" name="Safetyrisk[measures]" id="Safetyrisk_measures" cols="79" height="100px">{%$model['measures']%}</textarea>
+                  <textarea class="text-input textarea" name="Safetyrisk[measures]" id="Safetyrisk_measures" cols="40" rows="5">{%$model['measures']%}</textarea>
                   </td>
                 </tr>
                 <tr>
                   <td class="spantitle">分布情况</td>
                   <td colspan="3">
-                  <textarea class="text-input textarea" name="Safetyrisk[distribution]" id="Safetyrisk_distribution" cols="79" height="100px">{%$model['distribution']%}</textarea>
+                  <textarea class="text-input textarea" name="Safetyrisk[distribution]" id="Safetyrisk_distribution" cols="40" rows="5">{%$model['distribution']%}</textarea>
                   </td>
                 </tr>
                  <tr>
                   <td class="spantitle">进一步防控措施</td>
                   <td colspan="3">
-                  <textarea class="text-input textarea" name="Safetyrisk[furtherproof]" id="Safetyrisk_furtherproof"  cols="79" height="200px">{%$model['furtherproof']%}</textarea>
+                  <textarea class="text-input textarea" name="Safetyrisk[furtherproof]" id="Safetyrisk_furtherproof"  cols="40" height="200px">{%$model['furtherproof']%}</textarea>
                   </td>
                 </tr>
                 <tr>
                   <td class="spantitle">应急（预警）处置措施</td>
                   <td colspan="3">
-                  <textarea class="text-input textarea" name="Safetyrisk[emergencyhand]" id="Safetyrisk_emergencyhand"  cols="79" height="200px">{%$model['emergencyhand']%}</textarea>
+                  <textarea class="text-input textarea" name="Safetyrisk[emergencyhand]" id="Safetyrisk_emergencyhand"  cols="40" height="200px">{%$model['emergencyhand']%}</textarea>
                   </td>
                 </tr>
                 <tr>
@@ -141,13 +141,13 @@
                 <tr>
                   <td class="spantitle">备注客车</td>
                   <td colspan="3">
-                  <textarea class="text-input textarea" name="Safetyrisk[notethebus]" id="Safetyrisk_notethebus"  cols="79" height="100px">{%$model['notethebus']%}</textarea>
+                  <textarea class="text-input textarea" name="Safetyrisk[notethebus]" id="Safetyrisk_notethebus"  cols="40" rows="5">{%$model['notethebus']%}</textarea>
                   </td>
                 </tr>
                 <tr>
                   <td class="spantitle">备注高铁</td>
                   <td colspan="3">
-                  <textarea class="text-input textarea" name="Safetyrisk[notehighspeedrail]" id="Safetyrisk_notehighspeedrail"  cols="79" height="100px">{%$model['notehighspeedrail']%}</textarea>
+                  <textarea class="text-input textarea" name="Safetyrisk[notehighspeedrail]" id="Safetyrisk_notehighspeedrail"  cols="40" rows="5">{%$model['notehighspeedrail']%}</textarea>
                   </td>
                 </tr>
                 <tr>

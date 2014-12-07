@@ -38,7 +38,7 @@
           </p>
           <p>
             <span class="spantitle" style="padding-left:12px">信息来源 </span>
-            <select class="small-input chosen-select" id="infosources">
+            <select class="text-input  small-input chosen-select" id="infosources">
               <option value=""></option>
               <option value="车务段检查">车务段检查 </option>
              <option value="车间检查">车间检查 </option>
