@@ -28,8 +28,8 @@ td.op-calendar-new-relative.selected-date a .op-calendar-new-lday{
 }
 
 td.op-calendar-new-relative.has-schedule-date{
-	background-color: #f3f9ff;
-	border: 1px solid #c8dcfb;
+	background-color: rgb(221, 144, 110);
+border: 1px solid #B0415F;
 }
 
 .task-list-table tr{

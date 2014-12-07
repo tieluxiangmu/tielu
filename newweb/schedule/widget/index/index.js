@@ -21,24 +21,24 @@ function bindEvent() {
 }
 
 function selectDate() {
-	var year = $('[name=SY]').val();
-	var month = $('[name=SM]').val();
-	getTask(null, month, year);
+	
+	getTask();
 }
 
-function getTask(date, month, year) {
+function getTask(date) {
 	var taskDate, config;
-	year = year || new Date().getFullYear();
-	month = month || new Date().getMonth() + 1;
-	taskDate = year + '-' + month + (date ? ('-' + date) : '');
+	var year = $('[name=SY]').val() || new Date().getFullYear();
+	var month = $('[name=SM]').val() || new Date().getMonth() + 1;
+	month = month < 10 ? '0'+month:month;
+	taskDate = year + '-' + month + (date ? ('-' + (date<10?'0'+date:date)) : '');
 	config = {
 		url: 'index.php?r=schedule/getTask',
 		data: 'task_date=' + taskDate,
 		dataType: 'json',
 		success: showTasks
 	};
-	$('[name=SY]').val(year);
-	$('[name=SM]').val(month);
+	/*$('[name=SY]').val(year);
+	$('[name=SM]').val(month);*/
 	$.ajax(config);
 }
 
@@ -50,7 +50,6 @@ function  showTasks(res) {
 	var html = ['<table class="task-list-table">'];
 	var dates = [];
 	res.forEach(function (task, index) {
-		var d = new Date(task.task_date).getDate();
 		var str = '<tr>' +
 			'<td class="task-title">任务' + (index + 1) + ': </td>' +
 			'<td class="task-date">' + task.task_date + '</td>' +
@@ -58,24 +57,15 @@ function  showTasks(res) {
 			'<td class="task-type">' + task.task_type + '</td>' +
 			'</tr>';
 		html.push(str);
-		dates.push(d);
+		$('div.wise_calendar_body table td[data-date="'+task.task_date+'"]').addClass('has-schedule-date');
 	});
 	html.push('</table>');
 	$('#taskList').html(res.length ? html.join('') : '无日程');
-	$('div.wise_calendar_body table td div.op-calendar-new-daynumber').each(function () {
-		var $this = $(this);
-		var d = parseInt($this.html().trim());
-		if (d <= 7 && $this.closest('tr').index() === 5) {
-			return;
-		}
-		if (d >= 25 && $this.closest('tr').index() === 0) {
-			return;
-		}
-		(dates.indexOf(d) !== -1) && $this.closest('td').addClass('has-schedule-date');
-	});
+	
 }
 
 function init() {
+	$('select[name=SM]').val((new Date).getMonth()+1);
 	getTask();
 	bindEvent();
 }

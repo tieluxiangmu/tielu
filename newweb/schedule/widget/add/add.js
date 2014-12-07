@@ -39,20 +39,20 @@ function bindEvent() {
 }
 
 function showList() {
-	var year = $('[name=SY]').val();
-	var month = $('[name=SM]').val();
-	getTask(null, month, year);
+	
+	getTask();
 }
 
 function clearForm() {
 	$('[name=task_date], [name=task_name], [name=task_type]').val('');
 }
 
-function getTask(date, month, year) {
+function getTask(date) {
 	var taskDate, config;
 	var owner = $('[name=target]').val().trim();
-	year = year || new Date().getFullYear();
-	month = month || new Date().getMonth() + 1;
+	var year = $('[name=SY]').val() || new Date().getFullYear();
+	var month = $('[name=SM]').val() || new Date().getMonth() + 1;
+	month = month < 10 ? '0'+month:month;
 	taskDate = 'task_date=' + year + '-' + month + (date ? ('-' + (date<10?'0'+date:date)) : '');
 	owner = owner ? ('owner=' + owner) : '';
 
@@ -63,8 +63,7 @@ function getTask(date, month, year) {
 		dataType: 'json',
 		success: showTasks
 	};
-	$('[name=SY]').val(year);
-	$('[name=SM]').val(month);
+	
 	$('[name=owner]').val($('[name=target]').val());
 	$.ajax(config);
 }
@@ -91,12 +90,14 @@ function  showTasks(res) {
 			'<td class="task-close"><a class="task-close js-delete" data-schedule-id="' + task.id + '">x</a></td>' +
 			'</tr>';
 		html.push(str);
+		$('div.wise_calendar_body table td[data-date="'+task.task_date+'"]').addClass('has-schedule-date');
 	});
 	html.push('</table>');
 	$('#taskList').html(res.length ? html.join('') : '无日程');
 }
 
 function init() {
+	$('select[name=SM]').val((new Date).getMonth()+1);
 	getTask();
 	bindEvent();
 }
