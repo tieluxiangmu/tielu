@@ -1568,7 +1568,7 @@
         var input;
 
         return lhgdialog({
-            title: '提问',
+            title: '自定义内容',
             id: 'Prompt',
             zIndex: _zIndex(),
             icon: 'prompt.gif',
