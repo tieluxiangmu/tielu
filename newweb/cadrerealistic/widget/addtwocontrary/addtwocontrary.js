@@ -11,16 +11,16 @@ addtwocontrary = {
             $('#Twocontrarymanage_checktime').val(initdata.checktime);
             $('#Twocontrarymanage_Illegalcontent').val(initdata.Illegalcontent);
             $('#Twocontrarymanage_llegalcategory').find("option[value='" + initdata.llegalcategory + "']").attr("selected", "selected");
-            $('#Twocontrarymanage_rummager').find("option[value='" + initdata.rummager + "']").attr("selected", "selected");
+            $('#Twocontrarymanage_rummager').val(initdata.rummager);
 
-            $('##Twocontrarymanage_company').attr('data-value', initdata.company);
+            $('#Twocontrarymanage_company').attr('data-value', initdata.company);
             $('.chosen-select[multiple]').each(function() {
                 var id = $(this).attr('id');
                 var value = $(this).attr('data-value');
-                if(value){
+                if (value) {
                     value = value.split(',');
                     for (var i = 0; i < value.length; i++) {
-                        $('#'+id).find("option[value='" + value[i] + "']").attr("selected", "selected");
+                        $('#' + id).find("option[value='" + value[i] + "']").attr("selected", "selected");
                     }
                 }
             });
@@ -124,8 +124,8 @@ addtwocontrary = {
             var $form = $(this).parents('form');
             var id = $(this).attr('id');
             var value = window.ui.getchosenSelect(id);
-            if(value){
-                $('<input type="hidden" name="'+name+'" value="'+value.join(',')+'">').appendTo($form);
+            if (value) {
+                $('<input type="hidden" name="' + name + '" value="' + value.join(',') + '">').appendTo($form);
             }
         });
         if (!me.formValidate().form()) {
