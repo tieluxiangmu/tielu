@@ -369,6 +369,12 @@ $(document).on("click", "input[type=submit]", function() {
                         listener.trigger(chanelname, 'success', ftype);
                     }
                 });
+                
+                var list = top.window.$.dialog.list;
+                    for(var d in list) {
+                        list[d].close();
+                    }
+
             } else {
                 ui.errorDialog(res.message);
             }
