@@ -11,12 +11,17 @@ export = {
     },
     bind: function() {
 
-        this.exportexcel.click(function(){
-            var start_time =  $('#start_time').val();
-            var end_time = $('#end_time').val();
-
-            location.href = "/web/index.php?r=WorkInfo/selectResult&start_time=" + start_time
-                            + "&end_time=" + end_time;
+        this.exportexcel.click(function() {
+            var year = $('#year-select').val();
+            var month = $('#month-select').val();
+            var url = "/web/index.php?r=WorkInfo/selectResult&";
+            url += 'year=' + year;
+            url += '&month=' + month;
+            if (year == '' || month == '') {
+                $.dialog.alert('筛选条件选择不完整');
+                return;
+            }
+            location.href = url;
 
         });
     }
