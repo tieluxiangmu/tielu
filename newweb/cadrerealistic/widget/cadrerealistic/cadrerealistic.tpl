@@ -118,7 +118,7 @@
               <option value="赶水协管站">赶水协管站</option>
               <option value="万盛协管站">万盛协管站</option>
               <option value="南川协管站">南川协管站</option>
-              <option value="碑木镇站">碑木镇站</option>
+              <option value="椑木镇站">椑木镇站</option>
               <option value="双凤驿站">双凤驿站</option>
               <option value="迎祥街站">迎祥街站</option>
               <option value="石燕桥站">石燕桥站</option>

@@ -15,7 +15,7 @@
                   <td><input  class="text-input small-input" onclick="WdatePicker()" type="text" name="Safetyrisk[completiondate]" id="Safetyrisk_completiondate"   value="{%$model['completiondate']%}" /></td>
                   <td class="spantitle">风险名称</td>
                   <td> 
-                        <select id="safe_risk"  name="Safetyrisk[riskname]" class="chosen-select  small-input" multiple="multiple" data-value="{%$model['riskname']%}">
+                        <select id="safe_risk"  data-sep="|" name="Safetyrisk[riskname]" class="chosen-select  small-input" multiple="multiple" data-value="{%$model['riskname']%}">
                             <option value="防止错办" >防止错办</option>
                             <option value="调车安全">调车安全</option>
                             <option value="汛期防洪工作">汛期防洪工作</option>

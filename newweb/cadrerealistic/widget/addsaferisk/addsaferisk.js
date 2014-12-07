@@ -82,8 +82,9 @@ addsaferisk = {
             var $form = $(this).parents('form');
             var id = $(this).attr('id');
             var value = commonhelp.getchosenSelect(id);
+            var datasep = $(this).attr('data-sep') || ',';
             if(value){
-                $('<input type="hidden" name="'+name+'" value="'+value.join('|')+'">').appendTo($form);
+                $('<input type="hidden" name="'+name+'" value="'+value.join(datasep)+'">').appendTo($form);
             }
         });
         if (!me.formValidate().form()) {

@@ -91,7 +91,7 @@ editecurityprodu = {
             jError('请按系统要求填写两违问题！');
             return false;
         }
-        me.closeDialog();
+        /*me.closeDialog();*/
     }
 }
 module.exports = editecurityprodu;

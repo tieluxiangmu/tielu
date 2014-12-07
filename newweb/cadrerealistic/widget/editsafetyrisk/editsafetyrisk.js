@@ -27,8 +27,10 @@ editsafetyrisk = {
         $('.chosen-select[multiple]').each(function() {
             var id = $(this).attr('id');
             var value = $(this).attr('data-value');
+            var datasep = $(this).attr('data-sep') || ',';
+            
             if(value){
-                value = value.split('|');
+                value = value.split(datasep);
                 for (var i = 0; i < value.length; i++) {
                     $('#'+id).find("option[value='" + value[i] + "']").attr("selected", "selected");
                 }
@@ -132,9 +134,10 @@ editsafetyrisk = {
             var name = $(this).attr('name');
             var $form = $(this).parents('form');
             var id = $(this).attr('id');
+            var datasep = $(this).attr('data-sep') || ',';
             var value = window.ui.getchosenSelect(id);
             if(value){
-                $('<input type="hidden" name="'+name+'" value="'+value.join('|')+'">').appendTo($form);
+                $('<input type="hidden" name="'+name+'" value="'+value.join(datasep)+'">').appendTo($form);
             }
         });
         if (!me.formValidate().form()) {

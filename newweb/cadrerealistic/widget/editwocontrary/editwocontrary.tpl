@@ -19,7 +19,7 @@
                 <tr>
                   <td class="spantitle">处理结果</td>
                   <td colspan="3">
-                     <input type="number" type="text" class="text-input textarea wysiwyg" name="Twocontrarymanage[processingresults]" id="Twocontrarymanage_processingresults" value="{%$model['processingresults']%}" />
+                     <input  type="text" class="text-input textarea wysiwyg" name="Twocontrarymanage[processingresults]" id="Twocontrarymanage_processingresults" value="{%$model['processingresults']%}" />
                   </td>
                 </tr>
                 <tr>

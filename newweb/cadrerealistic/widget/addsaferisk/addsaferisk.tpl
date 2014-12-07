@@ -21,7 +21,7 @@
                         <label>
                             风险名称
                         </label>
-                        <select  name="Safetyrisk[riskname]" id="Safetyrisk_riskname"  class="chosen-select  small-input" multiple="multiple">
+                        <select  data-sep="|" name="Safetyrisk[riskname]" id="Safetyrisk_riskname"  class="chosen-select  small-input" multiple="multiple">
                             <option value="防止错办">防止错办</option>
                             <option value="调车安全">调车安全</option>
                             <option value="作业">汛期防洪工作</option>

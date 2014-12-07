@@ -80,6 +80,12 @@
               <a href="" title="写实详情"  class="detail"  data-detailinfo='{"page":"realinvestigation/view","id":{%$data[$i]["id"]%}}'>
                 <img src="/static/images/icons/detail.png" alt="详情" />
               </a>
+              <a href="index.php?r=cadrerealistic/addtwocontrary" title="收录为安全生产管理">
+                <img src="/web/static/cadrerealistic/images/icons/addrisk_e6d1dcd.png" alt="收录为安全生产管理">
+              </a>
+              <a href="index.php?r=cadrerealistic/addsaferisk" title="收录为两违问题">
+                <img src="/web/static/cadrerealistic/images/icons/addrisk_e6d1dcd.png" alt="收录为两违问题">
+              </a>
             </td>
         {%/for%}
         </tbody>
