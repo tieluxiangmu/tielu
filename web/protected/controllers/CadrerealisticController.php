@@ -36,11 +36,11 @@ class CadrerealisticController extends CController
 	{
 		$smarty = Yii::app()->smarty;
 		$user = $_SESSION['user'];
-        if(!$user) {
-            $this->redirect('index.php?r=site/login');
-        }
-        $leaders = UserInfo::model()->getAllSegmentLeaders();
-        $smarty->_smarty->assign('leaders', $leaders);
+	          if(!$user) {
+	            $this->redirect('index.php?r=site/login');
+	          }
+	     	$leaders = UserInfo::model()->getAllSegmentLeaders();
+		$smarty->_smarty->assign('leaders', $leaders);
 		$smarty->_smarty->display('cadrerealistic/page/addsaferisk.tpl');
 	}
 	/*=======================================================*/
