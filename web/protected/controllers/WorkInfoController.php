@@ -28,14 +28,20 @@ class WorkInfoController extends CController
 	public function actionselectResult(){
 
 		$userInfo = Userinfo::model();
-		$sql = "select department,name,position,goal from tl_userinfo;";
+		$sql = "select department,name,position,goal from tl_userinfo where name!='admin';";
 
 		$data = $userInfo->findAllBySql($sql);
 		$res = array();
 
-		$start_time = strtotime($_GET['start_time']);
-		$end_time = strtotime($_GET['end_time']);
-
+		// $start_time = strtotime($_GET['start_time']);
+		// $end_time = strtotime($_GET['end_time']);
+    		$year = $_GET['year'];
+		$month = $_GET['month'];
+		$nowMonthData = $year . '-' . $month . '-01';
+		$nextMonthDate = strtotime('next month', strtotime($nowMonthData));
+		$nextMonthDate = date('Y-m-d', $nextMonthDate);
+		$start_time = $nowMonthData;
+		$end_time = $nextMonthDate;
         for($i = 0 ; $i < count($data) ; $i++){
 
         	$name = $data[$i]['name'];
@@ -53,8 +59,9 @@ class WorkInfoController extends CController
         $twoContray = Twocontrarymanage::model();
         
         for($i = 0 ; $i < count($res) ; $i++){
+        $sql="";
         $sql = "select id from {{twocontrarymanage}} where rummager ='".$res[$i]['name'].
-        	"' and checktime > " .$start_time ." and checktime < " . $end_time;
+        	"' and checktime >=".$start_time."  and checktime <".$end_time;
         	$data = $twoContray->findAllBySql($sql);
         	$diff = $res[$i]['goal'] - count($data);
 
@@ -88,7 +95,7 @@ class WorkInfoController extends CController
 	    $objActSheet = $objPHPExcel->getActiveSheet();
 
 		$objActSheet->mergeCells('A2:I2');
-		$objActSheet->setCellValue('A2', '重庆车务段2014年7月管理人员考核情况汇总表');
+		$objActSheet->setCellValue('A2', '重庆车务段'.$year.'年'.$month.'月管理人员考核情况汇总表');
 
 		$objActSheet->mergeCells('A3:A4');
 		$objActSheet->setCellValue('A3', '序号');
