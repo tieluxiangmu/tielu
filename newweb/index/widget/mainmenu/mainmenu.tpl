@@ -51,6 +51,15 @@
                 </span>
             </a>
         </li>
+         <li>
+            <a class="shortcut-button" href="index.php?r=safetyproduct/index">
+                <span>
+                    <img src="/static/images/resize_png_new.png" alt="问题库" />
+                    <br />
+                    问题库
+                </span>
+            </a>
+        </li>
     </ul>
 </div>
 {%script%}
