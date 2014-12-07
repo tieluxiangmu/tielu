@@ -172,7 +172,9 @@ class TwocontrarymanageController extends Controller
 	                $sql.= " and  rummager='" . $_REQUEST['rummager'] . "'";
 	            }
 	            if (isset($_REQUEST['company'])) {
-	                $sql.= " and  company='" . $_REQUEST['company'] . "'";
+	                //$sql.= " and  company='" . $_REQUEST['company'] . "'";
+	                $str = $this->getSqlStr($_REQUEST['company'], 'company');
+	                $sql.= " and ".$str;
 	            }
 	            if (isset($_REQUEST['responsibleperson'])) {
 	                $sql.= " and  responsibleperson='" . $_REQUEST['responsibleperson'] . "'";
@@ -208,6 +210,16 @@ class TwocontrarymanageController extends Controller
 	            }
 	            $this->redirect('index.php?r=twocontrarymanage/index' . $urlparam);
 	        }
+	    }
+	     private function getSqlStr($value, $name) {
+	    	$arr = explode(",",$value);
+            $str = array();
+           
+            foreach($arr as $n) {
+            	$str[] = "find_in_set('".$n."',$name)";
+            }
+            $str = implode(' or ', $str);
+            return "(".$str.")";
 	    }
 	        /*根据用户的选择导出excel*/
 	    public function actionExportuserexcel() {

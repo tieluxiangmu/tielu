@@ -152,22 +152,31 @@ class SafetyriskController extends Controller
 	                $sql.= " and completiondate<='" . $_REQUEST['ecompletiondate'] . "'";
 	            }
 	            if (isset($_REQUEST['riskclass'])) {
-	                $sql.= " and  riskclass='" . $_REQUEST['riskclass'] . "'";
+	                //$sql.= " and  riskclass='" . $_REQUEST['riskclass'] . "'";
+	                $str = $this->getSqlStr($_REQUEST['riskclass'], 'riskclass');
+	                $sql.= " and ".$str;	
 	            }
 	            if (isset($_REQUEST['risksystem'])) {
 	                $sql.= " and  risksystem='" . $_REQUEST['risksystem'] . "'";
 	            }
 	            if (isset($_REQUEST['responsibilitylead'])) {
-	                $sql.= " and  responsibilitylead in ('" . $_REQUEST['responsibilitylead'] . "')";
+	                //$sql.= " and  responsibilitylead like '%" . $_REQUEST['responsibilitylead'] . "%'";
+	               
+	                $str = $this->getSqlStr($_REQUEST['responsibilitylead'], 'responsibilitylead');
+	                $sql.= " and ".$str;
 	            }
 	            if (isset($_REQUEST['dutyperson'])) {
 	                $sql.= " and  dutyperson='" . $_REQUEST['dutyperson'] . "'";
 	            }
 	            if (isset($_REQUEST['dutypartments'])) {
-	                $sql.= " and  dutypartments='" . $_REQUEST['dutypartments'] . "'";
+	                //$sql.= " and  dutypartments='" . $_REQUEST['dutypartments'] . "'";
+	                $str = $this->getSqlStr($_REQUEST['dutypartments'], 'dutypartments');
+	                $sql.= " and ".$str;
 	            }
 	        	 if (isset($_REQUEST['coordinationpart'])) {
-	                $sql.= " and  coordinationpart='" . $_REQUEST['coordinationpart'] . "'";
+	                //$sql.= " and  coordinationpart='" . $_REQUEST['coordinationpart'] . "'";
+	                $str = $this->getSqlStr($_REQUEST['coordinationpart'], 'coordinationpart');
+	                $sql.= " and ".$str;
 	            }
 	            $pagesize = 20;
 	            $pageparam = !empty($_GET["page"]) ? $_GET["page"] : 1;
@@ -198,6 +207,16 @@ class SafetyriskController extends Controller
 
 	            $this->redirect('index.php?r=safetyrisk/index' . $urlparam);
 	        }
+	    }
+	    private function getSqlStr($value, $name) {
+	    	$arr = explode(",",$value);
+            $str = array();
+           
+            foreach($arr as $n) {
+            	$str[] = "find_in_set('".$n."',$name)";
+            }
+            $str = implode(' or ', $str);
+            return "(".$str.")";
 	    }
 	    /*根据用户的选择导出excel*/
 	    public function actionExportuserexcel() {

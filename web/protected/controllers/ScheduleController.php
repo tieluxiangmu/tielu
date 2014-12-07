@@ -75,9 +75,9 @@ class ScheduleController extends Controller
 	 * 获取某一天的任务列表
 	 */
 	public function actionGetTask() {
-		$owner = isset($_REQUEST['owner']) ? $_REQUEST['owner'] : $this->getName();
+		$owner = $this->getName();
 		$date = $_REQUEST['task_date'];
-		$sql = 'select * from tl_schedule where owner = "'.$owner.'" and task_date="'.$date.'"';
+		$sql = 'select * from tl_schedule where owner = "'.$owner.'" and task_date like"'.$date.'%"';
 		$rest = Schedule::model() -> findAllBySql($sql);
 		echo CJSON::encode($rest);
 	}

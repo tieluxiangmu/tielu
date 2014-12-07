@@ -160,10 +160,14 @@ class SafetyproductController extends Controller
                 $sql.= " and  infosources='" . $_REQUEST['infosources'] . "'";
             }
             if (isset($_REQUEST['company'])) {
-                $sql.= " and  company='" . $_REQUEST['company'] . "'";
+                //$sql.= " and  company='" . $_REQUEST['company'] . "'";
+                 $str = $this->getSqlStr($_REQUEST['company'], 'company');
+                    $sql.= " and ".$str;
             }
             if (isset($_REQUEST['dutydepartment'])) {
-                $sql.= " and  dutydepartment in ('" . $_REQUEST['dutydepartment'] . "')";
+                //$sql.= " and  dutydepartment in ('" . $_REQUEST['dutydepartment'] . "')";
+                $str = $this->getSqlStr($_REQUEST['dutydepartment'], 'dutydepartment');
+                $sql.= " and ".$str;
             }
             if (isset($_REQUEST['dutyperson'])) {
                 $sql.= " and  dutyperson='" . $_REQUEST['dutyperson'] . "'";
@@ -200,6 +204,16 @@ class SafetyproductController extends Controller
             }
             $this->redirect('index.php?r=safetyproduct/index' . $urlparam);
         }
+    }
+    private function getSqlStr($value, $name) {
+        $arr = explode(",",$value);
+        $str = array();
+       
+        foreach($arr as $n) {
+            $str[] = "find_in_set('".$n."',$name)";
+        }
+        $str = implode(' or ', $str);
+        return "(".$str.")";
     }
         /*根据用户的选择导出excel*/
     public function actionExportuserexcel() {
