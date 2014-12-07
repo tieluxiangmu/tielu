@@ -1015,4 +1015,15 @@ vertical-align: bottom  !important; */
 .spantitle{
     font-weight: bolder;
 }
+.addChose{
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 13px;
+    zoom: 1;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    height: 29px;
+    cursor: pointer;
+}
 

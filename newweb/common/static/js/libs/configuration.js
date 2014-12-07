@@ -324,6 +324,21 @@ $(document).on("click", ".exportexcel", function() {
     return false;
 });
 
+$(document).on("click", ".addChose", function() {
+    var sourceSelect = $(this).attr('data-choseid'),
+        $source = $('#' + sourceSelect + ' .chosen-choices .search-field');
+    $.dialog.prompt('请输入要添加的内容',
+        function(val) {
+        if (val) {
+            $source.before('<li class="search-choice"><span>' + val + '</span><a class="search-choice-close diychosen" data-option-array-index="-1"></a></li>');
+        } else {
+            $.dialog.tips("输入不能为空！");
+        }
+        });
+});
+$(document).on("click", ".diychosen", function() {
+    $(this).parent('.search-choice').remove();
+});
 //每一行表格都有编辑数据
 $(document).on("click", ".edit", function() {
     var info = JSON.parse($(this).attr('data-editinfo'));

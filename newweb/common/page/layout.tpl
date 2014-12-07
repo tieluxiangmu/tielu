@@ -47,7 +47,7 @@
 		        </a>
 		        <div id="profile-links">
 		            姓名：
-		            <a class="profile-edit" href="javascript:void(0);" data-uid="{%$smarty.session.user.id%}" title="姓名">
+		            <a id="profile-edit" href="javascript:void(0);" data-uid="{%$smarty.session.user.id%}"title="姓名">
 		                {%$smarty.session.user.name%}
 		            </a>
 		            <br />
@@ -80,7 +80,7 @@
 		        </div>
 		        <ul id="main-nav">
 		            <li>
-		                <a  href="javascript:void(0);" data-uid="{%$smarty.session.user.id%}"  class="profile-edit nav-top-item no-submenu">
+		                <a href="#/" class="nav-top-item no-submenu">
 		                    个人信息管理
 		                </a>
 		            </li>
@@ -95,8 +95,8 @@
 		<script type="text/javascript" src="/web/static/libs/My97DatePicker/WdatePicker.js"></script>
 		{%script%}
 			require('common:widget/weblistener/weblistener.js').init();
-			$('.profile-edit').on('click', function(e) {
-				var id = $(e.target).attr('data-uid');
+			$('#profile-edit').on('click', function() {
+				var id = $('#profile-edit').attr('data-uid');
 				$.dialog({
 		            title: '编辑',
 		            width: '500px',
