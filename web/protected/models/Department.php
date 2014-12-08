@@ -58,6 +58,12 @@ class Department extends CActiveRecord
 		);
 	}
 
+	public function getIdByName($name) {
+		$department = $this->find('name=:name', array(
+			'name' =>  $name,
+		))->attributes;
+		return $department['id'];
+	}
 	/**
 	 * @return array customized attribute labels (name=>label)
 	 */
