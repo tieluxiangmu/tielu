@@ -91,7 +91,7 @@ editcadrerealistic = {
             jError('请按系统要求填写干部写实数据！');
             return false;
         }
-        me.closeDialog();
+       
     }
 }
 module.exports = editcadrerealistic;

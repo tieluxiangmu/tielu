@@ -34,6 +34,15 @@
             </a>
         </li>
         <li>
+            <a class="shortcut-button" href="index.php?r=WorkInfo/Listtwocontrary">
+                <span>
+                    <img src="/static/images/summary.png" alt="工作情况汇总" />
+                    <br />
+                    工作情况汇总
+                </span>
+            </a>
+        </li>
+         <li>
             <a class="shortcut-button" href="index.php?r=safetyproduct/index">
                 <span>
                     <img src="/static/images/resize_png_new.png" alt="问题库" />
@@ -43,24 +52,32 @@
             </a>
         </li>
         <li>
-            <a class="shortcut-button" href="index.php?r=WorkInfo/Listtwocontrary">
+            <a class="shortcut-button" href="">
                 <span>
-                    <img src="/static/images/summary.png" alt="工作情况汇总" />
+                    <img src="/static/images/Bulletin.png" alt="典型问题通报" />
                     <br />
-                    工作情况汇总
+                    典型问题通报
                 </span>
             </a>
         </li>
         <li>
-            <a class="shortcut-button" href="index.php?r=contact/Index">
+            <a class="shortcut-button" href="">
                 <span>
-                    <img src="/static/images/transfer.png" alt="联系人" />
+                    <img src="/static/images/Safetywarning.png" alt="安全预警" />
                     <br />
-                    联系人
+                    安全预警
                 </span>
             </a>
         </li>
-         
+        <li>
+            <a class="shortcut-button" href="">
+                <span>
+                    <img src="/static/images/mainsearch.png" alt="查询" />
+                    <br />
+                    查询
+                </span>
+            </a>
+        </li>
     </ul>
 </div>
 {%script%}
