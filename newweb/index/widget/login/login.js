@@ -23,7 +23,10 @@ login = {
                     if(json.success) {
                         location.href = "/web"
                     }else {
-                        alert(json.msg);
+                        jError(json.msg, {
+                            HorizontalPosition: 'center',
+                            VerticalPosition: 'center'
+                        });
                     }
                 }
             });
