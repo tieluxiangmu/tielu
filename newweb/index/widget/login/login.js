@@ -20,9 +20,9 @@ login = {
                     password: $('input[name=password]').val()
                 },
                 success: function(json) {
-                    if(json.success) {
+                    if (json.success) {
                         location.href = "/web"
-                    }else {
+                    } else {
                         jError(json.msg, {
                             HorizontalPosition: 'center',
                             VerticalPosition: 'center'
