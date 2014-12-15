@@ -70,7 +70,7 @@
             </a>
         </li>
         <li>
-            <a class="shortcut-button" href="">
+            <a class="shortcut-button" href="index.php?r=safetyproduct/search">
                 <span>
                     <img src="/static/images/mainsearch.png" alt="查询" />
                     <br />
