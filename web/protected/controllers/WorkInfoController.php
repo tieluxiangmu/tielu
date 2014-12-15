@@ -49,7 +49,7 @@ class WorkInfoController extends CController
             $data = $twoContray->findAllBySql($sql);
             $diff = $res[$i]['goal'] - count($data);
             if ($diff > 0) {
-                $res[$i]['goal'] = '查处两违问题数量差('.$diff.'件)，扣'.(string)(2*intval($diff));
+                $res[$i]['goal'] = '查处两违问题数量差('.$diff.'件)，扣'.(string)(2*intval($diff)).'。';
                 $res[$i]['diff'] = '';
                 $res[$i]['chejian'] = 100 - $diff;
                 $res[$i]['final'] = $res[$i]['chejian'];
